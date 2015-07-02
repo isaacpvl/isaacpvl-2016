@@ -1,0 +1,465 @@
+extends layout
+
+block page
+	body
+		a#home
+		nav
+			ul
+				li.nava
+					a.initials.caps(data-scroll, data-options="speed: 700", href="#home")
+						span P
+						div
+						span V
+						div
+						span L
+					a.lastname.caps
+						div
+						span A
+						span A
+						div
+						span O
+						div
+						span A
+					h6 Isaac Paavola's creative
+					h6 and design adventures!
+				li.navb.caps
+					a(data-scroll, data-options="speed: 600", href="#work")
+						span I make stuff
+						span Stuff
+				li.navc.caps
+					a(data-scroll, data-options="speed: 600", href="#about")
+						span I express myself
+						span Feels
+				li.navd.caps
+					a(data-scroll, data-options="speed: 600", href="#contact")
+						span Get at me
+						span Contact
+				li.social
+					a(href="http://twitter.com/isaacpvl", target="_blank")
+						span a
+				li.social
+					a(href="http://dribbble.com/isaacpvl", target="_blank")
+						span D
+
+		header
+			.wrap
+				#tagline.tagline.caps.smile(data-speed="2.75")
+					span
+						h1
+							span#super super
+							span#sweet sweet
+							span#comma ,
+						h1
+							span#unique one-of-a-kind
+						h1
+							span#design digital design
+				#speech.speech(data-speed="7")
+					span
+						.bubble
+							h3.caps now with
+							h1 Personality!
+							img(src="/images/home/speech.png")
+			.wrap.wrapm
+				.taglinem.caps
+					span
+						h1 super sweet,
+						h1 one-of-a-kind
+						h1 digital design
+		.push.headerin
+			div
+
+		section.workwall
+			a#work
+			.arrowbar
+				.arrowb
+			.head
+				span
+				h5.caps My Stuff
+				span
+			.fade
+			.bg
+			.wall
+				div
+					span
+				video(preload="auto", autoplay="true", loop="true", poster="/images/home/wallposter.jpg")
+					source(src="/images/home/wall.mp4", type="video/mp4")
+					source(src="/images/home/wall.webm", type="video/webm")
+					source(src="/images/home/wall-iosp.mp4", type="video/mp4")
+
+		section.work
+			.bg
+			.project.offset
+				.shield
+					img(src="/images/threadmeup/threadmeup.jpg")
+				a.studylink(data-pathname="threadmeup")
+					.preview.pleft
+						.phone.right
+							.top
+								.camera
+									span
+								.speaker
+									span
+							img(src="/images/threadmeup/threadmeupb.jpg")
+							.bottom
+								div
+									span
+						.browser.cond
+							.top
+								ul
+									li
+									li
+									li
+								span threadmeup.com
+							img(src="/images/threadmeup/threadmeup.jpg")
+				.info.iright
+					h1 ThreadMeUp
+					.role
+						h6.caps Role:
+						div
+							span pretty much everything
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="threadmeup") Look at it!
+
+			.project
+				.shield.small
+					img(src="/images/coolhouse/localfu.jpg")
+				a.studylink(data-pathname="coolhouse")
+					.preview.pright
+						.multibrowser.cycle.stepa
+							.browser.stack.stacka
+								.top
+									ul
+										li
+										li
+										li
+									span fountaingreetings.com
+								img(src="/images/coolhouse/fountain.jpg")
+							.browser.stack.stackb
+								.top
+									ul
+										li
+										li
+										li
+									span localfu.com
+								img(src="/images/coolhouse/localfu.jpg")
+							.browser.stack.stackc
+								.top
+									ul
+										li
+										li
+										li
+									span outdoors.io
+								img(src="/images/coolhouse/outdoors.jpg")
+							.browser.stack.stackd
+								.top
+									ul
+										li
+										li
+										li
+									span rexpethealth.com
+								img(src="/images/coolhouse/rex.jpg")
+							.browser.under
+								.top
+									ul
+										li
+										li
+										li
+									span coolhouselabs.com
+								img(src="/images/coolhouse/localfu.jpg")
+				.info.ileft
+					h1 Coolhouse
+					.role
+						h6.caps Role:
+						div
+							span project juggling spectacle
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="coolhouse") Look at it!
+
+			.project.offset
+				.shield
+					img(src="/images/dostoros/dostoros.jpg")
+				a.studylink(data-pathname="dostoros")
+					.preview.pleft
+						.phone.right
+							.top
+								.camera
+									span
+								.speaker
+									span
+							img(src="/images/dostoros/dostorosb.jpg")
+							.bottom
+								div
+									span
+						.browser.cond
+							.top
+								ul
+									li
+									li
+									li
+								span dostoros.com
+							img(src="/images/dostoros/dostoros.jpg")
+				.info.iright
+					h1 Dos Toros
+					.role
+						h6.caps Role:
+						div
+							span storyteller <em>(deal with it <a class="texta" href="https://youtu.be/UlkIVIau1Nk", target="_blank">sagmeister</a>)</em>
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="dostoros") Look at it!
+					a.button.livelink(href="http://dostoros.com", target="_blank") Visit the site
+
+			.project.offset
+				.shield
+					img(src="/images/huddlepass/huddlepass.jpg")
+				a.studylink(data-pathname="huddlepass")
+					.preview.pright
+						.phone
+							.top
+								.camera
+									span
+								.speaker
+									span
+							img(src="/images/huddlepass/huddlepassb.jpg")
+							.bottom
+								div
+									span
+						.browser.cond
+							.top
+								ul
+									li
+									li
+									li
+								span huddlepass.com
+							img(src="/images/huddlepass/huddlepass.jpg")
+				.info.ileft
+					h1 HuddlePass
+					.role
+						h6.caps Role:
+						div
+							span caring about football
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="huddlepass") Look at it!
+
+			.project.offset
+				.shield
+					img(src="/images/socialcrunch/socialcrunch.jpg")
+				a.studylink(data-pathname="socialcrunch")
+					.preview.pleft
+						.phone.right
+							.top
+								.camera
+									span
+								.speaker
+									span
+							img(src="/images/socialcrunch/socialcrunchb.jpg")
+							.bottom
+								div
+									span
+						.browser.cond
+							.top
+								ul
+									li
+									li
+									li
+								span socialcrunch.com
+							img(src="/images/socialcrunch/socialcrunch.jpg")
+				.info.iright
+					h1 SocialCrunch
+					.role
+						h6.caps Role:
+						div
+							span judging people
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="socialcrunch") Look at it!
+
+			.project
+				.shield.small
+					img(src="/images/lifeis/lifeis.gif")
+				a.studylink(data-pathname="lifeis")
+					.preview.pright
+						.browser
+							.top
+								ul
+									li
+									li
+									li
+								span life.is
+							img(src="/images/lifeis/lifeis.gif")
+				.info.ileft
+					h1 Life.is
+					.role
+						h6.caps Role:
+						div
+							span iphone photographer
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="lifeis") Look at it!
+
+			.project.triphone
+				.shield
+					img(src="/overdog/images/overdog.jpg")
+				a.studylink(data-pathname="overdog")
+					.preview.pleft
+						.multiphone
+							.phone.stack.stacka
+								.top
+									.camera
+										span
+									.speaker
+										span
+								img(src="/images/overdog/overdog.jpg")
+								.bottom
+									div
+										span
+							.phone.stack.stackb
+								.top
+									.camera
+										span
+									.speaker
+										span
+								img(src="/images/overdog/overdogb.jpg")
+								.bottom
+									div
+										span
+							.phone.stack.stackc
+								.top
+									.camera
+										span
+									.speaker
+										span
+								img(src="/images/overdog/overdogc.jpg")
+								.bottom
+									div
+										span
+							.phone.under
+								.top
+									.camera
+										span
+									.speaker
+										span
+								img(src="/images/overdog/overdog.jpg")
+								.bottom
+									div
+										span
+				.info.iright
+					h1 OverDog
+					.role
+						h6.caps Role:
+						div
+							span exuding testosterone <em>(ironically)</em>
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button.studylink(data-pathname="overdog") Look at it!
+
+			.project.dribs
+				a(href="http://dribbble.com/isaacpvl", target="_blank")
+					.preview.pright
+						.shots
+							img#a(src="/images/home/shot-2o2p.jpg")
+							img#b(src="/images/home/shot-comic.jpg")
+							img#c(src="/images/home/shot-streets.jpg")
+							img#d(src="/images/home/shot-toggle.jpg")
+						img(src="/images/home/shot-2o2p.jpg")
+				.info.ileft
+					h1 & more! 
+						span (dribbble)
+					.role
+						h6.caps Role:
+						div
+							span <em class="strikethru">desperately seeking approval</em> whateva I want
+					p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+					a.button(href="http://dribbble.com/isaacpvl", target="_blank") Ball so hard
+
+		section.about
+			a#about
+			.arrowc
+			.head
+				span
+				h5.caps My Feelings
+				span
+			.pitch
+				h1 I'm about authenticity n' emotions n' shit.<br> I design so people might give a fuck.
+				p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh... If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+				p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh... If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+			.bfade
+
+		section.aboutme
+			.bio
+				h1 I'm pretty much a 10 year-old <strong>who thinks he's Spider-Man.</strong>
+				p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh... If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh...
+				p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push then? Uh... If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. <i>So you might ask then, why'd I push in the first place? Uh...</i>
+				p If you're reading this, you caught me right after I pushed a big update, but before I wrote the copy. So why'd I push in the first place then? Uh...
+			ul.cred
+				h5.caps Featured in
+				li
+					a(href="http://www.creativebloq.com/responsive-web-design/net-awards-2013-top-10-young-designers-3132966", target="_blank")
+						img(src="/images/home/rec-netawards.png", width="292", height="60")
+				li
+					a(href="http://www.awwwards.com/best-websites/isaac-paavola-1", target="_blank")
+						img(src="/images/home/rec-awwwards.png", width="182", height="60")
+				li
+					a(href="http://www.portfoliotips.co/design-tips-from-isaac-paavolas-portfolio/", target="_blank")
+						img(src="/images/home/rec-ptreview.png", width="142", height="60")
+				li
+					a(href="http://abduzeedo.com/sites-week-stripe-squarespace-stories-isaac-paavola-and-more", target="_blank")
+						img(src="/images/home/rec-abduzeedo.png", width="106", height="60")
+				br
+				li
+					a(href="http://blog.typekit.com/2014/08/01/sites-we-like-kevin-clark-evan-kerrigan-isaac-paavola/", target="_blank")
+						img(src="/images/home/rec-typekit.png", width="150", height="60")
+				li
+					a(href="http://www.csswinner.com/details/isaac-paavola/5452/", target="_blank")
+						img(src="/images/home/rec-csswinner.png", width="160", height="60")
+				li
+					a(href="http://www.fromupnorth.com/web-design-inspiration-815", target="_blank")
+						img(src="/images/home/rec-fupnorth.png", width="204", height="60")
+				li
+					a#dbugle-link
+						img(src="/images/home/rec-dbugle.png", width="188", height="60")
+			.fade
+				img(src="/images/home/aboutfade.png")
+			.bg
+				img(src="/images/home/aboutbg.jpg")
+
+		section.contact
+			a#contact
+			.arrowd
+			.head
+				span
+				h5.caps Talk to me
+				span
+			.container.method.left
+				a(href="mailto:isaac@isaacpvl.com")
+					span
+						img(src="/images/home/mail.png", width="44", height="44")
+						h5 isaac@isaacpvl.com
+			.container.method.middle
+				a(href="skype:isaacpvl?userinfo", target="_blank")
+					span
+						span.social g
+						h5.skype isaacpvl
+			.container.social.right
+				a(href="http://twitter.com/isaacpvl", target="_blank")
+					span a
+				a(href="http://dribbble.com/isaacpvl", target="_blank")
+					span D
+				a(href="http://linkedin.com/in/isaacpvl", target="_blank")
+					span j
+			.head.visit
+				span
+				h5.caps Randomly Visit
+				span
+				h6 (seriously it'd be dope)
+			.container.office
+				a(href="https://www.google.com/maps?q=154+Grand+St,+New+York,+New+York,+10013", target="_blank")
+					span
+						img(src="/images/home/office.png", width="44", height="44")
+						h5 154 Grand St 2N-15
+				span.digits
+					img(src="/images/home/phone.png", width="44", height="44")
+					h5 616.558.5203
+
+		#dbugle-content.news.lockscroll
+			.paper
+				img(src="/images/home/newspaper.jpg")
+			.overlay
+		
+		.base

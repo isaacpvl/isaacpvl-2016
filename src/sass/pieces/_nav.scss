@@ -1,0 +1,295 @@
+
+
+// Nav styles
+// ------------------------------------------------------------
+
+nav {
+	position: fixed; z-index: 9990;
+	width: 100%; min-width: 320px; max-width: 1440px;
+	height: 60px;
+	text-align: right;
+	font-size: 16px;
+	color: $wht;
+	@include innershadow(0px, rgba($wht, .9));
+	@include noselect;
+	@include animate(.375s, 0s);
+	@include trans(.2s, 0s);
+	ul {
+		width: 100%;
+		margin: 0 auto;
+		@include padding-x(5%);
+		white-space: nowrap;
+		@include dropshadow(1px, $blk-n);
+		@include trans(.2s, 0s);
+		@include reset;
+	}
+	li {
+		position: relative;
+		display: inline-block; vertical-align: top;
+		@include margin-x(30px);
+		text-align: center;
+		@include trans(.2s, 0s);
+		@include fadeindown;
+		&:hover { @include innershadow(-3px, $wht); }
+		&:nth-of-type(2) { @include animate(.55s, 1s); }
+		&:nth-of-type(3) { @include animate(.65s, 1.05s); }
+		&:nth-of-type(4) { @include animate(.75s, 1.1s); }
+		&:nth-of-type(5) { @include animate(.85s, 1.15s); }
+		&:nth-of-type(6) { @include animate(.9s, 1.1825s); }
+	}
+	li.active { @include innershadow(-3px, $wht); a { color: $wht; &:hover { @include treset; } } }
+	li.disabled { box-shadow: none; a { color: $wht-f; &:hover, &:active { @include treset; } } }
+	li.social {
+		position: relative; display: inline-block; margin: 0 0 0 18px;
+		a { width: 42px; span { font-size: 26px; } }
+		&:last-of-type { a { span { font-size: 24px; font-weight: 600; } } }
+	}
+	a {
+		display: block;
+		position: relative;
+		height: 102px;
+		padding-top: 66px;
+		color: $wht;
+		&:focus { color: $wht; }
+		&:hover { color: $wht; @include tmove(0, -3px); }
+		&:active { color: $wht; @include treset; }
+		@include trans(.2s, 0s);
+	}
+	li.navb, li.navc, li.navd {
+		a { font-weight: 500; }
+		span:last-of-type { display: none; }
+	}
+	li.nava.full {
+		a { &:hover { @include treset; } }
+		&:hover, &.hover {
+			width: 176px;
+			padding-right: 28px;
+			@include trans(.25s, 0s);
+			.initials {
+				div {
+					@include trans(.25s, 0s);
+					&:first-of-type { width: 53px; } &:last-of-type { width: 30px; } }
+				}
+			.lastname {
+				opacity: 1;
+				div {
+					@include treset; @include trans(.25s, 0s);
+					&:nth-of-type(1) { width: 25px; } &:nth-of-type(2) { width: 25px; } &:nth-of-type(3) { width: 23px; }
+				}
+			}
+			h6 {
+				@include treset;
+				@include trans(.24s, .06s);
+				@include ttiming(ease-out);
+				&:last-of-type {
+					@include trans(.32s, 0s);
+				}
+			}
+		}
+	}
+	li.nava {
+		position: absolute; top: 0; left: 5%;
+		width: 64px;
+		margin: 0;
+		text-align: left;
+		cursor: pointer;
+		@include innershadow(-4px, $wht);
+		@include trans(.4s, 0s);
+		@include animatereset(.35s, 1s); @include atiming(ease-out); @include navain;
+		a, b { font-weight: 800; }
+		a {
+			height: 105px;
+		}
+		.caps { font-size: 32px; color: $wht; }
+		.initials {
+			position: relative; z-index: 1;
+			letter-spacing: 2px;
+			span {
+				@include fadein;
+				&:nth-of-type(1) { @include animate(.5s, .3s); }
+				&:nth-of-type(2) { @include animate(.5s, .45s); }
+				&:nth-of-type(3) { @include animate(.5s, .6s); }
+			}
+			div { position: relative; display: inline-block; width: 0; @include trans(.37s, .03s); }
+		}
+		.lastname {
+			position: absolute; top: 0;
+			letter-spacing: 4px;
+			opacity: 0;
+			b { color: $wht-0; opacity: 0; }
+			span { position: relative; &:nth-of-type(2) { margin-left: 1px; } }
+			div { position: relative; display: inline-block; width: 0; @include trans(.4s, 0s); }
+		}
+		h6 {
+			position: absolute;
+			left: 1px;
+			width: 180px;
+			@include padding-leader(1.5);
+			font-size: 18px;
+			opacity: 0;
+			letter-spacing: -0.005em;
+			@include tmove(0, -15px);
+			@include trans(.18s, .03s);
+			@include ttiming(ease-in);
+			&:last-of-type {
+				@include padding-leader(3.75);
+				letter-spacing: 0;
+				@include tmove(0, -36px);
+				@include trans(.25s, 0s);
+			}
+		}
+	}
+}
+nav.sticky {
+	z-index: 9992;
+	height: 60px;
+	@include innershadow(60px, rgba($wht, .9));
+	a { height: 60px; padding-top: 28px; color: $blk-6; &:hover { color: $blk; } }
+	ul { @include dropshadow(1px, $blk-1); }
+	li { &:hover { @include innershadow(-3px, $blk-6); } }
+	li.active { @include innershadow(-3px, $red); a { color: $red; &:hover { @include treset; } } }
+	li.disabled { box-shadow: none; a { opacity: .6; color: $dark-l; } &:hover { box-shadow: none; } }
+	li.social { a { span { font-size: 24px; } } &:last-of-type { span { font-size: 22px; } } }
+	li.nava {
+		width: 56px;
+		@include innershadow(0px, $wht-0);
+		&:hover, &.hover { @include innershadow(-3px, $red); }
+		a { height: 60px; padding-top: 27px; }
+		.caps { font-size: 28px; color: $red; }
+		.initials { letter-spacing: 2px; }
+		.lastname { letter-spacing: 4px; b { color: $wht-0; } span { &:nth-of-type(2) { margin-left: -1px; } } }
+		h6 {
+			left: 0;
+			@include padding-leader(1);
+			font-size: 16px;
+			letter-spacing: -0.016em;
+			color: $red;
+			@include tmove(0, -15px);
+			&:last-of-type {
+				@include padding-leader(3);
+				letter-spacing: -0.01em;
+				@include tmove(0, -30px);
+			}
+		}
+		&:hover, &.hover {
+			width: 150px;
+			padding-right: 28px;
+			.initials { div { &:first-of-type { width: 44px; } &:last-of-type { width: 25px; } } }
+			.lastname { div { &:nth-of-type(1) { width: 21px; } &:nth-of-type(2) { width: 20px; } &:nth-of-type(3) { width: 19px; } } }
+			h6 { @include treset; }
+		}
+	}
+	li:nth-of-type(5) { &:hover { @include innershadow(-3px, #4da7de); a:hover { color: #4da7de; } } }
+	li:nth-of-type(6) { &:hover { @include innershadow(-3px, #e84d88); a:hover { color: #e84d88; } } }
+}
+nav.bluebg {
+	@include innershadow(60px, rgba($blue, .9));
+	li { &:hover { @include innershadow(-3px, $wht-l); } }
+	li.active { @include innershadow(-3px, $wht); a { color: $wht; &:hover { @include treset; } } }
+	li.disabled { a { color: $wht-f; } }
+	a { color: $wht-l; &:hover { color: $wht; } }
+	li.nava {
+		@include innershadow(0px, $wht);
+		&:hover, &.hover { @include innershadow(-3px, $wht); }
+		.caps { color: $wht; }
+		h6 { color: $wht; }
+	}
+	li:nth-of-type(5) { &:hover { @include innershadow(-3px, $wht-l); a:hover { color: $wht; } } }
+	li:nth-of-type(6) { &:hover { @include innershadow(-3px, $wht-l); a:hover { color: $wht; } } }
+}
+.arrowbar { position: relative; width: 100%; height: 27px; overflow: hidden; }
+.arrowb { @include trans(.45s, 0s); @include arrow(27px, $red); margin: 0 auto; @include animatereset(.35s, 1.75s); @include arrowin; }
+.arrowc { @include trans(.25s, 0s); @include arrow(27px, $light-l); margin: 0 auto; }
+.arrowd { @include trans(.25s, 0s); @include arrow(27px, $blue); margin: 0 auto; }
+.arrowb.out { @include tmove(0, -27px); }
+.arrowc.out, .arrowd.out { @include tmove(0, -27px); }
+#home, #work, #about, #contact { display: block; }
+
+// Media queries
+	@media screen and (min-width: 1441px) {
+		nav {
+			ul { @include padding-x(6%) }
+			li.nava { left: 6%; }
+		}
+	}
+	@media screen and (max-width: 1023px) {
+		nav {
+			position: fixed; z-index: 2;
+			li { @include margin-x(24px); }
+		}
+		nav.sticky {
+			top: 0; z-index: 9990;
+		}
+	}
+	@media screen and (max-width: 960px) {
+		nav {
+			ul { padding: 0 4% 0 5%; }
+			li { @include margin-x(18px); }
+			li.social { margin: 0 0 0 12px; }
+		}
+	}
+	@media screen and (max-width: 880px) {
+		nav {
+			ul { padding: 0 3% 0 5%; }
+			li.social {
+				position: absolute; top: 114px; right: 5.5%;
+				a { height: 66px; padding-top: 30px; }
+			}
+			li:last-of-type {
+				top: 180px;
+			}
+		}
+		nav.sticky {
+			li.social { display: none; }
+		}
+	}
+	@media screen and (max-width: 720px) {
+		nav {
+			li.social {
+				position: relative; top: auto; right: auto;
+				a { height: 102px; padding-top: 66px; }
+			}
+			li:last-of-type {
+				top: auto;
+			}
+			li.navb, li.navc, li.navd {
+				span:first-of-type { display: none; }
+				span:last-of-type { display: block; }
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		nav {
+			height: 48px;
+			font-size: 14px;
+			@include trans(.3s, 0s);
+			ul { padding: 0 2% 0 5%; }
+			li { margin: 0 3.5%; &:hover { @include innershadow(-3px, $wht); }	}
+			li.active { @include innershadow(-3px, $wht); a { &:hover { @include treset; } } }
+			li.social { position: absolute; top: 78px; right: 5.5%; a { height: 66px; padding-top: 30px; } } li:last-of-type { top: 142px; }
+			a { height: 72px; padding: 42px 0 18px 0; &:hover { @include treset; } &:active { @include treset; } }
+			li.nava {
+				width: 48px; height: 72px; .caps { font-size: 24px; } .lastname { display: none; } h6 { display: none; } a { padding-top: 40px; }
+			}
+			li.nava.full { &:hover, &.hover { width: 48px; padding-right: 0; .initials { div { &:first-of-type, &:last-of-type { width: 0; } } } } }
+		}
+		nav.sticky {
+			height: 48px;
+			@include trans(.3s, 0s);
+			a { height: 48px; padding: 20px 0 16px 0; }
+			ul { height: 48px; }
+			li { margin: 0 3.5%; }
+			li.social { display: none; }
+			li.nava {
+				width: 48px; height: 48px; margin: 0; a { height: 48px; padding-top: 20px; } .caps { font-size: 24px; }
+				&:hover, &.hover { width: 48px; padding-right: 0; .initials { div { &:first-of-type, &:last-of-type { width: 0; } } } }
+				&.hover { box-shadow: none; }
+			}
+		}
+		.arrowbar { margin-bottom: -27px; }
+		.arrowb, .arrowc, .arrowd { display: none; }
+	}
+	@media screen and (max-width: 420px) {
+		nav { li.social { top: 72px; } li:last-of-type { top: 130px; } }
+	}
+

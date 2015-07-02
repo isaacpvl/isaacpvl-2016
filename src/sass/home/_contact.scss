@@ -1,0 +1,166 @@
+
+
+// Contact styles
+// ------------------------------------------------------------
+
+section.contact {
+	@include padding-trailer(30);
+	background: $wht;
+	background: url('/images/home/contactbg.jpg') no-repeat bottom $wht;
+	background-position: 50% 100%;
+	text-align: center;
+	.head.visit {
+		h6 {
+			position: absolute;
+			width: 100%;
+			@include leader(0.5);
+			font-style: italic;
+			opacity: 0.6;
+		}
+	}
+	.container {
+		position: relative; 
+		display: inline-block;
+		@include padding-leader(4);
+		@include padding-trailer(4);
+		h5 {
+			display: inline-block;
+			vertical-align: middle;
+			@extend .caps;
+			font-weight: 700;
+			letter-spacing: 0;
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 12px;
+		}
+		a {
+			@include padding-leader(2);
+			@include padding-trailer(2);
+			padding-right: 10px;
+			span { display: inline-block; }
+			img, span, h5 {
+				opacity: 1;
+				@include trans(.2s, 0s);
+			}
+			&:hover {
+				@include dropshadow(3px, $blk);
+				img, span, h5 {
+					@include tmove(0, -2px);
+					opacity: 1;
+				}
+			}
+			&:active {
+				img, span, h5 {
+					@include treset;
+					@include trans(.1s, 0s);
+				}
+			}
+		}
+		&.left { margin-right: 8%; }
+		&.middle { margin-right: 10%; }
+	}
+	.container.method {
+		a {
+			padding-right: 10px;
+			.skype {
+				padding-left: 58px;
+			}
+			span.social {
+				position: absolute;
+				margin: 14px 0 0 8px;
+			}
+		}
+	}
+	.social {
+		font-size: 28px;
+		a {
+			margin: 0 6px;
+			padding-right: 0;
+			&:nth-of-type(2) { font-size: 26px; font-weight: 600; }
+			&:nth-of-type(3) { font-weight: 400; }
+		}
+		span {
+			width: 48px;
+		}
+	}
+	.container.office {
+		width: 100%;
+		white-space: nowrap;
+		a {
+			width: 286px;
+			margin-right: 10%;
+		}
+		.digits {
+			margin-right: 5%;
+		}
+	}
+}
+
+// Media queries
+@media screen and (max-width: 960px) {
+	section.contact {
+		.container {
+			display: block;
+			width: auto;
+			min-width: 0;
+			@include padding-leader(3);
+			@include padding-trailer(2);
+			&.left { margin-right: 0%; }
+			&.middle { margin-right: 0%; }
+		}
+		.container.social {
+			@include leader(1);
+		}
+		.container.office {
+			width: auto;
+			height: auto;
+			a {
+				width: auto;
+				margin-right: 0;
+			}
+			.digits {
+				display: block;
+				@include leader(5);
+				margin-right: 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: 640px) {
+	section.contact {
+		@include padding-trailer(24);
+		background-size: 1000px auto;
+		background-position: 76% 100%;
+		.head.visit {
+			@include padding-trailer(2);
+			h6 { margin: 0; }
+		}
+		.container {
+			@include padding-leader(3);
+			@include padding-trailer(0);
+			h5 {
+				@include lineh(4);
+				font-size: 18px;
+			}
+		}
+		.container.social {
+			@include leader(1);
+		}
+		.container.office {
+			@include padding-leader(4);
+			.digits {
+				@include leader(3);
+			}
+		}
+	}
+}
+@media screen and (max-width: 420px) {
+	section.contact {
+		@include padding-trailer(18);
+		background-size: 720px auto;
+		background-position: 60% 100%;
+	}
+}
+
