@@ -1,0 +1,155 @@
+extends ../html/layout-study
+
+block page
+	body.study.odog
+		a#home
+		.bar
+		nav
+			ul
+				li#nava.nava
+					a.initials.caps(href="#home")
+						span P
+						div
+						span V
+						div
+						span L
+					a.lastname.caps
+						div
+						span A
+						span A
+						div
+						span O
+						div
+						span A
+					h6 Isaac Paavola's creative
+					h6 and design adventures!
+				li.navb.caps
+					a.nextstudy(data-nextstudy="lifeis")
+						span &#8249;
+						| Last thingy
+				li.navc.caps
+					a.nextstudy(data-nextstudy="threadmeup")
+						| Next thingy
+						span &#8250;
+
+		header
+			.wrap
+				.logo
+					span#logo(data-speed="5.55")
+						img.fadeindownb(src="/images/overdog/logo.png")
+				.title
+					span#title(data-speed="2.85")
+						h1.fadeinup Pitting athletes against their fans in online challenges
+		.push
+			div
+
+		section.work.bgfade
+			.arrowb
+			.head
+				span.fadeinleft
+				h5.caps.fadeinup Overview
+				span.fadeinright
+			.wrap.hidden
+				.overview
+					.detail.single
+						p I made it easy and exciting for pro athletes to challenge their fans in video games usually featuring sports or lots of guns.
+					.context
+						div
+							h6.caps My Role:
+							p exuding testosterone <em>(ironically)</em>
+						div
+							h6.caps When:
+							p early 2013
+						div
+							h6.caps With:
+							p ÄKTA, agency
+
+				.itemhead.small
+					h2 Athletes create challenges
+						span
+				.visual.multiphone
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						.frame
+							img(src="/images/overdog/odog-record.jpg")
+						.bottom
+							div
+								span
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						.frame.vid
+							video(preload="auto", autoplay="true", loop="true", poster="/images/overdog/odog-profile.jpg")
+								source(src="/images/overdog/odog-challenge.webm", type="video/webm")
+								source(src="/images/overdog/odog-challenge.mp4", type="video/mp4")
+						.bottom
+							div
+								span
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						.frame
+							img(src="/images/overdog/odog-profile.jpg")
+						.bottom
+							div
+								span
+				.itemhead.small
+					h2 Fans accept challenges
+						span
+				.visual.multiphone
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						.frame
+							img(src="/images/overdog/odog-challenges.jpg")
+						.bottom
+							div
+								span
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						.frame
+							img(src="/images/overdog/odog-enter-challenge.jpg")
+						.bottom
+							div
+								span
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						.frame
+							img(src="/images/overdog/odog-joined-challenge.jpg")
+						.bottom
+							div
+								span
+
+				.footlink
+					p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/120502-OverDog-iPhone", target="_blank">this project on dribbble</a>
+
+		section.next.tmu.nextstudy(data-nextstudy="threadmeup")
+			.head
+				h5.caps Next thingy
+			.peek
+				img(src="/images/threadmeup/logo.png")
+			.peekbg
+
+		.base
+		.base.study

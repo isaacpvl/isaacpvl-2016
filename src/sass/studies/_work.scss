@@ -37,6 +37,16 @@ body.study {
 	.detail.two-col {
 		@include padding-leader(8);
 		@include padding-trailer(4);
+		em {
+			font-style: italic;
+			font-weight: 600;
+		}
+	}
+	.detail.single {
+		p {
+			@include lineh(4);
+			font-size: 24px;
+		}
 	}
 	.context {
 		div {
@@ -46,6 +56,7 @@ body.study {
 			margin-right: 8%;
 			em {
 				font-size: 18px;
+				letter-spacing: -0.02em;
 				margin-right: 4px;
 				opacity: 0.6;
 			}

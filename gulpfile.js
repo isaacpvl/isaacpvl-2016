@@ -44,9 +44,17 @@ gulp.task("lint", function() {
 });
 
 gulp.task("templates", function() {
-	return gulp.src("views/**/*.jade")
-		.pipe(jade({pretty: true}))
+	return gulp.src("views/html/*.jade")
+		.pipe(jade({pretty: false}))
     	.pipe(gulp.dest("public/html"))
+		.pipe(plumber({ errorHandler: onError }))
+		.pipe(server.notify());
+});
+
+gulp.task("templates", function() {
+	return gulp.src("views/**/*.jade")
+		.pipe(jade({pretty: false}))
+    	.pipe(gulp.dest("public"))
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(server.notify());
 });

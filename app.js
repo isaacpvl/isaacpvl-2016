@@ -13,6 +13,7 @@ var huddlepass = require("./routes/huddlepass");
 var socialcrunch = require("./routes/socialcrunch");
 var lifeis = require("./routes/lifeis");
 var overdog = require("./routes/overdog");
+var recent = require("./routes/recent");
 var weirdshit = require("./routes/weirdshit");
 var users = require("./routes/users");
 
@@ -40,6 +41,7 @@ app.get("/huddlepass", huddlepass);
 app.get("/socialcrunch", socialcrunch);
 app.get("/lifeis", lifeis);
 app.get("/overdog", overdog);
+app.get("/recent", recent);
 app.get("/weirdshit", weirdshit);
 app.use("/users", users);
 

@@ -89,10 +89,15 @@ i { font-style: italic; }
 strong { font-weight: 600; }
 em {
 	font-style: italic;
-	letter-spacing: -0.02em;
 }
 .strikethru {
 	text-decoration: line-through;
+}
+.sidenote {
+	font-size: 18px;
+	font-style: italic;
+	letter-spacing: -0.02em;
+	opacity: 0.6;
 }
 
 .caps {

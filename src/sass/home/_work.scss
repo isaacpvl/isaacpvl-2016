@@ -56,7 +56,7 @@ section.work {
 	}
 	.info {
 		width: 34%;
-		@include leader(6);
+		@include leader(5.5);
 		h1 {
 			margin-left: -2px;
 			@include lineh(5);
@@ -68,7 +68,7 @@ section.work {
 		}
 		p {
 			@include leader(1);
-			@include trailer(3);
+			@include trailer(3.5);
 			@include lineh(3.5);
 			font-size: 22px;
 		}
@@ -92,6 +92,7 @@ section.work {
 				white-space: nowrap;
 				em {
 					font-size: 16px;
+					letter-spacing: -0.02em;
 					margin-right: 4px;
 					opacity: 0.6;
 				}
@@ -113,7 +114,7 @@ section.work {
 .project.offset {
 	@include padding-trailer(4);
 	.info {
-		@include leader(7);
+		@include leader(6.5);
 	}
 }
 
@@ -179,7 +180,7 @@ section.work {
 	}
 	.project.offset {
 		.info {
-			@include leader(4);
+			@include leader(3);
 		}
 	}
 }

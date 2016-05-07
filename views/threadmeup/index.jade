@@ -1,0 +1,193 @@
+extends ../html/layout-study
+
+block page
+	body.study.tmu
+		a#home
+		nav
+			ul
+				li#nava.nava
+					a.initials.caps(href="#home")
+						span P
+						div
+						span V
+						div
+						span L
+					a.lastname.caps
+						div
+						span A
+						span A
+						div
+						span O
+						div
+						span A
+					h6 Isaac Paavola's creative
+					h6 and design adventures!
+				li.navb.caps.disabled
+					a
+						span &#8249;
+						| Last thingy
+				li.navc.caps
+					a.nextstudy(data-nextstudy="coolhouse")
+						| Next thingy
+						span &#8250;
+
+		header
+			.wrap
+				.logo
+					span#logo(data-speed="5.55")
+						img.fadeindownb(src="/images/threadmeup/logo.png")
+				.title
+					span#title(data-speed="2.85")
+						h1.fadeinup Making it fun and engaging to design what you wear.
+		.push
+			div
+
+		section.work.bgfade
+			.arrowb
+			.head
+				span.fadeinleft
+				h5.caps.fadeinup Overview
+				span.fadeinright
+			.wrap.hidden
+				.overview
+					.detail.two-col
+						p This startup provides a platform to design and order pretty much anything you wear, as well as sell your designs to others, crowdfunding campaign style. With things like teespring already growing at the time, <em>our approach was a fantastic brand and infinitely more fun product.</em>
+						p By pretty much everything, I mean I did the entire brand, app architecture, UI/visual design, and even built the front-end. It was the most unicorn I'll want to be ever again. I came on at the very beginning, and phased myself out after we first launched the full product.
+					.context
+						div
+							h6.caps Role:
+							p pretty much everything
+						div
+							h6.caps When:
+							p early 2014
+						div
+							h6.caps With:
+							p just me, freelancing <em> (full-time tho)</em>
+					.live
+						a.button(href="http://isaacpvl.com/threadmeup/full", target="_blank") Visit the (front-end only) site
+						p
+							<strong>Note:</strong> this links to the front-end I built (launched March 2014)
+							span since the current threadmeup.com has changed, I host this myself so you can see the product I made, even without the back-end.
+				.itemhead
+					h2 The 'Designer'
+						span
+				.visual.full
+					.browser.large
+						.top
+							ul
+								li
+								li
+								li
+							span threadmeup.com/designer
+						img(src="/images/threadmeup/tmu-designer.gif")
+				.detail
+					p The 'Designer' is really the centerpiece of the entire platform, and definitely the most challenging and fun from a design perspective. I looked at the competition and felt underwhelmed, so the layout, flow, and almost all the interactions and features of the designer are completely original (and ended up testing quite nicely btw.) I wanted to do the in-browser designer better than anyone else had before.
+				.visual.two-col
+					.shot
+						img(src="/images/threadmeup/tmu-designer-objectui.gif")
+					.shot
+						img(src="/images/threadmeup/tmu-designer-colorpicker.gif")
+				.detail
+					p I actually built the front-end for the various custom interactions within the designer, and in the process of doing so made sure the entire experience had a playful aspect of motion throughout. All the details feeling not just pleasant, but more importantly deliberate, drove users' overall perception of ThreadMeUp as the place to go for custom apparel.
+				.itemhead
+					h2 Movements
+						span
+				.visual.full
+					.browser.large
+						.top
+							ul
+								li
+								li
+								li
+							span threadmeup.com/movements/timeless-responsibility
+						img(src="/images/threadmeup/tmu-movements.gif")
+				.detail
+					p The other big part of the platform is the crowdfunding aspect, which manifests as a marketplace to order designs people have created campaigns (called movements) out of. The main goal here is obviously getting people to want to order these, so the display of the designs and the process of ordering had to be extremely appealing throughout.
+				.visual.single
+					.shot
+						img(src="/images/threadmeup/tmu-movements-modules.gif")
+				.detail
+					p Even the marketplace has some delightful little interactions that bring in that playful aspect of motion we talked about, but to get to the point where there's anything to order in the first place, I had to get users through the complicated, feature-packed process of creating a movement.
+				.visual.single
+					.shot
+						img(src="/images/threadmeup/tmu-create-movement.gif")
+				.itemhead.small
+					h2 Responsive for mobile
+						span
+				.visual.multiphone
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						img.header(src="/images/threadmeup/tmu-mobile-header.png")
+						.frame.scroll
+							img(src="/images/threadmeup/tmu-mobile-movements.jpg")
+						.bottom
+							div
+								span
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						img.header(src="/images/threadmeup/tmu-mobile-header.png")
+						.frame.scroll
+							img(src="/images/threadmeup/tmu-mobile-movement.jpg")
+						.bottom
+							div
+								span
+					.phone
+						.top
+							.camera
+								span
+							.speaker
+								span
+						img.header(src="/images/threadmeup/tmu-mobile-header.png")
+						.frame.scroll
+							img(src="/images/threadmeup/tmu-mobile-checkout.jpg")
+						.bottom
+							div
+								span
+				.itemhead.small
+					h2 UI kit
+						span
+				.visual
+					.shot
+						img(src="/images/threadmeup/tmu-uikit.jpg")
+				.itemhead
+					h2 Brand
+						span
+				.visual.two-col
+					.shot
+						img(src="/images/threadmeup/tmu-brand-logo.jpg")
+					.shot
+						img(src="/images/threadmeup/tmu-brand-swag.jpg")
+					.shot.last
+						img(src="/images/threadmeup/tmu-brand-heartbeat.gif")
+				.detail
+					p I designed a unique logo for them, set type, colors, and all the usual art direction stuff... But the most important branding work was done within the product itself. I think that's a cool concept.
+
+				.footlink
+					p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/174662-ThreadMeUp", target="_blank">this project on dribbble</a>
+
+		section.next.coolhouse.nextstudy(data-nextstudy="coolhouse")
+			.head
+				h5.caps Next thingy
+			.peek
+				img(src="/images/coolhouse/logo.png")
+			.peekbg
+
+		.splash
+			.wrap
+				.fade
+					img(src="/images/threadmeup/splashfade.png")
+				.vid
+					video(preload="auto", autoplay="true", loop="loop", muted="muted", volume="0", poster="/threadmeup/images/splashbg.png")
+						source(src="/images/threadmeup/splash.webm", type="video/webm")
+						source(src="/images/threadmeup/splash.mp4", type="video/mp4")
+
+		.base
+		.base.study

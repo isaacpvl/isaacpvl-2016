@@ -277,10 +277,6 @@
     @keyframes headerin {
         0% {height: 100%; min-height: 100%; max-height: 100%;}
         100% {height: 89%; min-height: 588px; max-height: 828px;}}
-    @mixin headerin {
-        -webkit-animation-name: headerin;
-        animation-name: headerin;
-    }
 }
 @media screen and (max-width: 640px) {
     @-webkit-keyframes headerin {
@@ -289,10 +285,6 @@
     @keyframes headerin {
         0% {height: 100%; min-height: 100%; max-height: 100%;}
         100% {height: 94%; min-height: 396px; max-height: 480px;}}
-    @mixin headerin {
-        -webkit-animation-name: headerin;
-        animation-name: headerin;
-    }
 }
 
 @-webkit-keyframes sheaderin {
@@ -312,10 +304,6 @@
     @keyframes sheaderin {
         0% {height: 0; min-height: 0; max-height: 0;}
         100% {height: 100%; min-height: 420px; max-height: 540px;}}
-    @mixin sheaderin {
-        -webkit-animation-name: sheaderin;
-        animation-name: sheaderin;
-    }
 }
 
 @-webkit-keyframes navain {
@@ -335,10 +323,6 @@
     @keyframes navain {
         0% {width: 0;}
         100% {width: 48px;}}
-    @mixin navain {
-        -webkit-animation-name: navain;
-        animation-name: navain;
-    }
 }
 
 @-webkit-keyframes navout {
