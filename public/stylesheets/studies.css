@@ -2806,50 +2806,6 @@ body.study section.next.odog img {
   height: 125px;
   margin: 52px 0 0 0; }
 
-body.recent .base.study {
-  background: #00345e; }
-
-body.recent .arrowb {
-  width: 0;
-  height: 0;
-  border-left: 27px solid transparent;
-  border-right: 27px solid transparent;
-  border-top: 27px solid #00345e; }
-
-body.study section.next.recent:hover .peek {
-  background: #004073; }
-
-body.study section.next.recent:hover img {
-  -webkit-transform: translate(0, -24px);
-  transform: translate(0, -24px); }
-
-body.study section.next.recent img {
-  width: 384px;
-  height: 125px;
-  margin: 52px 0 0 0; }
-
-body.weirdshit .base.study {
-  background: #00345e; }
-
-body.weirdshit .arrowb {
-  width: 0;
-  height: 0;
-  border-left: 27px solid transparent;
-  border-right: 27px solid transparent;
-  border-top: 27px solid #00345e; }
-
-body.study section.next.weirdshit:hover .peek {
-  background: #004073; }
-
-body.study section.next.weirdshit:hover img {
-  -webkit-transform: translate(0, -24px);
-  transform: translate(0, -24px); }
-
-body.study section.next.weirdshit img {
-  width: 384px;
-  height: 125px;
-  margin: 52px 0 0 0; }
-
 body.study, header, nav, section {
   width: 100%;
   max-width: 1440px; }
