@@ -5,18 +5,6 @@ var logger = require("morgan");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 
-var routes = require("./routes/index");
-var threadmeup = require("./routes/threadmeup");
-var coolhouse = require("./routes/coolhouse");
-var dostoros = require("./routes/dostoros");
-var huddlepass = require("./routes/huddlepass");
-var socialcrunch = require("./routes/socialcrunch");
-var lifeis = require("./routes/lifeis");
-var overdog = require("./routes/overdog");
-var recent = require("./routes/recent");
-var weirdshit = require("./routes/weirdshit");
-var users = require("./routes/users");
-
 var app = express();
 
 // view engine setup
@@ -32,18 +20,6 @@ if (app.get("env") === "development") {
     app.use(require("connect-livereload")());
 }
 app.use(express.static(path.join(__dirname, "public")));
-
-app.use("/", routes);
-app.get("/threadmeup", threadmeup);
-app.get("/coolhouse", coolhouse);
-app.get("/dostoros", dostoros);
-app.get("/huddlepass", huddlepass);
-app.get("/socialcrunch", socialcrunch);
-app.get("/lifeis", lifeis);
-app.get("/overdog", overdog);
-app.get("/recent", recent);
-app.get("/weirdshit", weirdshit);
-app.use("/users", users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
