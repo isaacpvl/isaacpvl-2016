@@ -1,0 +1,265 @@
+extends ../html/layout-study
+
+block title
+	title Isaac Paavola | Recent Work
+
+block body
+	body.study.recent
+
+block header
+	nav
+		ul
+			li#nava.nava
+				a.initials.caps(href="#home")
+					span P
+					div
+					span V
+					div
+					span L
+				a.lastname.caps
+					div
+					span A
+					span A
+					div
+					span O
+					div
+					span A
+				h6 Isaac Paavola's creative
+				h6 and design adventures!
+			li.navb.caps.disabled
+				a
+					span &#8249;
+					| Last thingy
+			li.navc.caps
+				a.nextstudy(data-nextstudy="threadmeup")
+					| Next thingy
+					span &#8250;
+	header
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindownb(src="/images/overdog/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+	.push
+		div
+
+block overview
+	.head
+		span.fadeinleft
+		h5.caps.fadeinup Overview
+		span.fadeinright
+	.wrap.hidden
+		.overview
+			.detail.single
+				p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum.
+			.context
+				div
+					h6.caps My Role:
+					p pretty much everything
+				div
+					h6.caps When:
+					p erry' day!
+				div
+					h6.caps With:
+					p my imaginary friends
+
+block content
+	.itemhead
+		h2 Browser heading
+			span
+
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span whateverrr.com/ugh
+			video(preload="auto", autoplay="true", loop="true", poster="/images/huddlepass/hpass-huddles-poster.jpg")
+				source(src="/images/huddlepass/hpass-huddles.webm", type="video/webm")
+				source(src="/images/huddlepass/hpass-huddles.mp4", type="video/mp4")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, ex a iaculis facilisis, urna nibh mollis turpis, vel tristique est dolor vitae leo. Pellentesque ut pretium ipsum, eu commodo sem.
+
+
+	.visual.two-col
+		.shot
+			img(src="/images/threadmeup/tmu-designer-objectui.gif")
+		.shot
+			img(src="/images/threadmeup/tmu-designer-colorpicker.gif")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui nullam efficitur vestibulum.
+		a.button(href="http://isaacpvl.com/localfu", target="_blank") View the prototype
+
+
+	.itemhead.small
+		h2 Browser small heading
+			span
+
+	.visual
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span whateverrr.com/coolstory
+			img(src="/images/huddlepass/hpass-02.jpg")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, ex a iaculis facilisis, urna nibh mollis turpis.
+
+
+	.visual.single
+		.shot
+			img(src="/images/threadmeup/tmu-movements-modules.gif")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui nullam efficitur vestibulum.
+
+
+	.visual.single
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span whateverrr.com/go-away-dad
+			img(src="/images/threadmeup/tmu-create-movement.gif")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, ex a iaculis facilisis, urna nibh mollis turpis.
+
+
+	.itemhead.small
+		h2 Mobile small heading
+			span
+
+	.visual.multiphone
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/huddlepass/hpass-04h.png")
+			.frame.scroll
+				img(src="/images/huddlepass/hpass-04.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame.scroll.app
+				img(src="/images/huddlepass/hpass-05.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/huddlepass/hpass-04h.png")
+			.frame.scroll
+				img(src="/images/huddlepass/hpass-06.jpg")
+			.bottom
+				div
+					span
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend duis tristique ex.
+
+
+	.itemhead.small
+		h2 Visual small heading
+			span
+
+	.visual
+		.shot
+			img(src="/images/huddlepass/hpass-03.jpg")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, ex a iaculis facilisis, urna nibh mollis turpis.
+
+
+	.itemhead
+		h2 Tri-visual heading
+			span
+
+	.visual.two-col
+		.shot
+			img(src="/images/threadmeup/tmu-brand-logo.jpg")
+		.shot
+			img(src="/images/threadmeup/tmu-brand-swag.jpg")
+		.shot.last
+			img(src="/images/threadmeup/tmu-brand-heartbeat.gif")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend duis tristique ex.
+
+
+	.visual.two-col
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			video(preload="auto", autoplay="true", loop="true", poster="/images/dostoros/dostoros-view-guac-poster.jpg")
+				source(src="/images/dostoros/dostoros-view-guac.webm", type="video/webm")
+				source(src="/images/dostoros/dostoros-view-guac.mp4", type="video/mp4")
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			img(src="/images/dostoros/dostoros-view-chop.jpg")
+	.visual.two-col
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			img(src="/images/dostoros/dostoros-view-meats.jpg")
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			video(preload="auto", autoplay="true", loop="true", poster="/images/dostoros/dostoros-view-culture-poster.jpg")
+				source(src="/images/dostoros/dostoros-view-culture.webm", type="video/webm")
+				source(src="/images/dostoros/dostoros-view-culture.mp4", type="video/mp4")
+
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend duis tristique ex.
+
+
+	.footlink
+		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/173459-HuddlePass", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.tmu.nextstudy(data-nextstudy="threadmeup")
+		.head
+			h5.caps Next thingy
+		.peek
+			img(src="/images/threadmeup/logo.png")
+		.peekbg

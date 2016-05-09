@@ -11,7 +11,39 @@ html
 		script(src="//use.typekit.net/csr4glb.js")
 		<script>try{Typekit.load();}catch(e){}</script>
 
-	block page
+	body
+		a#home
+		block header
+		section.workwall
+			a#work
+			.arrowbar
+				.arrowb
+			block wall
+		section.work
+			.bg
+			block threadmeup
+			block coolhouse
+			block dostoros
+			block huddlepass
+			block socialcrunch
+			block lifeis
+			block overdog
+			block dribbble
+		section.about
+			a#about
+			.arrowc
+			block feelings
+		section.aboutme
+			block story
+		section.contact
+			a#contact
+			.arrowd
+			block contact
+		#dbugle-content.news.lockscroll
+			.paper
+				img(src="/images/home/newspaper.jpg")
+			.overlay
+		.base
 
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 	script(src="/javascripts/main.js")
