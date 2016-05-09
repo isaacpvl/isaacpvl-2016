@@ -9,8 +9,12 @@ body.study {
 		height: 85%;
 		color: $wht;
 		text-shadow: 1px 2px $blk-1;
-		.wrap { z-index: 1; }
-		.awrap { z-index: 0; }
+		.wrap {
+			z-index: 1;
+		}
+		.awrap {
+			z-index: 0;
+		}
 		.logo {
 			position: relative;
 			width: 100%;
@@ -77,10 +81,15 @@ body.study {
 	}
 }
 
+
 // Media queries
 @media screen and (max-height: 810px) {
 	body.study {
-		header { height: 89%; }
-		.push { height: 89%; }
+		header {
+			height: 89%;
+		}
+		.push {
+			height: 89%;
+		}
 	}
 }

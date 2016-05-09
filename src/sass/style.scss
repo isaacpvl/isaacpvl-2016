@@ -11,10 +11,18 @@ a, a img {
 	cursor: pointer;
 	color: $blk;
 	@include trans(.3s, 0s);
-	&:hover { color: $blk; @include trans(.15s, 0s); }
-	&:active { color: $blk; @include trans(.1s, 0s); }
+	&:hover {
+		color: $blk;
+		@include trans(.15s, 0s);
+	}
+	&:active {
+		color: $blk;
+		@include trans(.1s, 0s);
+	}
 }
-.hidden { display: none; }
+.hidden {
+	display: none;
+}
 
 
 // Layout styles
@@ -42,14 +50,38 @@ body {
 	font-size: $basefont;
 	line-height: $baseline;
 }
+
 body.out {
-	.base { background: $wht; @include trans(.375s, 0s); }
-	header { opacity: 0; @include trans(.375s, 0s); }
-	nav { @include navout; } nav.whitebg, nav.bluebg { background: none; box-shadow: none; }
-	.project, .head { opacity: 0; @include tmove(0, 900px); @include trans(.375s, 0s); }
-	section.about { opacity: 0; @include tmove(0, 100%); @include trans(.375, 0s); }
-	.arrowb { display: none; }
+	.base {
+		background: $wht;
+		@include trans(.375s, 0s);
+	}
+	header {
+		opacity: 0;
+		@include trans(.375s, 0s);
+	}
+	nav {
+		@include navout;
+	}
+	nav.whitebg, nav.bluebg {
+		background: none;
+		box-shadow: none;
+	}
+	.project, .head {
+		opacity: 0;
+		@include tmove(0, 900px);
+		@include trans(.375s, 0s);
+	}
+	section.about {
+		opacity: 0;
+		@include tmove(0, 100%);
+		@include trans(.375, 0s);
+	}
+	.arrowb {
+		display: none;
+	}
 }
+
 .rwrap {
 	position: relative;
 	width: 100%;
@@ -67,12 +99,15 @@ body.out {
 }
 .awrap {
 	position: absolute;
-	top: 0; left: 0;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 }
+
 section {
-	position: relative; z-index: 2;
+	position: relative;
+	z-index: 2;
 	width: 100%;
 	@include padding-x(5%);
 	overflow: hidden;
@@ -99,8 +134,11 @@ section {
 		}
 	}
 }
+
 .base {
-	position: fixed; top: 0; bottom: 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
 	width: 100%;
 	min-width: 320px;
 	max-width: 1440px;
@@ -109,20 +147,32 @@ section {
 	background: $red;
 	@include trans(.45s, 0s);
 }
+
 body.fold {
 	header {
 		.wrap {
 			opacity: .3;
 			@include tscale(.92);
 		}
-		.tagline:not(.face) { >span, >span:hover {
-			@include trans(.2s, 0s);
-			h1:nth-of-type(1) { @include tmove(-24px, -42px); }
-			h1:nth-of-type(2) { @include tmovescale(.96, -42px, -33px); }
-			h1:nth-of-type(3) { @include tmovescale(.92, -56px, -24px); }
-		} }
+		.tagline:not(.face) {
+			>span, >span:hover {
+				@include trans(.2s, 0s);
+				h1:nth-of-type(1) {
+					@include tmove(-24px, -42px);
+				}
+				h1:nth-of-type(2) {
+					@include tmovescale(.96, -42px, -33px);
+				}
+				h1:nth-of-type(3) {
+					@include tmovescale(.92, -56px, -24px);
+				}
+			}
+		}
 	}
-	.arrowb { @include arrow(27px, $red-d); @include trans(.25s); }
+	.arrowb {
+		@include arrow(27px, $red-d);
+		@include trans(.25s);
+	}
 	section.workwall {
 		.wall {
 			opacity: 1;
@@ -142,16 +192,36 @@ body.nowall {
 	header {
 		position: relative;
 		background: none;
-		.wrap { display: none; opacity: 0; @include treset; }
-		.wrapm { display: block; }
-		.tagline.face { > span { left: 5%; } }
-		.speech { display: none; }
-		.tagline:not(.face) { >span, >span:hover {
-			@include trans(.2s, 0s);
-			h1:nth-of-type(1) { @include treset; }
-			h1:nth-of-type(2) { @include treset; }
-			h1:nth-of-type(3) { @include treset; }
-		} }
+		.wrap {
+			display: none;
+			opacity: 0;
+			@include treset;
+		}
+		.wrapm {
+			display: block;
+		}
+		.tagline.face {
+			> span {
+				left: 5%;
+			}
+		}
+		.speech {
+			display: none;
+		}
+		.tagline:not(.face) {
+			>span, >span:hover {
+				@include trans(.2s, 0s);
+				h1:nth-of-type(1) {
+					@include treset;
+				}
+				h1:nth-of-type(2) {
+					@include treset;
+				}
+				h1:nth-of-type(3) {
+					@include treset;
+				}
+			}
+		}
 	}
 	.push {
 		position: absolute;
@@ -159,6 +229,7 @@ body.nowall {
 		z-index: -1;
 	}
 }
+
 
 //Media queries
 @media screen and (min-width: 1441px) {
@@ -202,8 +273,6 @@ body.nowall {
 
 
 // Animation styles
-// ------------------------------------------------------------
-
 .transit { @include treset; }
 .fadein { @include fadein; }
 .fadeinup { @include fadeinup; }
