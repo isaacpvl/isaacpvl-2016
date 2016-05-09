@@ -11,7 +11,7 @@ section.about {
 	h1 { text-shadow: 1px 2px $blk-1; }
 	h5, p { text-shadow: 1px 1px $blk-2; }
 	.head {
-		h5 { font-weight: 600; }
+		h5 { font-weight: 500; }
 		span { background: $wht; }
 	}
 	.pitch {
@@ -91,10 +91,10 @@ section.aboutme {
 		@include lineh(8);
 		text-align: center;
 		h5 {
-			@include trailer(4);
+			@include trailer(6);
 			font-weight: 600;
 			letter-spacing: 2px;
-			color: $blk-5;
+			color: $blk-6;
 		}
 		a {
 			opacity: .5;

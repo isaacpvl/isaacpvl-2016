@@ -147,31 +147,31 @@
 	}
 }
 
-@mixin faded-item {
+@mixin faded-itemr {
 	z-index: 8;
 	opacity: 0;
 	@include tmove(-8%, 0%);
 	@include trans(0.3s);
 	@include ttimingcb(.4, .7, .4, .9);
 }
-@mixin first-item {
+@mixin first-itemr {
 	z-index: 6;
 	opacity: 1;
 	@include tmove(0%, 0%);
 }
-@mixin second-item {
+@mixin second-itemr {
 	z-index: 4;
 	opacity: 1;
 	@include tmove(11.5%, 0%);
 	img { opacity: 0.5; }
 }
-@mixin third-item {
+@mixin third-itemr {
 	z-index: 2;
 	opacity: 1;
 	@include tmove(22%, 0%);
 	img { opacity: 0.25; }
 }
-@mixin prep-item {
+@mixin prep-itemr {
 	z-index: 2;
 	opacity: 0;
 	@include tmove(29%, 0%);
@@ -186,52 +186,130 @@
 		background: $light-d;
 	}
 	&.stepa {
-		.stacka { @include first-item; }
-		.stackb { @include second-item; }
-		.stackc { @include third-item; }
-		.stackd { @include faded-item; }
+		.stacka { @include first-itemr; }
+		.stackb { @include second-itemr; }
+		.stackc { @include third-itemr; }
+		.stackd { @include faded-itemr; }
 	}
 	&.prepb {
 		.stacka { z-index: 8; }
 		.stackb { z-index: 6; }
 		.stackc { z-index: 4; }
-		.stackd { @include prep-item; }
+		.stackd { @include prep-itemr; }
 	}
 	&.stepb {
-		.stacka { @include faded-item; }
-		.stackb { @include first-item; }
-		.stackc { @include second-item; }
-		.stackd { @include third-item; }
+		.stacka { @include faded-itemr; }
+		.stackb { @include first-itemr; }
+		.stackc { @include second-itemr; }
+		.stackd { @include third-itemr; }
 	}
 	&.prepc {
-		.stacka { @include prep-item; }
+		.stacka { @include prep-itemr; }
 		.stackb { z-index: 8; }
 		.stackc { z-index: 6; }
 		.stackd { z-index: 4; }
 	}
 	&.stepc {
-		.stacka { @include third-item; }
-		.stackb { @include faded-item; }
-		.stackc { @include first-item; }
-		.stackd { @include second-item; }
+		.stacka { @include third-itemr; }
+		.stackb { @include faded-itemr; }
+		.stackc { @include first-itemr; }
+		.stackd { @include second-itemr; }
 	}
 	&.prepd {
 		.stacka { z-index: 4; }
-		.stackb { @include prep-item; }
+		.stackb { @include prep-itemr; }
 		.stackc { z-index: 8; }
 		.stackd { z-index: 6; }
 	}
 	&.stepd {
-		.stacka { @include second-item; }
-		.stackb { @include third-item; }
-		.stackc { @include faded-item; }
-		.stackd { @include first-item; }
+		.stacka { @include second-itemr; }
+		.stackb { @include third-itemr; }
+		.stackc { @include faded-itemr; }
+		.stackd { @include first-itemr; }
 	}
 	&.prepa {
 		.stacka { z-index: 6; }
 		.stackb { z-index: 4; }
-		.stackc { @include prep-item; }
+		.stackc { @include prep-itemr; }
 		.stackd { z-index: 8; }
+	}
+}
+
+@mixin faded-iteml {
+	z-index: 8;
+	opacity: 0;
+	@include tmove(8%*0.85, 0%);
+	@include trans(0.3s);
+	@include ttimingcb(.4, .7, .4, .9);
+}
+@mixin first-iteml {
+	z-index: 6;
+	opacity: 1;
+	@include tmove(0%, 0%);
+}
+@mixin second-iteml {
+	z-index: 4;
+	opacity: 1;
+	@include tmove(-11.5%*0.85, 0%);
+	img { opacity: 0.5; }
+}
+@mixin third-iteml {
+	z-index: 2;
+	opacity: 1;
+	@include tmove(-22%*0.85, 0%);
+	img { opacity: 0.25; }
+}
+@mixin prep-iteml {
+	z-index: 2;
+	opacity: 0;
+	@include tmove(-29%*0.85, 0%);
+	@include trans(0s);
+	img { opacity: 0; }
+}
+
+.preview.pleft {
+	.multibrowser {
+		.browser.stack {
+			left: 5%;
+		}
+	}
+	.multibrowser.cycle {
+		&.stepa {
+			.stacka { @include first-iteml; }
+			.stackb { @include second-iteml; }
+			.stackc { @include third-iteml; }
+			.stackd { @include faded-iteml; }
+		}
+		&.prepb {
+			.stackd { @include prep-iteml; }
+		}
+		&.stepb {
+			.stacka { @include faded-iteml; }
+			.stackb { @include first-iteml; }
+			.stackc { @include second-iteml; }
+			.stackd { @include third-iteml; }
+		}
+		&.prepc {
+			.stacka { @include prep-iteml; }
+		}
+		&.stepc {
+			.stacka { @include third-iteml; }
+			.stackb { @include faded-iteml; }
+			.stackc { @include first-iteml; }
+			.stackd { @include second-iteml; }
+		}
+		&.prepd {
+			.stackb { @include prep-iteml; }
+		}
+		&.stepd {
+			.stacka { @include second-iteml; }
+			.stackb { @include third-iteml; }
+			.stackc { @include faded-iteml; }
+			.stackd { @include first-iteml; }
+		}
+		&.prepa {
+			.stackc { @include prep-iteml; }
+		}
 	}
 }
 

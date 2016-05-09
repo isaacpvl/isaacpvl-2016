@@ -1635,6 +1635,173 @@ nav.bluebg {
 .multibrowser.cycle.prepa .stackd {
   z-index: 8; }
 
+.preview.pleft .multibrowser .browser.stack {
+  left: 5%; }
+
+.preview.pleft .multibrowser.cycle.stepa .stacka {
+  z-index: 6;
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%); }
+
+.preview.pleft .multibrowser.cycle.stepa .stackb {
+  z-index: 4;
+  opacity: 1;
+  -webkit-transform: translate(-9.775%, 0%);
+  transform: translate(-9.775%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepa .stackb img {
+    opacity: 0.5; }
+
+.preview.pleft .multibrowser.cycle.stepa .stackc {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translate(-18.7%, 0%);
+  transform: translate(-18.7%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepa .stackc img {
+    opacity: 0.25; }
+
+.preview.pleft .multibrowser.cycle.stepa .stackd {
+  z-index: 8;
+  opacity: 0;
+  -webkit-transform: translate(6.8%, 0%);
+  transform: translate(6.8%, 0%);
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
+
+.preview.pleft .multibrowser.cycle.prepb .stackd {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: translate(-24.65%, 0%);
+  transform: translate(-24.65%, 0%);
+  transition-duration: 0s;
+  transition-delay: 0s; }
+  .preview.pleft .multibrowser.cycle.prepb .stackd img {
+    opacity: 0; }
+
+.preview.pleft .multibrowser.cycle.stepb .stacka {
+  z-index: 8;
+  opacity: 0;
+  -webkit-transform: translate(6.8%, 0%);
+  transform: translate(6.8%, 0%);
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
+
+.preview.pleft .multibrowser.cycle.stepb .stackb {
+  z-index: 6;
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%); }
+
+.preview.pleft .multibrowser.cycle.stepb .stackc {
+  z-index: 4;
+  opacity: 1;
+  -webkit-transform: translate(-9.775%, 0%);
+  transform: translate(-9.775%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepb .stackc img {
+    opacity: 0.5; }
+
+.preview.pleft .multibrowser.cycle.stepb .stackd {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translate(-18.7%, 0%);
+  transform: translate(-18.7%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepb .stackd img {
+    opacity: 0.25; }
+
+.preview.pleft .multibrowser.cycle.prepc .stacka {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: translate(-24.65%, 0%);
+  transform: translate(-24.65%, 0%);
+  transition-duration: 0s;
+  transition-delay: 0s; }
+  .preview.pleft .multibrowser.cycle.prepc .stacka img {
+    opacity: 0; }
+
+.preview.pleft .multibrowser.cycle.stepc .stacka {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translate(-18.7%, 0%);
+  transform: translate(-18.7%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepc .stacka img {
+    opacity: 0.25; }
+
+.preview.pleft .multibrowser.cycle.stepc .stackb {
+  z-index: 8;
+  opacity: 0;
+  -webkit-transform: translate(6.8%, 0%);
+  transform: translate(6.8%, 0%);
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
+
+.preview.pleft .multibrowser.cycle.stepc .stackc {
+  z-index: 6;
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%); }
+
+.preview.pleft .multibrowser.cycle.stepc .stackd {
+  z-index: 4;
+  opacity: 1;
+  -webkit-transform: translate(-9.775%, 0%);
+  transform: translate(-9.775%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepc .stackd img {
+    opacity: 0.5; }
+
+.preview.pleft .multibrowser.cycle.prepd .stackb {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: translate(-24.65%, 0%);
+  transform: translate(-24.65%, 0%);
+  transition-duration: 0s;
+  transition-delay: 0s; }
+  .preview.pleft .multibrowser.cycle.prepd .stackb img {
+    opacity: 0; }
+
+.preview.pleft .multibrowser.cycle.stepd .stacka {
+  z-index: 4;
+  opacity: 1;
+  -webkit-transform: translate(-9.775%, 0%);
+  transform: translate(-9.775%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepd .stacka img {
+    opacity: 0.5; }
+
+.preview.pleft .multibrowser.cycle.stepd .stackb {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translate(-18.7%, 0%);
+  transform: translate(-18.7%, 0%); }
+  .preview.pleft .multibrowser.cycle.stepd .stackb img {
+    opacity: 0.25; }
+
+.preview.pleft .multibrowser.cycle.stepd .stackc {
+  z-index: 8;
+  opacity: 0;
+  -webkit-transform: translate(6.8%, 0%);
+  transform: translate(6.8%, 0%);
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
+
+.preview.pleft .multibrowser.cycle.stepd .stackd {
+  z-index: 6;
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%); }
+
+.preview.pleft .multibrowser.cycle.prepa .stackc {
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: translate(-24.65%, 0%);
+  transform: translate(-24.65%, 0%);
+  transition-duration: 0s;
+  transition-delay: 0s; }
+  .preview.pleft .multibrowser.cycle.prepa .stackc img {
+    opacity: 0; }
+
 @media screen and (max-width: 640px) {
   .browser {
     border-radius: 3px 3px 2px 2px;
@@ -2433,8 +2600,8 @@ section.workwall {
       background-color: #fff !important; }
   section.workwall .fade {
     position: absolute;
-    top: 18%;
-    bottom: 10%;
+    top: 0%;
+    bottom: 9%;
     left: 0;
     right: 0;
     z-index: -1;
@@ -2484,7 +2651,7 @@ section.workwall.foldb .wall div {
 
 section.work {
   z-index: 3;
-  margin-top: -24%;
+  margin-top: -25%;
   padding-bottom: 216px; }
   section.work .bg {
     position: absolute;
@@ -2494,6 +2661,18 @@ section.work {
     left: 0;
     right: 0;
     background: #fff; }
+  section.work .head {
+    margin-top: 144px;
+    margin-bottom: 48px; }
+  section.work .divider {
+    position: relative;
+    width: 30%;
+    height: 1px;
+    margin-top: 96px;
+    margin-bottom: 144px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #999; }
 
 .project {
   position: relative;
@@ -2573,6 +2752,14 @@ section.work {
       min-width: 60%; }
     .project .info .button.livelink {
       display: none; }
+  .project .info.double h1 {
+    margin-bottom: 30px;
+    line-height: 54px;
+    font-size: 48px;
+    font-family: "utopia-std-subhead", serif;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    white-space: normal; }
 
 .project.offset {
   padding-bottom: 48px; }
@@ -2597,20 +2784,19 @@ section.work {
     width: 92.5%;
     margin-left: 7.5%; }
 
-.project.dribs .preview {
-  border: 1px solid #999; }
-  .project.dribs .preview img {
-    width: 100%;
-    display: none; }
-  .project.dribs .preview .shots {
+.project.dribs .preview img {
+  width: 100%;
+  display: none; }
+
+.project.dribs .preview .shots {
+  position: relative;
+  width: 100%; }
+  .project.dribs .preview .shots img {
     position: relative;
-    width: 100%; }
-    .project.dribs .preview .shots img {
-      position: relative;
-      display: inline-block;
-      float: left;
-      width: 50%;
-      max-width: 400px; }
+    display: inline-block;
+    float: left;
+    width: 50%;
+    max-width: 400px; }
 
 .project.dribs .info h1 span {
   font-size: 24px;
@@ -2781,7 +2967,7 @@ section.about {
   section.about h5, section.about p {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
   section.about .head h5 {
-    font-weight: 600; }
+    font-weight: 500; }
   section.about .head span {
     background: #fff; }
   section.about .pitch {
@@ -2863,10 +3049,10 @@ section.aboutme {
     line-height: 96px;
     text-align: center; }
     section.aboutme .cred h5 {
-      margin-bottom: 48px;
+      margin-bottom: 72px;
       font-weight: 600;
       letter-spacing: 2px;
-      color: rgba(0, 0, 0, 0.5); }
+      color: rgba(0, 0, 0, 0.6); }
     section.aboutme .cred a {
       opacity: .5; }
       section.aboutme .cred a:hover {
@@ -3312,10 +3498,10 @@ section {
     section .head span {
       position: relative;
       display: inline-block;
-      width: 18px;
+      width: 30px;
       height: 1px;
-      margin: 0 18px 7px 18px;
-      background: #000; }
+      margin: 0 24px 6px 24px;
+      background: #999; }
 
 .base {
   position: fixed;
