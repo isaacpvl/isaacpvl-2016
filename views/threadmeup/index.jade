@@ -1,4 +1,4 @@
-extends ../html/layout-study
+extends ../_layouts/works
 
 block title
 	title Isaac Paavola | ThreadMeUp
@@ -31,7 +31,7 @@ block header
 					span &#8249;
 					| Last thingy
 			li.navc.caps
-				a.nextstudy(data-nextstudy="coolhouse")
+				a.nextstudy(data-nextstudy="dostoros")
 					| Next thingy
 					span &#8250;
 	header
@@ -177,17 +177,17 @@ block content
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/174662-ThreadMeUp", target="_blank">this project on dribbble</a>
 
 block next
-	section.next.coolhouse.nextstudy(data-nextstudy="coolhouse")
+	section.next.dostoros.nextstudy(data-nextstudy="dostoros")
 		.head
 			h5.caps Next thingy
 		.peek
-			img(src="/images/coolhouse/logo.png")
+			img(src="/images/dostoros/logo.png")
 		.peekbg
 	.splash
 		.wrap
 			.fade
 				img(src="/images/threadmeup/splashfade.png")
 			.vid
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", volume="0", poster="/threadmeup/images/splashbg.png")
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", volume="0", poster="/images/threadmeup/splashbg.png")
 					source(src="/images/threadmeup/splash.webm", type="video/webm")
 					source(src="/images/threadmeup/splash.mp4", type="video/mp4")

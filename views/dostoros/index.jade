@@ -1,4 +1,4 @@
-extends ../html/layout-study
+extends ../_layouts/works
 
 block title
 	title Isaac Paavola | Dos Toros
@@ -27,11 +27,11 @@ block header
 				h6 Isaac Paavola's creative
 				h6 and design adventures!
 			li.navb.caps
-				a.nextstudy(data-nextstudy="coolhouse")
+				a.nextstudy(data-nextstudy="threadmeup")
 					span &#8249;
 					| Last thingy
 			li.navc.caps
-				a.nextstudy(data-nextstudy="huddlepass")
+				a.nextstudy(data-nextstudy="coolhouse")
 					| Next thingy
 					span &#8250;
 	header
@@ -196,9 +196,9 @@ block content
 		a.button(href="http://dostoros.com", target="_blank") Visit the live site
 
 block next
-	section.next.hpass.nextstudy(data-nextstudy="huddlepass")
+	section.next.coolhouse.nextstudy(data-nextstudy="coolhouse")
 		.head
 			h5.caps Next thingy
 		.peek
-			img(src="/images/huddlepass/logo.png")
+			img(src="/images/coolhouse/logo.png")
 		.peekbg

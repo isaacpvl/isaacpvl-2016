@@ -1,4 +1,4 @@
-extends html/layout
+extends _layouts/home
 
 block title
 	title Isaac Paavola
@@ -239,6 +239,39 @@ block huddlepass
 			p Nulla pharetra sagittis metus quisque luctus ipsum turpis, nec placerat sapien sodales vel, phasellus ac quam tempus luctor id.
 			a.button.studylink(data-pathname="huddlepass") Button text
 
+block socialcrunch
+	.project.offset
+		.shield
+			img(src="/images/socialcrunch/socialcrunch.jpg")
+		a.studylink(data-pathname="socialcrunch")
+			.preview.pleft
+				.phone.right
+					.top
+						.camera
+							span
+						.speaker
+							span
+					img(src="/images/socialcrunch/socialcrunchb.jpg")
+					.bottom
+						div
+							span
+				.browser.cond
+					.top
+						ul
+							li
+							li
+							li
+						span socialcrunch.com
+					img(src="/images/socialcrunch/socialcrunch.jpg")
+		.info.iright
+			h1 SocialCrunch
+			.role
+				h6.caps Role:
+				div
+					span aliquam eget lectus
+			p Nulla pharetra sagittis metus quisque luctus ipsum turpis, nec placerat sapien sodales vel, phasellus ac quam tempus luctor id.
+			a.button.studylink(data-pathname="socialcrunch") Button text
+
 block recent
 	.head
 		span
@@ -310,7 +343,7 @@ block past
 								li
 								li
 							span gennutrition.com
-						img(src="/images/past/gennutrition.jpg")
+						img(src="/images/gennutrition/gennutrition.jpg")
 					.browser.stack.stackb
 						.top
 							ul
@@ -326,7 +359,7 @@ block past
 								li
 								li
 							span 2old2play.com
-						img(src="/images/past/2old2playb.jpg")
+						img(src="/images/2old2play/2old2play.jpg")
 					.browser.stack.stackd
 						.top
 							ul
@@ -363,7 +396,7 @@ block dribbble
 			p Sed convallis mollis eros vel sagittis neque tristique ut, phasellus libero arcu imperdiet ut purus vitae.
 			a.button(href="http://dribbble.com/isaacpvl", target="_blank") Button text
 
-block about
+block feelings
 	.head
 		span
 		h5.caps My feelings
@@ -374,7 +407,7 @@ block about
 		p Scelerisque blandit mollis. Est nulla esse sit at neque. Nunc deserunt curabitur proin ut dolor. Feugiat nonummy nulla. Ac sed ante augue nunc placerat. Facilisis sit a mi etiam sed. Ultrices semper quam. Placerat placerat proident mi massa ac dui fermentum vitae eleifend at nec quis.
 	.bfade
 
-block aboutme
+block story
 	.bio
 		h1 Etiam mattis lacus est sit amet. <strong>Ut aliquam arcu fermentum.</strong>
 		p Mauris posuere tempus venenatis placerat vehicula sodales ut cras. Odio lacinia et. Tellus sapien tristique. Sapien orci vivamus nam ultrices lectus. Eu erat ut. Ullamcorper vehicula aliquam adipiscing pede nulla tellus odio aenean pede ac neque. Vitae dictumst lectus. Arcu quam sit commodo odio dolor.

@@ -19,7 +19,7 @@ var onError = function(err) {
 };
 
 gulp.task("sass", function() {
-	return gulp.src("src/sass/*.scss")
+	return gulp.src("src/_styles/*.scss")
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(sass({
 			style: "expanded",
@@ -29,24 +29,16 @@ gulp.task("sass", function() {
 			browsers: ["last 2 versions"],
 			cascade: true
 		}))
-		.pipe(gulp.dest("public/stylesheets"))
+		.pipe(gulp.dest("public/_styles"))
 		.pipe(server.notify());
 });
 
 gulp.task("lint", function() {
-	return gulp.src("src/javascripts/*.js")
+	return gulp.src("src/_scripts/*.js")
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(jshint())
 		.pipe(jshint.reporter("jshint-stylish"))
-		.pipe(gulp.dest("public/javascripts"))
-		.pipe(server.notify());
-});
-
-gulp.task("templates", function() {
-	return gulp.src("views/html/*.jade")
-		.pipe(jade({pretty: false}))
-    	.pipe(gulp.dest("public/html"))
-		.pipe(plumber({ errorHandler: onError }))
+		.pipe(gulp.dest("public/_scripts"))
 		.pipe(server.notify());
 });
 
@@ -60,8 +52,8 @@ gulp.task("templates", function() {
 
 gulp.task("server", function () {
 	server.run(["./bin/www"]);
-	gulp.watch("src/sass/**/*.scss", ["sass"]);
-	gulp.watch("src/javascripts/**/*.js",["lint"]);
+	gulp.watch("src/_styles/**/*.scss", ["sass"]);
+	gulp.watch("src/_scripts/**/*.js",["lint"]);
 	gulp.watch("views/**/*.jade", ["templates"]);
 });
 

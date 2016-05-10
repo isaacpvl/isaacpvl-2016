@@ -1,0 +1,195 @@
+@import "_all";
+
+
+// Fountain animations
+// ------------------------------------------------------------
+
+@-webkit-keyframes cardhover{
+	0% { }
+	50% { @include tfree(.985, -1deg, -3px, 7px); }
+	100% { }}
+@keyframes cardhover {
+	0% { }
+	50% { @include tfree(.985, -1deg, -3px, 7px); }
+	100% { }}
+@mixin cardhover {
+	-webkit-animation-name: cardhover;
+	animation-name: cardhover;
+}
+@-webkit-keyframes layershadowhover {
+	0% { @include tfree(.98, -3deg, 8px, 1px); opacity: .9; }
+	50% { @include tfree(1, -3.75deg, 13px, 10px); opacity: .6; }
+	100% { @include tfree(.98, -3deg, 8px, 1px); opacity: .9; }}
+@keyframes layershadowhover {
+	0% { }
+	50% { @include tfree(.98, -1.5deg, -3px, 7px); }
+	100% { }}
+@mixin layershadowhover {
+	-webkit-animation-name: layershadowhover;
+	animation-name: layershadowhover;
+}
+@-webkit-keyframes envelopehover{
+	0% { @include tfree(.98, -2deg, -3px, 7px); }
+	50% { @include tfree(1, -1deg, 0px, 0px); }
+	100% { @include tfree(.98, -2deg, -3px, 7px); }}
+@keyframes envelopehover {
+	0% { }
+	50% { @include tmove(-4px, 6px); }
+	100% { }}
+@mixin envelopehover {
+	-webkit-animation-name: envelopehover;
+	animation-name: envelopehover;
+}
+@-webkit-keyframes cardshadowhover {
+	0% { }
+	50% { @include tfree(.96, -1deg, 6px, -15px); opacity: .7; }
+	100% { }}
+@keyframes cardshadowhover {
+	0% { }
+	50% { @include tfree(.975, -1deg, -1px, -7px); opacity: .7; }
+	100% { }}
+@mixin cardshadowhover {
+	-webkit-animation-name: cardshadowhover;
+	animation-name: cardshadowhover;
+}
+@-webkit-keyframes envelopeshadowhover{
+	0% { @include tfree(.97, -2deg, -3px, -5px); opacity: .75; }
+	50% { @include tfree(1, 0deg, 0px, 0px); opacity: 1; }
+	100% { @include tfree(.97, -2deg, -3px, -5px); opacity: .75; }}
+@keyframes envelopeshadowhover {
+	0% { }
+	50% { @include tmove(-4px, 6px); }
+	100% { }}
+@mixin envelopeshadowhover {
+	-webkit-animation-name: envelopeshadowhover;
+	animation-name: envelopeshadowhover;
+}
+
+@-webkit-keyframes icard {
+	0% {opacity: 0; @include tfree(2.5, -60deg, -300px, 600px); }
+	100% {opacity: 1;}}
+@keyframes icard {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin icard {
+	-webkit-animation-name: icard;
+	animation-name: icard;
+}
+@-webkit-keyframes ocard {
+	0% {opacity: 1;}
+	100% {opacity: 0; @include tfree(2.5, -40deg, 300px, 1000px);}}
+@keyframes ocard {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin ocard {
+	-webkit-animation-name: ocard;
+	animation-name: ocard;
+}
+@-webkit-keyframes icardshadow {
+	0% {opacity: 0; @include tfree(4, -60deg, -300px, 600px); }
+	18% {opacity: 0;}
+	50% {@include tfree(1, 0, 0, 0);}
+	100% {opacity: 1;}}
+@keyframes icardshadow {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin icardshadow {
+	-webkit-animation-name: icardshadow;
+	animation-name: icardshadow;
+}
+@-webkit-keyframes ocardshadow {
+	0% {opacity: 1; }
+	50% {@include tfree(4, -40deg, 300px, 1000px);}
+	82% {opacity: 0;}
+	100% {opacity: 0; @include tfree(4, -40deg, 300px, 1000px);}}
+@keyframes ocardshadow {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin ocardshadow {
+	-webkit-animation-name: ocardshadow;
+	animation-name: ocardshadow;
+}
+@-webkit-keyframes ienvelope {
+	0% {opacity: 0; @include tfree(2.5, 60deg, 300px, 600px); }
+	100% {opacity: 1;}}
+@keyframes ienvelope {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin ienvelope {
+	-webkit-animation-name: ienvelope;
+	animation-name: ienvelope;
+}
+@-webkit-keyframes oenvelope {
+	0% {opacity: 1; }
+	100% {opacity: 0; @include tfree(2.5, 40deg, -300px, 1000px); }}
+@keyframes oenvelope {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin oenvelope {
+	-webkit-animation-name: oenvelope;
+	animation-name: oenvelope;
+}
+@-webkit-keyframes ienvelopeshadow {
+	0% {opacity: 0; @include tfree(4, 60deg, 300px, 600px); }
+	18% {opacity: 0;}
+	50% {@include tfree(1, 0, 0, 0);}
+	100% {opacity: 1;}}
+@keyframes ienvelopeshadow {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin ienvelopeshadow {
+	-webkit-animation-name: ienvelopeshadow;
+	animation-name: ienvelopeshadow;
+}
+@-webkit-keyframes oenvelopeshadow {
+	0% {opacity: 1;}
+	50% {@include tfree(4, 60deg, -300px, 600px);}
+	82% {opacity: 0;}
+	100% {opacity: 0; @include tfree(4, 40deg, -300px, 1000px);}}
+@keyframes oenvelopeshadow {
+	0% {opacity: 0;}
+	100% {opacity: 1; @include tfree(4, 40deg, 300px, 1000px);}}
+@mixin oenvelopeshadow {
+	-webkit-animation-name: oenvelopeshadow;
+	animation-name: oenvelopeshadow;
+}
+@-webkit-keyframes ilayershadow {
+	0% {opacity: 0; }
+	100% {opacity: 1;}}
+@keyframes ilayershadow {
+	0% {opacity: 0;}
+	100% {opacity: 1;}}
+@mixin ilayershadow {
+	-webkit-animation-name: ilayershadow;
+	animation-name: ilayershadow;
+}
+@-webkit-keyframes olayershadow {
+	0% {opacity: 1; }
+	100% {opacity: 0;}}
+@keyframes olayershadow {
+	0% {opacity: 1;}
+	100% {opacity: 0;}}
+@mixin olayershadow {
+	-webkit-animation-name: olayershadow;
+	animation-name: olayershadow;
+}
+@-webkit-keyframes fadeoutup {
+	0% {opacity: 1; -webkit-transform: translate(0);}
+	100% {opacity: 0; -webkit-transform: translate(0, -84px);}}
+@keyframes fadeoutup {
+	0% {opacity: 1; transform: translate(0); -ms-transform: translate(0);}
+	100% {opacity: 0; transform: translate(0, -84px); -ms-transform: translate(0, -84px);}}
+@mixin fadeoutup {
+	-webkit-animation-name: fadeoutup;
+	animation-name: fadeoutup;
+}
+@-webkit-keyframes pageup{
+	0% { @include tmove(0, 0); }
+	100% { @include tmove(0, -840px); }}
+@keyframes pageup {
+	0% { }
+	100% { @include tmove(0, -840px); }}
+@mixin pageup {
+	-webkit-animation-name: pageup;
+	animation-name: pageup;
+}

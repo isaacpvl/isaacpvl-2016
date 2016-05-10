@@ -1,0 +1,152 @@
+
+
+// Nav styles
+// ------------------------------------------------------------
+
+body.study {
+	nav {
+		ul {
+			@include animate(1s, .5s);
+		}
+		.navb, .navc {
+			span {
+				position: absolute;
+				line-height: 8px;
+				font-size: 30px;
+				font-weight: 300;
+			}
+		}
+		.navb {
+			margin: 0 30px 0 24px;
+			span {
+				left: -24px;
+			}
+		}
+		.navc {
+			margin: 0 24px 0 30px;
+			span {
+				right: -24px;
+			}
+		}
+		li {
+			margin: 0;
+			a {
+				color: $wht;
+			}
+			&:nth-of-type(2) {
+				@include animate(.5s, .2s);
+			}
+			&:nth-of-type(3) {
+				@include animate(.5s, .2s);
+			}
+		}
+		li.disabled {
+			a {
+				color: $wht-5;
+			}
+		}
+		.navb, .navc, .navd {
+			span:last-of-type {
+				display: inline-block;
+			}
+		}
+	}
+	nav.sticky {
+		a {
+			color: $blk-6;
+			&:hover {
+				color: $blk;
+			}
+		}
+		li.nava {
+			// @include innershadow(0px, $wht-0);
+			&:hover, &.hover {
+				.caps {
+					color: $red;
+				}
+				// @include innershadow(-3px, $red);
+			}
+			.caps {
+				color: $red;
+			}
+		}
+		li {
+			a {
+				color: $blk-6;
+			}
+			&:hover {
+				// @include innershadow(-3px, $blk-6);
+			}
+		}
+		li.disabled {
+			a {
+				color: $blk-4;
+			}
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+	nav.dark {
+		li.nava {
+			// @include innershadow(-4px, $red);
+			&:hover, &.hover {
+				.caps {
+					color: $red;
+				}
+				// @include innershadow(-4px, $red);
+			}
+			.caps {
+				color: $red;
+			}
+			h6 {
+				color: $red;
+			}
+		}
+		li {
+			&:hover {
+				// @include innershadow(-3px, $red);
+			}
+		}
+		a {
+			color: $blk-6;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	nav.dark.sticky {
+		li.nava {
+			// @include innershadow(0px, $wht-0);
+			&:hover, &.hover {
+				// @include innershadow(-3px, $red);
+			}
+		}
+	}
+	.arrowb {
+		@include animatereset(.3s, .8s);
+	}
+}
+
+
+// Media queries
+@media screen and (max-height: 810px) {
+	body.study {
+		header {
+			height: 89%;
+		}
+		.push {
+			height: 89%;
+		}
+	}
+}
+@media screen and (max-width: 1023px) {
+	body.study {
+		header {
+			z-index: 2;
+		}
+		.push {
+			display: none;
+		}
+	}
+}

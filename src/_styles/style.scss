@@ -1,0 +1,284 @@
+@import "settings/_all";
+@import "components/_all";
+@import "home/_all";
+
+
+// Base styles
+// ------------------------------------------------------------
+
+a, a img {
+	text-decoration: none;
+	cursor: pointer;
+	color: $blk;
+	@include trans(.3s);
+	&:hover {
+		color: $blk;
+		@include trans(.15s);
+	}
+	&:active {
+		color: $blk;
+		@include trans(.1s);
+	}
+}
+.hidden {
+	display: none;
+}
+
+
+// Layout styles
+// ------------------------------------------------------------
+
+html {
+	height: 100%;
+	font-size: 100%;
+	background: $lgt-d;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialised;
+	-ms-font-smoothing: antialised;
+	-o-font-smoothing: antialised;
+	font-smoothing: antialiased;
+}
+body {
+	position: relative;
+	width: 100%;
+	min-width: 320px;
+	max-width: 1440px;
+	height: 100%;
+	margin: auto;
+	color: $blk;
+	font-family: $serif;
+	font-size: $basefont;
+	line-height: $baseline;
+}
+
+body.out {
+	.base {
+		background: $wht;
+		@include trans(.375s);
+	}
+	header {
+		opacity: 0;
+		@include trans(.375s);
+	}
+	nav {
+		@include navout;
+	}
+	nav.whitebg, nav.bluebg {
+		background: none;
+		box-shadow: none;
+	}
+	.project, .head {
+		opacity: 0;
+		@include tmove(0, 900px);
+		@include trans(.375s);
+	}
+	section.about {
+		opacity: 0;
+		@include tmove(0, 100%);
+		@include trans(.375);
+	}
+	.arrowb {
+		display: none;
+	}
+}
+
+.rwrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.twrap {
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 100%;
+	.tcell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+.awrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	@include padding-x(5%);
+	overflow: hidden;
+	@include trans(.6s, .2s);
+	.head {
+		position: relative;
+		width: 100%;
+		@include leader(16);
+		@include trailer(6);
+		text-align: center;
+		@include trans(.4s);
+		@include ttiming(ease-in);
+		h5 {
+			display: inline-block;
+			letter-spacing: 0.075em;
+		}
+		span {
+			position: relative;
+			display: inline-block;
+			width: 30px;
+			height: 1px;
+			margin: 0 24px;
+			background: $drk-l;
+		}
+	}
+}
+
+.base {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	box-shadow: 18px 0 rgba($blk, 0.075), 1px 0 $blk-1, -18px 0 rgba($blk, 0.075), -1px 0 $blk-1;
+	background: $red;
+	@include trans(.45s);
+}
+
+body.fold {
+	header {
+		.wrap {
+			opacity: .3;
+			@include tscale(.92);
+		}
+		.tagline:not(.face) {
+			>span, >span:hover {
+				@include trans(.2s);
+				h1:nth-of-type(1) {
+					@include tmove(-24px, -42px);
+				}
+				h1:nth-of-type(2) {
+					@include tmovescale(.96, -42px, -33px);
+				}
+				h1:nth-of-type(3) {
+					@include tmovescale(.92, -56px, -24px);
+				}
+			}
+		}
+	}
+	.arrowb {
+		@include arrow(27px, $red-d);
+		@include trans(.25s);
+	}
+	section.workwall {
+		.wall {
+			opacity: 1;
+			@include trans(1s);
+		}
+	}
+	.base {
+		background: $red-d;
+	}
+}
+body.fold.nowall {
+	.arrowb {
+		@include arrow(24px, $red-d);
+	}
+}
+body.nowall {
+	header {
+		position: relative;
+		background: none;
+		.wrap {
+			display: none;
+			opacity: 0;
+			@include treset;
+		}
+		.wrapm {
+			display: block;
+		}
+		.tagline.face {
+			> span {
+				left: 5%;
+			}
+		}
+		.speech {
+			display: none;
+		}
+		.tagline:not(.face) {
+			>span, >span:hover {
+				@include trans(.2s);
+				h1:nth-of-type(1) {
+					@include treset;
+				}
+				h1:nth-of-type(2) {
+					@include treset;
+				}
+				h1:nth-of-type(3) {
+					@include treset;
+				}
+			}
+		}
+	}
+	.push {
+		position: absolute;
+		top: 0;
+		z-index: -1;
+	}
+}
+
+
+//Media queries
+@media screen and (min-width: 1441px) {
+	section {
+		@include padding-x(6%);
+	}
+}
+@media screen and (max-width: 1023px) {
+	.base {
+		z-index: -999;
+	}
+	section.work, section.about, section.aboutme, section.contact {
+		z-index: 999;
+	}
+}
+@media screen and (max-width: 960px) {
+	section {
+		@include padding-x(5%);
+		.head {
+			@include leader(12);
+			@include trailer(6);
+		}
+	}
+}
+@media screen and (max-width: 640px) {
+	section {
+		@include padding-x(2%);
+		.head {
+			@include leader(8);
+			@include trailer(0);
+			h5 {
+				font-size: 18px;
+			}
+			span {
+				width: 12px;
+				margin: 0 12px 5px 12px;
+			}
+		}
+	}
+}
+
+
+// Animation styles
+.transit { @include treset; }
+.fadein { @include fadein; }
+.fadeinup { @include fadeinup; }
+.fadeindown { @include fadeindown; }
+.fadeindownb { @include fadeindownb; }
+.fadeinleft { @include fadeinleft; }
+.fadeinright { @include fadeinright; }
+.headerin { @include headerin; }
+.bounce { @include bounce; }
