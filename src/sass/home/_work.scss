@@ -5,7 +5,7 @@
 
 section.work {
 	z-index: 3;
-	margin-top: -25%;
+	margin-top: -20%;
 	@include padding-trailer(18);
 	.bg {
 		position: absolute;
@@ -18,8 +18,7 @@ section.work {
 	}
 	.head {
 		@include leader(12);
-		@include trailer(4);
-		// font-weight: 600;
+		@include trailer(3);
 	}
 	.divider {
 		position: relative;
@@ -125,22 +124,33 @@ section.work {
 			display: none;
 		}
 	}
-	.info.double {
-		// @include leader(4);
-		// h1 {
-		// 	@include trailer(2.5);
-		// 	@include lineh(6);
-		// 	font-size: 60px;
-		// 	white-space: normal;
-		// }
+	.info.more {
 		h1 {
 			@include trailer(2.5);
-			@include lineh(4.5);
-			font-size: 48px;
+			@include lineh(5.5);
+			font-size: 50px;
 			font-family: $serif;
-			letter-spacing: -0.02em;
+			letter-spacing: -0.01em;
 			text-transform: none;
 			white-space: normal;
+		}
+		h6 {
+			float: left;
+			margin-left: 65%;
+			@include leader(-5);
+			@include lineh(2.75);
+			@include padding-x(12px);
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.03em;
+			@include stroke(2px, $red);
+			color: $red;
+			// background: $red;
+			// color: $wht;
+			// @include trotate(15deg);
+			span {
+				letter-spacing: -0.04em;
+			}
 		}
 	}
 }
@@ -189,13 +199,6 @@ section.work {
 				width: 50%;
 				max-width: 400px;
 			}
-			// img:nth-of-type(5), img:nth-of-type(6) {
-			// 	position: absolute;
-			// 	left: 100%;
-			// }
-			// img:nth-of-type(6) {
-			// 	@include tmove(0, 100%);
-			// }
 		}
 	}
 	.info {
@@ -227,7 +230,7 @@ section.work {
 }
 @media screen and (max-width: 1199px) {
 	section.work {
-		margin-top: -30%;
+		margin-top: -25%;
 		text-align: center;
 	}
 	.project.offset {
@@ -418,4 +421,3 @@ section.work {
 		}
 	}
 }
-

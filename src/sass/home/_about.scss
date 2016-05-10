@@ -88,7 +88,7 @@ section.aboutme {
 		margin: auto;
 		@include padding-leader(2);
 		@include padding-trailer(4);
-		@include lineh(8);
+		@include lineh(9);
 		text-align: center;
 		h5 {
 			@include trailer(6);

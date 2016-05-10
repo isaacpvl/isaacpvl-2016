@@ -616,7 +616,7 @@ nav {
   text-align: right;
   font-size: 16px;
   color: #fff;
-  box-shadow: inset 0 0px rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0px rgba(255, 255, 255, 0.925);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -884,7 +884,7 @@ nav {
 nav.sticky {
   z-index: 9992;
   height: 60px;
-  box-shadow: inset 0 60px rgba(255, 255, 255, 0.9); }
+  box-shadow: inset 0 60px rgba(255, 255, 255, 0.925); }
   nav.sticky a {
     height: 60px;
     padding-top: 28px;
@@ -1392,13 +1392,13 @@ nav.bluebg {
   .multibrowser .browser.stack {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2%;
     width: 92.5%; }
 
 .multibrowser.cycle .browser {
-  transition-duration: 1s;
+  transition-duration: 2s;
   transition-delay: 0s;
-  transition-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.1, 0.7, 0.3, 1);
   background: #c6cbcc; }
 
 .multibrowser.cycle.stepa .stacka {
@@ -1410,24 +1410,24 @@ nav.bluebg {
 .multibrowser.cycle.stepa .stackb {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(11.5%, 0%);
-  transform: translate(11.5%, 0%); }
+  -webkit-transform: translate(9.4875%, 0%);
+  transform: translate(9.4875%, 0%); }
   .multibrowser.cycle.stepa .stackb img {
     opacity: 0.5; }
 
 .multibrowser.cycle.stepa .stackc {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(22%, 0%);
-  transform: translate(22%, 0%); }
+  -webkit-transform: translate(18.15%, 0%);
+  transform: translate(18.15%, 0%); }
   .multibrowser.cycle.stepa .stackc img {
     opacity: 0.25; }
 
 .multibrowser.cycle.stepa .stackd {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(-8%, 0%);
-  transform: translate(-8%, 0%);
+  -webkit-transform: translate(-6.6%, 0%);
+  transform: translate(-6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1444,8 +1444,8 @@ nav.bluebg {
 .multibrowser.cycle.prepb .stackd {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(29%, 0%);
-  transform: translate(29%, 0%);
+  -webkit-transform: translate(23.925%, 0%);
+  transform: translate(23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .multibrowser.cycle.prepb .stackd img {
@@ -1454,8 +1454,8 @@ nav.bluebg {
 .multibrowser.cycle.stepb .stacka {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(-8%, 0%);
-  transform: translate(-8%, 0%);
+  -webkit-transform: translate(-6.6%, 0%);
+  transform: translate(-6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1469,24 +1469,24 @@ nav.bluebg {
 .multibrowser.cycle.stepb .stackc {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(11.5%, 0%);
-  transform: translate(11.5%, 0%); }
+  -webkit-transform: translate(9.4875%, 0%);
+  transform: translate(9.4875%, 0%); }
   .multibrowser.cycle.stepb .stackc img {
     opacity: 0.5; }
 
 .multibrowser.cycle.stepb .stackd {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(22%, 0%);
-  transform: translate(22%, 0%); }
+  -webkit-transform: translate(18.15%, 0%);
+  transform: translate(18.15%, 0%); }
   .multibrowser.cycle.stepb .stackd img {
     opacity: 0.25; }
 
 .multibrowser.cycle.prepc .stacka {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(29%, 0%);
-  transform: translate(29%, 0%);
+  -webkit-transform: translate(23.925%, 0%);
+  transform: translate(23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .multibrowser.cycle.prepc .stacka img {
@@ -1504,16 +1504,16 @@ nav.bluebg {
 .multibrowser.cycle.stepc .stacka {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(22%, 0%);
-  transform: translate(22%, 0%); }
+  -webkit-transform: translate(18.15%, 0%);
+  transform: translate(18.15%, 0%); }
   .multibrowser.cycle.stepc .stacka img {
     opacity: 0.25; }
 
 .multibrowser.cycle.stepc .stackb {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(-8%, 0%);
-  transform: translate(-8%, 0%);
+  -webkit-transform: translate(-6.6%, 0%);
+  transform: translate(-6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1527,8 +1527,8 @@ nav.bluebg {
 .multibrowser.cycle.stepc .stackd {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(11.5%, 0%);
-  transform: translate(11.5%, 0%); }
+  -webkit-transform: translate(9.4875%, 0%);
+  transform: translate(9.4875%, 0%); }
   .multibrowser.cycle.stepc .stackd img {
     opacity: 0.5; }
 
@@ -1538,8 +1538,8 @@ nav.bluebg {
 .multibrowser.cycle.prepd .stackb {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(29%, 0%);
-  transform: translate(29%, 0%);
+  -webkit-transform: translate(23.925%, 0%);
+  transform: translate(23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .multibrowser.cycle.prepd .stackb img {
@@ -1554,24 +1554,24 @@ nav.bluebg {
 .multibrowser.cycle.stepd .stacka {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(11.5%, 0%);
-  transform: translate(11.5%, 0%); }
+  -webkit-transform: translate(9.4875%, 0%);
+  transform: translate(9.4875%, 0%); }
   .multibrowser.cycle.stepd .stacka img {
     opacity: 0.5; }
 
 .multibrowser.cycle.stepd .stackb {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(22%, 0%);
-  transform: translate(22%, 0%); }
+  -webkit-transform: translate(18.15%, 0%);
+  transform: translate(18.15%, 0%); }
   .multibrowser.cycle.stepd .stackb img {
     opacity: 0.25; }
 
 .multibrowser.cycle.stepd .stackc {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(-8%, 0%);
-  transform: translate(-8%, 0%);
+  -webkit-transform: translate(-6.6%, 0%);
+  transform: translate(-6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1591,8 +1591,8 @@ nav.bluebg {
 .multibrowser.cycle.prepa .stackc {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(29%, 0%);
-  transform: translate(29%, 0%);
+  -webkit-transform: translate(23.925%, 0%);
+  transform: translate(23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .multibrowser.cycle.prepa .stackc img {
@@ -1613,24 +1613,24 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.stepa .stackb {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(-9.775%, 0%);
-  transform: translate(-9.775%, 0%); }
+  -webkit-transform: translate(-9.4875%, 0%);
+  transform: translate(-9.4875%, 0%); }
   .preview.pleft .multibrowser.cycle.stepa .stackb img {
     opacity: 0.5; }
 
 .preview.pleft .multibrowser.cycle.stepa .stackc {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(-18.7%, 0%);
-  transform: translate(-18.7%, 0%); }
+  -webkit-transform: translate(-18.15%, 0%);
+  transform: translate(-18.15%, 0%); }
   .preview.pleft .multibrowser.cycle.stepa .stackc img {
     opacity: 0.25; }
 
 .preview.pleft .multibrowser.cycle.stepa .stackd {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(6.8%, 0%);
-  transform: translate(6.8%, 0%);
+  -webkit-transform: translate(6.6%, 0%);
+  transform: translate(6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1638,8 +1638,8 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.prepb .stackd {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(-24.65%, 0%);
-  transform: translate(-24.65%, 0%);
+  -webkit-transform: translate(-23.925%, 0%);
+  transform: translate(-23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .preview.pleft .multibrowser.cycle.prepb .stackd img {
@@ -1648,8 +1648,8 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.stepb .stacka {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(6.8%, 0%);
-  transform: translate(6.8%, 0%);
+  -webkit-transform: translate(6.6%, 0%);
+  transform: translate(6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1663,24 +1663,24 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.stepb .stackc {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(-9.775%, 0%);
-  transform: translate(-9.775%, 0%); }
+  -webkit-transform: translate(-9.4875%, 0%);
+  transform: translate(-9.4875%, 0%); }
   .preview.pleft .multibrowser.cycle.stepb .stackc img {
     opacity: 0.5; }
 
 .preview.pleft .multibrowser.cycle.stepb .stackd {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(-18.7%, 0%);
-  transform: translate(-18.7%, 0%); }
+  -webkit-transform: translate(-18.15%, 0%);
+  transform: translate(-18.15%, 0%); }
   .preview.pleft .multibrowser.cycle.stepb .stackd img {
     opacity: 0.25; }
 
 .preview.pleft .multibrowser.cycle.prepc .stacka {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(-24.65%, 0%);
-  transform: translate(-24.65%, 0%);
+  -webkit-transform: translate(-23.925%, 0%);
+  transform: translate(-23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .preview.pleft .multibrowser.cycle.prepc .stacka img {
@@ -1689,16 +1689,16 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.stepc .stacka {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(-18.7%, 0%);
-  transform: translate(-18.7%, 0%); }
+  -webkit-transform: translate(-18.15%, 0%);
+  transform: translate(-18.15%, 0%); }
   .preview.pleft .multibrowser.cycle.stepc .stacka img {
     opacity: 0.25; }
 
 .preview.pleft .multibrowser.cycle.stepc .stackb {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(6.8%, 0%);
-  transform: translate(6.8%, 0%);
+  -webkit-transform: translate(6.6%, 0%);
+  transform: translate(6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1712,16 +1712,16 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.stepc .stackd {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(-9.775%, 0%);
-  transform: translate(-9.775%, 0%); }
+  -webkit-transform: translate(-9.4875%, 0%);
+  transform: translate(-9.4875%, 0%); }
   .preview.pleft .multibrowser.cycle.stepc .stackd img {
     opacity: 0.5; }
 
 .preview.pleft .multibrowser.cycle.prepd .stackb {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(-24.65%, 0%);
-  transform: translate(-24.65%, 0%);
+  -webkit-transform: translate(-23.925%, 0%);
+  transform: translate(-23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .preview.pleft .multibrowser.cycle.prepd .stackb img {
@@ -1730,24 +1730,24 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.stepd .stacka {
   z-index: 4;
   opacity: 1;
-  -webkit-transform: translate(-9.775%, 0%);
-  transform: translate(-9.775%, 0%); }
+  -webkit-transform: translate(-9.4875%, 0%);
+  transform: translate(-9.4875%, 0%); }
   .preview.pleft .multibrowser.cycle.stepd .stacka img {
     opacity: 0.5; }
 
 .preview.pleft .multibrowser.cycle.stepd .stackb {
   z-index: 2;
   opacity: 1;
-  -webkit-transform: translate(-18.7%, 0%);
-  transform: translate(-18.7%, 0%); }
+  -webkit-transform: translate(-18.15%, 0%);
+  transform: translate(-18.15%, 0%); }
   .preview.pleft .multibrowser.cycle.stepd .stackb img {
     opacity: 0.25; }
 
 .preview.pleft .multibrowser.cycle.stepd .stackc {
   z-index: 8;
   opacity: 0;
-  -webkit-transform: translate(6.8%, 0%);
-  transform: translate(6.8%, 0%);
+  -webkit-transform: translate(6.6%, 0%);
+  transform: translate(6.6%, 0%);
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.4, 0.7, 0.4, 0.9); }
@@ -1761,8 +1761,8 @@ nav.bluebg {
 .preview.pleft .multibrowser.cycle.prepa .stackc {
   z-index: 2;
   opacity: 0;
-  -webkit-transform: translate(-24.65%, 0%);
-  transform: translate(-24.65%, 0%);
+  -webkit-transform: translate(-23.925%, 0%);
+  transform: translate(-23.925%, 0%);
   transition-duration: 0s;
   transition-delay: 0s; }
   .preview.pleft .multibrowser.cycle.prepa .stackc img {
@@ -2169,8 +2169,8 @@ body.study nav.dark.sticky li.nava {
 body.study .arrowb {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
-  -webkit-animation-delay: 0.65s;
-  animation-delay: 0.65s;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
