@@ -1,0 +1,102 @@
+extends ../html/layout-study
+
+block title
+	title Isaac Paavola | 2old2play
+
+block body
+	body.study.totp
+
+block header
+	nav
+		ul
+			li#nava.nava
+				a.initials.caps(href="#home")
+					span P
+					div
+					span V
+					div
+					span L
+				a.lastname.caps
+					div
+					span A
+					span A
+					div
+					span O
+					div
+					span A
+				h6 Isaac Paavola's creative
+				h6 and design adventures!
+			li.navb.caps
+				a.nextstudy(data-nextstudy="gennutrition")
+					span &#8249;
+					| Last thingy
+			li.navc.caps
+				a.nextstudy(data-nextstudy="toggle")
+					| Next thingy
+					span &#8250;
+	header
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindownb(src="/images/2old2play/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+	.push
+		div
+
+block overview
+	.head
+		span.fadeinleft
+		h5.caps.fadeinup Overview
+		span.fadeinright
+	.wrap.hidden
+		.overview
+			.detail.single
+				p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum acra vitae eget sodales morbi non amet quisque fringilla tellus facilisi.
+			.context
+				div
+					h6.caps My Role:
+					p aliquam eget lectus
+				div
+					h6.caps When:
+					p early 2013
+				div
+					h6.caps With:
+					p AKTA, agency
+
+block content
+	.itemhead.small
+		h2 Homepage & community feed
+			span
+	.visual
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span 2old2play.com
+			img(src="/images/2old2play/2o2p-02.jpg")
+	.itemhead.small
+		h2 Alternate homepage
+			span
+	.visual
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span 2old2play.com
+			img(src="/images/2old2play/2o2p-01.jpg")
+	.footlink
+		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/173459-2old2play", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.toggle.nextstudy(data-nextstudy="toggle")
+		.head
+			h5.caps Next thingy
+		.peek
+			img(src="/images/overdog/logo.png")
+		.peekbg

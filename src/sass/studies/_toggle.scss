@@ -1,0 +1,24 @@
+
+
+// Toggle TV styles
+// ------------------------------------------------------------
+
+body.toggle {
+	.base.study { background: #00345e; }
+	.arrowb { @include arrow(27px, #00345e); }
+}
+
+// Next
+body.study {
+	section.next.toggle {
+		&:hover {
+			.peek { background: #004073; }
+			img { @include tmove(0, -24px); }
+		}
+		img {
+			width: 384px;
+			height: 125px;
+			margin: 52px 0 0 0;
+		}
+	}
+}

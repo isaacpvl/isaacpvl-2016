@@ -1,16 +1,16 @@
 
 
-// More work styles
+// OverDog styles
 // ------------------------------------------------------------
 
-body.more {
+body.gennut {
 	.base.study { background: #00345e; }
 	.arrowb { @include arrow(27px, #00345e); }
 }
 
 // Next
 body.study {
-	section.next.more {
+	section.next.gennut {
 		&:hover {
 			.peek { background: #004073; }
 			img { @include tmove(0, -24px); }

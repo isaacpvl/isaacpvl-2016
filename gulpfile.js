@@ -5,7 +5,6 @@ var gulp = require("gulp"),
 	jshint = require("gulp-jshint"),
 	autoprefixer = require("gulp-autoprefixer"),
 	plumber = require("gulp-plumber"),
-
 	app = require("./app");
 
 var onError = function(err) {
@@ -60,15 +59,11 @@ gulp.task("templates", function() {
 });
 
 gulp.task("server", function () {
-	// Start the server at the beginning of the task
 	server.run(["./bin/www"]);
-
 	gulp.watch("src/sass/**/*.scss", ["sass"]);
 	gulp.watch("src/javascripts/**/*.js",["lint"]);
 	gulp.watch("views/**/*.jade", ["templates"]);
-
 });
 
 gulp.task("default", ["sass", "lint", "server", "templates"], function() {
-
 });
