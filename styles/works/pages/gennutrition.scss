@@ -1,0 +1,27 @@
+
+
+// Generation Nutrition styles
+// ------------------------------------------------------------
+
+body.gennut {
+	.base.study {
+		background: #00345e;
+	}
+	.arrowb {
+		@include arrow(27px, #00345e);
+	}
+}
+
+// Next
+body.study {
+	section.next.gennut {
+		&:hover {
+			.peek {
+				background: #004073;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+	}
+}

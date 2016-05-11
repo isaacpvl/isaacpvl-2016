@@ -18,8 +18,8 @@ var onError = function(err) {
 	this.emit("end");
 };
 
-gulp.task("sass", function() {
-	return gulp.src("src/_styles/*.scss")
+gulp.task("styles", function() {
+	return gulp.src("styles/*.scss")
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(sass({
 			style: "expanded",
@@ -33,8 +33,8 @@ gulp.task("sass", function() {
 		.pipe(server.notify());
 });
 
-gulp.task("lint", function() {
-	return gulp.src("src/_scripts/*.js")
+gulp.task("scripts", function() {
+	return gulp.src("scripts/*.js")
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(jshint())
 		.pipe(jshint.reporter("jshint-stylish"))
@@ -42,8 +42,8 @@ gulp.task("lint", function() {
 		.pipe(server.notify());
 });
 
-gulp.task("templates", function() {
-	return gulp.src("views/**/*.jade")
+gulp.task("views", function() {
+	return gulp.src("pages/**/*.jade")
 		.pipe(jade({pretty: false}))
     	.pipe(gulp.dest("public"))
 		.pipe(plumber({ errorHandler: onError }))
@@ -52,10 +52,9 @@ gulp.task("templates", function() {
 
 gulp.task("server", function () {
 	server.run(["./bin/www"]);
-	gulp.watch("src/_styles/**/*.scss", ["sass"]);
-	gulp.watch("src/_scripts/**/*.js",["lint"]);
-	gulp.watch("views/**/*.jade", ["templates"]);
+	gulp.watch("styles/**/*.scss", ["styles"]);
+	gulp.watch("scripts/**/*.js", ["scripts"]);
+	gulp.watch("views/**/*.jade", ["views"]);
 });
 
-gulp.task("default", ["sass", "lint", "server", "templates"], function() {
-});
+gulp.task("default", ["styles", "scripts", "server", "views"], function() { });

@@ -1,0 +1,179 @@
+extends ../works
+
+block title
+	title Isaac Paavola | ThreadMeUp
+
+block body
+	body.study.tmu
+
+block header
+	nav
+		ul
+			include ../pieces/pvl
+			li.navb.caps.disabled
+				a
+					span &#8249;
+					| Last thingy
+			li.navc.caps
+				a.nextstudy(data-nextstudy="dostoros")
+					| Next thingy
+					span &#8250;
+	header
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindownb(src="/images/threadmeup/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+	.push
+		div
+
+block overview
+	.arrowbar
+		.arrowb
+	.head
+		span.fadeinleft
+		h5.caps.fadeinup Overview
+		span.fadeinright
+	.wrap.hidden
+		.overview
+			.detail.two-col
+				p Ullamcorper vel integer et condimentum vitae. Elit felis in. Commodo leo odio faucibus a nunc. Neque tempus luctus at tellus platea turpis etiam porta vel amet et. Dolor neque ipsum. Feugiat delectus lobortis vestibulum libero non vitae adipiscing tempor pede wisi nunc vitae.
+				p Id varius pellentesque. Aliquet velit ut blandit pulvinar urna. In accumsan ipsum. Cursus et morbi. Nulla commodo vitae. Tellus urna in dictumst fringilla id laoreet felis cras mattis cursus congue. Voluptates consequat elit dui pellentesque sapien gravida in.
+			.context
+				div
+					h6.caps Role:
+					p pretty much everything
+				div
+					h6.caps When:
+					p early 2014
+				div
+					h6.caps With:
+					p just me, freelancing <em>(full-time tho)</em>
+			.live
+				a.button(href="http://isaacpvl.com/threadmeup/full", target="_blank") Visit the (front-end only) site
+				p
+					<strong>Note:</strong> this links to the front-end I built (launched March 2014)
+					span since the current threadmeup.com has changed, I host this myself so you can see the product I made, even without the back-end.
+
+block content
+	.itemhead
+		h2 The 'Designer'
+			span
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span threadmeup.com/designer
+			img(src="/images/threadmeup/tmu-designer.gif")
+	.detail
+		p Turpis gravida posuere non duis nullam. Elit vel ligula. Est arcu luctus tincidunt vestibulum amet aliquet ligula sit elit vel varius. Et porttitor magna diam fringilla est taciti semper ultrices. Velit suscipit pellentesque. Duis et dolor. Ornare in con. Tristique mattis felis dui pellen enim, felis erat accum ultricies nam. Ac sed ante augue nunc placerat facilisis sit a mi etiam sed dolor dolor.
+	.visual.two-col
+		.shot
+			img(src="/images/threadmeup/tmu-designer-objectui.gif")
+		.shot
+			img(src="/images/threadmeup/tmu-designer-colorpicker.gif")
+	.detail
+		p Qui velit etiam. Nisl turpis purus. Magna leo in. Et nullam neque montes aute urna. Nulla scelerisque et. Euismod dolor ipsum suspendisse malesuada justo nunc tellus eros pede et dui fermentum vitae at maxime turpis sagittis. Ut vivamus proin. Euismod nunc vel in litora diam. Porttitor urna leo neque sem velit ut blandit pulvinar urna vitae.
+	.itemhead
+		h2 Movements
+			span
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span threadmeup.com/movements/timeless-responsibility
+			img(src="/images/threadmeup/tmu-movements.gif")
+	.detail
+		p Nisl turpis purus. Magna leo in. Et nullam neque montes aute urna. Nulla scelerisque et. Euismod dolor ipsum suspendisse malesuada justo nunc tellus eros pede et dui fermentum vitae at maxime turpis sagittis. Ut vivamus proin. Euismod nunc vel in litora diam. Porttitor urna leo neque sem velit ut blandit pulvinar urna vitae et neque euis.
+	.visual.single
+		.shot
+			img(src="/images/threadmeup/tmu-movements-modules.gif")
+	.detail
+		p Qui velit etiam. Nisl turpis purus. Magna leo in. Et nullam neque montes aute urna. Nulla scelerisque et. Euismod dolor ipsum suspendisse malesuada justo nunc tellus eros pede et dui fermentum vitae at maxime turpis sagittis. Ut vivamus proin.
+	.visual.single
+		.shot
+			img(src="/images/threadmeup/tmu-create-movement.gif")
+	.itemhead.small
+		h2 Responsive for mobile
+			span
+	.visual.multiphone
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/threadmeup/tmu-mobile-header.png")
+			.frame.scroll
+				img(src="/images/threadmeup/tmu-mobile-movements.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/threadmeup/tmu-mobile-header.png")
+			.frame.scroll
+				img(src="/images/threadmeup/tmu-mobile-movement.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/threadmeup/tmu-mobile-header.png")
+			.frame.scroll
+				img(src="/images/threadmeup/tmu-mobile-checkout.jpg")
+			.bottom
+				div
+					span
+	.itemhead.small
+		h2 UI kit
+			span
+	.visual
+		.shot
+			img(src="/images/threadmeup/tmu-uikit.jpg")
+	.itemhead
+		h2 Brand
+			span
+	.visual.two-col
+		.shot
+			img(src="/images/threadmeup/tmu-brand-logo.jpg")
+		.shot
+			img(src="/images/threadmeup/tmu-brand-swag.jpg")
+		.shot.last
+			img(src="/images/threadmeup/tmu-brand-heartbeat.gif")
+	.detail
+		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapie, insta tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. Inn semper non dolor vel eleifend duis tristique ex rhoncus.
+	.footlink
+		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/174662-ThreadMeUp", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.dostoros.nextstudy(data-nextstudy="dostoros")
+		.head
+			h5.caps Next thingy
+		.peek
+			img(src="/images/dostoros/logo.png")
+		.peekbg
+	.splash
+		.wrap
+			.fade
+				img(src="/images/threadmeup/splashfade.png")
+			.vid
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", volume="0", poster="/images/threadmeup/splashbg.png")
+					source(src="/images/threadmeup/splash.webm", type="video/webm")
+					source(src="/images/threadmeup/splash.mp4", type="video/mp4")

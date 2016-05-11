@@ -67,30 +67,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @-webkit-keyframes fadeindown {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, -60px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0); } }
-
-@keyframes fadeindown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(0, -60px);
-            transform: translate(0, -60px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0); } }
-
-@-webkit-keyframes fadeindownb {
-  0% {
-    opacity: 0;
     -webkit-transform: translate(0, -96px); }
   100% {
     opacity: 1;
     -webkit-transform: translate(0); } }
 
-@keyframes fadeindownb {
+@keyframes fadeindown {
   0% {
     opacity: 0;
     -webkit-transform: translate(0, -96px);
@@ -371,58 +353,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   100% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: scale(1); }
-  50% {
-    -webkit-transform: scale(0.9); }
-  70% {
-    -webkit-transform: scale(1.1); }
-  100% {
-    -webkit-transform: scale(1); } }
-
-@keyframes bounce {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); }
-  70% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-@-webkit-keyframes pop {
-  0% {
-    -webkit-transform: scale(1) rotate(8deg) translate(0, 0);
-    transform: scale(1) rotate(8deg) translate(0, 0); }
-  50% {
-    -webkit-transform: scale(0.9) rotate(6deg) translate(0, 0);
-    transform: scale(0.9) rotate(6deg) translate(0, 0); }
-  70% {
-    -webkit-transform: scale(1.1) rotate(10deg) translate(0, 0);
-    transform: scale(1.1) rotate(10deg) translate(0, 0); }
-  100% {
-    -webkit-transform: scale(1) rotate(8deg) translate(0, 0);
-    transform: scale(1) rotate(8deg) translate(0, 0); } }
-
-@keyframes pop {
-  0% {
-    -webkit-transform: scale(1) rotate(8deg) translate(0, 0);
-    transform: scale(1) rotate(8deg) translate(0, 0); }
-  50% {
-    -webkit-transform: scale(0.9) rotate(6deg) translate(0, 0);
-    transform: scale(0.9) rotate(6deg) translate(0, 0); }
-  70% {
-    -webkit-transform: scale(1.1) rotate(10deg) translate(0, 0);
-    transform: scale(1.1) rotate(10deg) translate(0, 0); }
-  100% {
-    -webkit-transform: scale(1) rotate(8deg) translate(0, 0);
-    transform: scale(1) rotate(8deg) translate(0, 0); } }
 
 @-webkit-keyframes lifebgin {
   0% {

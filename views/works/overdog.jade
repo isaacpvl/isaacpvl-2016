@@ -1,0 +1,140 @@
+extends ../works
+
+block title
+	title Isaac Paavola | OverDog
+
+block body
+	body.study.odog
+
+block header
+	nav
+		ul
+			include ../pieces/pvl
+			li.navb.caps
+				a.nextstudy(data-nextstudy="lifeis")
+					span &#8249;
+					| Last thingy
+			li.navc.caps
+				a.nextstudy(data-nextstudy="gennutrition")
+					| Next thingy
+					span &#8250;
+	header
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindownb(src="/images/overdog/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+	.push
+		div
+
+block overview
+	.arrowbar
+		.arrowb
+	.head
+		span.fadeinleft
+		h5.caps.fadeinup Overview
+		span.fadeinright
+	.wrap.hidden
+		.overview
+			.detail.single
+				p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum acra vitae eget sodales morbi non amet quisque fringilla tellus facilisi.
+			.context
+				div
+					h6.caps My Role:
+					p aliquam eget lectus
+				div
+					h6.caps When:
+					p early 2013
+				div
+					h6.caps With:
+					p AKTA, agency
+
+block content
+	.itemhead.small
+		h2 Athletes create challenges
+			span
+	.visual.multiphone
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/overdog/odog-record.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame.vid
+				video(preload="auto", autoplay="true", loop="true", poster="/images/overdog/odog-profile.jpg")
+					source(src="/images/overdog/odog-challenge.webm", type="video/webm")
+					source(src="/images/overdog/odog-challenge.mp4", type="video/mp4")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/overdog/odog-profile.jpg")
+			.bottom
+				div
+					span
+	.itemhead.small
+		h2 Fans accept challenges
+			span
+	.visual.multiphone
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/overdog/odog-challenges.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/overdog/odog-enter-challenge.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/overdog/odog-joined-challenge.jpg")
+			.bottom
+				div
+					span
+	.footlink
+		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/120502-OverDog-iPhone", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.gennut.nextstudy(data-nextstudy="gennutrition")
+		.head
+			h5.caps Next thingy
+		.peek
+			img(src="/images/overdog/logo.png")
+		.peekbg

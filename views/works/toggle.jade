@@ -1,0 +1,84 @@
+extends ../works
+
+block title
+	title Isaac Paavola | Toggle TV
+
+block body
+	body.study.toggle
+
+block header
+	nav
+		ul
+			include ../pieces/pvl
+			li.navb.caps
+				a.nextstudy(data-nextstudy="2old2play")
+					span &#8249;
+					| Last thingy
+			li.navc.caps
+				a.nextstudy(data-nextstudy="threadmeup")
+					| Next thingy
+					span &#8250;
+	header
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindownb(src="/images/huddlepass/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+	.push
+		div
+
+block overview
+	.arrowbar
+		.arrowb
+	.head
+		span.fadeinleft
+		h5.caps.fadeinup Overview
+		span.fadeinright
+	.wrap.hidden
+		.overview
+			.detail.single
+				p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum acra vitae eget sodales morbi non amet quisque fringilla tellus facilisi.
+			.context
+				div
+					h6.caps My Role:
+					p aliquam eget lectus
+				div
+					h6.caps When:
+					p early 2013
+				div
+					h6.caps With:
+					p AKTA, agency
+
+block content
+	.itemhead.small
+		h2 Huddle communities
+			span
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span huddlepass.com/isu/football
+			video(preload="auto", autoplay="true", loop="true", poster="/images/huddlepass/hpass-huddles-poster.jpg")
+				source(src="/images/huddlepass/hpass-huddles.webm", type="video/webm")
+				source(src="/images/huddlepass/hpass-huddles.mp4", type="video/mp4")
+	.itemhead.small
+		h2 UI kit & style guide
+			span
+	.visual
+		.shot
+			img(src="/images/huddlepass/hpass-03.jpg")
+	.footlink
+		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/195013-Toggle-TV", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.tmu.nextstudy(data-nextstudy="threadmeup")
+		.head
+			h5.caps Next thingy
+		.peek
+			img(src="/images/threadmeup/logo.png")
+		.peekbg
