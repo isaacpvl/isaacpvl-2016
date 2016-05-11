@@ -6,18 +6,21 @@ block title
 block body
 	body.study.tmu
 
-block header
+block nav
 	nav
 		ul
-			include ../pieces/pvl
+			li#nava.nava
+				include ../pieces/pvl
 			li.navb.caps.disabled
 				a
 					span &#8249;
-					| Last thingy
+					| Last Project
 			li.navc.caps
-				a.nextstudy(data-nextstudy="dostoros")
-					| Next thingy
+				a.navlink(data-pathname="dostoros")
+					| Next Project
 					span &#8250;
+
+block header
 	header
 		.wrap
 			.logo
@@ -25,7 +28,7 @@ block header
 					img.fadeindownb(src="/images/threadmeup/logo.png")
 			.title
 				span#title(data-speed="2.85")
-					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+					h1.fadeinup Making it fun and engaging to design what you wear.
 	.push
 		div
 
@@ -39,8 +42,8 @@ block overview
 	.wrap.hidden
 		.overview
 			.detail.two-col
-				p Ullamcorper vel integer et condimentum vitae. Elit felis in. Commodo leo odio faucibus a nunc. Neque tempus luctus at tellus platea turpis etiam porta vel amet et. Dolor neque ipsum. Feugiat delectus lobortis vestibulum libero non vitae adipiscing tempor pede wisi nunc vitae.
-				p Id varius pellentesque. Aliquet velit ut blandit pulvinar urna. In accumsan ipsum. Cursus et morbi. Nulla commodo vitae. Tellus urna in dictumst fringilla id laoreet felis cras mattis cursus congue. Voluptates consequat elit dui pellentesque sapien gravida in.
+				p This startup provides a platform to design and order pretty much anything you wear, as well as sell your designs to others, crowdfunding campaign style. With things like teespring already growing at the time, <em>our approach was a fantastic brand and infinitely more fun product.</em>
+				p By pretty much everything, I mean I did the entire brand, app architecture, UI/visual design, and even built the front-end. It was the most unicorn I'll want to be ever again. I came on at the very beginning, and phased myself out after we first launched the full product.
 			.context
 				div
 					h6.caps Role:
@@ -71,14 +74,14 @@ block content
 				span threadmeup.com/designer
 			img(src="/images/threadmeup/tmu-designer.gif")
 	.detail
-		p Turpis gravida posuere non duis nullam. Elit vel ligula. Est arcu luctus tincidunt vestibulum amet aliquet ligula sit elit vel varius. Et porttitor magna diam fringilla est taciti semper ultrices. Velit suscipit pellentesque. Duis et dolor. Ornare in con. Tristique mattis felis dui pellen enim, felis erat accum ultricies nam. Ac sed ante augue nunc placerat facilisis sit a mi etiam sed dolor dolor.
+		p The 'Designer' is really the centerpiece of the entire platform, and definitely the most challenging and fun from a design perspective. I looked at the competition and felt underwhelmed, so the layout, flow, and almost all the interactions and features of the designer are completely original (and ended up testing quite nicely btw.) I wanted to do the in-browser designer better than anyone else had before.
 	.visual.two-col
 		.shot
 			img(src="/images/threadmeup/tmu-designer-objectui.gif")
 		.shot
 			img(src="/images/threadmeup/tmu-designer-colorpicker.gif")
 	.detail
-		p Qui velit etiam. Nisl turpis purus. Magna leo in. Et nullam neque montes aute urna. Nulla scelerisque et. Euismod dolor ipsum suspendisse malesuada justo nunc tellus eros pede et dui fermentum vitae at maxime turpis sagittis. Ut vivamus proin. Euismod nunc vel in litora diam. Porttitor urna leo neque sem velit ut blandit pulvinar urna vitae.
+		p I actually built the front-end for the various custom interactions within the designer, and in the process of doing so made sure the entire experience had a playful aspect of motion throughout. All the details feeling not just pleasant, but more importantly deliberate, drove users' overall perception of ThreadMeUp as the place to go for custom apparel.
 	.itemhead
 		h2 Movements
 			span
@@ -92,12 +95,12 @@ block content
 				span threadmeup.com/movements/timeless-responsibility
 			img(src="/images/threadmeup/tmu-movements.gif")
 	.detail
-		p Nisl turpis purus. Magna leo in. Et nullam neque montes aute urna. Nulla scelerisque et. Euismod dolor ipsum suspendisse malesuada justo nunc tellus eros pede et dui fermentum vitae at maxime turpis sagittis. Ut vivamus proin. Euismod nunc vel in litora diam. Porttitor urna leo neque sem velit ut blandit pulvinar urna vitae et neque euis.
+		p The other big part of the platform is the crowdfunding aspect, which manifests as a marketplace to order designs people have created campaigns (called movements) out of. The main goal here is obviously getting people to want to order these, so the display of the designs and the process of ordering had to be extremely appealing throughout.
 	.visual.single
 		.shot
 			img(src="/images/threadmeup/tmu-movements-modules.gif")
 	.detail
-		p Qui velit etiam. Nisl turpis purus. Magna leo in. Et nullam neque montes aute urna. Nulla scelerisque et. Euismod dolor ipsum suspendisse malesuada justo nunc tellus eros pede et dui fermentum vitae at maxime turpis sagittis. Ut vivamus proin.
+		p Even the marketplace has some delightful little interactions that bring in that playful aspect of motion we talked about, but to get to the point where there's anything to order in the first place, I had to get users through the complicated, feature-packed process of creating a movement.
 	.visual.single
 		.shot
 			img(src="/images/threadmeup/tmu-create-movement.gif")
@@ -158,14 +161,14 @@ block content
 		.shot.last
 			img(src="/images/threadmeup/tmu-brand-heartbeat.gif")
 	.detail
-		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapie, insta tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. Inn semper non dolor vel eleifend duis tristique ex rhoncus.
+		p I designed a unique logo for them, set type, colors, and all the usual art direction stuff... But the most important branding work was done within the product itself. I think that's a cool concept.
 	.footlink
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/174662-ThreadMeUp", target="_blank">this project on dribbble</a>
 
 block next
-	section.next.dostoros.nextstudy(data-nextstudy="dostoros")
+	section.next.dostoros.navlink(data-pathname="dostoros")
 		.head
-			h5.caps Next thingy
+			h5.caps Next Project
 		.peek
 			img(src="/images/dostoros/logo.png")
 		.peekbg

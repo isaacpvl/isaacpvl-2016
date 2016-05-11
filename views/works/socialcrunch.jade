@@ -6,20 +6,22 @@ block title
 block body
 	body.study.scrunch
 
-block header
-	a#home
+block nav
 	.bar
 	nav.dark
 		ul
-			include ../pieces/pvl
+			li#nava.nava
+				include ../pieces/pvl
 			li.navb.caps
-				a.nextstudy(data-nextstudy="recent")
+				a.navlink(data-pathname="huddlepass")
 					span &#8249;
-					| Last thingy
+					| Last Project
 			li.navc.caps
-				a.nextstudy(data-nextstudy="lifeis")
-					| Next thingy
+				a.navlink(data-pathname="lifeis")
+					| Next Project
 					span &#8250;
+
+block header
 	header.dark
 		.wrap
 			.logo
@@ -27,7 +29,7 @@ block header
 					img.fadeindownb(src="/images/socialcrunch/logob.png")
 			.title
 				span#title(data-speed="2.85")
-					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
+					h1.fadeinup An addictive data game of question & comparison.
 	.push
 		div
 
@@ -41,11 +43,11 @@ block overview
 	.wrap.hidden
 		.overview
 			.detail
-				p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum acra vitae eget sodales morbi non amet quisque fringilla tellus facilisi.
+				p I made it easy for people to get addicted to giving this startup all kinds of data while they compare themselves to others.
 			.context
 				div
 					h6.caps My Role:
-					p aliquam eget lectus
+					p web/UI design
 				div
 					h6.caps When:
 					p summer 2013
@@ -121,9 +123,9 @@ block content
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/152381-SocialCrunch", target="_blank">this project on dribbble</a>
 
 block next
-	section.next.lifeis.nextstudy(data-nextstudy="lifeis")
+	section.next.lifeis.navlink(data-pathname="lifeis")
 		.head
-			h5.caps Next thingy
+			h5.caps Next Project
 		.peek
 			img(src="/images/lifeis/logo.png")
 		.peekbg

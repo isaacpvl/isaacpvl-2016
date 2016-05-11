@@ -1164,7 +1164,7 @@ jQuery(function() {
     });
 
 // links and transitions to other pages
-    $('section.work').on('mouseup', 'a.studylink', function(event) {
+    $('section.work').on('mouseup', '.navlink', function(event) {
       event.preventDefault();
       var studyPath = '/'+$(this).attr('data-pathname')+'/';
       if((event.which == 1)) {

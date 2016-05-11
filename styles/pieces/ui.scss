@@ -31,8 +31,9 @@
 	}
 }
 .button.disabled {
-	opacity: .5;
 	cursor: default;
+	font-weight: 500;
+	opacity: 0.3;
 	&:hover, &:focus, &:active {
 		color: $wht;
 		background: $blk;

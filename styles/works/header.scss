@@ -80,7 +80,15 @@ body.study {
 		}
 	}
 	header.more {
-
+		height: 80%;
+		.title {
+			h1 {
+				max-width: 720px;
+				@include lineh(8.5);
+				font-size: 66px;
+				font-weight: 600;
+			}
+		}
 	}
 }
 

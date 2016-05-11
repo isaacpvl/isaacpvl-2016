@@ -67,10 +67,38 @@ section.work {
 				max-width: 780px;
 			}
 		}
+		.shots {
+			position: relative;
+			width: 100%;
+			img {
+				position: relative;
+				display: inline-block;
+				float: left;
+				width: 50%;
+				max-width: 400px;
+			}
+		}
+		img.shot {
+			width: 100%;
+			max-width: 780px;
+		}
+		img.frame {
+			width: 100%;
+			@include border(1px, $drk-l);
+		}
+		img.cover {
+			width: 100%;
+			max-width: 780px;
+			display: none;
+		}
+	}
+	.preview.free {
+		max-width: 780px;
 	}
 	.info {
 		width: 34%;
 		@include leader(5.5);
+		text-align: left;
 		h1 {
 			margin-left: -2px;
 			@include lineh(5);
@@ -125,6 +153,7 @@ section.work {
 		}
 	}
 	.info.more {
+		@include leader(4.5);
 		h1 {
 			@include trailer(2.5);
 			@include lineh(5.5);
@@ -179,35 +208,6 @@ section.work {
 	}
 }
 
-.project.dribs {
-	.preview {
-		img {
-			width: 100%;
-			display: none;
-		}
-		.shots {
-			position: relative;
-			width: 100%;
-			img {
-				position: relative;
-				display: inline-block;
-				float: left;
-				width: 50%;
-				max-width: 400px;
-			}
-		}
-	}
-	.info {
-		h1 span {
-			font-size: 24px;
-			font-weight: 400;
-			font-family: $serif;
-			letter-spacing: 0;
-			text-transform: none;
-		}
-	}
-}
-
 
 // Media queries
 @media screen and (max-width: 1320px) {
@@ -216,6 +216,9 @@ section.work {
 			.button {
 				min-width: 65%;
 			}
+		}
+		.info.more {
+			@include leader(3);
 		}
 	}
 	.project.offset {
@@ -248,14 +251,30 @@ section.work {
 		.preview {
 			width: 100%; 
 			margin: auto;
+			.shots {
+				position: absolute;
+				img { opacity: 1; }
+			}
+			img.cover {
+				display: block;
+				width: 100%;
+				height: auto;
+				opacity: 0;
+			}
+		}
+		.preview.free {
+			float: none;
+			width: 100%;
+			@include trailer(4.5);
 		}
 		.info {
 			display: block;
 			width: 100%;
 			min-width: 290px;
 			max-width: 480px;
-			margin: auto;
+			@include margin-x(auto);
 			@include leader(5.5);
+			text-align: center;
 			p {
 				text-align: left;
 				@include leader(2);
@@ -279,16 +298,12 @@ section.work {
 			}
 		}
 		.info.more {
+			@include leader(5.5);
 			h1 {
-				// width: 150%;
-				// margin-left: -25%;
 				@include leader(-1.5);
 				@include trailer(1.5);
 				@include lineh(5);
 				font-size: 44px;
-				// br {
-				// 	display: none;
-				// }
 			}
 			h6 {
 				display: none;
@@ -309,23 +324,6 @@ section.work {
 		.browser.cond {
 			width: 92.5%;
 			margin-left: 0;
-		}
-	}
-	.project.dribs {
-		.preview {
-			float: none;
-			width: 100%;
-			@include trailer(4.5);
-			img {
-				display: block;
-				width: 100%;
-				height: auto;
-				opacity: 0;
-			}
-			.shots {
-				position: absolute;
-				img { opacity: 1; }
-			}
 		}
 	}
 	.phone {
@@ -398,6 +396,7 @@ section.work {
 			.button.livelink { display: inline-block; }
 		}
 		.info.more {
+			@include leader(2.5);
 			h1 {
 				@include leader(-0.5);
 				@include trailer(1);
@@ -409,11 +408,6 @@ section.work {
 	.project.dribs {
 		.preview {
 			@include trailer(0);
-		}
-		.info {
-			h1 span {
-				font-size: 16px;
-			}
 		}
 	}
 	.phone {

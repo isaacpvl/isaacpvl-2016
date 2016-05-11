@@ -9,14 +9,15 @@ block body
 block nav
 	nav
 		ul
-			include ../pieces/pvl
+			li#nava.nava
+				include ../pieces/pvl
 			li.navb.caps
-				a.nextstudy(data-nextstudy="overdog")
+				a.navlink(data-pathname="overdog")
 					span &#8249;
-					| Last thingy
+					| Last Project
 			li.navc.caps
-				a.nextstudy(data-nextstudy="2old2play")
-					| Next thingy
+				a.navlink(data-pathname="2old2play")
+					| Next Project
 					span &#8250;
 
 block header
@@ -24,7 +25,7 @@ block header
 		.wrap
 			.logo
 				span#logo(data-speed="5.55")
-					img.fadeindownb(src="/images/huddlepass/logo.png")
+					img.fadeindownb(src="/images/gennutrition/logo.png")
 			.title
 				span#title(data-speed="2.85")
 					h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
@@ -78,9 +79,9 @@ block content
 		p you can also check out <a class="texta" href="https://dribbble.com/shots/1501580-Generation-Nutrition-campaign-landing-page-WIP", target="_blank">this project on dribbble</a>
 
 block next
-	section.next.totp.nextstudy(data-nextstudy="2old2play")
+	section.next.totp.navlink(data-pathname="2old2play")
 		.head
-			h5.caps Next thingy
+			h5.caps Next Project
 		.peek
 			img(src="/images/2old2play/logo.png")
 		.peekbg

@@ -25,11 +25,15 @@ body.study {
 				opacity: 1;
 				@include tmove(0, -24px);
 			}
+			h1 {
+				@include tmove(0, -18px);
+				opacity: 1;
+			}
 		}
 		.head {
 			margin: 0;
 			z-index: 2;
-			@include trans(.4s, 0s);
+			@include trans(.4s);
 		}
 		h5 {
 			color: $wht;
@@ -46,7 +50,7 @@ body.study {
 			left: 0;
 			right: 0;
 			background: $red;
-			@include trans(.35s, 0s);
+			@include trans(.35s);
 		}
 		.peekbg {
 			position: absolute;
@@ -54,11 +58,16 @@ body.study {
 			bottom: 0;
 			left: 0;
 			right: 0;
-			@include trans(.35s, 0s);
+			@include trans(.35s);
 		}
 		img {
 			opacity: .3;
-			@include trans(.6s, 0s);
+			@include trans(.6s);
+		}
+		h1 {
+			@include leader(4.5);
+			opacity: 0.3;
+			@include trans(.6s);
 		}
 	}
 }

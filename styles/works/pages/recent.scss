@@ -19,9 +19,6 @@ body.study {
 			.peek {
 				background: #004073;
 			}
-			img {
-				@include tmove(0, -24px);
-			}
 		}
 	}
 }
