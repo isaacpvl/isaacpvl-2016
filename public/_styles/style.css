@@ -2671,10 +2671,13 @@ section.work {
   .project.offset .info {
     margin-top: 36px; } }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   section.work {
     margin-top: -25%;
     text-align: center; }
+    section.work .head {
+      margin-top: 108px;
+      margin-bottom: 12px; }
   .project.offset {
     padding: 0; }
     .project.offset .info {
@@ -2711,6 +2714,13 @@ section.work {
           margin-left: 6px; }
       .project .info .button {
         min-width: 70%; }
+    .project .info.more h1 {
+      margin-top: -18px;
+      margin-bottom: 18px;
+      line-height: 60px;
+      font-size: 44px; }
+    .project .info.more h6 {
+      display: none; }
   .ileft {
     float: none; }
   .iright {
@@ -2750,6 +2760,9 @@ section.work {
 @media screen and (max-width: 640px) {
   section.work {
     padding-bottom: 120px; }
+    section.work .head {
+      margin-top: 90px;
+      margin-bottom: 0px; }
   .project.offset .info {
     margin-top: 36px; }
   .project {
@@ -2791,6 +2804,11 @@ section.work {
         display: none; }
       .project .info .button.livelink {
         display: inline-block; }
+    .project .info.more h1 {
+      margin-top: -6px;
+      margin-bottom: 12px;
+      line-height: 36px;
+      font-size: 28px; }
   .project.dribs .preview {
     margin-bottom: 0px; }
   .project.dribs .info h1 span {
@@ -2940,7 +2958,7 @@ section.aboutme {
     z-index: 1;
     display: none; }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   section.about .pitch {
     max-width: 780px;
     margin: auto; }

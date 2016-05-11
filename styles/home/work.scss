@@ -145,9 +145,6 @@ section.work {
 			letter-spacing: 0.03em;
 			@include stroke(2px, $red);
 			color: $red;
-			// background: $red;
-			// color: $wht;
-			// @include trotate(15deg);
 			span {
 				letter-spacing: -0.04em;
 			}
@@ -184,7 +181,6 @@ section.work {
 
 .project.dribs {
 	.preview {
-		// @include border(1px, $drk-l);
 		img {
 			width: 100%;
 			display: none;
@@ -228,10 +224,14 @@ section.work {
 		}
 	}
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
 	section.work {
 		margin-top: -25%;
 		text-align: center;
+		.head {
+			@include leader(9);
+			@include trailer(1);
+		}
 	}
 	.project.offset {
 		padding: 0;
@@ -276,6 +276,22 @@ section.work {
 			}
 			.button {
 				min-width: 70%;
+			}
+		}
+		.info.more {
+			h1 {
+				// width: 150%;
+				// margin-left: -25%;
+				@include leader(-1.5);
+				@include trailer(1.5);
+				@include lineh(5);
+				font-size: 44px;
+				// br {
+				// 	display: none;
+				// }
+			}
+			h6 {
+				display: none;
 			}
 		}
 	}
@@ -326,6 +342,10 @@ section.work {
 @media screen and (max-width: 640px) {
 	section.work {
 		@include padding-trailer(10);
+		.head {
+			@include leader(7.5);
+			@include trailer(0);
+		}
 	}
 	.project.offset {
 		.info {
@@ -376,6 +396,14 @@ section.work {
 			}
 			.button.studylink { display: none; }
 			.button.livelink { display: inline-block; }
+		}
+		.info.more {
+			h1 {
+				@include leader(-0.5);
+				@include trailer(1);
+				@include lineh(3);
+				font-size: 28px;
+			}
 		}
 	}
 	.project.dribs {
