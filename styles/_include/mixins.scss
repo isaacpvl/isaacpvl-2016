@@ -220,26 +220,6 @@
     -webkit-animation-name: fadeindown;
     animation-name: fadeindown;
 }
-@-webkit-keyframes fadeinleft {
-    0% {opacity: 0; -webkit-transform: translate(-60px, 0);}
-    100% {opacity: 1; -webkit-transform: translate(0);}}
-@keyframes fadeinleft {
-    0% {opacity: 0; transform: translate(-60px, 0);}
-    100% {opacity: 1; transform: translate(0);}}
-@mixin fadeinleft {
-    -webkit-animation-name: fadeinleft;
-    animation-name: fadeinleft;
-}
-@-webkit-keyframes fadeinright {
-    0% {opacity: 0; -webkit-transform: translate(120px, 0);}
-    100% {opacity: 1; -webkit-transform: translate(0);}}
-@keyframes fadeinright {
-    0% {opacity: 0; transform: translate(120px, 0);}
-    100% {opacity: 1; transform: translate(0);}}
-@mixin fadeinright {
-    -webkit-animation-name: fadeinright;
-    animation-name: fadeinright;
-}
 
 @-webkit-keyframes vidscroll {
     0% {@include tmove(0, 0);}
@@ -381,30 +361,75 @@
     animation-name: lifebgin;
 }
 
-@-webkit-keyframes wall {
-    0% { @include tmovescale(1, -100px, -100px); }
-    100% { @include tmovescale(4, 400px, 400px); }
-}
-@keyframes wall {
-    0% { @include tmovescale(1, -400px, -400px); }
-    100% { @include tmovescale(4, 400px, 400px); }
-}
-@mixin wall {
-    -webkit-animation-name: wall;
-    animation-name: wall;
-}
 
 @-webkit-keyframes loaderin {
-    0% {opacity: 0; @include tscale(1.1);}
-    50% {opacity: 1;}
-    100% {@include tscale(.7);}}
+    0% { opacity: 0; @include tmove(-40px, 0); }
+    100% {  }
+}
 @keyframes loaderin {
-    0% { opacity: 0; @include tscale(1.1);}
-    50% {opacity: 1;}
-    100% { @include tscale(.7);}}
+    0% { opacity: 0; @include tmove(-40px, 0); }
+    100% {  }
+}
 @mixin loaderin {
     -webkit-animation-name: loaderin;
     animation-name: loaderin;
+}
+
+@-webkit-keyframes loadinga {
+    0% { @include tmovescale(0.1, -180px, 0); }
+    20% { @include tmovescale(0.1, -180px, 0); }
+    30% { @include tscale(1); }
+    90% { @include tscale(1); }
+    100% { @include tmovescale(0.1, 40px, 0); }
+}
+@keyframes loadinga {
+    0% { @include tmovescale(0.1, -180px, 0); }
+    20% { @include tmovescale(0.1, -180px, 0); }
+    30% { @include tscale(1); }
+    90% { @include tscale(1); }
+    100% { @include tmovescale(0.1, 40px, 0); }
+}
+@mixin loadinga {
+    -webkit-animation-name: loadinga;
+    animation-name: loadinga;
+}
+
+@-webkit-keyframes loadingb {
+    0% { @include tmovescale(0.05, -100px, 0); }
+    40% { @include tmovescale(0.05, -100px, 0); }
+    50% { @include tscale(1); }
+    90% { @include tscale(1); }
+    100% { @include tmovescale(0.05, 100px, 0); }
+}
+@keyframes loadingb {
+    0% { @include tmovescale(0.05, -100px, 0); }
+    40% { @include tmovescale(0.05, -100px, 0); }
+    50% { @include tscale(1); }
+    90% { @include tscale(1); }
+    100% { @include tmovescale(0.05, 100px, 0); }
+}
+@mixin loadingb {
+    -webkit-animation-name: loadingb;
+    animation-name: loadingb;
+}
+
+@-webkit-keyframes loadingc {
+    0% {@include tmovescale(0.05, -40px, 0); }
+    60% {@include tmovescale(0.05, -40px, 0); }
+    70% { @include tscale(1); }
+    90% { @include tscale(1); }
+    100% { @include tmovescale(0.05, 240px, 0); }
+}
+@keyframes loadingc {
+    0% {@include tmovescale(0.05, -40px, 0); }
+    60% {@include tmovescale(0.05, -40px, 0); }
+    70% { @include tscale(1); }
+    90% { @include tscale(1); }
+    100% { @include tmovescale(0.05, 240px, 0); }
+}
+@mixin loadingc {
+    -webkit-animation-name: loadingc;
+    animation-name: loadingc;
 }
 
 

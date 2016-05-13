@@ -685,7 +685,7 @@
 
 				setTimeout(function() {
 					$('.work').removeClass('bgfade');
-				}, 650);
+				}, 600);
 
 				setTimeout(function() {
 					$('.nava').addClass('full');
@@ -708,7 +708,7 @@
 				}, 500);
 
 
-			}, 500);
+			}, 1000+500);
 		})
 
 

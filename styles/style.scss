@@ -244,7 +244,7 @@ body.out {
 
 // Media queries
 @media screen and (min-width: 1441px) {
-	section {
+	section, .loader {
 		@include padding-x(6%);
 	}
 }
@@ -255,7 +255,7 @@ body.out {
 	section.work, section.about, section.aboutme, section.contact {
 		z-index: 999;
 	} 
-	section {
+	section, .loader {
 		@include padding-x(5%);
 		.head {
 			@include leader(12);
@@ -264,7 +264,7 @@ body.out {
 	}
 }
 @media screen and (max-width: 640px) {
-	section {
+	section, .loader {
 		@include padding-x(2%);
 		.head {
 			@include leader(8);
@@ -287,8 +287,6 @@ body.out {
 .fadein { @include fadein; }
 .fadeinup { @include fadeinup; }
 .fadeindown { @include fadeindown; }
-.fadeinleft { @include fadeinleft; }
-.fadeinright { @include fadeinright; }
 .headerin { @include headerin; }
 
 

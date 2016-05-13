@@ -1093,7 +1093,7 @@
 
 				}, 2000);
 
-			}, 1000);
+			}, 1000+1000);
 		})
 
 
@@ -1108,7 +1108,7 @@
 		});
 
 		if(navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
-				$("body").addClass('nowall');
+			$("body").addClass('nowall');
 		}
 
 
