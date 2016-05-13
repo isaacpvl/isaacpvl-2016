@@ -1,0 +1,53 @@
+
+
+// ThreadMeUp styles
+// ------------------------------------------------------------
+
+body.tmu {
+	.base.project {
+		background: #f46272;
+	}
+	.arrow {
+		@include arrow(27px, #f46272);
+	}
+	section.work {
+		box-shadow: 0 -96px 84px -54px #f46272;
+	}
+	.splash {
+		.vid {
+			video {
+				background-color: #f46272 !important;
+			}
+		}
+	}
+}
+body.tmu.fade {
+	.splash {
+		opacity: 0;
+		.vid {
+			video {
+				display: none;
+			}
+		}
+	}
+}
+
+
+// Next
+body.project {
+	section.next.tmu {
+		&:hover {
+			.peek {
+				background: #f46272;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+		img {
+			width: 384px;
+			height: 96px;
+			margin: 66px 0 0 2.5%;
+		}
+	}
+}

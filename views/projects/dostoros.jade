@@ -1,0 +1,188 @@
+extends ../project
+
+block title
+	title Isaac Paavola | Dos Toros
+
+block body
+	body.project.dostoros
+
+block nav
+	a#project
+	nav.hide
+		ul
+			include ../_pieces/pvl
+			li.navb.caps
+				a.navlink(data-pathname="threadmeup")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="coolhouse")
+					| Next Project
+					span &#8250;
+
+block header
+	header
+		.wrap.hide
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindown(src="/images/dostoros/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup A restaurant site as off the wall as its owners & culture.
+		.awrap
+			.rwrap
+				.fade
+	.push.hide
+		.bg
+
+block overview
+	.arrowbar.hide
+		.arrow
+	.head
+		h5.caps Overview
+	.wrap
+		.overview.hide
+			.detail.two-col
+				p Leo and Oliver Kremer are genuinely, fiercely passionate about their Mexican food. Before them, I thought there wasn't a restaurant site in the world I'd want to do. Well I was wrong, because Dos Toros revolves around a true culture that isn't about selling burritos.
+				p Their primary goal with the site was to tell their story and express the truly weird but passionate culture they have, they just had no idea how. That's where I came in, working closely with them and leading the design from first concepts to the full launched site.
+			.context
+				div
+					h6.caps Role:
+					p storyteller <em>(deal with it <a class="texta" href="https://youtu.be/UlkIVIau1Nk", target="_blank">sagmeister</a>)</em>
+				div
+					h6.caps When:
+					p early 2015
+				div
+					h6.caps With:
+					p Metronome3, agency
+			.live
+				a.button(href="http://dostoros.com", target="_blank") Visit The Live Site
+
+block content
+	.itemhead
+		h2 A Tale of Two Brothers
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/dostoros/dostoros-totb-poster.jpg")
+				source(src="/images/dostoros/dostoros-totb.webm", type="video/webm")
+				source(src="/images/dostoros/dostoros-totb.mp4", type="video/mp4")
+	.detail
+		p Dos Toros started with two brothers who set out on a mission of passion, and I framed the homepage as 'A Tale of Two Brothers' to tell their story. It goes on to explain how they went about their mission...
+		p The whole page heavily utilizes scrolling in some crazy ways. Some pretty awesome animation sequences happen completely based on scroll. With the help of M3's developers (who built the site,) I was able to work directly in the front-end in order to get the details of these animation sequences right, and balance the pacing of the story as I saw fit.
+	.visual.two-col
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/dostoros/dostoros-view-guac-poster.jpg")
+				source(src="/images/dostoros/dostoros-view-guac.webm", type="video/webm")
+				source(src="/images/dostoros/dostoros-view-guac.mp4", type="video/mp4")
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			img(src="/images/dostoros/dostoros-view-chop.jpg")
+	.visual.two-col
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			img(src="/images/dostoros/dostoros-view-meats.jpg")
+		.browser
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com
+			video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/dostoros/dostoros-view-culture-poster.jpg")
+				source(src="/images/dostoros/dostoros-view-culture.webm", type="video/webm")
+				source(src="/images/dostoros/dostoros-view-culture.mp4", type="video/mp4")
+	.detail
+		p What I love about those two is shown in their goals for the site. The normal business goals you'd expect all come second, because what they really care about is expressing their true story, and their real culture.
+		p They believe that in the long run, an authentic brand that stays true to a unique personality will impact their success more than anything. I think that's extremely wise of them.
+	.visual.multiphone
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/dostoros/dostoros-mobile-header.png")
+			.frame.scroll
+				img(src="/images/dostoros/dostoros-mobile-01.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/dostoros/dostoros-mobile-header.png")
+			.frame.scroll
+				img(src="/images/dostoros/dostoros-mobile-02.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			img.header(src="/images/dostoros/dostoros-mobile-header.png")
+			.frame.scroll
+				img(src="/images/dostoros/dostoros-mobile-03.jpg")
+			.bottom
+				div
+					span
+	.itemhead
+		h3 Locations
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com/locations
+			img(src="/images/dostoros/dostoros-locations.gif")
+	.itemhead
+		h3 Menu
+	.visual.full
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span dostoros.com/menu
+			img(src="/images/dostoros/dostoros-menu.jpg")
+	.detail
+		p I can't show off how different the tale of two brothers homepage is here. You really gotta scroll it for yourself.
+		a.button(href="http://dostoros.com", target="_blank") Visit The Live Site
+
+block next
+	section.next.coolhouse.navlink(data-pathname="coolhouse")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/coolhouse/logo.png")
+		.peekbg

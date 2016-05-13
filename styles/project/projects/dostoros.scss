@@ -1,0 +1,47 @@
+
+
+// Dos Toros styles
+// ------------------------------------------------------------
+
+body.dostoros {
+	.base.project {
+		background: $blk url('/images/dostoros/bg.jpg') no-repeat;
+	}
+	header {
+		.fade {
+			@include gradient-vert-d($blk-0, 65%, $blk, 100%);
+		}
+	}
+	.arrow {
+		@include arrow(27px, $blk);
+	}
+	section.work {
+		box-shadow: 0 -96px 84px -54px $blk;
+	}
+}
+
+// Next
+body.project {
+	section.next.dostoros {
+		.peekbg {
+			background: $blk url('/images/dostoros/bg.jpg') no-repeat;
+			opacity: 0;
+		}
+		&:hover {
+			.peek {
+				background: none;
+			}
+			.peekbg {
+				opacity: 1;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+		img {
+			width: 432px;
+			height: 108px;
+			margin: 48px 0 0 0;
+		}
+	}
+}

@@ -1,0 +1,131 @@
+
+
+// Life.is styles
+// ------------------------------------------------------------
+
+body.lifeis.fold {
+	header {
+		background: $wht;
+	}
+	section.work {
+		.arrow {
+			opacity: 0;
+		}
+		.sbg {
+			div:first-of-type {
+				top: 0;
+				height: 900px;
+				opacity: 1;
+				@include trans(.4s, 0s);
+			}
+			div:last-of-type {
+				opacity: 0;
+				@include trans(.1s, .1s);
+			}
+			img {
+				top: 0;
+				height: 900px;
+				opacity: 1;
+				@include trans(.6s, 0s);
+			}
+		}
+	}
+}
+body.lifeis {
+	.base.project {
+		background: $wht;
+	}
+	header {
+		.wrap {
+			z-index: -5;
+		}
+		.logo {
+			height: 57%;
+			min-height: 324px;
+			max-height: 480px;
+			img {
+				position: relative;
+				width: 540px;
+				height: 196px;
+				@include animate(.6s, .4s);
+				z-index: 1;
+			}
+		}
+		.title {
+			height: 32%;
+			min-height: 216px;
+			max-height: 276px;
+			h1 {
+				@include animate(.6s, .4s);
+			}
+		}
+		.wrap:last-of-type {
+			z-index: -6;
+		}
+	}
+	.arrow {
+		position: relative;
+		z-index: -2;
+		@include arrow(27px, #ff1414);
+		opacity: .3;
+	}
+	section.work {
+		overflow: visible;
+	}
+	.sbg {
+		position: absolute;
+		top: -900px;
+		left: 0;
+		width: 100%;
+		height: 900px;
+		overflow: hidden;
+		div:first-of-type {
+			position: absolute;
+			top: 660px;
+			width: 1440px;
+			height: 240px;
+			opacity: 0;
+			@include gradient-vert($wht-0, #ffbcbc);
+			@include trans(.6s, .1s);
+		}
+		div:last-of-type {
+			position: absolute;
+			top: 876px;
+			z-index: -1;
+			width: 1440px;
+			height: 24px;
+			background: $wht;
+			opacity: 1;
+			@include trans(0s, 0s);
+		}
+		img {
+			position: relative;
+			top: 450px;
+			width: 1440px;
+			height: 600px;
+			@include trans(.6s);
+			@include animatereset(.9s);
+			@include lifebgin;
+		}
+	}
+}
+
+// Next
+body.project {
+	section.next.lifeis {
+		&:hover {
+			.peek {
+				background: url('/images/lifeis/bg.png') -10% center #ffa9aa;
+				background-size: 100% auto;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+		img {
+			width: 384px;
+			height: 96px;
+			margin: 66px 0 0 0;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+
+
+// Coolhouse styles
+// ------------------------------------------------------------
+
+body.coolhouse {
+	.base.project {
+		background: #033f64 url('/images/coolhouse/bg.jpg') no-repeat;
+	}
+	header {
+		.logo {
+			height: 56%;
+			min-height: 336px;
+			max-height: 444px;
+		}
+		.title {
+			height: 32%;
+			min-height: 192px;
+			max-height: 252px;
+		}
+		.fade {
+			@include gradient-vert-d(rgba(#033f64, 0), 20%, #033f64, 90%);
+		}
+	}
+	.arrow {
+		@include arrow(27px, #033f64);
+	}
+	section.work {
+		box-shadow: 0 -96px 84px -54px #033f64;
+	}
+}
+
+// Next
+body.project {
+	section.next.coolhouse {
+		.peekbg {
+			background: #033f64 url('/images/coolhouse/bg.jpg') no-repeat;
+			opacity: 0;
+		}
+		&:hover {
+			.peek {
+				background: none;
+			}
+			.peekbg {
+				opacity: 1;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+		img {
+			width: 422px;
+			height: 234px;
+			margin: 18px 0 0 0;
+		}
+	}
+}

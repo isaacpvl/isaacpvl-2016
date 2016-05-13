@@ -1,4 +1,4 @@
-@import "settings/_extras";
+@import "_include/_extras";
 
 
 // Study styles
@@ -39,7 +39,7 @@ body.extra {
 		position: relative; z-index: 3; height: 93.5%; min-height: 600px; max-height: 900px; overflow: hidden;
 		div { position: absolute; top: 100%; width: 100%; height: 105%; background: $wht; @include animatereset(.6s, .5s); @include sheaderin; }
 	}
-	.arrowb { @include animatereset(.35s, 1.05s); }
+	.arrow { @include animatereset(.35s, 1.05s); }
 	section { @include trans(.4s, 0s); .head { @include ttiming(ease); } }
 	section.work {
 		min-height: 1400px;
@@ -102,7 +102,7 @@ body.extra.next {
 		.base { position: fixed; top: 0; bottom: 0; height: auto; }
 		.push { display: none; }
 	} }
-	@media screen and (max-width: 960px) { body.extra {
+	@media screen and (max-width: 959px) { body.extra {
 		.wrap { display: block; }
 	} }
 	@media screen and (max-width: 640px) {
@@ -182,7 +182,7 @@ body.extra {
 		}
 	}
 } }
-@media screen and (max-width: 960px) { body.extra {
+@media screen and (max-width: 959px) { body.extra {
 	section.work { text-align: left; .info { text-align: left; } }
 } }
 
@@ -196,7 +196,7 @@ body.coolhouse {
 		.logo { height: 60%; min-height: 400px; max-height: 500px; img { width: 320px; height: 320px; } }
 		.title { height: 39%; min-height: 246px; max-height: 300px; h1 { background: rgba($blk, .6); } }
 	}
-	.arrowb { @include arrow(24px, #033f64); }
+	.arrow { @include arrow(24px, #033f64); }
 	section.work { box-shadow: 0 -96px 84px -54px #033f64; }
 // Header
 	header {

@@ -10,25 +10,32 @@ section.contact {
 	background-position: 50% 100%;
 	text-align: center;
 	.head.visit {
+		h5 {
+			&::after {
+				content: none;
+			}
+		}
 		h6 {
 			position: absolute;
 			width: 100%;
-			@include leader(0.5);
+			@include leader(.7);
 			font-style: italic;
 			opacity: 0.6;
 		}
 	}
 	.container {
-		position: relative; 
+		position: relative;
+
 		display: inline-block;
 		@include padding-leader(4);
-		@include padding-trailer(4);
+		@include padding-trailer(2);
 		h5 {
 			display: inline-block;
 			vertical-align: middle;
-			@extend .caps;
+			font-family: $caps;
+			text-transform: uppercase;
 			font-weight: 700;
-			letter-spacing: 0;
+			letter-spacing: 0.025em;
 		}
 		img {
 			display: inline-block;
@@ -39,7 +46,9 @@ section.contact {
 			@include padding-leader(2);
 			@include padding-trailer(2);
 			padding-right: 10px;
-			span { display: inline-block; }
+			span {
+				display: inline-block;
+			}
 			img, span, h5 {
 				opacity: 1;
 				@include trans(.2s, 0s);
@@ -58,8 +67,12 @@ section.contact {
 				}
 			}
 		}
-		&.left { margin-right: 8%; }
-		&.middle { margin-right: 10%; }
+		&.left {
+			margin-right: 8%;
+		}
+		&.middle {
+			margin-right: 10%;
+		}
 	}
 	.container.method {
 		a {
@@ -78,15 +91,34 @@ section.contact {
 		a {
 			margin: 0 6px;
 			padding-right: 0;
-			&:nth-of-type(2) { font-size: 26px; font-weight: 600; }
-			&:nth-of-type(3) { font-weight: 400; }
+			&:nth-of-type(2) {
+				font-size: 26px;
+				font-weight: 600;
+			}
+			&:nth-of-type(3) {
+				font-weight: 400;
+			}
 		}
-		span {
-			width: 48px;
+	}
+	.container.social {
+		a {
+			margin: 0 6px;
+			padding-right: 0;
+			&:nth-of-type(2) {
+				font-size: 26px;
+				font-weight: 600;
+			}
+			&:nth-of-type(3) {
+				font-weight: 400;
+			}
+			span {
+				width: 48px;
+			}
 		}
 	}
 	.container.office {
 		width: 100%;
+		@include padding-trailer(6);
 		white-space: nowrap;
 		a {
 			width: 286px;
@@ -98,8 +130,9 @@ section.contact {
 	}
 }
 
+
 // Media queries
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
 	section.contact {
 		.container {
 			display: block;
@@ -107,8 +140,12 @@ section.contact {
 			min-width: 0;
 			@include padding-leader(3);
 			@include padding-trailer(2);
-			&.left { margin-right: 0%; }
-			&.middle { margin-right: 0%; }
+			&.left {
+				margin-right: 0%;
+			}
+			&.middle {
+				margin-right: 0%;
+			}
 		}
 		.container.social {
 			@include leader(1);
@@ -135,7 +172,9 @@ section.contact {
 		background-position: 76% 100%;
 		.head.visit {
 			@include padding-trailer(2);
-			h6 { margin: 0; }
+			h6 {
+				margin: 0;
+			}
 		}
 		.container {
 			@include padding-leader(3);
@@ -163,4 +202,3 @@ section.contact {
 		background-position: 60% 100%;
 	}
 }
-

@@ -1,0 +1,32 @@
+
+
+// 2Old2Play styles
+// ------------------------------------------------------------
+
+body.totp {
+	.base.project {
+		background: #212833;
+	}
+	.arrow {
+		@include arrow(27px, #212833);
+	}
+}
+
+// Next
+body.project {
+	section.next.totp {
+		&:hover {
+			.peek {
+				background: #212833;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+		img {
+			width: 480px;
+			height: 120px;
+			margin: 52px 0 0 0;
+		}
+	}
+}

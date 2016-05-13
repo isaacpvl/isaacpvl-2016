@@ -1,0 +1,35 @@
+
+
+// HuddlePass styles
+// ------------------------------------------------------------
+
+body.hpass {
+	.base.project {
+		background: url('/images/huddlepass/linesbg.png') #404759;
+		@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
+	}
+	.arrow {
+		@include arrow(27px, #353a49);
+	}
+	section.work {
+		box-shadow: 0 -96px 84px -54px #353a49;
+	}
+}
+
+// Next
+body.project {
+	section.next.hpass {
+		&:hover {
+			.peek {
+				background: url('/images/huddlepass/linesbg.png') #404759;
+				@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+		img {
+			margin: 44px 7.5% 0 0;
+		}
+	}
+}

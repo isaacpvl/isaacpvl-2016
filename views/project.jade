@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		block title
+		link(rel="stylesheet", href="/_styles/projects.css")
+		include _pieces/head
+		script(src="/_scripts/loaderp.js")
+
+	block body
+	block nav
+	block header
+	section.work.bgfade
+		block overview
+		block content
+	block next
+	.base
+	.base.project
+	include _pieces/loader
+
+	script(src="/_scripts/projects.js")

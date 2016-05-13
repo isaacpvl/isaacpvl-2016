@@ -1,5 +1,5 @@
-@import "settings/_all";
-@import "pieces/_all";
+@import "_include/_all";
+@import "_pieces/_all";
 @import "home/_all";
 
 
@@ -50,38 +50,6 @@ body {
 	font-size: $basefont;
 	line-height: $baseline;
 }
-
-body.out {
-	.base {
-		background: $wht;
-		@include trans(.375s);
-	}
-	header {
-		opacity: 0;
-		@include trans(.375s);
-	}
-	nav {
-		@include navout;
-	}
-	nav.whitebg, nav.bluebg {
-		background: none;
-		box-shadow: none;
-	}
-	.project, .head {
-		opacity: 0;
-		@include tmove(0, 900px);
-		@include trans(.375s);
-	}
-	section.about {
-		opacity: 0;
-		@include tmove(0, 100%);
-		@include trans(.375);
-	}
-	.arrowb {
-		display: none;
-	}
-}
-
 .rwrap {
 	position: relative;
 	width: 100%;
@@ -104,7 +72,6 @@ body.out {
 	width: 100%;
 	height: 100%;
 }
-
 section {
 	position: relative;
 	z-index: 2;
@@ -116,25 +83,28 @@ section {
 		position: relative;
 		width: 100%;
 		@include leader(16);
-		@include trailer(6);
+		@include trailer(7);
 		text-align: center;
 		@include trans(.4s);
 		@include ttiming(ease-in);
 		h5 {
 			display: inline-block;
 			letter-spacing: 0.075em;
-		}
-		span {
-			position: relative;
-			display: inline-block;
-			width: 30px;
-			height: 1px;
-			margin: 0 24px;
-			background: $drk-l;
+			font-weight: 600;
+			color: $blk-7;
+			&::after {
+				content:'';
+				position: absolute;
+				bottom: -15px;
+				left: 50%;
+				width: 50px;
+				height: 3px;
+				margin-left: -25px;
+				background: $blk-6;
+			}
 		}
 	}
 }
-
 .base {
 	position: fixed;
 	top: 0;
@@ -142,10 +112,10 @@ section {
 	width: 100%;
 	min-width: 320px;
 	max-width: 1440px;
-	margin: 0 auto;
+	margin: auto;
 	box-shadow: 18px 0 rgba($blk, 0.075), 1px 0 $blk-1, -18px 0 rgba($blk, 0.075), -1px 0 $blk-1;
 	background: $red;
-	@include trans(.45s);
+	@include trans(.5s);
 }
 
 body.fold {
@@ -169,8 +139,7 @@ body.fold {
 			}
 		}
 	}
-	.arrowb {
-		@include arrow(27px, $red-d);
+	.arrow {
 		@include trans(.25s);
 	}
 	section.workwall {
@@ -178,14 +147,20 @@ body.fold {
 			opacity: 1;
 			@include trans(1s);
 		}
-	}
-	.base {
-		background: $red-d;
+		.arrow {
+			@include arrow(27px, $red-d);
+		}
 	}
 }
 body.fold.nowall {
-	.arrowb {
+	.arrow {
 		@include arrow(24px, $red-d);
+	}
+}
+body.home.fold {
+	.base {
+		background: $red-d;
+		@include trans(.25s);
 	}
 }
 body.nowall {
@@ -229,6 +204,42 @@ body.nowall {
 		z-index: -1;
 	}
 }
+body.out {
+	.base {
+		background: $wht;
+		@include trans(.375s);
+	}
+	header {
+		opacity: 0;
+		@include trans(.375s);
+	}
+	nav {
+		@include navout;
+	}
+	nav.whitebg, nav.bluebg {
+		background: none;
+		box-shadow: none;
+		
+	}
+	section.workwall {
+		.wall {
+			opacity: 0;
+			@include trans(.375s);			
+		}
+	}
+	.project, .head {
+		opacity: 0;
+		@include tmove(0, 600px);
+		@include trans(.375s);
+	}
+	section.about {
+		opacity: 0;
+		@include trans(.375);
+	}
+	.arrow {
+		display: none;
+	}
+}
 
 
 // Media queries
@@ -237,15 +248,13 @@ body.nowall {
 		@include padding-x(6%);
 	}
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 959px) {
 	.base {
 		z-index: -999;
 	}
 	section.work, section.about, section.aboutme, section.contact {
 		z-index: 999;
-	}
-}
-@media screen and (max-width: 960px) {
+	} 
 	section {
 		@include padding-x(5%);
 		.head {
@@ -259,13 +268,15 @@ body.nowall {
 		@include padding-x(2%);
 		.head {
 			@include leader(8);
-			@include trailer(0);
+			@include trailer(2);
 			h5 {
 				font-size: 18px;
-			}
-			span {
-				width: 12px;
-				margin: 0 12px 5px 12px;
+				&::after {
+					bottom: -9px;
+					width: 40px;
+					height: 3px;
+					margin-left: -20px;
+				}
 			}
 		}
 	}
@@ -279,3 +290,13 @@ body.nowall {
 .fadeinleft { @include fadeinleft; }
 .fadeinright { @include fadeinright; }
 .headerin { @include headerin; }
+
+
+// Loader styles
+nav.hide,
+.arrowbar.hide,
+.tagline.hide,
+header .wrap.hide {
+	display: none;
+}
+

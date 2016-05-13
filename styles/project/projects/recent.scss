@@ -1,0 +1,24 @@
+
+
+// Recent work styles
+// ------------------------------------------------------------
+
+body.recent {
+	.base.project {
+		background: #00345e;
+	}
+	.arrow {
+		@include arrow(27px, #00345e);
+	}
+}
+
+// Next
+body.project {
+	section.next.recent {
+		&:hover {
+			.peek {
+				background: #004073;
+			}
+		}
+	}
+}

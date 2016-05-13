@@ -1,0 +1,34 @@
+
+
+// Past work styles
+// ------------------------------------------------------------
+
+body.past {
+	.base.project {
+		background: #00345e;
+	}
+	.arrow {
+		@include arrow(27px, #00345e);
+	}
+	section.work {
+		box-shadow: 0 -96px 84px -54px #00345e;
+	}
+	.splash {
+		.vid {
+			opacity: 0.5;
+			video {
+				background-color: #00345e !important;
+			}
+		}
+	}
+}
+body.past.fade {
+	.splash {
+		opacity: 0;
+		.vid {
+			video {
+				display: none;
+			}
+		}
+	}
+}

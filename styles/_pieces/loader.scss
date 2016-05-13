@@ -1,0 +1,55 @@
+
+
+// Preloader styles
+// ------------------------------------------------------------
+
+.loader {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: auto;
+	text-align: center;
+	color: $wht;
+	.overlay {
+		position: relative;
+		z-index: 9999;
+		width: 100%;
+		height: 100%;
+	}
+	.status {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		width: 480px;
+		height: 240px;
+		margin: -120px 0 0 -240px;
+		@include trans(.5s);
+		@include ttimingcb(.1, .7, .3, 1);
+		h4 {
+			line-height: 240px;
+			font-family: $caps;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-weight: 600;
+			@include animate(5s);
+			@include loaderin;
+		}
+	}
+	.status.out {
+		opacity: 0;
+		@include tscale(0.65);
+	}
+}
+
+body.project {
+	.loader {
+		.status {
+			display: none;
+		}
+	}
+}
+

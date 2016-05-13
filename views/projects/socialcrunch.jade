@@ -1,0 +1,126 @@
+extends ../project
+
+block title
+	title Isaac Paavola | SocialCrunch
+
+block body
+	body.project.scrunch
+
+block nav
+	a#project
+	.bar
+	nav.dark.hide
+		ul
+			include ../_pieces/pvl
+			li.navb.caps
+				a.navlink(data-pathname="huddlepass")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="lifeis")
+					| Next Project
+					span &#8250;
+
+block header
+	header.dark
+		.wrap.hide
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindown(src="/images/socialcrunch/logob.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup An addictive data game of question & comparison.
+	.push.hide
+		.bg
+
+block overview
+	.arrowbar.hide
+		.arrow
+	.head
+		h5.caps Overview
+	.wrap
+		.overview.hide
+			.detail
+				p I made it easy for people to get addicted to giving this startup all kinds of data while they compare themselves to others.
+			.context
+				div
+					h6.caps My Role:
+					p web/UI design
+				div
+					h6.caps When:
+					p summer 2013
+				div
+					h6.caps With:
+					p AKTA, agency
+
+block content
+	.itemhead
+		h3 Main feed (questions) page
+	.visual
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span socialcrunch.com/feed
+			img(src="/images/socialcrunch/scrunch-01.jpg")
+	.itemhead
+		h3 Characteristics (profile) page
+	.visual
+		.browser.large
+			.top
+				ul
+					li
+					li
+					li
+				span socialcrunch.com/profile
+			img(src="/images/socialcrunch/scrunch-02.jpg")
+	.itemhead
+		h3 Mobile app design
+	.visual.multiphone
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/socialcrunch/scrunch-03.jpg")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame.vid
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/socialcrunch/scrunch-mobile-poster.jpg")
+					source(src="/images/socialcrunch/scrunch-mobile.webm", type="video/webm")
+					source(src="/images/socialcrunch/scrunch-mobile.mp4", type="video/mp4")
+			.bottom
+				div
+					span
+		.phone
+			.top
+				.camera
+					span
+				.speaker
+					span
+			.frame
+				img(src="/images/socialcrunch/scrunch-03c.jpg")
+			.bottom
+				div
+					span
+	.footlink
+		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/152381-SocialCrunch", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.lifeis.navlink(data-pathname="lifeis")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/lifeis/logo.png")
+		.peekbg

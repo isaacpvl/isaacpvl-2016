@@ -1,0 +1,69 @@
+extends ../project
+
+block title
+	title Isaac Paavola | Past work
+
+block body
+	body.project.more.past
+
+block nav
+	a#project
+	nav.hide
+		ul
+			include ../_pieces/pvl
+			li.navb.caps
+				a.navlink(data-pathname="huddlepass")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="socialcrunch")
+					| Next Project
+					span &#8250;
+
+block header
+	header.more
+		.wrap.hide
+			.logo
+				span#logo(data-speed="5.55")
+					img.fadeindown(src="/images/recent/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1.fadeinup More projects I've<br> done from the past.
+	.push.hide
+		.bg
+
+block overview
+	.arrowbar.hide
+		.arrow
+	.head
+		h5.caps Overview
+	.wrap
+		.overview.hide
+			.detail.single
+				p A separate place for a bunch of random older projects from over 2 years ago that I keep around because why not.
+
+block content
+	.visual.gap
+	include ../home/projects/socialcrunch
+	include ../home/projects/lifeis
+	include ../home/projects/overdog
+	include ../home/projects/gennutrition
+	include ../home/projects/2old2play
+	include ../home/projects/toggle
+
+block next
+	section.next.scrunch.navlink(data-pathname="socialcrunch")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/socialcrunch/logo.png")
+		.peekbg
+	.splash
+		.wrap
+			.fade
+				img(src="/images/home/splashfadec.png")
+			.vid
+				video(preload="auto", autoplay="true", loop="true", muted="muted", poster="/images/home/wallposter.jpg")
+					source(src="/images/home/wall.mp4", type="video/mp4")
+					source(src="/images/home/wall.webm", type="video/webm")
+					source(src="/images/home/wall-iosp.mp4", type="video/mp4")

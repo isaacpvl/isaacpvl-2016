@@ -1,0 +1,27 @@
+
+
+// OverDog styles
+// ------------------------------------------------------------
+
+body.odog {
+	.base.project {
+		background: #00345e;
+	}
+	.arrow {
+		@include arrow(27px, #00345e);
+	}
+}
+
+// Next
+body.project {
+	section.next.odog {
+		&:hover {
+			.peek {
+				background: #004073;
+			}
+			img {
+				@include tmove(0, -24px);
+			}
+		}
+	}
+}

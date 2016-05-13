@@ -24,22 +24,27 @@ section.workwall {
 		opacity: .2;
 		overflow: hidden;
 		@include trans(.45s);
-		div {
+		.fadeb {
 			position: fixed;
 			top: 540px;
-			left: 0;
-			right: 0;
 			z-index: 3;
 			display: none;
+			width: 100%;
+			min-width: 320px;
+			max-width: 1440px;
 			height: 270px;
-			@include gradient-vert($blu-n, $blu);
-			span {
+			margin: auto;
+			@include gradient-vert-d($blu-n, 0%, $blu, 100%);
+			&::after {
+				content: '';
 				position: fixed;
 				top: 810px;
 				bottom: 0;
-				left: 0;
-				right: 0;
 				z-index: 3;
+				width: 100%;
+				min-width: 320px;
+				max-width: 1440px;
+				margin: auto;
 				background: $blu;
 			}
 		}
@@ -62,9 +67,10 @@ section.workwall {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		width: 100%; max-width: 1440px;
-		margin: 0 auto;
-		@include gradient-vert($wht-0, $wht);
+		width: 100%;
+		max-width: 1440px;
+		margin: auto;
+		@include gradient-vert-d($wht-0, 0%, $wht, 100%);
 	}
 	.bg {
 		position: absolute;
@@ -73,8 +79,9 @@ section.workwall {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		width: 100%; max-width: 1440px;
-		margin: 0 auto;
+		width: 100%;
+		max-width: 1440px;
+		margin: auto;
 		background: $wht;
 	}
 }
@@ -86,11 +93,12 @@ section.workwall.fold {
 }
 section.workwall.foldb {
 	.wall {
-		div {
+		.fadeb {
 			display: block;
 		}
 	}
 }
+
 
 // Media queries
 @media screen and (max-width: 1120px) {
@@ -103,7 +111,7 @@ section.workwall.foldb {
 		max-height: 504px;
 	}
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
 	section.workwall {
 		height: auto;
 		min-height: 0;
@@ -113,7 +121,9 @@ section.workwall.foldb {
 		}
 		.fade, .wall {
 			display: none;
-			video { display: none; }
+			video {
+				display: none;
+			}
 		}
 	}
 }

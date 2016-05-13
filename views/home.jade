@@ -1,23 +1,24 @@
 doctype html
 html
 	head
-		title Isaac Paavola's design adventures!
-		include pieces/head
+		title Isaac Paavola
+		include _pieces/head
+		script(src="/_scripts/loader.js")
 
-	body
-		include pieces/nav
+	body.home
+		include home/nav
 		include home/header
 		include home/wall
-			include blocks/threadmeup
-			include blocks/dostoros
-			include blocks/coolhouse
-			include blocks/huddlepass
-			include blocks/recent
-			include blocks/past
-			include blocks/shots
+			include home/projects/threadmeup
+			include home/projects/dostoros
+			include home/projects/coolhouse
+			include home/projects/huddlepass
+			include home/projects/recent
+			include home/projects/past
+			include home/projects/shots
 		include home/about
 		include home/contact
-		include pieces/base
+		include _pieces/base
+	include _pieces/loader
 
-	script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 	script(src="/_scripts/home.js")
