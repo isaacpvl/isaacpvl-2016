@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title Isaac Paavola | Life.is
+		link(rel="stylesheet", href="/_styles/project.css")
+		link(rel="stylesheet", href="/_styles/style.css")
+		include ../../_resource/head
+		script(src="/_scripts/loaderp.js")
+
+	body.project.lifeis
+		a#project
+		include ../../projects/lifeis
+		.base
+		.base.project
+
+	div.loader#loader
+		div.status#status
+			h3 Wait for it
+				span
+				span
+				span
+		div.overlay.lockscroll
+
+	script(src="/_scripts/project.js")

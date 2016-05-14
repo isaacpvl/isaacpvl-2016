@@ -1,39 +1,33 @@
-extends ../project
 
-block title
-	title Isaac Paavola | SocialCrunch
+//- block nav
+a#project
+.bar
+nav.dark.hide
+	ul
+		include ../_resource/pvl
+		li.navb.caps
+			a.navlink(data-pathname="huddlepass")
+				span &#8249;
+				| Last Project
+		li.navc.caps
+			a.navlink(data-pathname="lifeis")
+				| Next Project
+				span &#8250;
 
-block body
-	body.project.scrunch
+//- block header
+header.dark
+	.wrap.hide
+		.logo
+			span#logo(data-speed="5.55")
+				img.fadeindown(src="/images/socialcrunch/logob.png")
+		.title
+			span#title(data-speed="2.85")
+				h1.fadeinup An addictive data game of question & comparison.
+.push.hide
+	.bg
 
-block nav
-	a#project
-	.bar
-	nav.dark.hide
-		ul
-			include ../_pieces/pvl
-			li.navb.caps
-				a.navlink(data-pathname="huddlepass")
-					span &#8249;
-					| Last Project
-			li.navc.caps
-				a.navlink(data-pathname="lifeis")
-					| Next Project
-					span &#8250;
-
-block header
-	header.dark
-		.wrap.hide
-			.logo
-				span#logo(data-speed="5.55")
-					img.fadeindown(src="/images/socialcrunch/logob.png")
-			.title
-				span#title(data-speed="2.85")
-					h1.fadeinup An addictive data game of question & comparison.
-	.push.hide
-		.bg
-
-block overview
+//- block work
+section.work.bgfade
 	.arrowbar.hide
 		.arrow
 	.head
@@ -52,8 +46,6 @@ block overview
 				div
 					h6.caps With:
 					p AKTA, agency
-
-block content
 	.itemhead
 		h3 Main feed (questions) page
 	.visual
@@ -117,10 +109,10 @@ block content
 	.footlink
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/152381-SocialCrunch", target="_blank">this project on dribbble</a>
 
-block next
-	section.next.lifeis.navlink(data-pathname="lifeis")
-		.head
-			h5.caps Next Project
-		.peek
-			img(src="/images/lifeis/logo.png")
-		.peekbg
+//- block next
+section.next.lifeis.navlink(data-pathname="lifeis")
+	.head
+		h5.caps Next Project
+	.peek
+		img(src="/images/lifeis/logo.png")
+	.peekbg

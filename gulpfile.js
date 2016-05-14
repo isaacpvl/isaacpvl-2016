@@ -43,7 +43,7 @@ gulp.task("scripts", function() {
 });
 
 gulp.task("views", function() {
-	return gulp.src("pages/**/*.jade")
+	return gulp.src("views/_pages/**/*.jade")
 		.pipe(jade({pretty: false}))
     	.pipe(gulp.dest("public"))
 		.pipe(plumber({ errorHandler: onError }))

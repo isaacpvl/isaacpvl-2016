@@ -318,6 +318,7 @@ section.aboutme {
 			min-height: 480px;
 			max-height: 780px;
 			box-shadow: 0 0 $blk-0;
+			@include torigin(50%, 50%);
 			@include animate(.7s, 0s);
 			@include atiming(ease-out);
 			@include newsflash;

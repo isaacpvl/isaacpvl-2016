@@ -1,38 +1,32 @@
-extends ../project
 
-block title
-	title Isaac Paavola | ThreadMeUp
+//- block nav
+a#project
+nav.hide
+	ul
+		include ../_resource/pvl
+		li.navb.caps.disabled
+			a
+				span &#8249;
+				| Last Project
+		li.navc.caps
+			a.navlink(data-pathname="dostoros")
+				| Next Project
+				span &#8250;
 
-block body
-	body.project.tmu
+//- block header
+header
+	.wrap.hide
+		.logo
+			span#logo(data-speed="5.55")
+				img.fadeindown(src="/images/threadmeup/logo.png")
+		.title
+			span#title(data-speed="2.85")
+				h1.fadeinup Making it fun and engaging to design what you wear.
+.push.hide
+	.bg
 
-block nav
-	a#project
-	nav.hide
-		ul
-			include ../_pieces/pvl
-			li.navb.caps.disabled
-				a
-					span &#8249;
-					| Last Project
-			li.navc.caps
-				a.navlink(data-pathname="dostoros")
-					| Next Project
-					span &#8250;
-
-block header
-	header
-		.wrap.hide
-			.logo
-				span#logo(data-speed="5.55")
-					img.fadeindown(src="/images/threadmeup/logo.png")
-			.title
-				span#title(data-speed="2.85")
-					h1.fadeinup Making it fun and engaging to design what you wear.
-	.push.hide
-		.bg
-
-block overview
+//- block work
+section.work.bgfade
 	.arrowbar.hide
 		.arrow
 	.head
@@ -57,8 +51,6 @@ block overview
 				p
 					<strong>Note:</strong> this links to the front-end I built (launched March 2014)
 					span since the current threadmeup.com has changed, I host this myself so you can see the product I made, even without the back-end.
-
-block content
 	.itemhead
 		h2 The 'Designer'
 	.visual.full
@@ -158,18 +150,18 @@ block content
 	.footlink
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/174662-ThreadMeUp", target="_blank">this project on dribbble</a>
 
-block next
-	section.next.dostoros.navlink(data-pathname="dostoros")
-		.head
-			h5.caps Next Project
-		.peek
-			img(src="/images/dostoros/logo.png")
-		.peekbg
-	.splash
-		.wrap
-			.fade
-				img(src="/images/threadmeup/splashfade.png")
-			.vid
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/threadmeup/splashbg.png")
-					source(src="/images/threadmeup/splash.webm", type="video/webm")
-					source(src="/images/threadmeup/splash.mp4", type="video/mp4")
+//- block next
+section.next.dostoros.navlink(data-pathname="dostoros")
+	.head
+		h5.caps Next Project
+	.peek
+		img(src="/images/dostoros/logo.png")
+	.peekbg
+.splash
+	.wrap
+		.fade
+			img(src="/images/threadmeup/splashfade.png")
+		.vid
+			video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/threadmeup/splashbg.png")
+				source(src="/images/threadmeup/splash.webm", type="video/webm")
+				source(src="/images/threadmeup/splash.mp4", type="video/mp4")

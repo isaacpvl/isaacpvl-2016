@@ -129,7 +129,7 @@ nav {
 		@include trans(.4s);
 		@include animatereset(.35s, 1s);
 		@include atiming(ease-out);
-		@include navain;
+		@include pvlin;
 		a, b {
 			font-weight: 800;
 		}

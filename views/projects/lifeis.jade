@@ -1,38 +1,32 @@
-extends ../project
 
-block title
-	title Isaac Paavola | Life.is
+//- block nav
+a#project
+nav.dark.hide
+	ul
+		include ../_resource/pvl
+		li.navb.caps
+			a.navlink(data-pathname="socialcrunch")
+				span &#8249;
+				| Last Project
+		li.navc.caps
+			a.navlink(data-pathname="overdog")
+				| Next Project
+				span &#8250;
 
-block body
-	body.project.lifeis
+//- block header
+header.dark
+	.wrap.hide
+		.logo
+			span#logo(data-speed="5.55")
+				img.fadeindown(src="/images/lifeis/logob.gif")
+		.title
+			span#title(data-speed="2.85")
+				h1.fadeinup Branding life on the web.
+.push.hide
+	.bg
 
-block nav
-	a#project
-	nav.dark.hide
-		ul
-			include ../_pieces/pvl
-			li.navb.caps
-				a.navlink(data-pathname="socialcrunch")
-					span &#8249;
-					| Last Project
-			li.navc.caps
-				a.navlink(data-pathname="overdog")
-					| Next Project
-					span &#8250;
-
-block header
-	header.dark
-		.wrap.hide
-			.logo
-				span#logo(data-speed="5.55")
-					img.fadeindown(src="/images/lifeis/logob.gif")
-			.title
-				span#title(data-speed="2.85")
-					h1.fadeinup Branding life on the web.
-	.push.hide
-		.bg
-
-block overview
+//- block work
+section.work.bgfade
 	.arrowbar.hide
 		.arrow
 	.sbg.hide
@@ -55,8 +49,6 @@ block overview
 				div
 					h6.caps With:
 					p just me, freelancing
-
-block content
 	.itemhead
 		h3 Brand & landing page
 	.visual.full
@@ -100,10 +92,10 @@ block content
 	.footlink
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/167510-life-is", target="_blank">this project on dribbble</a>
 
-block next
-	section.next.odog.navlink(data-pathname="overdog")
-		.head
-			h5.caps Next Project
-		.peek
-			img(src="/images/overdog/logo.png")
-		.peekbg
+//- block next
+section.next.odog.navlink(data-pathname="overdog")
+	.head
+		h5.caps Next Project
+	.peek
+		img(src="/images/overdog/logo.png")
+	.peekbg

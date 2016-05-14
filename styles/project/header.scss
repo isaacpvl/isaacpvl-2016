@@ -75,7 +75,7 @@ body.project {
 			height: 105%;
 			background: $wht;
 			@include animate(.6s);
-			@include sheaderin;
+			@include projectheaderin;
 		}
 	}
 	header.more {

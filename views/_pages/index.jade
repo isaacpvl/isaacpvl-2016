@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		title Isaac Paavola
+		link(rel="stylesheet", href="/_styles/style.css")
+		include ../_resource/head
+		script(src="/_scripts/loader.js")
+
+	body.home
+		include ../home/nav
+		include ../home/header
+		include ../home/wall
+		include ../home/work
+		include ../home/about
+		include ../home/aboutme
+		include ../home/contact
+		include ../home/base
+
+	div.loader#loader
+		div.status#status
+			h3 Wait for it
+				span
+				span
+				span
+		div.overlay.lockscroll
+
+	script(src="/_scripts/home.js")

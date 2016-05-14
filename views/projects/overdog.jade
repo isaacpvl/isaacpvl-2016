@@ -1,38 +1,32 @@
-extends ../project
 
-block title
-	title Isaac Paavola | OverDog
+//- block nav
+a#project
+nav.hide
+	ul
+		include ../_resource/pvl
+		li.navb.caps
+			a.navlink(data-pathname="lifeis")
+				span &#8249;
+				| Last Project
+		li.navc.caps
+			a.navlink(data-pathname="2old2play")
+				| Next Project
+				span &#8250;
 
-block body
-	body.project.odog
+//- block header
+header
+	.wrap.hide
+		.logo
+			span#logo(data-speed="5.55")
+				img.fadeindown(src="/images/overdog/logo.png")
+		.title
+			span#title(data-speed="2.85")
+				h1.fadeinup Pitting athletes against their fans in online challenges.
+.push.hide
+	.bg
 
-block nav
-	a#project
-	nav.hide
-		ul
-			include ../_pieces/pvl
-			li.navb.caps
-				a.navlink(data-pathname="lifeis")
-					span &#8249;
-					| Last Project
-			li.navc.caps
-				a.navlink(data-pathname="2old2play")
-					| Next Project
-					span &#8250;
-
-block header
-	header
-		.wrap.hide
-			.logo
-				span#logo(data-speed="5.55")
-					img.fadeindown(src="/images/overdog/logo.png")
-			.title
-				span#title(data-speed="2.85")
-					h1.fadeinup Pitting athletes against their fans in online challenges.
-	.push.hide
-		.bg
-
-block overview
+//- block work
+section.work.bgfade
 	.arrowbar.hide
 		.arrow
 	.head
@@ -51,8 +45,6 @@ block overview
 				div
 					h6.caps With:
 					p AKTA, agency
-
-block content
 	.itemhead
 		h3 Athletes create challenges
 	.visual.multiphone
@@ -131,17 +123,15 @@ block content
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/120502-OverDog-iPhone", target="_blank">this project on dribbble</a>
 
 //- block next
-//- 	section.next.gennut.navlink(data-pathname="gennutrition")
-//- 		.head
-//- 			h5.caps Next Project
-//- 		.peek
-//- 			img(src="/images/gennutrition/logo.png")
-//- 		.peekbg
-
-block next
-	section.next.totp.navlink(data-pathname="2old2play")
-		.head
-			h5.caps Next Project
-		.peek
-			img(src="/images/2old2play/logo.png")
-		.peekbg
+//- section.next.gennut.navlink(data-pathname="gennutrition")
+//- 	.head
+//- 		h5.caps Next Project
+//- 	.peek
+//- 		img(src="/images/gennutrition/logo.png")
+//- 	.peekbg
+section.next.totp.navlink(data-pathname="2old2play")
+	.head
+		h5.caps Next Project
+	.peek
+		img(src="/images/2old2play/logo.png")
+	.peekbg

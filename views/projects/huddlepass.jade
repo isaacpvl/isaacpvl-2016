@@ -1,38 +1,32 @@
-extends ../project
 
-block title
-	title Isaac Paavola | HuddlePass
+//- block nav
+a#project
+nav.hide
+	ul
+		include ../_resource/pvl
+		li.navb.caps
+			a.navlink(data-pathname="coolhouse")
+				span &#8249;
+				| Last Project
+		li.navc.caps
+			a.navlink(data-pathname="socialcrunch")
+				| Next Project
+				span &#8250;
 
-block body
-	body.project.hpass
+//- block header
+header
+	.wrap.hide
+		.logo
+			span#logo(data-speed="5.55")
+				img.fadeindown(src="/images/huddlepass/logo.png")
+		.title
+			span#title(data-speed="2.85")
+				h1.fadeinup Putting fans inside the huddle with their coaches and players.
+.push.hide
+	.bg
 
-block nav
-	a#project
-	nav.hide
-		ul
-			include ../_pieces/pvl
-			li.navb.caps
-				a.navlink(data-pathname="coolhouse")
-					span &#8249;
-					| Last Project
-			li.navc.caps
-				a.navlink(data-pathname="socialcrunch")
-					| Next Project
-					span &#8250;
-
-block header
-	header
-		.wrap.hide
-			.logo
-				span#logo(data-speed="5.55")
-					img.fadeindown(src="/images/huddlepass/logo.png")
-			.title
-				span#title(data-speed="2.85")
-					h1.fadeinup Putting fans inside the huddle with their coaches and players.
-	.push.hide
-		.bg
-
-block overview
+//- block work
+section.work.bgfade
 	.arrowbar.hide
 		.arrow
 	.head
@@ -54,8 +48,6 @@ block overview
 				div
 					h6.caps With:
 					p just me, freelancing
-
-block content
 	.itemhead
 		h2 Huddle communities
 	.visual.full
@@ -138,17 +130,15 @@ block content
 		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/173459-HuddlePass", target="_blank">this project on dribbble</a>
 
 //- block next
-//- 	section.next.recent.navlink(data-pathname="recent")
-//- 		.head
-//- 			h5.caps Next Project
-//- 		.peek
-//- 			h1 Recently I've been...
-//- 		.peekbg
-
-block next
-	section.next.scrunch.navlink(data-pathname="socialcrunch")
-		.head
-			h5.caps Next Project
-		.peek
-			img(src="/images/socialcrunch/logo.png")
-		.peekbg
+//- section.next.recent.navlink(data-pathname="recent")
+//- 	.head
+//- 		h5.caps Next Project
+//- 	.peek
+//- 		h1 Recently I've been...
+//- 	.peekbg
+section.next.scrunch.navlink(data-pathname="socialcrunch")
+	.head
+		h5.caps Next Project
+	.peek
+		img(src="/images/socialcrunch/logo.png")
+	.peekbg

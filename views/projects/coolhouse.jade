@@ -1,41 +1,34 @@
-extends ../project
 
-block title
-	title Isaac Paavola | Coolhouse Labs
+//- block nav
+nav.hide
+	ul
+		include ../_resource/pvl
+		li.navb.caps
+			a.navlink(data-pathname="dostoros")
+				span &#8249;
+				| Last Project
+		li.navc.caps
+			a.navlink(data-pathname="huddlepass")
+				| Next Project
+				span &#8250;
 
-block body
-	body.project.coolhouse
+//- block header
+header
+	.wrap.hide
+		.logo
+			span#logo(data-speed="5.55")
+				img.fadeindown(src="/images/coolhouse/logo.png")
+		.title
+			span#title(data-speed="2.85")
+				h1.fadeinup Being a full-scale design team for a whole cohort of startups.
+	.awrap
+		.rwrap
+			.fade
+.push.hide
+	.bg
 
-block nav
-	a#project
-	nav.hide
-		ul
-			include ../_pieces/pvl
-			li.navb.caps
-				a.navlink(data-pathname="dostoros")
-					span &#8249;
-					| Last Project
-			li.navc.caps
-				a.navlink(data-pathname="huddlepass")
-					| Next Project
-					span &#8250;
-
-block header
-	header
-		.wrap.hide
-			.logo
-				span#logo(data-speed="5.55")
-					img.fadeindown(src="/images/coolhouse/logo.png")
-			.title
-				span#title(data-speed="2.85")
-					h1.fadeinup Being a full-scale design team for a whole cohort of startups.
-		.awrap
-			.rwrap
-				.fade
-	.push.hide
-		.bg
-
-block overview
+//- block work
+section.work.bgfade
 	.arrowbar.hide
 		.arrow
 	.head
@@ -55,8 +48,6 @@ block overview
 				div
 					h6.caps With:
 					p Coolhouse Labs, accelerator
-
-block content
 	.itemhead
 		h2 Showreel
 	.visual.full
@@ -148,10 +139,10 @@ block content
 		a.button(href="http://isaacpvl.com/outdoors", target="_blank") View The Front-End
 
 
-block next
-	section.next.hpass.navlink(data-pathname="huddlepass")
-		.head
-			h5.caps Next Project
-		.peek
-			img(src="/images/huddlepass/logo.png")
-		.peekbg
+//- block next
+section.next.hpass.navlink(data-pathname="huddlepass")
+	.head
+		h5.caps Next Project
+	.peek
+		img(src="/images/huddlepass/logo.png")
+	.peekbg
