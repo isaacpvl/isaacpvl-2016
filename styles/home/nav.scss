@@ -125,7 +125,7 @@ nav {
 		margin: 0;
 		text-align: left;
 		cursor: pointer;
-		@include twowayshadow(-3px, 1px, $wht);
+		@include twowayshadow(-4px, 1px, $wht);
 		@include trans(.4s);
 		@include animatereset(.35s, 1s);
 		@include atiming(ease-out);
@@ -309,7 +309,7 @@ nav.sticky {
 		width: 56px;
 		@include twowayshadow(0px, 0px, $wht-0);
 		&:hover, &.hover {
-			@include twowayshadow(-2px, 1px, $red);
+			@include twowayshadow(-3px, 1px, $red);
 		}
 		a {
 			height: 60px;
@@ -395,7 +395,7 @@ nav.sticky {
 	}
 }
 nav.bluebg {
-	@include innershadow(60px, rgba($blu, .9));
+	@include innershadow(60px, rgba($blu, .8));
 	li {
 		&:hover {
 			@include twowayshadow(-2px, 1px, $wht-8);
@@ -422,9 +422,9 @@ nav.bluebg {
 		}
 	}
 	li.nava {
-		@include twowayshadow(0px, 0px, $wht);
+		@include twowayshadow(0px, 0px, $wht-0);
 		&:hover, &.hover {
-			@include twowayshadow(-2px, 1px, $wht);
+			@include twowayshadow(-3px, 1px, $wht);
 		}
 		.caps {
 			color: $wht;
@@ -616,6 +616,7 @@ nav.bluebg {
 		li.nava {
 			width: 48px;
 			height: 72px;
+			@include twowayshadow(-3px, 1px, $wht);
 			.caps {
 				font-size: 24px;
 			}

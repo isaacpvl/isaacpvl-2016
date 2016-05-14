@@ -995,12 +995,13 @@
 
 				$('nav').removeClass('hide');
 				$('.wrap').removeClass('hide');
+				$('.taglinem').removeClass('hide');
 				$('.push').removeClass('hide');
 				$('.arrowbar').removeClass('hide');
 
-				setTimeout(function() {
-					$('.nava').addClass('full');
-				}, 1800);
+			setTimeout(function() {
+				$('.nava').addClass('full');
+			}, 1800);
 
 			// automatically expands PVL
 				var pvlStartTimer = setTimeout(function() {

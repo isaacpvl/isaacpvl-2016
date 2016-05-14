@@ -89,6 +89,8 @@ header {
 		height: 84%;
 		min-height: 528px;
 		max-height: 732px;
+		@include animatereset(.8s, .8s);
+		@include fadeinup;
 		> span {
 			position: absolute;
 			bottom: 0;
@@ -101,20 +103,25 @@ header {
 			font-weight: 800;
 			letter-spacing: 0;
 			white-space: nowrap;
+			@include fadeinup;
+			@include trans(.3s, 0s);
 			&:nth-of-type(1) {
 				height: 78px;
 				@include lineh(7);
 				font-size: 62px;
+				@include animatereset(.8s, 1s);
 			}
 			&:nth-of-type(2) {
 				height: 78px;
 				@include lineh(6.5);
 				font-size: 62px;
+				@include animatereset(.65s, 1.15s);
 			}
 			&:nth-of-type(3) {
 				height: 90px;
 				@include lineh(7.5);
 				font-size: 72px;
+				@include animatereset(.5s, 1.3s);
 			}
 		}
 	}
@@ -457,8 +464,8 @@ header {
 @media screen and (max-width: 640px) {
 	header {
 		height: 100%;
-		min-height: 396px;
-		max-height: 720px;
+		min-height: 360px;
+		max-height: 100%;
 		.taglinem {
 			height: 90%;
 			min-height: 0;
@@ -483,7 +490,7 @@ header {
 	}
 	.push {
 		height: 100%;
-		min-height: 0;
+		min-height: 360px;
 		max-height: 100%;
 	}
 }

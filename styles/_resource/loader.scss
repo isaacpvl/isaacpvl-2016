@@ -15,16 +15,24 @@
 	text-align: left;
 	color: $wht;
 	@include padding-x(5%);
-	.overlay {
+	.lockscroll {
 		position: absolute;
 		@include onepos(0);
 		z-index: 9999;
 	}
+	.overlay {
+		position: absolute;
+		@include onepos(0);
+		z-index: 9997;
+		background: $red;
+		@include trans(0.5s);
+	}
 	.status {
 		position: relative;
+		z-index: 9998;
 		width: 100%;
 		height: 100%;
-		@include trans(0.5s);
+		@include trans(0.5s, 0s);
 		@include ttimingcb(.1, .7, .3, 1);
 		h3 {
 			display: inline-block;
@@ -35,7 +43,7 @@
 			letter-spacing: 0.025em;
 			font-weight: 800;
 			font-style: italic;
-			@include animatereset(0.9s, 0s);
+			@include animatereset(0.9s, 0.2s);
 			@include atimingcb(.1, .7, .3, 1);
 			@include loaderin;
 			span {
@@ -47,22 +55,27 @@
 				background: $wht;
 				@include torigin(50%, 50%);
 				&:nth-of-type(1) {
-					@include animateinf(2.6s, 0.1s);
+					@include animateinf(2.4s, 0.1s);
 					@include loadinga;
 					margin-left: 9px;
 				}
 				&:nth-of-type(2) {
-					@include animateinf(2.6s, 0.2s);
+					@include animateinf(2.4s, 0.175s);
 					@include loadingb;
 				}
 				&:nth-of-type(3) {
-					@include animateinf(2.6s, 0.3s);
+					@include animateinf(2.4s, 0.25s);
 					@include loadingc;
 				}
 			}
 		}
 	}
-	.status.out {
+}
+.loader.out {
+	.overlay {
+		opacity: 0;
+	}
+	.status {
 		h3 {
 			opacity: 0;
 			@include tmove(90px, 0);
@@ -77,25 +90,51 @@ body.project {
 	.loader {
 		text-align: center;
 		color: $blk;
+		.overlay {
+			display: none;
+			background: $wht;
+		}
 		.status {
 			position: absolute;
 			width: 480px;
 			height: 180px;
-			top: 50%;
+			top: 45%;
 			left: 50%;
-			margin: -60px 0 0 -240px;
+			margin: -90px 0 0 -240px;
 			h3 {
 				@include animatereset(0.9s, 0s);
 				span {
 					background: $blk;
 					&:nth-of-type(1) {
-						@include animateinf(2.6s, 0s);
+						@include animateinf(2.4s, 0s);
 					}
 					&:nth-of-type(2) {
-						@include animateinf(2.6s, 0.1s);
+						@include animateinf(2.4s, 0.075s);
 					}
 					&:nth-of-type(3) {
-						@include animateinf(2.6s, 0.2s);
+						@include animateinf(2.4s, 0.15s);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Media queries
+@media screen and (max-width: 640px) {
+	.loader {
+		.status {
+			h3 {
+				@include leader(2);
+				@include lineh(4);
+				font-size: 24px;
+				span {
+					width: 6px;
+					height: 6px;
+					margin-right: 4px;
+					&:nth-of-type(1) {
+						margin-left: 5px;
 					}
 				}
 			}

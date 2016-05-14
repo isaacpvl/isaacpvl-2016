@@ -242,7 +242,7 @@ body.out {
 
 
 // Media queries
-@media screen and (min-width: 141601px) {
+@media screen and (min-width: 1601px) {
 	section, .loader {
 		@include padding-x(6%);
 	}
@@ -263,7 +263,7 @@ body.out {
 	}
 }
 @media screen and (max-width: 640px) {
-	section, .loader {
+	section {
 		@include padding-x(2%);
 		.head {
 			@include leader(8);
@@ -293,7 +293,9 @@ body.out {
 nav.hide,
 .arrowbar.hide,
 .tagline.hide,
-header .wrap.hide {
+.taglinem.hide,
+header .wrap.hide,
+header .wrapm.hide {
 	display: none;
 }
 

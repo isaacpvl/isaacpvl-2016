@@ -1,11 +1,11 @@
 $(window).load(function() {
 
 	setTimeout(function() {
-		$('#status').addClass('out');
-	}, 500+500);
+		$('#loader').addClass('out');
+	}, 500+750);
 
 	setTimeout(function() {
 		$('#loader').fadeOut('fast');
-	}, 1500+500);
+	}, 1750+750);
 
 })

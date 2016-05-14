@@ -1,7 +1,7 @@
 $(window).load(function() {
 
 	setTimeout(function() {
-		$('#status').addClass('out');
+		$('#loader').addClass('out');
 	}, 750+1000);
 
 	setTimeout(function() {

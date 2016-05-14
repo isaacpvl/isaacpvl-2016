@@ -121,28 +121,31 @@
 
 	@mixin loadinga { animation-name: loadinga; }
 	@keyframes loadinga {
-		0% { @include tmovescale(0.1, -180px, 0); }
-		20% { @include tmovescale(0.1, -180px, 0); }
-		30% { @include tscale(1); }
-		90% { @include tscale(1); }
-		100% { @include tmovescale(0.1, 40px, 0); }
+		0% { opacity: 0; @include tmovescale(0.1, -60px, 0); }
+		10% { opacity: 0; @include tmovescale(0.1, -60px, 0); }
+		11% { opacity: 1; }
+		20% { opacity: 1; @include tscale(1); }
+		85% { opacity: 1; @include tscale(1); }
+		100% { opacity: 0; @include tmovescale(0.1, 60px, 0); }
 	}
 
 	@mixin loadingb { animation-name: loadingb; }
 	@keyframes loadingb {
-		0% { @include tmovescale(0.05, -100px, 0); }
-		40% { @include tmovescale(0.05, -100px, 0); }
-		50% { @include tscale(1); }
-		90% { @include tscale(1); }
-		100% { @include tmovescale(0.05, 100px, 0); }
+		0% { opacity: 0; @include tmovescale(0.1, -60px, 0); }
+		32.5% { opacity: 0; @include tmovescale(0.1, -60px, 0); }
+		33.5% { opacity: 1; }
+		42.5% { opacity: 1; @include tscale(1); }
+		85% { opacity: 1; @include tscale(1); }
+		100% { opacity: 0; @include tmovescale(0.1, 100px, 0); }
 	}
 
 	@mixin loadingc { animation-name: loadingc; }
 	@keyframes loadingc {
-		0% { @include tmovescale(0.05, -40px, 0); }
-		60% { @include tmovescale(0.05, -40px, 0); }
-		70% { @include tscale(1); }
-		90% { @include tscale(1); }
-		100% { @include tmovescale(0.05, 240px, 0); }
+		0% { opacity: 0; @include tmovescale(0.1, -60px, 0); }
+		55% { opacity: 0; @include tmovescale(0.1, -60px, 0); }
+		56% { opacity: 1; }
+		65% { opacity: 1; @include tscale(1); }
+		85% { opacity: 1; @include tscale(1); }
+		100% { opacity: 0; @include tmovescale(0.1, 150px, 0); }
 	}
 
