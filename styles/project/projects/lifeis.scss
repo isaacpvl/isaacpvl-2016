@@ -82,7 +82,7 @@ body.lifeis {
 		div:first-of-type {
 			position: absolute;
 			top: 660px;
-			width: 1440px;
+			width: 1600px;
 			height: 240px;
 			opacity: 0;
 			@include gradient-vert($wht-0, #ffbcbc);
@@ -92,7 +92,7 @@ body.lifeis {
 			position: absolute;
 			top: 876px;
 			z-index: -1;
-			width: 1440px;
+			width: 1600px;
 			height: 24px;
 			background: $wht;
 			opacity: 1;
@@ -101,7 +101,7 @@ body.lifeis {
 		img {
 			position: relative;
 			top: 450px;
-			width: 1440px;
+			width: 1600px;
 			height: 600px;
 			@include trans(.6s);
 			@include animatereset(.9s);

@@ -6,6 +6,7 @@
 body.coolhouse {
 	.base.project {
 		background: #033f64 url('/images/coolhouse/bg.jpg') no-repeat;
+		background-size: 100%;
 	}
 	header {
 		.logo {
@@ -35,6 +36,7 @@ body.project {
 	section.next.coolhouse {
 		.peekbg {
 			background: #033f64 url('/images/coolhouse/bg.jpg') no-repeat;
+			background-size: cover;
 			opacity: 0;
 		}
 		&:hover {

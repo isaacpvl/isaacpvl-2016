@@ -7,6 +7,7 @@ section.work {
 	z-index: 3;
 	margin-top: -20%;
 	@include padding-trailer(18);
+	text-align: center;
 	// background: $wht;
 	.bg {
 		// display: none;
@@ -27,7 +28,9 @@ section.work {
 		z-index: 1;
 		display: inline-block;
 		width: 100%;
+		max-width: 1280px;
 		min-height: 480px;
+		margin: auto;
 		@include leader(5);
 		@include trailer(9);
 		overflow: visible;
@@ -63,6 +66,10 @@ section.work {
 				img {
 					max-width: 780px;
 				}
+			}
+			.browser.cond {
+				width: 92.5%;
+				max-width: 722px;
 			}
 			.shots {
 				position: relative;
@@ -193,14 +200,12 @@ section.work {
 	.pleft {
 		float: left;
 		.browser.cond {
-			width: 92.5%;
 			margin-right: 7.5%;
 		}
 	}
 	.pright {
 		float: right;
 		.browser.cond {
-			width: 92.5%;
 			margin-left: 7.5%;
 		}
 	}
@@ -320,14 +325,12 @@ section.work {
 		.pleft {
 			float: none;
 			.browser.cond {
-				width: 92.5%;
 				margin-right: 0;
 			}
 		}
 		.pright {
 			float: none;
 			.browser.cond {
-				width: 92.5%;
 				margin-left: 0;
 			}
 		}

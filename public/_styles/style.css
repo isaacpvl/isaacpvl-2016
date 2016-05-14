@@ -692,15 +692,16 @@ a.texta {
   position: relative;
   width: 100%;
   height: 100%; }
+  .multibrowser .browser {
+    width: 92.5%;
+    max-width: 722px; }
   .multibrowser .browser.under {
     z-index: 1;
-    width: 92.5%;
     opacity: 0 !important; }
   .multibrowser .browser.stack {
     position: absolute;
     top: 0;
-    left: 2%;
-    width: 92.5%; }
+    left: 2%; }
 
 .multibrowser.cycle .browser {
   transition-duration: 1s;
@@ -1386,7 +1387,7 @@ a.texta {
   bottom: 0;
   width: 100%;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: auto;
   text-align: left;
   color: #fff;
@@ -1528,7 +1529,7 @@ nav {
   z-index: 9990;
   width: 100%;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1600px;
   height: 60px;
   text-align: right;
   font-size: 16px;
@@ -1979,7 +1980,7 @@ nav.bluebg {
 #home, #work, #about, #contact {
   display: block; }
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1601px) {
   nav ul {
     padding-left: 6%;
     padding-right: 6%; }
@@ -2136,7 +2137,7 @@ header {
   z-index: 1;
   width: 100%;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1600px;
   height: 85%;
   min-height: 588px;
   max-height: 828px;
@@ -2496,7 +2497,7 @@ header {
     -webkit-transform: scale(0.825) rotate(15deg) translate(21px, 3px);
     transform: scale(0.825) rotate(15deg) translate(21px, 3px); } }
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1601px) {
   header .wrap {
     padding-left: 10%;
     padding-right: 10%; } }
@@ -2599,7 +2600,7 @@ section.workwall {
     left: 0;
     right: 0;
     z-index: -1000;
-    max-width: 1440px;
+    max-width: 1600px;
     height: 100%;
     margin: 0 auto;
     opacity: .2;
@@ -2613,7 +2614,7 @@ section.workwall {
       display: none;
       width: 100%;
       min-width: 320px;
-      max-width: 1440px;
+      max-width: 1600px;
       height: 270px;
       margin: auto;
       background: linear-gradient(to bottom, rgba(21, 137, 214, 0) 0%, #1589d6 100%); }
@@ -2625,7 +2626,7 @@ section.workwall {
         z-index: 3;
         width: 100%;
         min-width: 320px;
-        max-width: 1440px;
+        max-width: 1600px;
         margin: auto;
         background: #1589d6; }
     section.workwall .wall video {
@@ -2636,7 +2637,7 @@ section.workwall {
       z-index: 1;
       width: 100%;
       min-width: 1280px;
-      max-width: 1440px;
+      max-width: 1600px;
       background-color: #fff !important; }
   section.workwall .fade {
     position: absolute;
@@ -2646,7 +2647,7 @@ section.workwall {
     right: 0;
     z-index: -1;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1600px;
     margin: auto;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%); }
   section.workwall .bg {
@@ -2657,7 +2658,7 @@ section.workwall {
     right: 0;
     z-index: -1;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1600px;
     margin: auto;
     background: #fff; }
 
@@ -2691,7 +2692,8 @@ section.workwall.foldb .wall .fadeb {
 section.work {
   z-index: 3;
   margin-top: -20%;
-  padding-bottom: 216px; }
+  padding-bottom: 216px;
+  text-align: center; }
   section.work .bg {
     position: absolute;
     z-index: 0;
@@ -2708,7 +2710,9 @@ section.work {
     z-index: 1;
     display: inline-block;
     width: 100%;
+    max-width: 1280px;
     min-height: 480px;
+    margin: auto;
     margin-top: 60px;
     margin-bottom: 108px;
     overflow: visible; }
@@ -2738,6 +2742,9 @@ section.work {
         right: 0; }
       section.work .project .preview .browser img {
         max-width: 780px; }
+      section.work .project .preview .browser.cond {
+        width: 92.5%;
+        max-width: 722px; }
       section.work .project .preview .shots {
         position: relative;
         width: 100%; }
@@ -2838,12 +2845,10 @@ section.work {
   section.work .pleft {
     float: left; }
     section.work .pleft .browser.cond {
-      width: 92.5%;
       margin-right: 7.5%; }
   section.work .pright {
     float: right; }
     section.work .pright .browser.cond {
-      width: 92.5%;
       margin-left: 7.5%; }
 
 @media screen and (max-width: 1320px) {
@@ -2928,12 +2933,10 @@ section.work {
     section.work .pleft {
       float: none; }
       section.work .pleft .browser.cond {
-        width: 92.5%;
         margin-right: 0; }
     section.work .pright {
       float: none; }
       section.work .pright .browser.cond {
-        width: 92.5%;
         margin-left: 0; } }
 
 @media screen and (max-width: 959px) {
@@ -3479,7 +3482,7 @@ body {
   position: relative;
   width: 100%;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1600px;
   height: 100%;
   margin: auto;
   color: #000;
@@ -3547,7 +3550,7 @@ section {
   bottom: 0;
   width: 100%;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: auto;
   box-shadow: 18px 0 rgba(0, 0, 0, 0.075), 1px 0 rgba(0, 0, 0, 0.1), -18px 0 rgba(0, 0, 0, 0.075), -1px 0 rgba(0, 0, 0, 0.1);
   background: #d12b52;
@@ -3674,7 +3677,7 @@ body.out section.about {
 body.out .arrow {
   display: none; }
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 141601px) {
   section, .loader {
     padding-left: 6%;
     padding-right: 6%; } }

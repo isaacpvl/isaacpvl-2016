@@ -9,7 +9,7 @@ header {
 	z-index: 1;
 	width: 100%;
 	min-width: 320px;
-	max-width: 1440px;
+	max-width: 1600px;
 	height: 85%;
 	min-height: 588px;
 	max-height: 828px;
@@ -370,7 +370,7 @@ header {
 		}
 	}
 }
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1601px) {
 	header {
 		.wrap {
 			@include padding-x(10%);

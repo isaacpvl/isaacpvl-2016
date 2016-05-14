@@ -9,7 +9,7 @@
 body.project, header, nav, section {
 	width: 100%;
 	min-width: 960px;
-	max-width: 1440px;
+	max-width: 1600px;
 }
 body.project {
 	text-align: center;
@@ -39,7 +39,7 @@ body.project {
 		z-index: 1;
 		width: 100%;
 		min-width: 320px;
-		max-width: 1440px;
+		max-width: 1600px;
 		height: 92.5%;
 		min-height: 600px;
 		max-height: 960px;
@@ -226,7 +226,7 @@ body.project.fold {
 
 
 // Media queries
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1601px) {
 	body.project {
 		section {
 			@include padding-x(5%);

@@ -41,7 +41,7 @@ body {
 	position: relative;
 	width: 100%;
 	min-width: 320px;
-	max-width: 1440px;
+	max-width: 1600px;
 	height: 100%;
 	margin: auto;
 	color: $blk;
@@ -110,7 +110,7 @@ section {
 	bottom: 0;
 	width: 100%;
 	min-width: 320px;
-	max-width: 1440px;
+	max-width: 1600px;
 	margin: auto;
 	box-shadow: 18px 0 rgba($blk, 0.075), 1px 0 $blk-1, -18px 0 rgba($blk, 0.075), -1px 0 $blk-1;
 	background: $red;
@@ -242,7 +242,7 @@ body.out {
 
 
 // Media queries
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 141601px) {
 	section, .loader {
 		@include padding-x(6%);
 	}
