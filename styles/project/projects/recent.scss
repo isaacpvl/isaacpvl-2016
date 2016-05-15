@@ -3,21 +3,46 @@
 // Recent work styles
 // ------------------------------------------------------------
 
+$pcolor:	$blk-4;
+$pcolorb:	#7e7e7e;
 body.recent {
-	.base.project {
-		background: #00345e;
+	header {
+		background: $wht url('/images/home/contactbg.jpg') no-repeat;
+		background-size: 140%;
+		background-position: 60% 100%;
+		.fade {
+			@include gradient-vert-d(rgba($pcolor, 0), 50%, $pcolor, 100%);
+		}
+	}
+	.splash {
+		display: none;
+		.splashfade {
+			opacity: 0.1;
+		}
 	}
 	.arrow {
-		@include arrow(27px, #00345e);
+		@include arrow(27px, $pcolorb);
+	}
+	.base {
+		background: $pcolorb;
 	}
 }
 
 // Next
 body.project {
 	section.next.recent {
+		.peekbg {
+			background: $pcolor url('/images/home/contactbg.jpg') no-repeat;
+			background-size: 100%;
+			background-position: 50% 100%;
+			opacity: 0;
+		}
 		&:hover {
 			.peek {
-				background: #004073;
+				background: $blk-4;
+			}
+			.peekbg {
+				opacity: 1;
 			}
 		}
 	}

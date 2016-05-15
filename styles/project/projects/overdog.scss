@@ -3,24 +3,31 @@
 // OverDog styles
 // ------------------------------------------------------------
 
-body.odog {
-	.base.project {
-		background: #00345e;
+$pcolor:	#00345e;
+body.overdog {
+	header {
+		background: $pcolor;
+		.fade {
+			display: none;
+		}
 	}
 	.arrow {
-		@include arrow(27px, #00345e);
+		@include arrow(27px, $pcolor);
+	}
+	.base {
+		background: $pcolor;
 	}
 }
 
 // Next
 body.project {
-	section.next.odog {
+	section.next.overdog {
+		img {
+			@include leader(3.5);
+		}
 		&:hover {
 			.peek {
-				background: #004073;
-			}
-			img {
-				@include tmove(0, -24px);
+				background: $pcolor;
 			}
 		}
 	}

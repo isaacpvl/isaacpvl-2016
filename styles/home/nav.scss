@@ -13,7 +13,7 @@ nav {
 	text-align: right;
 	font-size: 16px;
 	color: $wht;
-	@include innershadow(0px, rgba($wht, .925));
+	@include innershadow(0px, $wht-9);
 	@include noselect;
 	@include animate(.375s);
 	@include trans(.2s);
@@ -257,7 +257,7 @@ nav {
 nav.sticky {
 	z-index: 9992;
 	height: 60px;
-	@include innershadow(60px, rgba($wht, .925));
+	@include innershadow(60px, $wht-9);
 	a {
 		height: 60px;
 		padding-top: 28px;
@@ -459,24 +459,21 @@ nav.bluebg {
 .arrow {
 	@include trans(.5s);
 	@include arrow(27px, $red);
-	margin: 0 auto;
+	margin: auto;
 	@include animatereset(.5s, 1.8s);
 	@include arrowin;
 }
 .arrowb {
 	@include trans(.25s);
 	@include arrow(27px, $wht);
-	margin: 0 auto;
+	margin: auto;
 }
 .arrowc {
 	@include trans(.25s);
 	@include arrow(27px, $blu);
-	margin: 0 auto;
+	margin: auto;
 }
-.arrow.out {
-	@include tmove(0, -27px);
-}
-.arrowb.out, .arrowc.out {
+.arrow.out, .arrowb.out, .arrowc.out {
 	@include tmove(0, -27px);
 }
 #home, #work, #about, #contact {

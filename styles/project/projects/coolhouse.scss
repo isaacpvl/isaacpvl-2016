@@ -3,12 +3,11 @@
 // Coolhouse styles
 // ------------------------------------------------------------
 
+$pcolor:	#033f64;
 body.coolhouse {
-	.base.project {
-		background: #033f64 url('/images/coolhouse/bg.jpg') no-repeat;
-		background-size: 100%;
-	}
 	header {
+		background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
+		background-size: 100%;
 		.logo {
 			height: 56%;
 			min-height: 336px;
@@ -20,22 +19,27 @@ body.coolhouse {
 			max-height: 252px;
 		}
 		.fade {
-			@include gradient-vert-d(rgba(#033f64, 0), 20%, #033f64, 90%);
+			@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 95%);
 		}
 	}
 	.arrow {
-		@include arrow(27px, #033f64);
+		@include arrow(27px, $pcolor);
 	}
-	section.work {
-		box-shadow: 0 -96px 84px -54px #033f64;
+	.base {
+		background: $pcolor;
 	}
 }
 
 // Next
 body.project {
 	section.next.coolhouse {
+		img {
+			width: 422px;
+			height: 234px;
+			@include leader(1.5);
+		}
 		.peekbg {
-			background: #033f64 url('/images/coolhouse/bg.jpg') no-repeat;
+			background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
 			background-size: cover;
 			opacity: 0;
 		}
@@ -46,14 +50,6 @@ body.project {
 			.peekbg {
 				opacity: 1;
 			}
-			img {
-				@include tmove(0, -24px);
-			}
-		}
-		img {
-			width: 422px;
-			height: 234px;
-			margin: 18px 0 0 0;
 		}
 	}
 }

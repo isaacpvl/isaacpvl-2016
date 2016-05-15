@@ -1,101 +1,98 @@
 
-//- block nav
-a#project
-nav.dark.hide
-	ul
-		include ../_resource/pvl
-		li.navb.caps
-			a.navlink(data-pathname="socialcrunch")
-				span &#8249;
-				| Last Project
-		li.navc.caps
-			a.navlink(data-pathname="overdog")
-				| Next Project
-				span &#8250;
+block nav
+	nav.dark.hide
+		ul
+			include ../_resource/pvl
+			li.navb.caps
+				a.navlink(data-pathname="socialcrunch")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="overdog")
+					| Next Project
+					span &#8250;
 
-//- block header
-header.dark
-	.wrap.hide
-		.logo
-			span#logo(data-speed="5.55")
-				img.fadeindown(src="/images/lifeis/logob.gif")
-		.title
-			span#title(data-speed="2.85")
-				h1.fadeinup Branding life on the web.
-.push.hide
-	.bg
+block header
+	header.dark.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/lifeis/logob.gif")
+			.title
+				span#title(data-speed="2.85")
+					h1 Branding feelings of life through the web.
+		.lifebg
+			img(src="/images/lifeis/bg.png")
+		.fade
+		.slide
+	.push
 
-//- block work
-section.work.bgfade
-	.arrowbar.hide
-		.arrow
-	.sbg.hide
-		img(src="/images/lifeis/bg.png")
-		div
-		div
-	.head
-		h5.caps Overview
-	.wrap
-		.overview.hide
-			.detail.single
-				p I did a happy feel-good brand for this new e-magazine and fundraising platform, and then carried those vibes onto the web.
-			.context
-				div
-					h6.caps My Role:
-					p web design & brand
-				div
-					h6.caps When:
-					p late 2013
-				div
-					h6.caps With:
-					p just me, freelancing
-	.itemhead
-		h3 Brand & landing page
-	.visual.full
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span life.is
-			video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/lifeis/life-menu-poster.jpg")
-				source(src="/images/lifeis/life-menu.webm", type="video/webm")
-				source(src="/images/lifeis/life-menu.mp4", type="video/mp4")
-	.visual.two-col.gap
-		.shot
-			img(src="/images/lifeis/life-brand.gif")
-		.shot
-			img(src="/images/lifeis/life-landing.jpg")
-	.itemhead
-		h3 Community fundraiser page
-	.visual
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span life.is/fundraiser/ny-community-garden
-			img(src="/images/lifeis/life-03.jpg")
-	.itemhead
-		h3 Fundraiser item purchase page
-	.visual
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span life.is/fundraiser/ny-community-garden#buy
-			img(src="/images/lifeis/life-04.jpg")
-	.footlink
-		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/167510-life-is", target="_blank">this project on dribbble</a>
+block work
+	section.work.bgfade
+		.arrowbar.hide
+			.arrow
+		.head
+			h5.caps Overview
+		.wrap
+			.overview
+				.detail.single
+					p I did a happy feel-good brand for this new e-magazine and fundraising platform, and then carried those vibes onto the web.
+				.context
+					div
+						h6.caps My Role:
+						p web design & brand
+					div
+						h6.caps When:
+						p late 2013
+					div
+						h6.caps With:
+						p just me, freelancing
+		.itemhead
+			h3 Brand & landing page
+		.visual.full
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span life.is
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/lifeis/life-menu-poster.jpg")
+					source(src="/images/lifeis/life-menu.webm", type="video/webm")
+					source(src="/images/lifeis/life-menu.mp4", type="video/mp4")
+		.visual.two-col.gap
+			.shot
+				img(src="/images/lifeis/life-brand.gif")
+			.shot
+				img(src="/images/lifeis/life-landing.jpg")
+		.itemhead
+			h3 Community fundraiser page
+		.visual
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span life.is/fundraiser/ny-community-garden
+				img(src="/images/lifeis/life-03.jpg")
+		.itemhead
+			h3 Fundraiser item purchase page
+		.visual
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span life.is/fundraiser/ny-community-garden#buy
+				img(src="/images/lifeis/life-04.jpg")
+		.footlink
+			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/167510-life-is", target="_blank">this project on dribbble</a>
 
-//- block next
-section.next.odog.navlink(data-pathname="overdog")
-	.head
-		h5.caps Next Project
-	.peek
-		img(src="/images/overdog/logo.png")
-	.peekbg
+block next
+	section.next.overdog.navlink(data-pathname="overdog")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/overdog/logo.png")

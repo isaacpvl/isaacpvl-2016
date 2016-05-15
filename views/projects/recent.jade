@@ -1,150 +1,151 @@
 
-//- block nav
-a#project
-nav.hide
-	ul
-		include ../_resource/pvl
-		li.navb.caps
-			a.navlink(data-pathname="huddlepass")
-				span &#8249;
-				| Last Project
-		li.navc.caps
-			a.navlink(data-pathname="socialcrunch")
-				| Next Project
-				span &#8250;
+block nav
+	nav.dark.hide
+		ul
+			include ../_resource/pvl
+			li.navb.caps
+				a.navlink(data-pathname="huddlepass")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="past")
+					| Next Project
+					span &#8250;
 
-//- block header
-header.more
-	.wrap.hide
-		.logo
-			span#logo(data-speed="5.55")
-				img.fadeindown(src="/images/recent/logo.png")
-		.title
-			span#title(data-speed="2.85")
-				h1.fadeinup What I've been<br> up to recently.
-.push.hide
-	.bg
+block header
+	header.dark.more.hide
+		.wrap
+			.logo#logo
+			.title
+				span#title(data-speed="2.85")
+					h1 What I've been<br> up to recently.
+		.splash
+			.splashfade
+				img(src="/images/home/splashfadeblk.png")
+		.fade
+		.slide
+	.push
 
-//- block work
-section.work.bgfade
-	.arrowbar.hide
-		.arrow
-	.head
-		h5.caps Overview
-	.wrap
-		.overview.hide
-			.detail.single
-				p A more casual place for me to throw up a few quick looks of newer things I've been on, even if unorganized or unfinished.
-	.visual.two-col
-		.browser
-			a(data-scroll, data-options="speed: 600", href="#recenta")
+block work
+	section.work.bgfade
+		.arrowbar.hide
+			.arrow
+		.head
+			h5.caps Overview
+		.wrap
+			.overview
+				.detail.single
+					p A more casual place for me to throw up a few quick looks of newer things I've been on, even if unorganized or unfinished.
+		.visual.two-col
+			.browser
+				a(data-scroll, data-options="speed: 600", href="#recenta")
+					.top
+						ul
+							li
+							li
+							li
+						span dostoros.com
+					img(src="/images/dostoros/dostoros-view-chop.jpg")
+			.browser
+				a(data-scroll, data-options="speed: 900", href="#recentb")
+					.top
+						ul
+							li
+							li
+							li
+						span dostoros.com
+					img(src="/images/dostoros/dostoros-view-chop.jpg")
+		.visual.two-col
+			.browser
+				a(data-scroll, data-options="speed: 1200", href="#recentc")
+					.top
+						ul
+							li
+							li
+							li
+						span dostoros.com
+					img(src="/images/dostoros/dostoros-view-chop.jpg")
+			.browser
+				a(data-scroll, data-options="speed: 1500", href="#recentd")
+					.top
+						ul
+							li
+							li
+							li
+						span dostoros.com
+					img(src="/images/dostoros/dostoros-view-chop.jpg")
+		.detail
+			p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra.
+
+
+		a#recenta
+		.itemhead
+			h2 Vouch heading
+		.visual.full
+			.browser.large
 				.top
 					ul
 						li
 						li
 						li
-					span dostoros.com
-				img(src="/images/dostoros/dostoros-view-chop.jpg")
-		.browser
-			a(data-scroll, data-options="speed: 900", href="#recentb")
+					span whateverrr.com/ugh
+				img(src="/images/huddlepass/hpass-02.jpg")
+		.detail
+			p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
+
+
+		a#recentb
+		.itemhead
+			h2 Stump heading
+		.visual.full
+			.browser.large
 				.top
 					ul
 						li
 						li
 						li
-					span dostoros.com
-				img(src="/images/dostoros/dostoros-view-chop.jpg")
-	.visual.two-col
-		.browser
-			a(data-scroll, data-options="speed: 1200", href="#recentc")
+					span whateverrr.com/ugh
+				img(src="/images/huddlepass/hpass-02.jpg")
+		.detail
+			p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
+
+
+		a#recentc
+		.itemhead
+			h2 JUST Capital heading
+		.visual.full
+			.browser.large
 				.top
 					ul
 						li
 						li
 						li
-					span dostoros.com
-				img(src="/images/dostoros/dostoros-view-chop.jpg")
-		.browser
-			a(data-scroll, data-options="speed: 1500", href="#recentd")
+					span whateverrr.com/ugh
+				img(src="/images/huddlepass/hpass-02.jpg")
+		.detail
+			p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
+
+
+		a#recentd
+		.itemhead
+			h2 Analytics8 heading
+		.visual.full
+			.browser.large
 				.top
 					ul
 						li
 						li
 						li
-					span dostoros.com
-				img(src="/images/dostoros/dostoros-view-chop.jpg")
-	.detail
-		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra.
+					span whateverrr.com/ugh
+				img(src="/images/huddlepass/hpass-02.jpg")
+		.detail
+			p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
 
 
-	a#recenta
-	.itemhead
-		h2 Vouch heading
-	.visual.full
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span whateverrr.com/ugh
-			img(src="/images/huddlepass/hpass-02.jpg")
-	.detail
-		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
-
-
-	a#recentb
-	.itemhead
-		h2 Stump heading
-	.visual.full
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span whateverrr.com/ugh
-			img(src="/images/huddlepass/hpass-02.jpg")
-	.detail
-		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
-
-
-	a#recentc
-	.itemhead
-		h2 JUST Capital heading
-	.visual.full
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span whateverrr.com/ugh
-			img(src="/images/huddlepass/hpass-02.jpg")
-	.detail
-		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
-
-
-	a#recentd
-	.itemhead
-		h2 Analytics8 heading
-	.visual.full
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span whateverrr.com/ugh
-			img(src="/images/huddlepass/hpass-02.jpg")
-	.detail
-		p Mauris eleifend, libero vel pellentesque ornare, erat felis pharetra sapien, in tempus lectus urna nec dui. Nullam efficitur vestibulum iaculis. In semper non dolor vel eleifend. Duis tristique, exa iaculis facilisis.
-
-
-//- block next
-section.next.scrunch.navlink(data-pathname="socialcrunch")
-	.head
-		h5.caps Next Project
-	.peek
-		img(src="/images/socialcrunch/logo.png")
-	.peekbg
+block next
+	section.next.past.navlink(data-pathname="past")
+		.head
+			h5.caps Also check out
+		.peek
+			h1 A long time ago...
+		.peekbg

@@ -1,79 +1,83 @@
 
-//- block nav
-a#project
-nav.hide
-	ul
-		include ../_resource/pvl
-		li.navb.caps
-			a.navlink(data-pathname="overdog")
-				span &#8249;
-				| Last Project
-		li.navc.caps
-			a.navlink(data-pathname="threadmeup")
-				| Next Project
-				span &#8250;
+block nav
+	nav.hide
+		ul
+			include ../_resource/pvl
+			li.navb.caps
+				a.navlink(data-pathname="overdog")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="threadmeup")
+					| Next Project
+					span &#8250;
 
-//- block header
-header
-	.wrap.hide
-		.logo
-			span#logo(data-speed="5.55")
-				img.fadeindown(src="/images/2old2play/logo.png")
-		.title
-			span#title(data-speed="2.85")
-				h1.fadeinup A social hub that sparks community playing together.
-.push.hide
-	.bg
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/2old2play/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 A social hub that sparks community playing together.
+		.fade
+		.slide
+	.push
 
-//- block work
-section.work.bgfade
-	.arrowbar.hide
-		.arrow
-	.head
-		h5.caps Overview
-	.wrap
-		.overview.hide
-			.detail.single
-				p I took a large community's dated website and designed it to be a social hub that gats people to start playing together.
-			.context
-				div
-					h6.caps My Role:
-					p web design & brand
-				div
-					h6.caps When:
-					p late 2013
-				div
-					h6.caps With:
-					p just me, freelancing
-	.itemhead
-		h3 Homepage & community feed
-	.visual
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span 2old2play.com
-			img(src="/images/2old2play/2o2p-02.jpg")
-	.itemhead
-		h3 Alternate homepage
-	.visual
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span 2old2play.com
-			img(src="/images/2old2play/2o2p-01.jpg")
-	.footlink
-		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/173459-2old2play", target="_blank">this project on dribbble</a>
+block work
+	section.work.bgfade
+		.arrowbar.hide
+			.arrow
+		.head
+			h5.caps Overview
+		.wrap
+			.overview
+				.detail.single
+					p I took a large community's dated website and designed it to be a social hub that gats people to start playing together.
+				.context
+					div
+						h6.caps My Role:
+						p web design & brand
+					div
+						h6.caps When:
+						p late 2013
+					div
+						h6.caps With:
+						p just me, freelancing
+		.itemhead
+			h3 Homepage & community feed
+		.visual
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span 2old2play.com
+				img(src="/images/2old2play/2o2p-02.jpg")
+		.itemhead
+			h3 Alternate homepage
+		.visual
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span 2old2play.com
+				img(src="/images/2old2play/2o2p-01.jpg")
+		.footlink
+			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/173459-2old2play", target="_blank">this project on dribbble</a>
 
-//- block next
-section.next.tmu.navlink(data-pathname="threadmeup")
-	.head
-		h5.caps Next Project
-	.peek
-		img(src="/images/threadmeup/logo.png")
-	.peekbg
+block next
+	section.next.threadmeup.navlink(data-pathname="threadmeup")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/threadmeup/logo.png")
+	//- section.next.toggle.navlink(data-pathname="toggle")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/toggle/logo.png")

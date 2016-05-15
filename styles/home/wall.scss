@@ -23,7 +23,7 @@ section.workwall {
 		margin: 0 auto;
 		opacity: .2;
 		overflow: hidden;
-		@include trans(.45s);
+		@include trans(.5s);
 		.fadeb {
 			position: fixed;
 			top: 540px;
@@ -71,18 +71,19 @@ section.workwall {
 		max-width: 1600px;
 		margin: auto;
 		@include gradient-vert-d($wht-0, 0%, $wht, 100%);
-	}
-	.bg {
-		position: absolute;
-		top: 90%;
-		bottom: -100%;
-		left: 0;
-		right: 0;
-		z-index: -1;
-		width: 100%;
-		max-width: 1600px;
-		margin: auto;
-		background: $wht;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			bottom: -50%;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			width: 100%;
+			max-width: 1600px;
+			margin: auto;
+			background: $wht;
+		}
 	}
 }
 section.workwall.fold {

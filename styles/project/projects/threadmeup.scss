@@ -3,51 +3,43 @@
 // ThreadMeUp styles
 // ------------------------------------------------------------
 
-body.tmu {
-	.base.project {
-		background: #f46272;
+$pcolor:	#f46272;
+body.threadmeup {
+	header {
+		background: $pcolor;
+		.fade {
+			@include gradient-vert-d(rgba($pcolor, 0), 75%, $pcolor, 100%);
+		}
+	}
+	.splash {
+		.vid {
+			video {
+				background-color: $pcolor !important;
+			}
+		}
 	}
 	.arrow {
-		@include arrow(27px, #f46272);
+		@include arrow(27px, $pcolor);
 	}
-	section.work {
-		box-shadow: 0 -96px 84px -54px #f46272;
-	}
-	.splash {
-		.vid {
-			video {
-				background-color: #f46272 !important;
-			}
-		}
-	}
-}
-body.tmu.fade {
-	.splash {
-		opacity: 0;
-		.vid {
-			video {
-				display: none;
-			}
-		}
+	.base {
+		background: $pcolor;
 	}
 }
 
 
 // Next
 body.project {
-	section.next.tmu {
-		&:hover {
-			.peek {
-				background: #f46272;
-			}
-			img {
-				@include tmove(0, -24px);
-			}
-		}
+	section.next.threadmeup {
 		img {
 			width: 384px;
 			height: 96px;
-			margin: 66px 0 0 2.5%;
+			@include leader(5.5);
+			margin-left: 2.5%;
+		}
+		&:hover {
+			.peek {
+				background: $pcolor;
+			}
 		}
 	}
 }

@@ -3,27 +3,31 @@
 // Generation Nutrition styles
 // ------------------------------------------------------------
 
-body.gennut {
-	.base.project {
-		background: #2d293d;
+$pcolor:	#2d293d;
+body.gennutrition {
+	header {
+		background: $pcolor;
+		.fade {
+			display: none;
+		}
 	}
 	.arrow {
-		@include arrow(27px, #2d293d);
+		@include arrow(27px, $pcolor);
+	}
+	.base {
+		background: $pcolor;
 	}
 }
 
 // Next
 body.project {
-	section.next.gennut {
+	section.next.gennutrition {
 		img {
 			@include leader(1.5);
 		}
 		&:hover {
 			.peek {
-				background: #2d293d;
-			}
-			img {
-				@include tmove(0, -24px);
+				background: $pcolor;
 			}
 		}
 	}

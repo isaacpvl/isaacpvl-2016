@@ -3,30 +3,34 @@
 // 2Old2Play styles
 // ------------------------------------------------------------
 
-body.totp {
-	.base.project {
-		background: #212833;
+$pcolor:	#212833;
+body.toldtplay {
+	header {
+		background: $pcolor;
+		.fade {
+			display: none;
+		}
 	}
 	.arrow {
-		@include arrow(27px, #212833);
+		@include arrow(27px, $pcolor);
+	}
+	.base {
+		background: $pcolor;
 	}
 }
 
 // Next
 body.project {
-	section.next.totp {
-		&:hover {
-			.peek {
-				background: #212833;
-			}
-			img {
-				@include tmove(0, -24px);
-			}
-		}
+	section.next.toldtplay {
 		img {
 			width: 480px;
 			height: 120px;
-			margin: 52px 0 0 0;
+			@include leader(4.5);
+		}
+		&:hover {
+			.peek {
+				background: $pcolor;
+			}
 		}
 	}
 }

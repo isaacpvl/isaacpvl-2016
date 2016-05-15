@@ -3,57 +3,52 @@
 // SocialCrunch styles
 // ------------------------------------------------------------
 
-body.scrunch {
-	.base.project {
+$pcolor:	#fff3dd;
+$pcolorb:	#fedc9e;
+$pcolorc:	#edcdc9;
+body.socialcrunch {
+	header {
 		@include scrunchbg;
-		@include animatereset(1.2s, 0s);
-		@include fadein;
-	}
-	.base.scrunch {
-		box-shadow: none;
-		@include scrunchbar;
+		.bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 9px;
+			@include scrunchbar;
+			@include trans(.25s);
+		}
+		.fade {
+			display: none;
+			@include gradient-vert-d(rgba($pcolor, 0), 75%, $pcolor, 100%);
+		}
 	}
 	.arrow {
-		@include arrow(27px, #fff3dd);
+		@include arrow(27px, $pcolor);
 	}
-	.bar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-		max-width: 1600px;
-		margin: 0 auto;
-		height: 9px;
-		@include scrunchbar;
-		@include trans(.2s, 0s);
+	.base {
+		// background: $pcolor;
+		@include scrunchbg;
 	}
 }
-body.project.scrunch.next, body.project.scrunch.home {
-	.base.project, .base.scrunch {
-		opacity: 0;
-	}
+
+body.project.next, body.project.return {
 	.bar {
-		top: -9px;
-	}
-	.shadow {
-		opacity: 0;
+		@include tmove(0, -9px);
 	}
 }
 
 // Next
 body.project {
-	section.next.scrunch {
+	section.next.socialcrunch {
+		img {
+			@include leader(4.5);
+			margin-left: 3%;
+		}
 		&:hover {
 			.peek {
 				background: none;
 			}
-			img {
-				@include tmove(0, -24px);
-			}
-		}
-		img {
-			margin: 52px 0 0 3%;
 		}
 		.peekbg {
 			@include scrunchbar;

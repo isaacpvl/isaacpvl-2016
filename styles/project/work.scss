@@ -18,13 +18,12 @@ body.project {
 			max-width: 1282px;
 			margin: auto;
 		}
-		.head, .overview, .itemhead, .visual, .detail, .project {
+		.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
 			@include trans(.75s, .3s);
 		}
 	}
 	section.work.bgfade {
-		box-shadow: none;
-		.head, .overview, .itemhead, .visual, .detail, .project {
+		.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
 			opacity: 0;
 		}
 	}

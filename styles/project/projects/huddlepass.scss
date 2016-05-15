@@ -3,33 +3,36 @@
 // HuddlePass styles
 // ------------------------------------------------------------
 
-body.hpass {
-	.base.project {
-		background: url('/images/huddlepass/linesbg.png') #404759;
+$pcolor:	#404759;
+$pcolorb:	#353a49;
+body.huddlepass {
+	header {
+		background: $pcolor url('/images/huddlepass/linesbg.png');
 		@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
+		.fade {
+			@include gradient-vert-d(rgba($pcolorb, 0), 50%, $pcolorb, 100%);
+		}
 	}
 	.arrow {
-		@include arrow(27px, #353a49);
+		@include arrow(27px, $pcolorb);
 	}
-	section.work {
-		box-shadow: 0 -96px 84px -54px #353a49;
+	.base {
+		background: $pcolorb;
 	}
 }
 
 // Next
 body.project {
-	section.next.hpass {
+	section.next.huddlepass {
+		img {
+			@include leader(3.5);
+			margin-right: 7.5%;
+		}
 		&:hover {
 			.peek {
-				background: url('/images/huddlepass/linesbg.png') #404759;
+				background: url('/images/huddlepass/linesbg.png') $pcolor;
 				@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
 			}
-			img {
-				@include tmove(0, -24px);
-			}
-		}
-		img {
-			margin: 44px 7.5% 0 0;
 		}
 	}
 }

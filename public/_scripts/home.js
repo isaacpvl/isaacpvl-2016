@@ -994,10 +994,14 @@
 			setTimeout(function() {
 
 				$('nav').removeClass('hide');
+				$('header').removeClass('hide');
 				$('.wrap').removeClass('hide');
 				$('.taglinem').removeClass('hide');
-				$('.push').removeClass('hide');
 				$('.arrowbar').removeClass('hide');
+
+			setTimeout(function() {
+				$('.push').addClass('reveal');
+			}, 1200);
 
 			setTimeout(function() {
 				$('.nava').addClass('full');
@@ -1152,10 +1156,10 @@
 			event.preventDefault();
 			var projectPath = '/'+$(this).attr('data-pathname')+'/';
 			if((event.which == 1)) {
-				$('body').addClass('out');
+				$('body').addClass('navgo');
 				var projectDelay = setTimeout(function() {
 					location.href = projectPath;
-				}, 400);
+				}, 1000);
 			} else {
 				window.open(projectPath, '_blank');
 			}

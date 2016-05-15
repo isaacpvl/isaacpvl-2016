@@ -11,95 +11,27 @@ body.project, header, nav, section {
 	min-width: 960px;
 	max-width: 1600px;
 }
+
 body.project {
 	text-align: center;
-	.base {
+	.base.hide {
 		background: $wht;
 	}
-	.base.project {
-		box-shadow: none;
-		@include trans(0s);
-		.fade {
-			position: relative;
-			width: 100%;
-			height: 85%;
-		}
-	}
 	section {
-		@include trans(.4s, 0s);
+		@include trans(.375);
 		.head {
-			@include trans(.4s, 0s);
-			@include ttiming(ease);
+			@include trans(.375);
 		}
 	}
-	.splash {
-		text-align: right;
-		position: fixed;
-		top: 0;
-		z-index: 1;
-		width: 100%;
-		min-width: 320px;
-		max-width: 1600px;
-		height: 92.5%;
-		min-height: 600px;
-		max-height: 960px;
-		margin: auto;
-		opacity: 1;
-		@include trans(.2s, 0s);
-		.wrap {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-		.fade {
-			position: absolute;
-			@include onepos(0);
-			z-index: -1;
-			min-width: 1280px;
-			height: 100%;
-			overflow: hidden;
-			@include trans(.6s, 0s);
-			img {
-				pointer-events: none;
-				width: 100%;
-				height: 100%;
-				min-height: 540px;
-			}
-		}
-		.vid {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			z-index: -1000;
-			@include trans(.6s, 0s);
-			video {
-				position: relative;
-				float: right;
-				width: auto;
-				min-width: 100%;
-				height: auto;
-				height: 100%;
-				// @include animatereset(1.2s, 1.2s);
-				// @include atiming(ease-in);
-				// @include fadein;
-			}
+	.navslide {
+		.slide {
+			background: $red;
+			@include dropshadow-x(36px, $blk-1);
+			@include homeslidein;
 		}
 	}
 }
-body.project.fade {
-	header, .base.project, .splash {
-		opacity: 0;
-	}
-}
-
-body.project.home {
-	header, .shadow {
-		opacity: 0;
-		@include tmove(0, -900px);
-		@include trans(.375s, 0s);
-	}
+body.project.navreturn {
 	nav {
 		@include navout;
 		li.nava {
@@ -108,119 +40,59 @@ body.project.home {
 			}
 		}
 	}
-	nav.whitebg, nav.bluebg {
-		background: none;
-	}
-	.base, .base.project {
-		background: $red;
-		@include trans(.375s, 0s);
-	}
-	.splash {
-		bottom: 0;
-		height: 100%;
-		min-height: 100%;
-		max-height: 100%;
-		opacity: 0;
-	}
-	section.work {
-		opacity: 0;
-		@include tmove(0, 900px);
-		@include trans(.375s, 0s);
-	}
-	section.next {
-		background: none;
-		.head, .peek, .peekbg {
-			@include tmove(0, 100%);
-			@include trans(.375s, 0s);
-		}
-	}
-	.splash {
-		opacity: 0;
-		.vid {
-			video {
-				display: none;
-			}
-		}
-	}
-	.browser {
-		.vid {
-			video.hidden {
-				display: none;
-			}
-		}
-		.poster {
-			display: block;
+	.navslide {
+		display: block;
+		.slide {
+			@include dropshadow-x(15px, $blk-1);
 		}
 	}
 }
 
 
 body.project.next {
-	header, section, .shadow {
-		@include tmove(0, 600px);
-		@include trans(.375s, 0s);
-	}
-	section.work {
-		opacity: 0;
-		@include tmove(0, 600px);
+	nav {
+		@include navout;
 	}
 	header {
 		.logo, .title {
 			opacity: 0;
-			@include trans(.375s, 0s);
+			@include trans(.375s);
+		}
+		.logo {
+			@include tmove(0, -96px);
+		}
+		.title {
+			@include tmove(0, 84px);
+		}
+		.slide {
+			@include animate(.375s);
+			@include slidein;
+		}
+	}
+	.arrow {
+		opacity: 0;
+		@include tmove(0, -127px);
+		@include trans(.1s);
+	}
+	section.work {
+		.head, .itemhead, .wrap, .visual, .detail, .footlink {
+			opacity: 0;
+			@include tmove(0, 240px);
+			@include trans(.375s);
+			@include ttimingcb(.7, .3, .7, .3);
 		}
 	}
 	section.next {
-		@include tmove(0, 100%);
-	}
-	nav {
-		@include navout;
-	}
-	nav.whitebg, nav.bluebg {
-		background: none;
-	}
-	.base.project {
-		opacity: 0;
-		@include trans(.4s, 0s);
-	}
-	.splash {
-		position: absolute;
-		bottom: 0;
-		height: 100%;
-		min-height: 100%;
-		max-height: 100%;
-		opacity: 0;
-	}
-	section.work {
-		.head, .wrap, .wrapb {
-			opacity: 0;
-		}
-	}
-	.splash {
-		opacity: 0;
-		.vid {
-			video {
-				display: none;
-			}
-		}
-	}
-	.browser {
-		.vid {
-			video.hidden {
-				display: none;
-			}
-		}
-		.poster {
-			display: block;
+		.head, .peek, .peekbg {
+			@include tmove(0, 144px);
+			@include trans(.375s);
 		}
 	}
 }
 body.project.fold {
 	.arrow {
 		@include tmove(0, -27px);
-	}
-	section.work {
-		box-shadow: none;
+		@include trans(.2s);
 	}
 }
 
@@ -260,18 +132,6 @@ body.project.fold {
 			top: 0;
 			bottom: 0;
 			height: auto;
-			z-index: 1;
 		}
 	}
 }
-
-
-// Loader styles
-.push.hide, .sbg.hide {
-	display: none;
-}
-.overview.hide {
-	opacity: 0;
-}
-
-

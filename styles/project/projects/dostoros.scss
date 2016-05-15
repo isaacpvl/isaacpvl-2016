@@ -3,29 +3,33 @@
 // Dos Toros styles
 // ------------------------------------------------------------
 
+$pcolor:	$blk;
 body.dostoros {
-	.base.project {
-		background: $blk url('/images/dostoros/bg.jpg') no-repeat;
-		background-size: 100%;
-	}
 	header {
+		background: $pcolor url('/images/dostoros/bg.jpg') no-repeat;
+		background-size: 100%;
 		.fade {
-			@include gradient-vert-d($blk-0, 65%, $blk, 100%);
+			@include gradient-vert-d(rgba($pcolor, 0), 65%, $pcolor, 100%);
 		}
 	}
 	.arrow {
-		@include arrow(27px, $blk);
+		@include arrow(27px, $pcolor);
 	}
-	section.work {
-		box-shadow: 0 -96px 84px -54px $blk;
+	.base {
+		background: $pcolor;
 	}
 }
 
 // Next
 body.project {
 	section.next.dostoros {
+		img {
+			width: 432px;
+			height: 108px;
+			@include leader(4);
+		}
 		.peekbg {
-			background: $blk url('/images/dostoros/bg.jpg') no-repeat;
+			background: $pcolor url('/images/dostoros/bg.jpg') no-repeat;
 			background-size: 100%;
 			opacity: 0;
 		}
@@ -36,14 +40,6 @@ body.project {
 			.peekbg {
 				opacity: 1;
 			}
-			img {
-				@include tmove(0, -24px);
-			}
-		}
-		img {
-			width: 432px;
-			height: 108px;
-			margin: 48px 0 0 0;
 		}
 	}
 }

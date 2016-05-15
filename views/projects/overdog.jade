@@ -1,137 +1,136 @@
 
-//- block nav
-a#project
-nav.hide
-	ul
-		include ../_resource/pvl
-		li.navb.caps
-			a.navlink(data-pathname="lifeis")
-				span &#8249;
-				| Last Project
-		li.navc.caps
-			a.navlink(data-pathname="2old2play")
-				| Next Project
-				span &#8250;
+block nav
+	nav.hide
+		ul
+			include ../_resource/pvl
+			li.navb.caps
+				a.navlink(data-pathname="lifeis")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="2old2play")
+					| Next Project
+					span &#8250;
 
-//- block header
-header
-	.wrap.hide
-		.logo
-			span#logo(data-speed="5.55")
-				img.fadeindown(src="/images/overdog/logo.png")
-		.title
-			span#title(data-speed="2.85")
-				h1.fadeinup Pitting athletes against their fans in online challenges.
-.push.hide
-	.bg
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/overdog/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 Pitting athletes against their fans in online challenges.
+		.fade
+		.slide
+	.push
 
-//- block work
-section.work.bgfade
-	.arrowbar.hide
-		.arrow
-	.head
-		h5.caps Overview
-	.wrap
-		.overview.hide
-			.detail.single
-				p I made it easy and exciting for pro athletes to challenge their fans in video games, and for both parties to have a blast.
-			.context
-				div
-					h6.caps My Role:
-					p UI design & art direction
-				div
-					h6.caps When:
-					p early 2013
-				div
-					h6.caps With:
-					p AKTA, agency
-	.itemhead
-		h3 Athletes create challenges
-	.visual.multiphone
-		.phone
-			.top
-				.camera
-					span
-				.speaker
-					span
-			.frame
-				img(src="/images/overdog/odog-record.jpg")
-			.bottom
-				div
-					span
-		.phone
-			.top
-				.camera
-					span
-				.speaker
-					span
-			.frame.vid
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/overdog/odog-profile.jpg")
-					source(src="/images/overdog/odog-challenge.webm", type="video/webm")
-					source(src="/images/overdog/odog-challenge.mp4", type="video/mp4")
-			.bottom
-				div
-					span
-		.phone
-			.top
-				.camera
-					span
-				.speaker
-					span
-			.frame
-				img(src="/images/overdog/odog-profile.jpg")
-			.bottom
-				div
-					span
-	.itemhead
-		h3 Fans accept challenges
-	.visual.multiphone
-		.phone
-			.top
-				.camera
-					span
-				.speaker
-					span
-			.frame
-				img(src="/images/overdog/odog-challenges.jpg")
-			.bottom
-				div
-					span
-		.phone
-			.top
-				.camera
-					span
-				.speaker
-					span
-			.frame
-				img(src="/images/overdog/odog-enter-challenge.jpg")
-			.bottom
-				div
-					span
-		.phone
-			.top
-				.camera
-					span
-				.speaker
-					span
-			.frame
-				img(src="/images/overdog/odog-joined-challenge.jpg")
-			.bottom
-				div
-					span
-	.footlink
-		p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/120502-OverDog-iPhone", target="_blank">this project on dribbble</a>
+block work
+	section.work.bgfade
+		.arrowbar.hide
+			.arrow
+		.head
+			h5.caps Overview
+		.wrap
+			.overview
+				.detail.single
+					p I made it easy and exciting for pro athletes to challenge their fans in video games, and for both parties to have a blast.
+				.context
+					div
+						h6.caps My Role:
+						p UI design & art direction
+					div
+						h6.caps When:
+						p early 2013
+					div
+						h6.caps With:
+						p AKTA, agency
+		.itemhead
+			h3 Athletes create challenges
+		.visual.multiphone
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/images/overdog/odog-record.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame.vid
+					video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/overdog/odog-profile.jpg")
+						source(src="/images/overdog/odog-challenge.webm", type="video/webm")
+						source(src="/images/overdog/odog-challenge.mp4", type="video/mp4")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/images/overdog/odog-profile.jpg")
+				.bottom
+					div
+						span
+		.itemhead
+			h3 Fans accept challenges
+		.visual.multiphone
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/images/overdog/odog-challenges.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/images/overdog/odog-enter-challenge.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/images/overdog/odog-joined-challenge.jpg")
+				.bottom
+					div
+						span
+		.footlink
+			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/120502-OverDog-iPhone", target="_blank">this project on dribbble</a>
 
-//- block next
-//- section.next.gennut.navlink(data-pathname="gennutrition")
-//- 	.head
-//- 		h5.caps Next Project
-//- 	.peek
-//- 		img(src="/images/gennutrition/logo.png")
-//- 	.peekbg
-section.next.totp.navlink(data-pathname="2old2play")
-	.head
-		h5.caps Next Project
-	.peek
-		img(src="/images/2old2play/logo.png")
-	.peekbg
+block next
+	section.next.toldtplay.navlink(data-pathname="2old2play")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/2old2play/logo.png")
+	//- section.next.gennutrition.navlink(data-pathname="gennutrition")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/gennutrition/logo.png")
+		.peekbg

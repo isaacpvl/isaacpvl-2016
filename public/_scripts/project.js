@@ -677,14 +677,13 @@
 			setTimeout(function() {
 
 				$('nav').removeClass('hide');
-				$('.wrap').removeClass('hide');
-				$('.push').removeClass('hide');
+				$('header').removeClass('hide');
 				$('.arrowbar').removeClass('hide');
-				$('.overview').removeClass('hide');
-				$('.sbg').removeClass('hide');
+				$('.base').removeClass('hide');
 
 				setTimeout(function() {
 					$('.work').removeClass('bgfade');
+					$('.base').removeClass('hide');
 				}, 600);
 
 				setTimeout(function() {
@@ -693,18 +692,12 @@
 
 			// waypoints
 				setTimeout(function() {
-
-				// fold transitions
 					home.waypoint({
 					handler: function(event, direction) {
 						body.toggleClass('fold');}, offset: '-5%' });
 					work.waypoint({
 					handler: function(event, direction) {
 						nav.toggleClass('sticky');}, offset: '30%' });
-					work.waypoint({
-					handler: function(event, direction) {
-						body.toggleClass('fade');}, offset: -1 });
-
 				}, 500);
 
 
@@ -742,10 +735,10 @@
 		$('#nava').on('mouseup', function(event) {
 			event.preventDefault();
 			if((event.which == 1)) {
-				$('body').addClass('home'); 
+				$('body').addClass('navreturn'); 
 				setTimeout(function() { 
 					location.href='/';
-				}, 400);
+				}, 1000);
 			} else {
 				window.open('/', '_blank');
 			}
@@ -762,14 +755,14 @@
 
 
 	// redirects to homepage
-		$(window).on('resize', function() {
-			if (window.matchMedia('(max-width: 959px)').matches) {
-				window.location.href = "/";
-			}
-		});
-		if (window.matchMedia('(max-width: 959px)').matches) {
-			window.location.href = "/";
-		}
+		// $(window).on('resize', function() {
+		// 	if (window.matchMedia('(max-width: 959px)').matches) {
+		// 		window.location.href = "/";
+		// 	}
+		// });
+		// if (window.matchMedia('(max-width: 959px)').matches) {
+		// 	window.location.href = "/";
+		// }
 
 
 	});

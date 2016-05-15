@@ -3,31 +3,44 @@
 // Past work styles
 // ------------------------------------------------------------
 
+$pcolor:	$blu-d;
 body.past {
-	.base.project {
-		background: #00345e;
-	}
-	.arrow {
-		@include arrow(27px, #00345e);
-	}
-	section.work {
-		box-shadow: 0 -96px 84px -54px #00345e;
+	header {
+		background: $pcolor;
+		.fade {
+			@include gradient-vert-d(rgba($pcolor, 0), 65%, $pcolor, 100%);
+		}
 	}
 	.splash {
 		.vid {
 			opacity: 0.5;
 			video {
-				background-color: #00345e !important;
+				background-color: $pcolor !important;
 			}
 		}
 	}
+	.arrow {
+		@include arrow(27px, $pcolor);
+	}
+	.base {
+		background: $pcolor;
+	}
 }
-body.past.fade {
-	.splash {
-		opacity: 0;
-		.vid {
-			video {
-				display: none;
+
+// Next
+body.project {
+	section.next.past {
+		.peekbg {
+			background: $pcolor url('/images/home/wallbanner.jpg') no-repeat;
+			background-size: 100%;
+			opacity: 0;
+		}
+		&:hover {
+			.peek {
+				background: none;
+			}
+			.peekbg {
+				opacity: 1;
 			}
 		}
 	}

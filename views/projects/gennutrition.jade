@@ -1,75 +1,72 @@
 
-//- block nav
-a#project
-nav.hide
-	ul
-		include ../_resource/pvl
-		li.navb.caps
-			a.navlink(data-pathname="overdog")
-				span &#8249;
-				| Last Project
-		li.navc.caps
-			a.navlink(data-pathname="2old2play")
-				| Next Project
-				span &#8250;
+block nav
+	nav.hide
+		ul
+			include ../_resource/pvl
+			li.navb.caps
+				a.navlink(data-pathname="overdog")
+					span &#8249;
+					| Last Project
+			li.navc.caps
+				a.navlink(data-pathname="2old2play")
+					| Next Project
+					span &#8250;
 
-//- block header
-header
-	.wrap.hide
-		.logo
-			span#logo(data-speed="5.55")
-				img.fadeindown(src="/images/gennutrition/logo.png")
-		.title
-			span#title(data-speed="2.85")
-				h1.fadeinup Nunc rutrum mi molestie faucibus erat at feugiat erat.
-.push.hide
-	.bg
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/gennutrition/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 Nunc rutrum mi molestie faucibus erat at feugiat erat.
+		.fade
+		.slide
+	.push
 
-//- block work
-section.work.bgfade
-	.arrowbar.hide
-		.arrow
-	.head
-		h5.caps Overview
-	.wrap
-		.overview.hide
-			.detail.single
-				p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum acra vitae eget sodales morbi non amet quisque fringilla tellus facilisi.
-			.context
-				div
-					h6.caps My Role:
-					p aliquam eget lectus
-				div
-					h6.caps When:
-					p early 2013
-				div
-					h6.caps With:
-					p AKTA, agency
-	.itemhead
-		h3 Huddle communities
-	.visual.full
-		.browser.large
-			.top
-				ul
-					li
-					li
-					li
-				span huddlepass.com/isu/football
-			video(preload="auto", autoplay="true", loop="true", poster="/images/huddlepass/hpass-huddles-poster.jpg")
-				source(src="/images/huddlepass/hpass-huddles.webm", type="video/webm")
-				source(src="/images/huddlepass/hpass-huddles.mp4", type="video/mp4")
-	.itemhead
-		h3 UI kit & style guide
-	.visual
-		.shot
-			img(src="/images/huddlepass/hpass-03.jpg")
-	.footlink
-		p you can also check out <a class="texta" href="https://dribbble.com/shots/1501580-Generation-Nutrition-campaign-landing-page-WIP", target="_blank">this project on dribbble</a>
+block work
+	section.work.bgfade
+		.arrowbar.hide
+			.arrow
+		.head
+			h5.caps Overview
+		.wrap
+			.overview
+				.detail.single
+					p Pellentesque ut ipsum aliquam, interdum est quis, semper enim. Phasellus porttitor quam sed neque luctus, bibendum lacinia tellus iaculis. Mauris ac nibh dignissim, posuere orci vitae, ultrices ipsum acra vitae eget sodales morbi non amet quisque fringilla tellus facilisi.
+				.context
+					div
+						h6.caps My Role:
+						p aliquam eget lectus
+					div
+						h6.caps When:
+						p early 2014
+					div
+						h6.caps With:
+						p just me, freelancing
+		.itemhead
+			h3 Landing page
+		.visual
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span huddlepass.com
+				img(src="/images/huddlepass/hpass-02.jpg")
+		.itemhead
+			h3 UI kit & style guide
+		.visual
+			.shot
+				img.frame(src="/images/huddlepass/hpass-03.jpg")
+		.footlink
+			p you can also check out <a class="texta" href="https://dribbble.com/shots/1501580-Generation-Nutrition-campaign-landing-page-WIP", target="_blank">this project on dribbble</a>
 
-//- block next
-section.next.totp.navlink(data-pathname="2old2play")
-	.head
-		h5.caps Next Project
-	.peek
-		img(src="/images/2old2play/logo.png")
-	.peekbg
+block next
+	section.next.toldtplay.navlink(data-pathname="2old2play")
+		.head
+			h5.caps Next Project
+		.peek
+			img(src="/images/2old2play/logo.png")
