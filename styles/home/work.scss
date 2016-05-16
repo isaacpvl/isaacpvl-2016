@@ -8,9 +8,7 @@ section.work {
 	margin-top: -20%;
 	@include padding-trailer(18);
 	text-align: center;
-	// background: $wht;
 	.bg {
-		// display: none;
 		position: absolute;
 		z-index: 0;
 		top: 300px;

@@ -18,77 +18,14 @@ body.project {
 		background: $wht;
 	}
 	section {
-		@include trans(.375);
+		@include trans(.5s);
 		.head {
-			@include trans(.375);
-		}
-	}
-	.navslide {
-		.slide {
-			background: $red;
-			@include dropshadow-x(36px, $blk-1);
-			@include homeslidein;
-		}
-	}
-}
-body.project.navreturn {
-	nav {
-		@include navout;
-		li.nava {
-			h6 {
-				opacity: 0;
-			}
-		}
-	}
-	.navslide {
-		display: block;
-		.slide {
-			@include dropshadow-x(15px, $blk-1);
+			@include trans(.5s);
 		}
 	}
 }
 
 
-body.project.next {
-	nav {
-		@include navout;
-	}
-	header {
-		.logo, .title {
-			opacity: 0;
-			@include trans(.375s);
-		}
-		.logo {
-			@include tmove(0, -96px);
-		}
-		.title {
-			@include tmove(0, 84px);
-		}
-		.slide {
-			@include animate(.375s);
-			@include slidein;
-		}
-	}
-	.arrow {
-		opacity: 0;
-		@include tmove(0, -127px);
-		@include trans(.1s);
-	}
-	section.work {
-		.head, .itemhead, .wrap, .visual, .detail, .footlink {
-			opacity: 0;
-			@include tmove(0, 240px);
-			@include trans(.375s);
-			@include ttimingcb(.7, .3, .7, .3);
-		}
-	}
-	section.next {
-		.head, .peek, .peekbg {
-			@include tmove(0, 144px);
-			@include trans(.375s);
-		}
-	}
-}
 body.project.fold {
 	.arrow {
 		@include tmove(0, -27px);

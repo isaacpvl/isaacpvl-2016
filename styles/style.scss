@@ -49,20 +49,40 @@ body {
 	font-size: $basefont;
 	line-height: $baseline;
 }
+.twrap {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	@include torigin(0%, 0%);
+	@include trans(0.75s);
+	@include ttimingcb(.3, .7, .3, .7);
+	.overlay {
+		display: none;
+		position: fixed;
+		z-index: 998;
+		top: -10%;
+		bottom: -10%;
+		left: 0;
+		right: 0;
+		background: $blk-5;
+		@include animate(.8s);
+		@include fadein;
+	}
+}
 section {
 	position: relative;
 	z-index: 2;
 	width: 100%;
 	@include padding-x(5%);
 	overflow: hidden;
-	@include trans(.6s, .2s);
 	.head {
 		position: relative;
 		width: 100%;
 		@include leader(16);
 		@include trailer(7);
 		text-align: center;
-		@include trans(.375s);
+		@include trans(.5s);
 		h5 {
 			display: inline-block;
 			letter-spacing: 0.075em;
@@ -94,6 +114,7 @@ section {
 	background: $red;
 	@include trans(.5s);
 }
+
 .navslide {
 	display: none;
 	position: fixed;
@@ -104,6 +125,7 @@ section {
 	height: 100%;
 	overflow: hidden;
 	.slide {
+		display: none;
 		position: relative;
 		z-index: 999;
 		width: 100%;
@@ -111,15 +133,63 @@ section {
 		@include animate(.75s, .2s);
 		@include atimingcb(.7, .3, .7, .3);
 	}
+	.pslide {
+		background: $wht;
+	}
+	.hslide {
+		background: $red;
+	}
 	.overlay {
 		position: fixed;
 		z-index: 998;
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: $blk-6;
-		@include animate(.95s);
+		background: $blk-7;
+		@include animate(.8s);
 		@include fadein;
+	}
+}
+
+body.out {
+	.navslide {
+		display: block;
+	}
+}
+body.return {
+	.twrap {
+		@include torigin(0%, 0%);
+		@include tscale(0.85);
+	}
+	.navslide {
+		.hslide {
+			display: block;
+			@include slideindown;
+		}
+	}
+}
+body.prev {
+	.twrap {
+		@include torigin(0%, 0%);
+		@include tscale(0.88);
+	}
+	.navslide {
+		.pslide {
+			display: block;
+			@include slideinleft;
+		}
+	}
+}
+body.next {
+	.twrap {
+		@include torigin(0%, 0%);
+		@include tscale(0.88)
+	}
+	.navslide {
+		.pslide {
+			display: block;
+			@include slideinright;
+		}
 	}
 }
 
@@ -129,23 +199,9 @@ body.home {
 		background: $red;
 	}
 	.navslide {
-		.slide {
-			background: $wht;
-			@include dropshadow-x(-36px, $blk-1);
-			@include animate(.75s, .225s);
-			@include projectslidein;
-			@include atimingcb(.7, .3, .7, .3);
-		}
-	}
-}
-body.home.navgo {
-	nav {
-		@include navout;
-	}
-	.navslide {
-		display: block;
-		.slide {
-			@include dropshadow-x(-15px, $blk-1);
+		.pslide {
+			@include animate(.75s, .2s);
+			@include slideinright;
 		}
 	}
 }
@@ -190,43 +246,6 @@ body.home.fold {
 		@include arrow(27px, $red-d);
 	}
 }
-
-// body.out {
-// 	.base {
-// 		background: $wht;
-// 		@include trans(.375s);
-// 	}
-// 	header {
-// 		opacity: 0;
-// 		@include trans(.375s);
-// 	}
-// 	nav {
-// 		@include navout;
-// 	}
-// 	nav.bluebg {
-// 		background: none;
-// 		box-shadow: none;
-// 	}
-// 	section.workwall {
-// 		.wall {
-// 			opacity: 0;
-// 			@include trans(.375s);			
-// 		}
-// 	}
-// 	.project, .head {
-// 		opacity: 0;
-// 		@include tmove(0, 240px);
-// 		@include trans(.375s);
-// 		@include ttimingcb(.7, .3, .7, .3);
-// 	}
-// 	section.about {
-// 		opacity: 0;
-// 		@include trans(.375);
-// 	}
-// 	.arrow {
-// 		display: none;
-// 	}
-// }
 
 
 // Media queries

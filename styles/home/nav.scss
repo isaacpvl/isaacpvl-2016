@@ -5,7 +5,7 @@
 
 nav {
 	position: fixed;
-	z-index: 9990;
+	z-index: 99;
 	width: 100%;
 	min-width: 320px;
 	max-width: 1600px;
@@ -255,7 +255,7 @@ nav {
 
 
 nav.sticky {
-	z-index: 9992;
+	z-index: 95;
 	height: 60px;
 	@include innershadow(60px, $wht-9);
 	a {
@@ -515,7 +515,7 @@ nav.bluebg {
 	}
 	nav.sticky {
 		top: 0;
-		z-index: 9990;
+		z-index: 95;
 	}
 }
 @media screen and (max-width: 880px) {

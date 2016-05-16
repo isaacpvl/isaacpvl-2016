@@ -67,18 +67,26 @@
 		100% { @include tmove(0, -100%); }
 	}
 
-// home slide
-	@mixin homeslidein { animation-name: homeslidein; }
-	@keyframes homeslidein {
-		0% { @include tmove(-102%, 0); }
-		100% {  }
+// page transition slides
+	@mixin slideinright { animation-name: slideinright; }
+	@keyframes slideinright {
+		0% { @include tmove(102%, 0); @include dropshadow-x(-36px, rgba(#000, 0.1)); }
+		100% { @include dropshadow-x(-15px, rgba(#000, 0.1)); }
 	}
-
-// project slide
-	@mixin projectslidein { animation-name: projectslidein; }
-	@keyframes projectslidein {
-		0% { @include tmove(102%, 0); }
-		100% {  }
+	@mixin slideinleft { animation-name: slideinleft; }
+	@keyframes slideinleft {
+		0% { @include tmove(-102%, 0); @include dropshadow-x(-6px, rgba(#000, 0.1)); }
+		100% { @include dropshadow-x(15px, rgba(#000, 0.1)); }
+	}
+	@mixin slideinup { animation-name: slideinup; }
+	@keyframes slideinup {
+		0% { @include tmove(0, 102%); @include dropshadow(-30px, rgba(#000, 0.1)); }
+		100% { @include dropshadow(-12px, rgba(#000, 0.1)); }
+	}
+	@mixin slideindown { animation-name: slideindown; }
+	@keyframes slideindown {
+		0% { @include tmove(0, -102%); @include dropshadow(30px, rgba(#000, 0.1)); }
+		100% { @include dropshadow(12px, rgba(#000, 0.1)); }
 	}
 
 // PVL in

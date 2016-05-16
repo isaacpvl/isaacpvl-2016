@@ -719,28 +719,42 @@
 
 
 	// links and transitions to other pages
-		$('body.project').on('mouseup', '.navlink', function(event) {
-			event.preventDefault();
-			var projectPath = '/'+$(this).attr('data-pathname')+'/';
-			if((event.which == 1)) {
-				$('body').addClass('next'); 
-				var projectDelay = setTimeout(function() { 
-					location.href = projectPath;
-				}, 400);
-			} else {
-				window.open(projectPath, '_blank');
-			}
-		});
 
 		$('#nava').on('mouseup', function(event) {
 			event.preventDefault();
 			if((event.which == 1)) {
-				$('body').addClass('navreturn'); 
+				$('body').addClass('out').addClass('return'); 
 				setTimeout(function() { 
 					location.href='/';
 				}, 1000);
 			} else {
 				window.open('/', '_blank');
+			}
+		});
+
+		$('body.project').on('mouseup', '.navb .navlink', function(event) {
+			event.preventDefault();
+			var projectPath = '/'+$(this).attr('data-pathname')+'/';
+			if((event.which == 1)) {
+				$('body').addClass('out').addClass('prev'); 
+				var projectDelay = setTimeout(function() {
+					location.href = projectPath;
+				}, 1000);
+			} else {
+				window.open(projectPath, '_blank');
+			}
+		});
+
+		$('body.project').on('mouseup', '.navc .navlink, .next.navlink', function(event) {
+			event.preventDefault();
+			var projectPath = '/'+$(this).attr('data-pathname')+'/';
+			if((event.which == 1)) {
+				$('body').addClass('out').addClass('next');
+				var projectDelay = setTimeout(function() { 
+					location.href = projectPath;
+				}, 1000);
+			} else {
+				window.open(projectPath, '_blank');
 			}
 		});
 
@@ -755,14 +769,14 @@
 
 
 	// redirects to homepage
-		// $(window).on('resize', function() {
-		// 	if (window.matchMedia('(max-width: 959px)').matches) {
-		// 		window.location.href = "/";
-		// 	}
-		// });
-		// if (window.matchMedia('(max-width: 959px)').matches) {
-		// 	window.location.href = "/";
-		// }
+		$(window).on('resize', function() {
+			if (window.matchMedia('(max-width: 959px)').matches) {
+				window.location.href = "/";
+			}
+		});
+		if (window.matchMedia('(max-width: 959px)').matches) {
+			window.location.href = "/";
+		}
 
 
 	});

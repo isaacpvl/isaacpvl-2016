@@ -114,6 +114,7 @@ section.workwall.foldb {
 }
 @media screen and (max-width: 959px) {
 	section.workwall {
+		display: inline-block;
 		height: auto;
 		min-height: 0;
 		max-height: none;

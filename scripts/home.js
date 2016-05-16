@@ -1059,6 +1059,7 @@
 					work.waypoint({
 						handler: function(event, direction) {
 							work.toggleClass('foldb');}, offset: -600 });
+					
 				// arrows
 					home.waypoint({
 						handler: function(event, direction) {
@@ -1156,7 +1157,7 @@
 			event.preventDefault();
 			var projectPath = '/'+$(this).attr('data-pathname')+'/';
 			if((event.which == 1)) {
-				$('body').addClass('navgo');
+				$('body').addClass('out').addClass('next');
 				var projectDelay = setTimeout(function() {
 					location.href = projectPath;
 				}, 1000);
