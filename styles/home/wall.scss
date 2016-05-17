@@ -12,6 +12,18 @@
 		.head {
 			display: none;
 		}
+		.fade {
+			position: absolute;
+			top: 0%;
+			bottom: 0%;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			width: 100%;
+			max-width: 1600px;
+			margin: auto;
+			@include gradient-vert-d($wht-0, 0%, $wht, 91%);
+		}
 		.wall {
 			position: absolute;
 			top: 0;
@@ -24,7 +36,7 @@
 			opacity: .2;
 			overflow: hidden;
 			@include trans(.5s);
-			.fadeb {
+			.fade {
 				position: fixed;
 				top: 540px;
 				z-index: 3;
@@ -58,31 +70,6 @@
 				min-width: 1280px;
 				max-width: 1600px;
 				background-color: $wht !important;
-			}
-		}
-		.fade {
-			position: absolute;
-			top: 0%;
-			bottom: 9%;
-			left: 0;
-			right: 0;
-			z-index: -1;
-			width: 100%;
-			max-width: 1600px;
-			margin: auto;
-			@include gradient-vert-d($wht-0, 0%, $wht, 100%);
-			&::after {
-				content: '';
-				position: absolute;
-				top: 100%;
-				bottom: -50%;
-				left: 0;
-				right: 0;
-				z-index: -1;
-				width: 100%;
-				max-width: 1600px;
-				margin: auto;
-				background: $wht;
 			}
 		}
 	}

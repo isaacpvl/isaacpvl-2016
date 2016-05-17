@@ -3,76 +3,75 @@
 // Next styles
 // ------------------------------------------------------------
 
-	body.project {
-		section.next {
-			height: 144px;
-			@include padding-leader(3);
-			cursor: pointer;
-			color: $wht;
-			background: $wht;
-			&:hover, &.active {
-				.head {
-					opacity: 0;
-					@include tmove(0, -24px);
-				}
-				.peek {
-					top: 0;
-					background: none;
-				}
-				.peekbg {
-					top: 0;
-					opacity: 1;
-				}
-				img {
-					opacity: 1;
-					@include tmove(0, -24px);
-				}
-				h1 {
-					@include tmove(0, -18px);
-					opacity: 1;
-				}
-			}
+	section.next {
+		height: 144px;
+		@include padding-leader(3);
+		cursor: pointer;
+		overflow: hidden;
+		color: $wht;
+		background: $wht;
+		&:hover, &.active {
 			.head {
-				margin: 0;
-				z-index: 2;
-				@include trans(.4s);
-				h5 {
-					color: $wht;
-					line-height: 84px;
-					font-size: 20px;
-					font-weight: 600;
-					letter-spacing: 3px;
-					&::after {
-						content: none;
-					}
-				}
+				opacity: 0;
+				@include tmove(0, -24px);
 			}
 			.peek {
-				position: absolute;
-				z-index: 1;
-				top: 36px;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background: $red;
-				@include trans(.35s);
+				top: 0;
+				background: none;
 			}
 			.peekbg {
-				position: absolute;
-				top: 36px;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				@include trans(.35s);
+				top: 0;
+				opacity: 1;
 			}
 			img {
-				opacity: .3;
-				@include trans(.6s);
+				opacity: 1;
+				@include tmove(0, -24px);
 			}
 			h1 {
-				@include leader(4.5);
-				opacity: 0.3;
-				@include trans(.6s);
+				@include tmove(0, -18px);
+				opacity: 1;
 			}
+		}
+		.head {
+			margin: 0;
+			z-index: 2;
+			@include trans(.4s);
+			h5 {
+				color: $wht;
+				line-height: 84px;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 3px;
+				&::after {
+					content: none;
+				}
+			}
+		}
+		.peek {
+			position: absolute;
+			z-index: 1;
+			top: 36px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: $red;
+			@include trans(.35s);
+		}
+		.peekbg {
+			position: absolute;
+			top: 36px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			@include trans(.35s);
+		}
+		img {
+			opacity: .3;
+			@include trans(.6s);
+		}
+		h1 {
+			@include leader(4.5);
+			opacity: 0.3;
+			@include trans(.6s);
 		}
 	}

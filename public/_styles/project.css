@@ -290,6 +290,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     transform: translate(0, -102%); }
   100% { } }
 
+@-webkit-keyframes zoomout {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
+@keyframes zoomout {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
 @-webkit-keyframes pvlin {
   0% {
     width: 0; }
@@ -642,6 +658,9 @@ a, a img {
     color: #000;
     transition-duration: 0.1s;
     transition-delay: 0s; }
+
+a.texta {
+  text-decoration: underline; }
 
 .button {
   display: inline-block;
@@ -1506,7 +1525,7 @@ a, a img {
 
 .loader {
   position: fixed;
-  z-index: 9999;
+  z-index: 9998;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -1514,9 +1533,7 @@ a, a img {
   max-width: 1600px;
   margin: auto;
   text-align: left;
-  color: #fff;
-  padding-left: 5%;
-  padding-right: 5%; }
+  color: #fff; }
   .loader #lockscroll {
     position: absolute;
     top: 0;
@@ -1546,6 +1563,8 @@ a, a img {
     transition-timing-function: cubic-bezier(0.1, 0.7, 0.3, 1); }
     .loader .status h3 {
       display: inline-block;
+      position: absolute;
+      left: 5%;
       margin-top: 48px;
       font-family: "jaf-facitweb", sans-serif;
       font-size: 34px;
@@ -1561,8 +1580,12 @@ a, a img {
       animation-delay: 0.2s;
       -webkit-animation-fill-mode: backwards;
       animation-fill-mode: backwards; }
+      .loader .status h3:first-letter {
+        letter-spacing: 0em; }
       .loader .status h3 i {
         letter-spacing: 0.04em; }
+        .loader .status h3 i:last-of-type {
+          letter-spacing: 0.02em; }
       .loader .status h3 span {
         display: inline-block;
         width: 8px;
@@ -1584,7 +1607,7 @@ a, a img {
           animation-iteration-count: infinite;
           -webkit-animation-name: loadinga;
                   animation-name: loadinga;
-          margin-left: 6px; }
+          margin-left: 3px; }
         .loader .status h3 span:nth-of-type(2) {
           -webkit-animation-duration: 2.4s;
           animation-duration: 2.4s;
@@ -1917,6 +1940,7 @@ body.project header.more .title {
   min-height: 600px;
   max-height: 960px;
   margin: auto;
+  overflow: hidden;
   opacity: 1;
   transition-duration: 0.375s;
   transition-delay: 0s; }
@@ -2119,6 +2143,7 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
   .visual.multiphone .phone {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     width: 32%;
     min-width: none;
     max-width: 356px;
@@ -2165,44 +2190,45 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
   .visual.full .shot {
     max-width: 1080px; } }
 
-body.project section.next {
+section.next {
   height: 144px;
   padding-top: 36px;
   cursor: pointer;
+  overflow: hidden;
   color: #fff;
   background: #fff; }
-  body.project section.next:hover .head, body.project section.next.active .head {
+  section.next:hover .head, section.next.active .head {
     opacity: 0;
     -webkit-transform: translate(0, -24px);
     transform: translate(0, -24px); }
-  body.project section.next:hover .peek, body.project section.next.active .peek {
+  section.next:hover .peek, section.next.active .peek {
     top: 0;
     background: none; }
-  body.project section.next:hover .peekbg, body.project section.next.active .peekbg {
+  section.next:hover .peekbg, section.next.active .peekbg {
     top: 0;
     opacity: 1; }
-  body.project section.next:hover img, body.project section.next.active img {
+  section.next:hover img, section.next.active img {
     opacity: 1;
     -webkit-transform: translate(0, -24px);
     transform: translate(0, -24px); }
-  body.project section.next:hover h1, body.project section.next.active h1 {
+  section.next:hover h1, section.next.active h1 {
     -webkit-transform: translate(0, -18px);
     transform: translate(0, -18px);
     opacity: 1; }
-  body.project section.next .head {
+  section.next .head {
     margin: 0;
     z-index: 2;
     transition-duration: 0.4s;
     transition-delay: 0s; }
-    body.project section.next .head h5 {
+    section.next .head h5 {
       color: #fff;
       line-height: 84px;
       font-size: 20px;
       font-weight: 600;
       letter-spacing: 3px; }
-      body.project section.next .head h5::after {
+      section.next .head h5::after {
         content: none; }
-  body.project section.next .peek {
+  section.next .peek {
     position: absolute;
     z-index: 1;
     top: 36px;
@@ -2212,7 +2238,7 @@ body.project section.next {
     background: #d12b52;
     transition-duration: 0.35s;
     transition-delay: 0s; }
-  body.project section.next .peekbg {
+  section.next .peekbg {
     position: absolute;
     top: 36px;
     bottom: 0;
@@ -2220,11 +2246,11 @@ body.project section.next {
     right: 0;
     transition-duration: 0.35s;
     transition-delay: 0s; }
-  body.project section.next img {
+  section.next img {
     opacity: .3;
     transition-duration: 0.6s;
     transition-delay: 0s; }
-  body.project section.next h1 {
+  section.next h1 {
     margin-top: 54px;
     opacity: 0.3;
     transition-duration: 0.6s;
@@ -2290,8 +2316,10 @@ body.threadmeup header {
   body.threadmeup header .fade {
     background: linear-gradient(to bottom, rgba(244, 98, 114, 0) 75%, #f46272 100%); }
 
-body.threadmeup .splash .vid video {
-  background-color: #f46272 !important; }
+body.threadmeup .splash {
+  box-shadow: inset 0 0 12px 6px #fff; }
+  body.threadmeup .splash .vid video {
+    background-color: #f46272 !important; }
 
 body.threadmeup .arrow {
   width: 0;
@@ -2387,7 +2415,7 @@ body.huddlepass .arrow {
   border-top: 27px solid #353a49; }
 
 body.huddlepass .base {
-  background: #353a49; }
+  background: #404759; }
 
 body.project section.next.huddlepass img {
   margin-top: 42px;
@@ -2430,10 +2458,6 @@ body.socialcrunch .base {
   background-color: #fff3de;
   background: linear-gradient(to right, #edcdc9 0%, #edcdc9 15%, #fbd5cf 15%, #fbd5cf 29%, #fde7d6 29%, #fde7d6 43%, #fff3dd 43%, #fff3dd 57%, #def0eb 57%, #def0eb 71%, #dbe8eb 71%, #dbe8eb 85%, #cde5f0 85%, #cde5f0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edcdc9', endColorstr='#55a9d1',GradientType=1 ); }
-
-body.project.next .bar, body.project.return .bar {
-  -webkit-transform: translate(0, -9px);
-  transform: translate(0, -9px); }
 
 body.project section.next.socialcrunch img {
   margin-top: 54px;

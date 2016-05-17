@@ -5,7 +5,7 @@
 
 	.loader {
 		position: fixed;
-		z-index: 9999;
+		z-index: 9998;
 		top: 0;
 		bottom: 0;
 		width: 100%;
@@ -14,7 +14,6 @@
 		margin: auto;
 		text-align: left;
 		color: $wht;
-		@include padding-x(5%);
 		#lockscroll {
 			position: absolute;
 			@include onepos(0);
@@ -38,6 +37,8 @@
 			@include ttimingcb(.1, .7, .3, 1);
 			h3 {
 				display: inline-block;
+				position: absolute;
+				left: 5%;
 				@include leader(4);
 				font-family: $caps;
 				font-size: 34px;
@@ -47,11 +48,14 @@
 				font-style: italic;
 				@include fadein;
 				@include animatereset(.6s, .2s)
-				// @include animatereset(.9s, .2s);
-				// @include atimingcb(.1, .7, .3, 1);
-				// @include loaderinleft;
+				&:first-letter {
+					letter-spacing: 0em;
+				}
 				i {
 					letter-spacing: 0.04em;
+					&:last-of-type {
+						letter-spacing: 0.02em;
+					}
 				}
 				span {
 					display: inline-block;
@@ -65,7 +69,7 @@
 					&:nth-of-type(1) {
 						@include animateinf(2.4s, 0.1s);
 						@include loadinga;
-						margin-left: 6px;
+						margin-left: 3px;
 					}
 					&:nth-of-type(2) {
 						@include animateinf(2.4s, 0.175s);
@@ -111,8 +115,6 @@
 					width: 320px;
 					height: 120px;
 					margin: -60px 0 0 -160px;
-					// @include loaderinright;
-					// @include animatereset(0.9s, 0.2s);
 					span {
 						margin-bottom: 0;
 						background: $blk;

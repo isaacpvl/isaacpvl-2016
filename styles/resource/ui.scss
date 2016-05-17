@@ -18,6 +18,9 @@
 			@include trans(.1s);
 		}
 	}
+	a.texta {
+		text-decoration: underline;
+	}
 
 // buttons
 	.button {

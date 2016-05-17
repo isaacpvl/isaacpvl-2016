@@ -488,7 +488,7 @@
 			ul {
 				@include padding-x(6%);
 			}
-			li.nava {
+			li.nava, .status {
 				left: 6%;
 			}
 		}

@@ -99,6 +99,7 @@
 		min-height: 600px;
 		max-height: 960px;
 		margin: auto;
+		overflow: hidden;
 		opacity: 1;
 		@include trans(.375s);
 		.splashfade {

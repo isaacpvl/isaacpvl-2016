@@ -8,6 +8,7 @@
 		background: $wht;
 		background: url('/images/home/contactbg.jpg') no-repeat bottom $wht;
 		background-position: 50% 100%;
+		background-size: 100%;
 		text-align: center;
 		.head.visit {
 			h5 {
@@ -134,8 +135,15 @@
 // Media queries
 // ------------------------------------------------------------
 
+	@media screen and (max-width: 1280px) {
+		section.contact {
+			background-size: 120%;
+		}
+	}
 	@media screen and (max-width: 959px) {
 		section.contact {
+			background-position: 60% 100%;
+			background-size: 150%;
 			.container {
 				display: block;
 				width: auto;

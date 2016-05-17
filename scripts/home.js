@@ -45,6 +45,7 @@ jQuery(function() {
 			$('nav').removeClass('hide');
 			$('header').removeClass('hide');
 			$('.wrap').removeClass('hide');
+			$('.base').removeClass('hide');
 			$('#taglinem').removeClass('hide');
 			$('.arrowbar').removeClass('hide');
 

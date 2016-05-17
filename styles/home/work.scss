@@ -5,19 +5,10 @@
 
 	section.work {
 		z-index: 3;
-		margin-top: -20%;
 		@include padding-trailer(18);
 		text-align: center;
-		&::after {
-			content: '';
-			position: absolute;
-			z-index: -1;
-			top: 300px;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background: $wht;
-		}
+		background: $wht;
+		overflow: visible;
 		.head {
 			@include leader(13);
 			@include trailer(6);
@@ -33,6 +24,9 @@
 			@include leader(5);
 			@include trailer(9);
 			overflow: visible;
+			&:first-of-type {
+				margin-top: -20%;
+			}
 			.shield {
 				position: absolute;
 				left: 0;
@@ -235,7 +229,6 @@
 	}
 	@media screen and (max-width: 1200px) {
 		section.work {
-			margin-top: -25%;
 			text-align: center;
 			.head {
 				@include leader(11);
@@ -253,6 +246,9 @@
 				max-width: 782px;
 				@include leader(3);
 				@include trailer(9);
+				&:first-of-type {
+					margin-top: -25%;
+				}
 				.preview {
 					width: 100%;
 					margin: auto;
@@ -339,7 +335,6 @@
 	}
 	@media screen and (max-width: 959px) {
 		section.work {
-			margin-top: 0;
 			background: $wht;
 			&::after {
 				display: none;
@@ -351,6 +346,9 @@
 			.project {
 				@include leader(4);
 				@include trailer(7);
+				&:first-of-type {
+					@include leader(4);
+				}
 				.info {
 					.button#navlink {
 						display: none;

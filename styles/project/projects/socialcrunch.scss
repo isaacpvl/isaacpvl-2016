@@ -27,14 +27,7 @@
 			@include arrow(27px, $pcolor);
 		}
 		.base {
-		// background: $pcolor;
 			@include scrunchbg;
-		}
-	}
-
-	body.project.next, body.project.return {
-		.bar {
-			@include tmove(0, -9px);
 		}
 	}
 

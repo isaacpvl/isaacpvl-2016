@@ -124,6 +124,12 @@
 		}
 	}
 
+	@mixin zoomout { animation-name: zoomout; }
+	@keyframes zoomout {
+		0% { @include tscale(1); }
+		100% { @include tscale(0.9); }
+	}
+
 // PVL in
 	@mixin pvlin { animation-name: pvlin; }
 	@keyframes pvlin {

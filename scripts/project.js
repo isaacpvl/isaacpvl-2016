@@ -32,7 +32,7 @@ jQuery(function($) {
 			$('nav').removeClass('hide');
 			$('header').removeClass('hide');
 			$('.arrowbar').removeClass('hide');
-			$('.base').removeClass('hide');
+			// $('.base').removeClass('hide');
 
 			setTimeout(function() {
 				$('.work').removeClass('bgfade');
@@ -63,7 +63,7 @@ jQuery(function($) {
 
 		}, 500);
 
-	}, 1000+750);
+	}, 1000+1000);
 });
 
 
@@ -97,11 +97,6 @@ jQuery(function($) {
 		window.location.href = "/";
 	}
 
-// next project
-	$('body.project').on('mouseup', '.next#navlink', function() {
-		$('.next').addClass('active'); 
-	});
-
 // page links & transitions
 	$('#nava').on('mouseup', function(event) {
 		event.preventDefault();
@@ -126,11 +121,12 @@ jQuery(function($) {
 			window.open(projectPath, '_blank');
 		}
 	});
-	$('body.project').on('mouseup', '.navc #navlink, .next#navlink', function(event) {
+	$('body.project').on('mouseup', '.navc #navlink, a#navlink, .next#navlink', function(event) {
 		event.preventDefault();
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
 		if((event.which == 1)) {
 			$('body').addClass('out').addClass('next');
+			$('.next').addClass('active'); 
 			var projectDelay = setTimeout(function() { 
 				location.href = projectPath;
 			}, 1200);

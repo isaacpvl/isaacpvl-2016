@@ -31,6 +31,9 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
+		margin: auto;
 		@include padding-x(5%);
 		overflow: hidden;
 		.head {
@@ -80,10 +83,15 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
 		height: 100%;
+		margin: auto;
 		box-shadow: 0 0 20px $blk-0;
 		@include trans(.75s);
 		@include ttimingcb(.3, .7, .3, .7);
+		@include animate(.75s);
+		@include atimingcb(.3, .7, .3, .7);
 	}
 	.underlay {
 		display: none;
@@ -127,6 +135,7 @@
 			z-index: 998;
 			top: 0;
 			width: 100%;
+			max-width: 1600px;
 			height: 100%;
 			background: $blk-4;
 			@include animate(.75s);
@@ -176,7 +185,7 @@
 	body.out:not(.fold), body.out.return:not(.fold) {
 		.twrap {
 			box-shadow: 0 0 20px $blk-2;
-			@include tscale(0.9);
+			@include zoomout;
 		}
 		.underlay {
 			display: block;
@@ -186,23 +195,26 @@
 		.about, .aboutme, .contact, .project:not(':first-of-type'), .visual, .next {
 			display: none;
 		}
+		&.home {
+			header {
+				background: $red;
+				@include trans(0s);
+			}
+		}
 	}
 
 // next project
 	body.fold.out.next {
 		&.home {
 			header .wrap, .head, .project, {
-				@include tmove(-180px, 0);
+				@include tmove(-150px, 0);
 				@include trans(1s);
 				@include ttimingcb(.9, .1, .8, .4);
 			}
-			.overview .detail {
-				@include treset;
-			}
 		}
 		&.project {
-			header .wrap, .head, .itemhead, .overview, .visual, .detail, .footlink, .next {
-				@include tmove(-180px, 0);
+			.wrap, .head, .itemhead, .project, .visual, .detail, .footlink, .next {
+				@include tmove(-150px, 0);
 				@include trans(1s);
 				@include ttimingcb(.9, .1, .8, .4);
 			}
@@ -212,21 +224,18 @@
 		}
 	}
 
-// previous project
+// previous project & return home
 	body.fold.out.prev, body.fold.out.return {
 		&.home {
 			header .wrap, .head, .project, {
-				@include tmove(180px, 0);
+				@include tmove(150px, 0);
 				@include trans(1s);
 				@include ttimingcb(.9, .1, .8, .4);
 			}
-			.overview .detail {
-				@include treset;
-			}
 		}
 		&.project {
-			header .wrap, .head, .itemhead, .overview, .visual, .detail, .footlink, .next {
-				@include tmove(180px, 0);
+			header .wrap, .head, .itemhead, .project, .overview, .visual, .detail, .footlink, .next {
+				@include tmove(150px, 0);
 				@include trans(1s);
 				@include ttimingcb(.9, .1, .8, .4);
 			}
@@ -235,6 +244,16 @@
 			}
 		}
 	}
+
+@media screen and (min-width: 1661px) {
+	body.fold.out.next, body.fold.out.prev, body.fold.out.return {
+		&.project {
+			section.next {
+				@include treset;
+			}			
+		}
+	}
+}
 
 
 // Page transitions
@@ -305,7 +324,7 @@
 			.wall {
 				position: fixed;
 				bottom: 0;
-				.fadeb {
+				.fade {
 					display: block;
 				}
 			}
@@ -317,7 +336,7 @@
 // ------------------------------------------------------------
 
 	@media screen and (min-width: 1601px) {
-		section, .loader {
+		section {
 			@include padding-x(6%);
 		}
 	}
@@ -328,7 +347,7 @@
 		section.work, section.about, section.aboutme, section.contact {
 			z-index: 999;
 		} 
-		section, .loader {
+		section {
 			@include padding-x(5%);
 			.head {
 				@include leader(12);
