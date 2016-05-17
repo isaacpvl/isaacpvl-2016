@@ -2,37 +2,36 @@
 block nav
 	nav.hide
 		ul
-			include ../_resource/pvl
-			li.navb.caps
-				a.navlink(data-pathname="dostoros")
+			include ../resource/pvl
+			li.navb.caps#navb
+				a#navlink(data-pathname="dostoros")
 					span &#8249;
 					| Prev Project
-			li.navc.caps
-				a.navlink(data-pathname="huddlepass")
+			li.navc.caps#navc
+				a#navlink(data-pathname="huddlepass")
 					| Next Project
 					span &#8250;
 
 block header
 	header.hide
 		.wrap
-			.twrap
-				.logo
-					span#logo(data-speed="5.55")
-						img(src="/images/coolhouse/logo.png")
-				.title
-					span#title(data-speed="2.85")
-						h1 Being a full-scale design team for a whole cohort of startups.
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/coolhouse/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 Being a full-scale design team for a whole cohort of startups.
 		.fade
 		.slide
-	.push
+	.push#push
 
 block work
 	section.work.bgfade
 		.arrowbar.hide
-			.arrow
+			.arrow#work
 		.head
 			h5.caps Overview
-		.twrap
+		.wrap
 			.overview
 				.detail.two-col
 					p Other than being located in a coastal, northern Michigan resort town, Coolhouse Labs is an accelerator much like many others. The campers were 8 startup teams, and I left the big city for the summer to help them. <em>Especially with gaining the interest of investors and potential users.</em>
@@ -139,7 +138,7 @@ block work
 
 
 block next
-	section.next.huddlepass.navlink(data-pathname="huddlepass")
+	section.next.huddlepass#navlink(data-pathname="huddlepass")
 		.head
 			h5.caps Next Project
 		.peek

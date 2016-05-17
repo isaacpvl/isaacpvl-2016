@@ -3,32 +3,32 @@
 // OverDog styles
 // ------------------------------------------------------------
 
-$pcolor:	#00345e;
-body.overdog {
-	header {
-		background: $pcolor;
-		.fade {
-			display: none;
+	$pcolor:	#00345e;
+	body.overdog {
+		header {
+			background: $pcolor;
+			.fade {
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
 		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
 
-// Next
-body.project {
-	section.next.overdog {
-		img {
-			@include leader(3.5);
-		}
-		&:hover {
-			.peek {
-				background: $pcolor;
+// next
+	body.project {
+		section.next.overdog {
+			img {
+				@include leader(3.5);
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
 			}
 		}
 	}
-}

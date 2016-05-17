@@ -2,13 +2,13 @@
 block nav
 	nav.dark.hide
 		ul
-			include ../_resource/pvl
-			li.navb.caps
-				a.navlink(data-pathname="huddlepass")
+			include ../resource/pvl
+			li.navb.caps#navb
+				a#navlink(data-pathname="huddlepass")
 					span &#8249;
 					| Prev Project
-			li.navc.caps
-				a.navlink(data-pathname="lifeis")
+			li.navc.caps#navc
+				a#navlink(data-pathname="lifeis")
 					| Next Project
 					span &#8250;
 
@@ -24,12 +24,12 @@ block header
 					h1 An addictive data game of question & comparison.
 		.fade
 		.slide
-	.push
+	.push#push
 
 block work
 	section.work.bgfade
 		.arrowbar.hide
-			.arrow
+			.arrow#work
 		.head
 			h5.caps Overview
 		.wrap
@@ -110,7 +110,7 @@ block work
 			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/152381-SocialCrunch", target="_blank">this project on dribbble</a>
 
 block next
-	section.next.lifeis.navlink(data-pathname="lifeis")
+	section.next.lifeis#navlink(data-pathname="lifeis")
 		.head
 			h5.caps Next Project
 		.peek

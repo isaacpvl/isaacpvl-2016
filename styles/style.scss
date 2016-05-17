@@ -1,308 +1,356 @@
-@import "_resource/_all";
+@import "resource/_all";
 @import "home/_all";
 
 
 // Base styles
 // ------------------------------------------------------------
 
-a, a img {
-	text-decoration: none;
-	cursor: pointer;
-	color: $blk;
-	@include trans(.3s);
-	&:hover {
-		color: $blk;
-		@include trans(.15s);
+	html {
+		height: 100%;
+		font-size: 100%;
+		background: $lgt-d;
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialised;
+		-ms-font-smoothing: antialised;
+		-o-font-smoothing: antialised;
+		font-smoothing: antialiased;
 	}
-	&:active {
+	body {
+		position: relative;
+		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
+		height: 100%;
+		margin: auto;
 		color: $blk;
-		@include trans(.1s);
+		font-family: $serif;
+		font-size: $basefont;
+		line-height: $baseline;
 	}
-}
-.hidden {
-	display: none;
-}
+	section {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		@include padding-x(5%);
+		overflow: hidden;
+		.head {
+			position: relative;
+			width: 100%;
+			@include leader(16);
+			@include trailer(7);
+			text-align: center;
+			@include trans(.5s);
+			h5 {
+				display: inline-block;
+				letter-spacing: 0.075em;
+				font-weight: 600;
+				color: $blk-7;
+				&::after {
+					content:'';
+					position: absolute;
+					bottom: -15px;
+					left: 50%;
+					width: 50px;
+					height: 3px;
+					margin-left: -25px;
+					background: $blk-6;
+				}
+			}
+		}
+	}
+	.base {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
+		margin: auto;
+		box-shadow: 18px 0 $blk-1, 1px 0 $blk-1, -18px 0 $blk-1, -1px 0 $blk-1;
+		background: $red;
+		@include trans(.5s);
+	}
 
 
-// Layout styles
+// Page transitions
 // ------------------------------------------------------------
 
-html {
-	height: 100%;
-	font-size: 100%;
-	background: $lgt-d;
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialised;
-	-ms-font-smoothing: antialised;
-	-o-font-smoothing: antialised;
-	font-smoothing: antialiased;
-}
-body {
-	position: relative;
-	width: 100%;
-	min-width: 320px;
-	max-width: 1600px;
-	height: 100%;
-	margin: auto;
-	color: $blk;
-	font-family: $serif;
-	font-size: $basefont;
-	line-height: $baseline;
-}
-.twrap {
-	position: relative;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	@include torigin(0%, 0%);
-	@include trans(0.75s);
-	@include ttimingcb(.3, .7, .3, .7);
-	.overlay {
-		display: none;
-		position: fixed;
-		z-index: 998;
-		top: -10%;
-		bottom: -10%;
-		left: 0;
-		right: 0;
-		background: $blk-5;
-		@include animate(.8s);
-		@include fadein;
-	}
-}
-section {
-	position: relative;
-	z-index: 2;
-	width: 100%;
-	@include padding-x(5%);
-	overflow: hidden;
-	.head {
+	.twrap {
 		position: relative;
-		width: 100%;
-		@include leader(16);
-		@include trailer(7);
-		text-align: center;
-		@include trans(.5s);
-		h5 {
-			display: inline-block;
-			letter-spacing: 0.075em;
-			font-weight: 600;
-			color: $blk-7;
-			&::after {
-				content:'';
-				position: absolute;
-				bottom: -15px;
-				left: 50%;
-				width: 50px;
-				height: 3px;
-				margin-left: -25px;
-				background: $blk-6;
-			}
-		}
-	}
-}
-.base {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	z-index: -1;
-	width: 100%;
-	min-width: 320px;
-	max-width: 1600px;
-	margin: auto;
-	box-shadow: 18px 0 $blk-1, 1px 0 $blk-1, -18px 0 $blk-1, -1px 0 $blk-1;
-	background: $red;
-	@include trans(.5s);
-}
-
-.navslide {
-	display: none;
-	position: fixed;
-	z-index: 999;
-	top: 0;
-	width: 100%;
-	max-width: 1600px;
-	height: 100%;
-	overflow: hidden;
-	.slide {
-		display: none;
-		position: relative;
-		z-index: 999;
+		z-index: 2;
 		width: 100%;
 		height: 100%;
-		@include animate(.75s, .2s);
-		@include atimingcb(.7, .3, .7, .3);
+		box-shadow: 0 0 20px $blk-0;
+		@include trans(.75s);
+		@include ttimingcb(.3, .7, .3, .7);
 	}
-	.pslide {
-		background: $wht;
-	}
-	.hslide {
-		background: $red;
-	}
-	.overlay {
+	.underlay {
+		display: none;
 		position: fixed;
-		z-index: 998;
+		z-index: 0;
 		top: 0;
 		width: 100%;
+		max-width: 1600px;
 		height: 100%;
-		background: $blk-7;
-		@include animate(.8s);
-		@include fadein;
-	}
-}
-
-body.out {
-	.navslide {
-		display: block;
-	}
-}
-body.return {
-	.twrap {
-		@include torigin(0%, 0%);
-		@include tscale(0.85);
+		background: $blk-4;
+		@include animate(1s);
+		@include fadeout;
 	}
 	.navslide {
+		display: none;
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		width: 100%;
+		max-width: 1600px;
+		height: 100%;
+		overflow: hidden;
+		.slide {
+			display: none;
+			position: relative;
+			z-index: 999;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 0 30px $blk-0;
+			@include animate(.75s, .25s);
+			@include atimingcb(.8, .2, .8, .4);
+		}
+		.pslide {
+			background: $wht;
+		}
 		.hslide {
-			display: block;
-			@include slideindown;
+			background: $red;
+		}
+		.overlay {
+			position: fixed;
+			z-index: 998;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: $blk-4;
+			@include animate(.75s);
+			@include fadein;
 		}
 	}
-}
-body.prev {
-	.twrap {
-		@include torigin(0%, 0%);
-		@include tscale(0.88);
-	}
-	.navslide {
-		.pslide {
-			display: block;
-			@include slideinleft;
-		}
-	}
-}
-body.next {
-	.twrap {
-		@include torigin(0%, 0%);
-		@include tscale(0.88)
-	}
-	.navslide {
-		.pslide {
-			display: block;
-			@include slideinright;
-		}
-	}
-}
 
 
-body.home {
-	header {
-		background: $red;
-	}
-	.navslide {
-		.pslide {
-			@include animate(.75s, .2s);
-			@include slideinright;
+// page out
+	body.out {
+		.navslide {
+			display: block;
+			.slide {
+				box-shadow: 0 0 30px $blk-3;
+			}
 		}
-	}
-}
-
-body.fold {
-	header {
-		.wrap {
-			opacity: .3;
-			@include tscale(.92);
+		.about, .aboutme, .contact {
+			display: none;
 		}
-		.tagline:not(.face) {
-			>span, >span:hover {
-				@include trans(.2s);
-				h1:nth-of-type(1) {
-					@include tmove(-24px, -42px);
+		&.next {
+			.navslide {
+				.pslide {
+					display: block;
+					@include slideinright;
 				}
-				h1:nth-of-type(2) {
-					@include tmovescale(.96, -42px, -33px);
+			}
+		}
+		&.prev {
+			.navslide {
+				.pslide {
+					display: block;
+					@include slideinleft;
 				}
-				h1:nth-of-type(3) {
-					@include tmovescale(.92, -56px, -24px);
+			}
+		}
+		&.return {
+			.navslide {
+				.hslide {
+					display: block;
+					@include slideinleft;
 				}
 			}
 		}
 	}
-	.arrow {
-		@include trans(.25s);
-	}
-	section.workwall {
-		.wall {
-			opacity: 1;
-			@include trans(.8s);
+
+// page out (from top)
+	body.out:not(.fold), body.out.return:not(.fold) {
+		.twrap {
+			box-shadow: 0 0 20px $blk-2;
+			@include tscale(0.9);
+		}
+		.underlay {
+			display: block;
+			@include animate(.75s);
+			@include fadein;
+		}
+		.about, .aboutme, .contact, .project:not(':first-of-type'), .visual, .next {
+			display: none;
 		}
 	}
-}
-body.home.fold {
-	header, .base {
-		background: $red-d;
-		@include trans(.25s);
+
+// next project
+	body.fold.out.next {
+		&.home {
+			header .wrap, .head, .project, {
+				@include tmove(-180px, 0);
+				@include trans(1s);
+				@include ttimingcb(.9, .1, .8, .4);
+			}
+			.overview .detail {
+				@include treset;
+			}
+		}
+		&.project {
+			header .wrap, .head, .itemhead, .overview, .visual, .detail, .footlink, .next {
+				@include tmove(-180px, 0);
+				@include trans(1s);
+				@include ttimingcb(.9, .1, .8, .4);
+			}
+			.overview .detail {
+				@include treset;
+			}
+		}
 	}
-	.arrow {
-		@include arrow(27px, $red-d);
+
+// previous project
+	body.fold.out.prev, body.fold.out.return {
+		&.home {
+			header .wrap, .head, .project, {
+				@include tmove(180px, 0);
+				@include trans(1s);
+				@include ttimingcb(.9, .1, .8, .4);
+			}
+			.overview .detail {
+				@include treset;
+			}
+		}
+		&.project {
+			header .wrap, .head, .itemhead, .overview, .visual, .detail, .footlink, .next {
+				@include tmove(180px, 0);
+				@include trans(1s);
+				@include ttimingcb(.9, .1, .8, .4);
+			}
+			.overview .detail {
+				@include treset;
+			}
+		}
 	}
-}
+
+
+// Page transitions
+// ------------------------------------------------------------
+
+	body.fold {
+		header {
+			.wrap {
+				opacity: .3;
+				@include tscale(.92);
+			}
+			.tagline:not(.face) {
+				>span, >span:hover {
+					@include trans(.2s);
+					h1:nth-of-type(1) {
+						@include tmove(-24px, -42px);
+					}
+					h1:nth-of-type(2) {
+						@include tmovescale(.96, -42px, -33px);
+					}
+					h1:nth-of-type(3) {
+						@include tmovescale(.92, -56px, -24px);
+					}
+				}
+			}
+		}
+		.arrow {
+			@include trans(.25s);
+		}
+		section.wall {
+			.wall {
+				opacity: 1;
+				@include trans(.8s);
+			}
+		}
+	}
+
+	body.foldb {
+		.base {
+			background: $wht;
+			@include trans(0s);
+		}
+		header {
+			background: none;
+			@include trans(0s);
+			.splash, .fade {
+				display: none;
+				@include trans(0s);
+			}
+		}
+	}
+
+	body.home.fold {
+		.base {
+			background: $red-d;
+			@include trans(.25s);
+		}
+		.arrow {
+			@include arrow(27px, $red-d);
+		}
+	}
+	body.home.foldb {
+		.base {
+			background: $wht;
+			@include trans(0s);
+		}
+		section.wall {
+			.wall {
+				position: fixed;
+				bottom: 0;
+				.fadeb {
+					display: block;
+				}
+			}
+		}
+	}
 
 
 // Media queries
-@media screen and (min-width: 1601px) {
-	section, .loader {
-		@include padding-x(6%);
-	}
-}
-@media screen and (max-width: 959px) {
-	.base {
-		z-index: -999;
-	}
-	section.work, section.about, section.aboutme, section.contact {
-		z-index: 999;
-	} 
-	section, .loader {
-		@include padding-x(5%);
-		.head {
-			@include leader(12);
-			@include trailer(6);
+// ------------------------------------------------------------
+
+	@media screen and (min-width: 1601px) {
+		section, .loader {
+			@include padding-x(6%);
 		}
 	}
-}
-@media screen and (max-width: 640px) {
-	section {
-		@include padding-x(2%);
-		.head {
-			@include leader(8);
-			@include trailer(2);
-			h5 {
-				font-size: 18px;
-				&::after {
-					bottom: -9px;
-					width: 40px;
-					height: 3px;
-					margin-left: -20px;
+	@media screen and (max-width: 959px) {
+		.base {
+			z-index: -999;
+		}
+		section.work, section.about, section.aboutme, section.contact {
+			z-index: 999;
+		} 
+		section, .loader {
+			@include padding-x(5%);
+			.head {
+				@include leader(12);
+				@include trailer(6);
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		section {
+			@include padding-x(2%);
+			.head {
+				@include leader(8);
+				@include trailer(2);
+				h5 {
+					font-size: 18px;
+					&::after {
+						bottom: -9px;
+						width: 40px;
+						height: 3px;
+						margin-left: -20px;
+					}
 				}
 			}
 		}
 	}
-}
-
-
-// Animation styles
-.fadein { @include fadein; }
-.fadeinup { @include fadeinup; }
-.fadeindown { @include fadeindown; }
-
-
-// Loader styles
-nav.hide,
-.arrowbar.hide,
-.tagline.hide,
-.taglinem.hide,
-header .wrap.hide,
-.overview.hide,
-header.hide {
-	display: none;
-}
-

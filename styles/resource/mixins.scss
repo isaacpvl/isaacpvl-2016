@@ -1,0 +1,293 @@
+
+
+// Transforms
+// ------------------------------------------------------------
+
+	@mixin transf-p($arg...) {
+		-webkit-transform: $arg;
+		transform: $arg;
+	}
+	@mixin torigin($arg...) {
+		-webkit-transform-origin: $arg;
+		transform-origin: $arg;
+	}
+	@mixin tmove($x, $y) {
+		-webkit-transform: translate($x, $y);
+		transform: translate($x, $y);
+	}
+	@mixin tscale($size) {
+		-webkit-transform: scale($size);
+		transform: scale($size);
+	}
+	@mixin trotate($deg) {
+		-webkit-transform: rotate($deg);
+		transform: rotate($deg);
+	}
+	@mixin tmovescale($size, $x, $y) {
+		-webkit-transform: scale($size) translate($x, $y);
+		transform: scale($size) translate($x, $y);
+	}
+	@mixin tmoverotate($deg, $x, $y) {
+		-webkit-transform: translate($x, $y) rotate($deg);
+		transform: translate($x, $y) rotate($deg);
+	}
+	@mixin tfree($size: 1, $deg: 0deg, $x: 0, $y: 0) {
+		-webkit-transform: scale($size) rotate($deg) translate($x, $y);
+		transform: scale($size) rotate($deg) translate($x, $y);
+	}
+	@mixin treset {
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	@mixin tmove3d($x: 0, $y: 0, $z: 0) {
+		-webkit-transform: translate3d($x, $y, $z);
+		transform: translate3d($x, $y, $z);
+	}
+	@mixin tscale3d($x: 1, $y: 1, $z: 1) {
+		-webkit-transform: scale3d($x, $y, $z);
+		transform: scale3d($x, $y, $z);
+	}
+	@mixin trotate3d($x: 1, $y: 0, $z: 0, $a: 0deg) {
+		-webkit-transform: rotate3d($x, $y, $z, $a);
+		transform: rotate3d($x, $y, $z, $a);
+	}
+	@mixin tmovescale3d($scalex: 1, $scaley: 1, $scalez: 1, $movex: 0, $movey: 0, $movez: 0) {
+		-webkit-transform: scale3d($scalex, $scaley, $scalez) translate3d($movex, $movey, $movez);
+		transform: scale3d($scalex, $scaley, $scalez) translate3d($movex, $movey, $movez);
+	}
+	@mixin tfree3d($scalex: 1, $scaley: 1, $scalez: 1, $rotatex: 1, $rotatey: 0, $rotatez: 0, $rotatea: 0deg, $movex: 0, $movey: 0, $movez: 0) {
+		-webkit-transform: scale3d($scalex, $scaley, $scalez) rotate3d($rotatex, $rotatey, $rotatez, $rotatea) translate3d($movex, $movey, $movez);
+		transform: scale3d($scalex, $scaley, $scalez) rotate3d($rotatex, $rotatey, $rotatez, $rotatea) translate3d($movex, $movey, $movez);
+	}
+	@mixin treset3d {
+		opacity: 1;
+		-webkit-transform: scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) translate3d(0, 0, 0);
+		transform: scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) translate3d(0, 0, 0);
+		-webkit-perspective: none;
+		-webkit-perspective-origin: 50% 50%;
+		perspective: none;
+		perspective-origin: 50% 50%;
+	}
+	@mixin perspective($n, $x: 50%, $y: 50%) {
+		-webkit-perspective: $n;
+		-webkit-perspective-origin: $x $y;
+		perspective: $n;
+		perspective-origin: $x $y;
+	}
+
+
+// Transitions & animations
+// ------------------------------------------------------------
+
+	@mixin trans-p($arg...) {
+		-webkit-transition: $arg;
+		transition: $arg;
+	}
+	@mixin trans($duration: .2s, $delay: 0s) {
+		-webkit-transition-duration: $duration;
+		transition-duration: $duration;
+		-webkit-transition-delay: $delay;
+		transition-delay: $delay;
+	}
+	@mixin ttiming($function: ease-in-out) {
+		-webkit-transition-timing-function: $function;
+		transition-timing-function: $function;
+	}
+	@mixin ttimingcb($p1x: 1, $p1y: 1, $p2x: 1, $p2y: 1) {
+		-webkit-transition-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
+		transition-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
+	}
+
+	@mixin animate($duration: .6s, $delay:   0s) {
+		-webkit-animation-duration: $duration;
+		animation-duration: $duration;
+		-webkit-animation-delay: $delay;
+		animation-delay: $delay;
+		-webkit-animation-fill-mode:both;
+		animation-fill-mode:both;
+	}
+	@mixin animatereset($duration: .6s, $delay: 0s) {
+		-webkit-animation-duration: $duration;
+		animation-duration: $duration;
+		-webkit-animation-delay: $delay;
+		animation-delay: $delay;
+		-webkit-animation-fill-mode:backwards;
+		animation-fill-mode:backwards;
+	}
+	@mixin animateinf($duration: .6s, $delay: 0s) {
+		-webkit-animation-duration: $duration;
+		animation-duration: $duration;
+		-webkit-animation-delay: $delay;
+		animation-delay: $delay;
+		-webkit-animation-fill-mode:both;
+		animation-fill-mode:both;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+	}
+	@mixin atiming($function: ease-in-out) {
+		-webkit-animation-timing-function: $function;
+		animation-timing-function: $function;
+	}
+	@mixin atimingcb($p1x: 1, $p1y: 1, $p2x: 1, $p2y: 1) {
+		-webkit-animation-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
+		animation-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
+	}
+
+
+// Vertical rhythm
+// ------------------------------------------------------------
+
+	@mixin lineh($variable) {
+		line-height: $baseline*$variable;
+	}
+	@mixin leader($variable) {
+		margin-top: $baseline*$variable;
+	}
+	@mixin padding-leader($variable) {
+		padding-top: $baseline*$variable;
+	}
+	@mixin trailer($variable) {
+		margin-bottom: $baseline*$variable;
+	}
+	@mixin padding-trailer($variable) {
+		padding-bottom: $baseline*$variable;
+	}
+
+
+// Effects
+// ------------------------------------------------------------
+
+	@mixin stroke ($size, $color) {
+		box-shadow: inset 0 0 0 $size $color;
+	}
+	@mixin outline ($size, $color) {
+		box-shadow: 0 0 0 $size $color;
+	}
+	@mixin border ($size, $color) {
+		border: $size solid $color;
+	}
+	@mixin innershadow ($size, $color) {
+		box-shadow: inset 0 $size $color;
+	}
+	@mixin dropshadow ($size, $color) {
+		box-shadow: 0 $size $color;
+	}
+	@mixin innershadow-x ($size, $color) {
+		box-shadow: inset $size 0 $color;
+	}
+	@mixin dropshadow-x ($size, $color) {
+		box-shadow: $size 0 $color;
+	}
+	@mixin twowayshadow ($size, $sizeb, $color) {
+		box-shadow: inset 0 $size $color, 0 $sizeb $color;
+	}
+	@mixin blur ($size) {
+		filter: blur($size);
+		-webkit-filter: blur($size);
+	}
+	@mixin hue ($deg) {
+		filter: hue-rotate($deg);
+		-webkit-filter: hue-rotate($deg);
+	}
+	@mixin arrow($size, $color) {
+		width: 0;
+		height: 0;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	}
+
+
+// Gradients
+// ------------------------------------------------------------
+
+	@mixin gradient-vert($tcolor, $bcolor) {
+		background: linear-gradient(to bottom, $tcolor 0%, $bcolor 100%);
+	}
+	@mixin gradient-vert-d($tcolor, $tdistance, $bcolor, $bdistance) {
+		background: linear-gradient(to bottom, $tcolor $tdistance, $bcolor $bdistance);
+	}
+	@mixin gradient-hor($lcolor, $rcolor) {
+		background: linear-gradient(to right, $tcolor 0%, $bcolor 100%);
+	}
+	@mixin gradient-hor-d($lcolor, $ldistance, $rcolor, $rdistance) {
+		background: linear-gradient(to right, $tcolor $tdistance, $bcolor $bdistance);
+	}
+	@mixin scrunchbar {
+		background-color: #fedc9e;
+		background: -moz-linear-gradient(left,  rgba(184,55,38,1) 0%, rgba(184,55,38,1) 15%, rgba(238,62,36,1) 15%, rgba(238,62,36,1) 29%, rgba(251,187,140,1) 29%, rgba(251,187,140,1) 43%, rgba(255,221,154,1) 43%, rgba(255,221,154,1) 57%, rgba(146,206,188,1) 57%, rgba(146,206,188,1) 71%, rgba(73,141,157,1) 71%, rgba(73,141,157,1) 85%, rgba(85,169,209,1) 85%, rgba(85,169,209,1) 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(184,55,38,1)), color-stop(15%,rgba(184,55,38,1)), color-stop(15%,rgba(238,62,36,1)), color-stop(29%,rgba(238,62,36,1)), color-stop(29%,rgba(251,187,140,1)), color-stop(43%,rgba(251,187,140,1)), color-stop(43%,rgba(255,221,154,1)), color-stop(57%,rgba(255,221,154,1)), color-stop(57%,rgba(146,206,188,1)), color-stop(71%,rgba(146,206,188,1)), color-stop(71%,rgba(73,141,157,1)), color-stop(85%,rgba(73,141,157,1)), color-stop(85%,rgba(85,169,209,1)), color-stop(100%,rgba(85,169,209,1)));
+		background: -webkit-linear-gradient(left,  rgba(184,55,38,1) 0%,rgba(184,55,38,1) 15%,rgba(238,62,36,1) 15%,rgba(238,62,36,1) 29%,rgba(251,187,140,1) 29%,rgba(251,187,140,1) 43%,rgba(255,221,154,1) 43%,rgba(255,221,154,1) 57%,rgba(146,206,188,1) 57%,rgba(146,206,188,1) 71%,rgba(73,141,157,1) 71%,rgba(73,141,157,1) 85%,rgba(85,169,209,1) 85%,rgba(85,169,209,1) 100%);
+		background: -o-linear-gradient(left,  rgba(184,55,38,1) 0%,rgba(184,55,38,1) 15%,rgba(238,62,36,1) 15%,rgba(238,62,36,1) 29%,rgba(251,187,140,1) 29%,rgba(251,187,140,1) 43%,rgba(255,221,154,1) 43%,rgba(255,221,154,1) 57%,rgba(146,206,188,1) 57%,rgba(146,206,188,1) 71%,rgba(73,141,157,1) 71%,rgba(73,141,157,1) 85%,rgba(85,169,209,1) 85%,rgba(85,169,209,1) 100%);
+		background: -ms-linear-gradient(left,  rgba(184,55,38,1) 0%,rgba(184,55,38,1) 15%,rgba(238,62,36,1) 15%,rgba(238,62,36,1) 29%,rgba(251,187,140,1) 29%,rgba(251,187,140,1) 43%,rgba(255,221,154,1) 43%,rgba(255,221,154,1) 57%,rgba(146,206,188,1) 57%,rgba(146,206,188,1) 71%,rgba(73,141,157,1) 71%,rgba(73,141,157,1) 85%,rgba(85,169,209,1) 85%,rgba(85,169,209,1) 100%);
+		background: linear-gradient(to right,  rgba(184,55,38,1) 0%,rgba(184,55,38,1) 15%,rgba(238,62,36,1) 15%,rgba(238,62,36,1) 29%,rgba(251,187,140,1) 29%,rgba(251,187,140,1) 43%,rgba(255,221,154,1) 43%,rgba(255,221,154,1) 57%,rgba(146,206,188,1) 57%,rgba(146,206,188,1) 71%,rgba(73,141,157,1) 71%,rgba(73,141,157,1) 85%,rgba(85,169,209,1) 85%,rgba(85,169,209,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b83726', endColorstr='#55a9d1',GradientType=1 );
+	}
+	@mixin scrunchbg {
+		background-color: #fff3de;
+		background: -moz-linear-gradient(left,  rgba(237,205,201,1) 0%, rgba(237,205,201,1) 15%, rgba(251,213,207,1) 15%, rgba(251,213,207,1) 29%, rgba(253,231,214,1) 29%, rgba(253,231,214,1) 43%, rgba(255,243,221,1) 43%, rgba(255,243,221,1) 57%, rgba(222,240,235,1) 57%, rgba(222,240,235,1) 71%, rgba(219,232,235,1) 71%, rgba(219,232,235,1) 85%, rgba(205,229,240,1) 85%, rgba(205,229,240,1) 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(237,205,201,1)), color-stop(15%,rgba(237,205,201,1)), color-stop(15%,rgba(251,213,207,1)), color-stop(29%,rgba(251,213,207,1)), color-stop(29%,rgba(253,231,214,1)), color-stop(43%,rgba(253,231,214,1)), color-stop(43%,rgba(255,243,221,1)), color-stop(57%,rgba(255,243,221,1)), color-stop(57%,rgba(222,240,235,1)), color-stop(71%,rgba(222,240,235,1)), color-stop(71%,rgba(219,232,235,1)), color-stop(85%,rgba(219,232,235,1)), color-stop(85%,rgba(205,229,240,1)), color-stop(100%,rgba(205,229,240,1)));
+		background: -webkit-linear-gradient(left,  rgba(237,205,201,1) 0%,rgba(237,205,201,1) 15%,rgba(251,213,207,1) 15%,rgba(251,213,207,1) 29%,rgba(253,231,214,1) 29%,rgba(253,231,214,1) 43%,rgba(255,243,221,1) 43%,rgba(255,243,221,1) 57%,rgba(222,240,235,1) 57%,rgba(222,240,235,1) 71%,rgba(219,232,235,1) 71%,rgba(219,232,235,1) 85%,rgba(205,229,240,1) 85%,rgba(205,229,240,1) 100%);
+		background: -o-linear-gradient(left,  rgba(237,205,201,1) 0%,rgba(237,205,201,1) 15%,rgba(251,213,207,1) 15%,rgba(251,213,207,1) 29%,rgba(253,231,214,1) 29%,rgba(253,231,214,1) 43%,rgba(255,243,221,1) 43%,rgba(255,243,221,1) 57%,rgba(222,240,235,1) 57%,rgba(222,240,235,1) 71%,rgba(219,232,235,1) 71%,rgba(219,232,235,1) 85%,rgba(205,229,240,1) 85%,rgba(205,229,240,1) 100%);
+		background: -ms-linear-gradient(left,  rgba(237,205,201,1) 0%,rgba(237,205,201,1) 15%,rgba(251,213,207,1) 15%,rgba(251,213,207,1) 29%,rgba(253,231,214,1) 29%,rgba(253,231,214,1) 43%,rgba(255,243,221,1) 43%,rgba(255,243,221,1) 57%,rgba(222,240,235,1) 57%,rgba(222,240,235,1) 71%,rgba(219,232,235,1) 71%,rgba(219,232,235,1) 85%,rgba(205,229,240,1) 85%,rgba(205,229,240,1) 100%);
+		background: linear-gradient(to right,  rgba(237,205,201,1) 0%,rgba(237,205,201,1) 15%,rgba(251,213,207,1) 15%,rgba(251,213,207,1) 29%,rgba(253,231,214,1) 29%,rgba(253,231,214,1) 43%,rgba(255,243,221,1) 43%,rgba(255,243,221,1) 57%,rgba(222,240,235,1) 57%,rgba(222,240,235,1) 71%,rgba(219,232,235,1) 71%,rgba(219,232,235,1) 85%,rgba(205,229,240,1) 85%,rgba(205,229,240,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edcdc9', endColorstr='#55a9d1',GradientType=1 );
+	}
+
+
+// Miscellaneous
+// ------------------------------------------------------------
+
+	@mixin noselect {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	@mixin back-hide {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	@mixin reset {
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+	}
+	@mixin onepos($size) {
+		top: $size;
+		bottom: $size;
+		left: $size;
+		right: $size;
+	}
+	@mixin padding-x($variable) {
+		padding-left: $variable;
+		padding-right: $variable;
+	}
+	@mixin margin-x($variable) {
+		margin-left: $variable;
+		margin-right: $variable;
+	}
+
+// retina images
+	@mixin retinaimg($image, $width, $height) {
+		@media (min--moz-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 2.6/2),
+		(-webkit-min-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 1.3),
+		(min-resolution: 1.3dppx) {
+			background-image: url($image);
+			background-size: $width $height;
+		}
+	}
+	@mixin retinaimg-cover($image, $width, $height) {
+		@media (min--moz-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 2.6/2),
+		(-webkit-min-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 1.3),
+		(min-resolution: 1.3dppx) {
+			background-image: url($image);
+			background-size: cover;
+		}
+	}

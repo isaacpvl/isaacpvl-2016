@@ -3,34 +3,34 @@
 // 2Old2Play styles
 // ------------------------------------------------------------
 
-$pcolor:	#212833;
-body.toldtplay {
-	header {
-		background: $pcolor;
-		.fade {
-			display: none;
+	$pcolor:	#212833;
+	body.toldtplay {
+		header {
+			background: $pcolor;
+			.fade {
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
 		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
 
-// Next
-body.project {
-	section.next.toldtplay {
-		img {
-			width: 480px;
-			height: 120px;
-			@include leader(4.5);
-		}
-		&:hover {
-			.peek {
-				background: $pcolor;
+// next
+	body.project {
+		section.next.toldtplay {
+			img {
+				width: 480px;
+				height: 120px;
+				@include leader(4.5);
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
 			}
 		}
 	}
-}

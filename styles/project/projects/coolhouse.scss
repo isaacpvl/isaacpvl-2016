@@ -3,53 +3,44 @@
 // Coolhouse styles
 // ------------------------------------------------------------
 
-$pcolor:	#033f64;
-body.coolhouse {
-	header {
-		background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
-		background-size: 100%;
-		.logo {
-			height: 56%;
-			min-height: 336px;
-			max-height: 444px;
-		}
-		.title {
-			height: 32%;
-			min-height: 192px;
-			max-height: 252px;
-		}
-		.fade {
-			@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 95%);
-		}
-	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
-
-// Next
-body.project {
-	section.next.coolhouse {
-		img {
-			width: 422px;
-			height: 234px;
-			@include leader(1.5);
-		}
-		.peekbg {
+	$pcolor:	#033f64;
+	body.coolhouse {
+		header {
 			background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
-			background-size: cover;
-			opacity: 0;
+			background-size: 100%;
+			.logo {
+				height: 56%;
+				min-height: 336px;
+				max-height: 444px;
+			}
+			.title {
+				height: 32%;
+				min-height: 192px;
+				max-height: 252px;
+			}
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 95%);
+			}
 		}
-		&:hover {
-			.peek {
-				background: none;
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+	}
+
+// next
+	body.project {
+		section.next.coolhouse {
+			img {
+				width: 422px;
+				height: 234px;
+				@include leader(1.5);
 			}
 			.peekbg {
-				opacity: 1;
+				background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
+				background-size: cover;
 			}
 		}
 	}
-}

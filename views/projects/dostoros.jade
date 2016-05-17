@@ -2,37 +2,36 @@
 block nav
 	nav.hide
 		ul
-			include ../_resource/pvl
-			li.navb.caps
-				a.navlink(data-pathname="threadmeup")
+			include ../resource/pvl
+			li.navb.caps#navb
+				a#navlink(data-pathname="threadmeup")
 					span &#8249;
 					| Prev Project
-			li.navc.caps
-				a.navlink(data-pathname="coolhouse")
+			li.navc.caps#navc
+				a#navlink(data-pathname="coolhouse")
 					| Next Project
 					span &#8250;
 
 block header
 	header.hide
 		.wrap
-			.twrap
-				.logo
-					span#logo(data-speed="5.55")
-						img(src="/images/dostoros/logo.png")
-				.title
-					span#title(data-speed="2.85")
-						h1 A restaurant site as off the wall as its owners & culture.
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/dostoros/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 A restaurant site as off the wall as its owners & culture.
 		.fade
 		.slide
-	.push
+	.push#push
 
 block work
 	section.work.bgfade
 		.arrowbar.hide
-			.arrow
+			.arrow#work
 		.head
 			h5.caps Overview
-		.twrap
+		.wrap
 			.overview
 				.detail.two-col
 					p Leo and Oliver Kremer are genuinely, fiercely passionate about their Mexican food. Before them, I thought there wasn't a restaurant site in the world I'd want to do. Well I was wrong, because Dos Toros revolves around a true culture that isn't about selling burritos.
@@ -170,7 +169,7 @@ block work
 			a.button(href="http://dostoros.com", target="_blank") Visit The Live Site
 
 block next
-	section.next.coolhouse.navlink(data-pathname="coolhouse")
+	section.next.coolhouse#navlink(data-pathname="coolhouse")
 		.head
 			h5.caps Next Project
 		.peek

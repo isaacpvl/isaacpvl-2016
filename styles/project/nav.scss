@@ -3,150 +3,152 @@
 // Nav styles
 // ------------------------------------------------------------
 
-body.project {
-	nav {
-		ul {
-			@include animate(1s, .5s);
-		}
-		.navb, .navc {
-			span {
-				position: absolute;
-				line-height: 8px;
-				font-size: 30px;
-				font-weight: 300;
+	body.project {
+		nav {
+			ul {
+				@include animate(1s, .5s);
 			}
-		}
-		.navb {
-			margin: 0 30px 0 24px;
-			span {
-				left: -24px;
-			}
-		}
-		.navc {
-			margin: 0 24px 0 30px;
-			span {
-				right: -24px;
-			}
-		}
-		li {
-			margin: 0;
-			a {
-				color: $wht;
-			}
-			&:nth-of-type(2) {
-				@include animate(.5s, .2s);
-			}
-			&:nth-of-type(3) {
-				@include animate(.5s, .2s);
-			}
-		}
-		li.disabled {
-			a {
-				color: $wht-5;
-			}
-		}
-		.navb, .navc, .navd {
-			span:last-of-type {
-				display: inline-block;
-			}
-		}
-	}
-	nav.sticky {
-		a {
-			color: $blk-6;
-			&:hover {
-				color: $blk;
-			}
-		}
-		li.nava {
-			@include twowayshadow(0px, 0px, $wht-0);
-			&:hover, &.hover {
-				.caps {
-					color: $red;
+			.navb, .navc {
+				span {
+					position: absolute;
+					line-height: 8px;
+					font-size: 30px;
+					font-weight: 300;
 				}
-				@include twowayshadow(-3px, 1px, $red);
 			}
-			.caps {
-				color: $red;
+			.navb {
+				margin: 0 30px 0 24px;
+				span {
+					left: -24px;
+				}
+			}
+			.navc {
+				margin: 0 24px 0 30px;
+				span {
+					right: -24px;
+				}
+			}
+			li {
+				margin: 0;
+				a {
+					color: $wht;
+				}
+				&:nth-of-type(2) {
+					@include animate(.5s, .2s);
+				}
+				&:nth-of-type(3) {
+					@include animate(.5s, .2s);
+				}
+			}
+			li.disabled {
+				a {
+					color: $wht-5;
+				}
+			}
+			.navb, .navc, .navd {
+				span:last-of-type {
+					display: inline-block;
+				}
 			}
 		}
-		li {
+		nav.sticky {
 			a {
 				color: $blk-6;
+				&:hover {
+					color: $blk;
+				}
 			}
-			&:hover {
-				@include twowayshadow(-2px, 1px, $blk-6);
-			}
-		}
-		li.disabled {
-			a {
-				color: $blk-4;
-			}
-			&:hover {
-				box-shadow: none;
-			}
-		}
-	}
-	nav.dark {
-		li.nava {
-			@include twowayshadow(-4px, 1px, $red);
-			&:hover, &.hover {
+			li.nava {
+				@include twowayshadow(0px, 0px, $wht-0);
+				&:hover, &.hover {
+					.caps {
+						color: $red;
+					}
+					@include twowayshadow(-3px, 1px, $red);
+				}
 				.caps {
 					color: $red;
 				}
+			}
+			li {
+				a {
+					color: $blk-6;
+				}
+				&:hover {
+					@include twowayshadow(-2px, 1px, $blk-6);
+				}
+			}
+			li.disabled {
+				a {
+					color: $blk-4;
+				}
+				&:hover {
+					box-shadow: none;
+				}
+			}
+		}
+		nav.dark {
+			li.nava {
 				@include twowayshadow(-4px, 1px, $red);
+				&:hover, &.hover {
+					.caps {
+						color: $red;
+					}
+					@include twowayshadow(-4px, 1px, $red);
+				}
+				.caps {
+					color: $red;
+				}
+				h6 {
+					color: $red;
+				}
 			}
-			.caps {
-				color: $red;
+			li {
+				&:hover {
+					@include twowayshadow(-2px, 1px, $red);
+				}
 			}
-			h6 {
-				color: $red;
+			a {
+				color: $blk-6;
+				&:hover {
+					color: $red;
+				}
 			}
 		}
-		li {
-			&:hover {
-				@include twowayshadow(-2px, 1px, $red);
+		nav.dark.sticky {
+			li.nava {
+				@include twowayshadow(0px, 0px, $wht-0);
+				&:hover, &.hover {
+					@include twowayshadow(-3px, 1px, $red);
+				}
 			}
 		}
-		a {
-			color: $blk-6;
-			&:hover {
-				color: $red;
-			}
+		.arrow {
+			@include animatereset(.3s, .65s);
 		}
 	}
-	nav.dark.sticky {
-		li.nava {
-			@include twowayshadow(0px, 0px, $wht-0);
-			&:hover, &.hover {
-				@include twowayshadow(-3px, 1px, $red);
-			}
-		}
-	}
-	.arrow {
-		@include animatereset(.3s, .65s);
-	}
-}
 
 
 // Media queries
-@media screen and (max-height: 810px) {
-	body.project {
-		header {
-			height: 89%;
-		}
-		.push {
-			height: 89%;
-		}
-	}
-}
-@media screen and (max-width: 959px) {
-	body.project {
-		header {
-			z-index: 2;
-		}
-		.push {
-			display: none;
+// ------------------------------------------------------------
+
+	@media screen and (max-height: 810px) {
+		body.project {
+			header {
+				height: 89%;
+			}
+			.push {
+				height: 89%;
+			}
 		}
 	}
-}
+	@media screen and (max-width: 959px) {
+		body.project {
+			header {
+				z-index: 2;
+			}
+			.push {
+				display: none;
+			}
+		}
+	}

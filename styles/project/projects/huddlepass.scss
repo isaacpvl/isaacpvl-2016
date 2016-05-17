@@ -3,36 +3,36 @@
 // HuddlePass styles
 // ------------------------------------------------------------
 
-$pcolor:	#404759;
-$pcolorb:	#353a49;
-body.huddlepass {
-	header {
-		background: $pcolor url('/images/huddlepass/linesbg.png');
-		@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
-		.fade {
-			@include gradient-vert-d(rgba($pcolorb, 0), 50%, $pcolorb, 100%);
+	$pcolor:	#404759;
+	$pcolorb:	#353a49;
+	body.huddlepass {
+		header {
+			background: $pcolor url('/images/huddlepass/linesbg.png');
+			@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
+			.fade {
+				@include gradient-vert-d(rgba($pcolorb, 0), 50%, $pcolorb, 100%);
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolorb);
+		}
+		.base {
+			background: $pcolorb;
 		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolorb);
-	}
-	.base {
-		background: $pcolorb;
-	}
-}
 
-// Next
-body.project {
-	section.next.huddlepass {
-		img {
-			@include leader(3.5);
-			margin-right: 7.5%;
-		}
-		&:hover {
-			.peek {
-				background: url('/images/huddlepass/linesbg.png') $pcolor;
-				@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
+// next
+	body.project {
+		section.next.huddlepass {
+			img {
+				@include leader(3.5);
+				margin-right: 7.5%;
+			}
+			&:hover, &.active {
+				.peek {
+					background: url('/images/huddlepass/linesbg.png') $pcolor;
+					@include retinaimg('/images/huddlepass/linesbg@2x.png', 24px, 24px);
+				}
 			}
 		}
 	}
-}

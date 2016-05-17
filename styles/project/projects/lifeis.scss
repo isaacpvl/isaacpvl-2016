@@ -3,97 +3,88 @@
 // Life.is styles
 // ------------------------------------------------------------
 
-$pcolor:	rgba(#ff1414, 0.3);
-$pcolorb:	#ffb8b8;
-body.lifeis {
-	header {
-		background: $wht;
-		.logo {
-			height: 52%;
-			min-height: 300px;
-			max-height: 456px;
+	$pcolor:	rgba(#ff1414, 0.3);
+	$pcolorb:	#ffb8b8;
+	body.lifeis {
+		header {
+			background: $wht;
+			.logo {
+				height: 52%;
+				min-height: 300px;
+				max-height: 456px;
+				img {
+					position: relative;
+					width: 540px;
+					height: 196px;
+					@include animate(.6s, .4s);
+					z-index: 1;
+				}
+			}
+			.title {
+				z-index: 4;
+				height: 35%;
+				min-height: 240px;
+				max-height: 300px;
+				h1 {
+					@include animate(.6s, .4s);
+				}
+			}
+			.fade {
+				display: none;
+				z-index: 3;
+				@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 100%);
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolorb;
+		}
+		.lifebg {
+			position: absolute;
+			z-index: 3;
+			top: 100%;
+			left: 0;
+			right: 0;
+			height: 900px;
+			margin-top: -900px;
+			overflow: hidden;
 			img {
 				position: relative;
-				width: 540px;
-				height: 196px;
-				@include animate(.6s, .4s);
-				z-index: 1;
+				top: 390px;
+				width: 1600px;
+				height: 600px;
+				@include trans(.5s);
+				@include ttimingcb(.4, .7, .4, .9);
+				@include animatereset(.8s);
+				@include lifebgin;
 			}
 		}
-		.title {
-			z-index: 4;
-			height: 35%;
-			min-height: 240px;
-			max-height: 300px;
-			h1 {
-				@include animate(.6s, .4s);
+	}
+
+	body.lifeis.fold {
+		.lifebg {
+			img {
+				@include tmove(0, -660px);
+				height: 1200px;
+				@include trans(.5s);
 			}
 		}
-		.fade {
-			display: none;
-			z-index: 3;
-			@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 100%);
-		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolorb;
-	}
-	.lifebg {
-		position: absolute;
-		z-index: 3;
-		top: 100%;
-		left: 0;
-		right: 0;
-		height: 900px;
-		margin-top: -900px;
-		overflow: hidden;
-		img {
-			position: relative;
-			top: 390px;
-			width: 1600px;
-			height: 600px;
-			@include trans(.5s);
-			@include ttimingcb(.4, .7, .4, .9);
-			@include animatereset(.8s);
-			@include lifebgin;
-		}
-	}
-}
 
-body.lifeis.fold {
-	.lifebg {
-		img {
-			@include tmove(0, -660px);
-			height: 1200px;
-			@include trans(.5s);
-		}
-	}
-}
-
-// Next
-body.project {
-	section.next.lifeis {
-		img {
-			width: 384px;
-			height: 96px;
-			@include leader(5.5);
-		}
-		.peekbg {
-			background: $pcolor url('/images/lifeis/bg.png') no-repeat;
-			background-size: 100%;
-			background-position: -10% center;
-			opacity: 0;
-		}
-		&:hover {
-			.peek {
-				background: none;
+// next
+	body.project {
+		section.next.lifeis {
+			img {
+				width: 384px;
+				height: 96px;
+				@include leader(5.5);
 			}
 			.peekbg {
-				opacity: 1;
+				background: $pcolor url('/images/lifeis/bg.png') no-repeat;
+				background-size: 100%;
+				background-position: -10% center;
 			}
 		}
 	}
-}

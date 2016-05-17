@@ -3,11 +3,11 @@
 // Animations
 // ------------------------------------------------------------
 
-// fade in
+// fades
 	@mixin fadein { animation-name: fadein; }
 	@keyframes fadein {
 		0% { opacity: 0; }
-		100% { opacity: 1; }
+		100% {  }
 	}
 	@mixin fadeinup { animation-name: fadeinup; }
 	@keyframes fadeinup {
@@ -17,7 +17,22 @@
 	@mixin fadeindown { animation-name: fadeindown; }
 	@keyframes fadeindown {
 		0% { opacity: 0; @include tmove(0, -96px); }
-		100% { opacity: 1; }
+		100% {  }
+	}
+	@mixin fadeout { animation-name: fadeout; }
+	@keyframes fadeout {
+		0% { opacity: 1; }
+		100% { opacity: 0; }
+	}
+	@mixin fadeoutup { animation-name: fadeoutup; }
+	@keyframes fadeoutup {
+		0% { opacity: 1; }
+		100% { opacity: 0; @include tmove(0, 84px); }
+	}
+	@mixin fadeoutdown { animation-name: fadeoutdown; }
+	@keyframes fadeoutdown {
+		0% { opacity: 1; }
+		100% { opacity: 0; @include tmove(0, -96px); }
 	}
 
 // bounce in
@@ -70,23 +85,43 @@
 // page transition slides
 	@mixin slideinright { animation-name: slideinright; }
 	@keyframes slideinright {
-		0% { @include tmove(102%, 0); @include dropshadow-x(-36px, rgba(#000, 0.1)); }
-		100% { @include dropshadow-x(-15px, rgba(#000, 0.1)); }
+		0% {
+			@include tmove(102%, 0);
+			// @include dropshadow-x(-36px, rgba(#000, 0.1));
+		}
+		100% {
+			// @include dropshadow-x(-15px, rgba(#000, 0.1));
+		}
 	}
 	@mixin slideinleft { animation-name: slideinleft; }
 	@keyframes slideinleft {
-		0% { @include tmove(-102%, 0); @include dropshadow-x(-6px, rgba(#000, 0.1)); }
-		100% { @include dropshadow-x(15px, rgba(#000, 0.1)); }
+		0% {
+			@include tmove(-102%, 0);
+			// @include dropshadow-x(-6px, rgba(#000, 0.1));
+		}
+		100% {
+			// @include dropshadow-x(15px, rgba(#000, 0.1));
+		}
 	}
 	@mixin slideinup { animation-name: slideinup; }
 	@keyframes slideinup {
-		0% { @include tmove(0, 102%); @include dropshadow(-30px, rgba(#000, 0.1)); }
-		100% { @include dropshadow(-12px, rgba(#000, 0.1)); }
+		0% {
+			@include tmove(0, 102%);
+			// @include dropshadow(-30px, rgba(#000, 0.1));
+		}
+		100% {
+			// @include dropshadow(-12px, rgba(#000, 0.1));
+		}
 	}
 	@mixin slideindown { animation-name: slideindown; }
 	@keyframes slideindown {
-		0% { @include tmove(0, -102%); @include dropshadow(30px, rgba(#000, 0.1)); }
-		100% { @include dropshadow(12px, rgba(#000, 0.1)); }
+		0% {
+			@include tmove(0, -102%);
+			// @include dropshadow(30px, rgba(#000, 0.1));
+		}
+		100% {
+			// @include dropshadow(12px, rgba(#000, 0.1));
+		}
 	}
 
 // PVL in
@@ -132,9 +167,20 @@
 	}
 
 // loader animations
-	@mixin loaderin { animation-name: loaderin; }
-	@keyframes loaderin {
-		0% { opacity: 0; @include tmove(-40px, 0); }
+	@mixin loaderinleft { animation-name: loaderinleft; }
+	@keyframes loaderinleft {
+		0% {
+			opacity: 0;
+			@include tmove(-18px, 0);
+		}
+		100% {  }
+	}
+	@mixin loaderinright { animation-name: loaderinright; }
+	@keyframes loaderinright {
+		0% {
+			opacity: 0;
+			@include tmove(18px, 0);
+		}
 		100% {  }
 	}
 
@@ -167,4 +213,3 @@
 		85% { opacity: 1; @include tscale(1); }
 		100% { opacity: 0; @include tmovescale(0.1, 150px, 0); }
 	}
-

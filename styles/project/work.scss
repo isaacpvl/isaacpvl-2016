@@ -3,297 +3,299 @@
 // Work styles
 // ------------------------------------------------------------
 
-body.project {
-	section.work {
-		min-height: 1600px;
-		@include leader(0);
-		@include padding-trailer(15);
-		background: $wht;
-		.head {
-			@include leader(16);
-			@include trailer(2);
+	body.project {
+		section.work {
+			min-height: 1600px;
+			@include leader(0);
+			@include padding-trailer(15);
+			background: $wht;
+			.head {
+				@include leader(16);
+				@include trailer(2);
+			}
+			.twrap {
+				width: 100%;
+				max-width: 1282px;
+				margin: auto;
+			}
+			.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
+				@include trans(.75s, .3s);
+			}
 		}
-		.twrap {
-			width: 100%;
-			max-width: 1282px;
-			margin: auto;
-		}
-		.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
-			@include trans(.75s, .3s);
+		section.work.bgfade {
+			.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
+				opacity: 0;
+			}
 		}
 	}
-	section.work.bgfade {
-		.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
-			opacity: 0;
-		}
-	}
-}
 
-.overview {
-	position: relative;
-	max-width: 1140px;
-	margin: auto;
-	@include padding-trailer(4);
-	.detail.two-col {
-		@include padding-leader(8);
+	.overview {
+		position: relative;
+		max-width: 1140px;
+		margin: auto;
 		@include padding-trailer(4);
-		em {
-			font-style: italic;
-			font-weight: 600;
+		.detail.two-col {
+			@include padding-leader(8);
+			@include padding-trailer(4);
+			em {
+				font-style: italic;
+				font-weight: 600;
+			}
+		}
+		.detail.single {
+			p {
+				@include lineh(4);
+				font-size: 24px;
+			}
+		}
+		.context {
+			div {
+				display: inline-block;
+				vertical-align: top;
+				text-align: left;
+				margin-right: 8%;
+				em {
+					font-size: 18px;
+					letter-spacing: -0.02em;
+					margin-right: 4px;
+					opacity: 0.6;
+				}
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+		.live {
+			position: relative;
+			width: 480px;
+			margin: auto;
+			@include padding-leader(6);
+			.button {
+				width: 100%;
+			}
+			p {
+				display: block;
+				width: 100%;
+				height: 60px;
+				@include leader(2);
+				@include lineh(2.5);
+				font-size: 18px;
+				strong {
+					@extend .caps;
+					font-size: 16px;
+				}
+				span {
+					display: block;
+					@include leader(1);
+					font-style: italic;
+					opacity: 0.6;
+				}
+			}
 		}
 	}
-	.detail.single {
+
+	.itemhead {
+		h2, h3 {
+			position: relative;
+			font-family: $caps;
+			text-transform: uppercase;
+			font-weight: 800;
+			&::after {
+				content:'';
+				position: absolute;
+				left: 50%;
+				width: 60px;
+				margin-left: -30px;
+				background: $blk;
+			}
+		}
+		h2 {
+			@include padding-leader(14);
+			@include padding-trailer(4);
+			&::after {
+				bottom: 11%;
+				height: 5px;
+			}
+		}
+		h3 {
+			@include padding-leader(12);
+			@include padding-trailer(3);
+			&::after {
+				bottom: 12%;
+				height: 4px;
+			}
+		}
+	}
+
+	.detail {
+		position: relative;
+		@include padding-leader(6);
+		@include padding-trailer(6);
 		p {
-			@include lineh(4);
-			font-size: 24px;
+			max-width: 680px;
+			margin: auto;
+			@include padding-trailer(2.5);
+			&:last-of-type {
+				@include padding-trailer(0);
+			}
+		}
+		.button {
+			@include leader(6);
+			min-width: 35%;
 		}
 	}
-	.context {
-		div {
+	.detail.two-col {
+		p {
 			display: inline-block;
 			vertical-align: top;
-			text-align: left;
-			margin-right: 8%;
-			em {
-				font-size: 18px;
-				letter-spacing: -0.02em;
-				margin-right: 4px;
-				opacity: 0.6;
+			width: 47.5%;
+			&:last-of-type {
+				margin-left: 5%;
 			}
+		}
+	}
+
+	.visual {
+		position: relative;
+		@include leader(3);
+		@include trailer(3);
+		.shot {
+			position: relative;
+			width: 100%;
+			margin: auto;
+			img, video {
+				width: 100%;
+				max-width: 1280px;
+			}
+			img.frame {
+				max-width: 1282px;
+				@include border(1px, $drk-l);
+			}
+		}
+		.browser {
+			max-width: 1282px;
+			margin: auto;
+			video {
+				width: 100%;
+			}
+		}
+		#video {
+			cursor: pointer;
+		}
+	}
+	.visual.single {
+		@include leader(2);
+		@include trailer(2);
+		.shot, .browser {
+			max-width: 800px;
+			&.small {
+				max-width: 660px;
+			}
+		}
+	}
+	.visual.two-col {
+		.shot {
+			width: 48.5%;
+			max-width: 544px;
+			display: inline-block;
+			vertical-align: top;
+			&:first-of-type {
+				margin-right: 3%;
+			}
+			&.last {
+				@include leader(-10);
+				max-width: 400px;
+			}
+		}
+		.browser {
+			width: 48.5%;
+			display: inline-block;
+			vertical-align: top;
+			&:first-of-type {
+				margin-right: 3%;
+			}
+			.frame {
+				height: 420px;
+			}
+		}
+	}
+	.visual.multiphone {
+		@include leader(4);
+		@include trailer(4);
+		.phone {
+			position: relative;
+			display: inline-block;
+			width: 32%;
+			min-width: none;
+			max-width: 356px;
+			@include padding-x(16px);
+			margin-right: 2%;
 			&:last-of-type {
 				margin-right: 0;
 			}
 		}
 	}
-	.live {
-		position: relative;
-		width: 480px;
-		margin: auto;
-		@include padding-leader(6);
-		.button {
-			width: 100%;
-		}
-		p {
-			display: block;
-			width: 100%;
-			height: 60px;
-			@include leader(2);
-			@include lineh(2.5);
-			font-size: 18px;
-			strong {
-				@extend .caps;
-				font-size: 16px;
-			}
-			span {
-				display: block;
-				@include leader(1);
-				font-style: italic;
-				opacity: 0.6;
-			}
-		}
-	}
-}
-
-.itemhead {
-	h2, h3 {
-		position: relative;
-		font-family: $caps;
-		text-transform: uppercase;
-		font-weight: 800;
-		&::after {
-			content:'';
-			position: absolute;
-			left: 50%;
-			width: 60px;
-			margin-left: -30px;
-			background: $blk;
-		}
-	}
-	h2 {
-		@include padding-leader(14);
-		@include padding-trailer(4);
-		&::after {
-			bottom: 11%;
-			height: 5px;
-		}
-	}
-	h3 {
-		@include padding-leader(12);
-		@include padding-trailer(3);
-		&::after {
-			bottom: 12%;
-			height: 4px;
-		}
-	}
-}
-
-.detail {
-	position: relative;
-	@include padding-leader(6);
-	@include padding-trailer(6);
-	p {
-		max-width: 680px;
-		margin: auto;
-		@include padding-trailer(2.5);
-		&:last-of-type {
-			@include padding-trailer(0);
-		}
-	}
-	.button {
+	.visual.gap {
 		@include leader(6);
-		min-width: 35%;
 	}
-}
-.detail.two-col {
-	p {
-		display: inline-block;
-		vertical-align: top;
-		width: 47.5%;
-		&:last-of-type {
-			margin-left: 5%;
-		}
-	}
-}
 
-.visual {
-	position: relative;
-	@include leader(3);
-	@include trailer(3);
-	.shot {
-		position: relative;
-		width: 100%;
-		margin: auto;
-		img, video {
-			width: 100%;
-			max-width: 1280px;
-		}
-		img.frame {
-			max-width: 1282px;
-			@include border(1px, $drk-l);
+	.footlink {
+		@include leader(12);
+		@include trailer(-8);
+		p {
+			text-align: center;
 		}
 	}
-	.browser {
-		max-width: 1282px;
-		margin: auto;
-		video {
-			width: 100%;
-		}
-	}
-	#video {
-		cursor: pointer;
-	}
-}
-.visual.single {
-	@include leader(2);
-	@include trailer(2);
-	.shot, .browser {
-		max-width: 800px;
-		&.small {
-			max-width: 660px;
-		}
-	}
-}
-.visual.two-col {
-	.shot {
-		width: 48.5%;
-		max-width: 544px;
-		display: inline-block;
-		vertical-align: top;
-		&:first-of-type {
-			margin-right: 3%;
-		}
-		&.last {
-			@include leader(-10);
-			max-width: 400px;
-		}
-	}
-	.browser {
-		width: 48.5%;
-		display: inline-block;
-		vertical-align: top;
-		&:first-of-type {
-			margin-right: 3%;
-		}
-		.frame {
-			height: 420px;
-		}
-	}
-}
-.visual.multiphone {
-	@include leader(4);
-	@include trailer(4);
-	.phone {
-		position: relative;
-		display: inline-block;
-		width: 32%;
-		min-width: none;
-		max-width: 356px;
-		@include padding-x(16px);
-		margin-right: 2%;
-		&:last-of-type {
-			margin-right: 0;
-		}
-	}
-}
-.visual.gap {
-	@include leader(6);
-}
-
-.footlink {
-	@include leader(12);
-	@include trailer(-8);
-	p {
-		text-align: center;
-	}
-}
 
 
 // Media queries
-@media screen and (min-width: 1360px) and (min-height: 800px) {
-	.visual.video {
+// ------------------------------------------------------------
 
-	}
-}
-@media screen and (max-width: 1240px) {
-	.visual.multiphone {
-		.phone {
-			@include padding-x(14px);
-			img.header {
-				display: none;
-			}
-			.frame.scroll {
-				height: 510px;
-			}
+	@media screen and (min-width: 1360px) and (min-height: 800px) {
+		.visual.video {
+
 		}
 	}
-}
-@media screen and (max-width: 1080px) {
-	.visual.multiphone {
-		.phone {
-			@include padding-x(12px);
-			.frame.scroll {
-				height: 504px;
+	@media screen and (max-width: 1240px) {
+		.visual.multiphone {
+			.phone {
+				@include padding-x(14px);
+				img.header {
+					display: none;
+				}
+				.frame.scroll {
+					height: 510px;
+				}
 			}
 		}
 	}
-}
-@media screen and (max-height: 900px) {
-	.visual.full {
-		.browser {
-			max-width: 1142px;
-		}
-		.shot {
-			max-width: 1200px;
-		}
-	}
-}
-@media screen and (max-height: 780px) {
-	.visual.full {
-		.browser {
-			max-width: 1026px;
-		}
-		.shot {
-			max-width: 1080px;
+	@media screen and (max-width: 1080px) {
+		.visual.multiphone {
+			.phone {
+				@include padding-x(12px);
+				.frame.scroll {
+					height: 504px;
+				}
+			}
 		}
 	}
-}
+	@media screen and (max-height: 900px) {
+		.visual.full {
+			.browser {
+				max-width: 1142px;
+			}
+			.shot {
+				max-width: 1200px;
+			}
+		}
+	}
+	@media screen and (max-height: 780px) {
+		.visual.full {
+			.browser {
+				max-width: 1026px;
+			}
+			.shot {
+				max-width: 1080px;
+			}
+		}
+	}

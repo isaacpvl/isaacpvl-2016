@@ -3,91 +3,89 @@
 // Header styles
 // ------------------------------------------------------------
 
-header {
-	position: fixed;
-	top: 0;
-	z-index: 1;
-	width: 100%;
-	min-width: 320px;
-	max-width: 1600px;
-	height: 85%;
-	min-height: 588px;
-	max-height: 828px;
-	overflow: hidden;
-	color: $wht;
-	background: $red;
-	@include trans(.45s);
-	.wrap {
-		position: absolute;
-		z-index: 2;
-		width: 100%;
-		height: 100%;
-		@include padding-x(8%);
-		@include trans(.45s);
-	}
-	.wrapm {
-		display: none;
-	}
-}
-.push {
-	position: relative;
-	z-index: -1;
-	height: 85%;
-	min-height: 588px;
-	max-height: 828px;
-}
-
-body.home {
 	header {
-		background: $red;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
+		height: 85%;
+		min-height: 588px;
+		max-height: 828px;
+		overflow: hidden;
+		color: $wht;
+		@include trans(.45s);
+		.wrap {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			@include padding-x(8%);
+			@include trans(.375s);
+		}
+		.wrapm {
+			display: none;
+		}
 	}
 	.push {
-		height: 100%;
-		min-height: 100%;
-		max-height: 100%;
+		position: relative;
+		z-index: -1;
+		height: 85%;
+		min-height: 588px;
+		max-height: 828px;
 	}
-	.push.reveal {
-		@include animate(.6s);
-		@include ttiming(ease-out);
-		@include headerin;
+
+	body.home {
+		.push {
+			height: 100%;
+			min-height: 100%;
+			max-height: 100%;
+		}
+		.push.reveal {
+			@include animate(.6s);
+			@include ttiming(ease-out);
+			@include headerin;
+		}
 	}
-}
 
 
 // Media queries
-@media screen and (max-height: 810px) {
-	header, .push {
-		height: 89%;
-	}
-}
-@media screen and (min-width: 1601px) {
-	header {
-		.wrap {
-			@include padding-x(10%);
+// ------------------------------------------------------------
+
+	@media screen and (max-height: 810px) {
+		header, .push {
+			height: 89%;
 		}
 	}
-}
-@media screen and (max-width: 959px) {
-	header {
-		.wrap {
-			display: none;
-		}
-		.wrapm {
-			display: block;
+	@media screen and (min-width: 1601px) {
+		header {
+			.wrap {
+				@include padding-x(10%);
+			}
 		}
 	}
-}
-@media screen and (max-width: 640px) {
-	header, .push {
-		height: 100%;
-		min-height: 360px;
-		max-height: 100%;
-	}
-}
-@media screen and (max-width: 420px) {
-	header {
-		.wrap {
-			@include padding-x(5%);
+	@media screen and (max-width: 959px) {
+		header {
+			.wrap {
+				display: none;
+			}
+			.wrapm {
+				display: block;
+			}
 		}
 	}
-}
+	@media screen and (max-width: 640px) {
+		header, .push {
+			height: 100%;
+			min-height: 360px;
+			max-height: 100%;
+		}
+	}
+	@media screen and (max-width: 420px) {
+		header {
+			.wrap {
+				@include padding-x(5%);
+			}
+		}
+	}

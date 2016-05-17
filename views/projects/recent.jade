@@ -2,13 +2,13 @@
 block nav
 	nav.dark.hide
 		ul
-			include ../_resource/pvl
-			li.navb.caps
-				a.navlink(data-pathname="huddlepass")
+			include ../resource/pvl
+			li.navb.caps#navb
+				a#navlink(data-pathname="huddlepass")
 					span &#8249;
 					| Prev Project
-			li.navc.caps
-				a.navlink(data-pathname="past")
+			li.navc.caps#navc
+				a#navlink(data-pathname="past")
 					| Next Project
 					span &#8250;
 
@@ -24,12 +24,12 @@ block header
 				img(src="/images/home/splashfadeblk.png")
 		.fade
 		.slide
-	.push
+	.push#push
 
 block work
 	section.work.bgfade
 		.arrowbar.hide
-			.arrow
+			.arrow#work
 		.head
 			h5.caps Overview
 		.wrap
@@ -143,7 +143,7 @@ block work
 
 
 block next
-	section.next.past.navlink(data-pathname="past")
+	section.next.past#navlink(data-pathname="past")
 		.head
 			h5.caps Also check out
 		.peek

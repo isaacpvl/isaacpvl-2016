@@ -2,13 +2,13 @@
 block nav
 	nav.hide
 		ul
-			include ../_resource/pvl
-			li.navb.caps
-				a.navlink(data-pathname="huddlepass")
+			include ../resource/pvl
+			li.navb.caps#navb
+				a#navlink(data-pathname="huddlepass")
 					span &#8249;
 					| Prev Project
-			li.navc.caps
-				a.navlink(data-pathname="socialcrunch")
+			li.navc.caps#navc
+				a#navlink(data-pathname="socialcrunch")
 					| Next Project
 					span &#8250;
 
@@ -29,12 +29,12 @@ block header
 					source(src="/images/home/wall-iosp.mp4", type="video/mp4")
 		.fade
 		.slide
-	.push
+	.push#push
 
 block work
 	section.work.bgfade
 		.arrowbar.hide
-			.arrow
+			.arrow#work
 		.head
 			h5.caps Overview
 		.wrap
@@ -50,7 +50,7 @@ block work
 		include ../home/projects/toggle
 
 block next
-	section.next.socialcrunch.navlink(data-pathname="socialcrunch")
+	section.next.socialcrunch#navlink(data-pathname="socialcrunch")
 		.head
 			h5.caps Next Project
 		.peek

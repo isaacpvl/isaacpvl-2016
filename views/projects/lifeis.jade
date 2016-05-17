@@ -2,13 +2,13 @@
 block nav
 	nav.dark.hide
 		ul
-			include ../_resource/pvl
-			li.navb.caps
-				a.navlink(data-pathname="socialcrunch")
+			include ../resource/pvl
+			li.navb.caps#navb
+				a#navlink(data-pathname="socialcrunch")
 					span &#8249;
 					| Prev Project
-			li.navc.caps
-				a.navlink(data-pathname="overdog")
+			li.navc.caps#navc
+				a#navlink(data-pathname="overdog")
 					| Next Project
 					span &#8250;
 
@@ -25,12 +25,12 @@ block header
 			img(src="/images/lifeis/bg.png")
 		.fade
 		.slide
-	.push
+	.push#push
 
 block work
 	section.work.bgfade
 		.arrowbar.hide
-			.arrow
+			.arrow#work
 		.head
 			h5.caps Overview
 		.wrap
@@ -91,7 +91,7 @@ block work
 			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/167510-life-is", target="_blank">this project on dribbble</a>
 
 block next
-	section.next.overdog.navlink(data-pathname="overdog")
+	section.next.overdog#navlink(data-pathname="overdog")
 		.head
 			h5.caps Next Project
 		.peek

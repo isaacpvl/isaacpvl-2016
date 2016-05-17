@@ -1,0 +1,107 @@
+
+
+// Type styles
+// ------------------------------------------------------------
+
+// fonts
+	$serif						: "utopia-std-subhead",serif;
+	$caps						: "jaf-facitweb",sans-serif;
+	$script						: "bistro-script-web",cursive;
+	$icon						: "socicon" !important;
+
+// base sizing settings
+	$basefont						: 18px;		// browser default size
+	$baseline						: 12px;		// baseline grid
+	$relative-font-sizing			: false;	// absolute pixel styles
+	$round-to-nearest-half-line		: true;		// line-height rounding
+
+// headings & paragraphs
+	h1, h2, h3, h4, h5 {
+		font-weight: 600;
+	}
+	h1 {
+		font-size: 54px;
+		line-height: 84px;
+	}
+	h2 {
+		font-size: 48px;
+		line-height: 72px;
+	}
+	h3 {
+		font-size: 30px;
+		line-height: 60px;
+	}
+	h4 {
+		font-size: 24px;
+		line-height: 42px;
+	}
+	h5 {
+		font-size: 20px;
+		line-height: 36px;
+	}
+	h6 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	p {
+		line-height: 42px;
+		font-size: 22px;
+		text-align: left;
+	}
+
+// style tags & classes
+	b {
+		font-weight: 600;
+	}
+	i {
+		font-style: italic;
+	}
+	strong {
+		font-weight: 600;
+	}
+	em {
+		font-style: italic;
+	}
+	.strikethru {
+		text-decoration: line-through;
+	}
+	.sidenote {
+		font-size: 18px;
+		font-style: italic;
+		letter-spacing: -0.02em;
+		opacity: 0.6;
+	}
+	.caps {
+		font-family: $caps;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+	}
+	h6.caps {
+		font-weight: 600;
+	}
+
+// socicon webfont
+	@font-face {
+		font-family: 'socicon';
+		src: url('/_fonts/socicon-webfont.eot');
+		src: url('/_fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/_fonts/socicon-webfont.woff') format('woff'),
+		url('/_fonts/socicon-webfont.ttf') format('truetype'),
+		url('/_fonts/socicon-webfont.svg#sociconregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	.social {
+		font-family: $icon;
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+
+
+// iOS specifics
+	@media screen and (max-width: 769px) {
+		-webkit-text-size-adjust:none;
+	}

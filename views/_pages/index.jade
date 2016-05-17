@@ -3,24 +3,24 @@ html
 	head
 		title Isaac Paavola
 		link(rel="stylesheet", href="/_styles/style.css")
-		include ../_resource/head
+		include ../resource/head
 		script(src="/_scripts/loader.js")
 
 	body.home
 		include ../home/nav
-		include ../home/header
-		include ../home/wall
-		include ../home/work
-		include ../home/about
-		include ../home/aboutme
-		include ../home/contact
-		include ../home/base
-		.navslide
-			.slide.pslide
-			.slide.hslide
-			.overlay
-		.base
+		.twrap
+			include ../home/header
+			include ../home/wall
+			include ../home/work
+			include ../home/about
+			include ../home/aboutme
+			include ../home/contact
+		.news#news
+			.paper#lockscroll
+				img(src="/images/home/newspaper.jpg")
+		include ../resource/base
 
-	include ../_resource/loader
+	include ../resource/loader
 
+	script(src="/_scripts/plugins.js")
 	script(src="/_scripts/home.js")

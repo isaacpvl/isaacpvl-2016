@@ -3,43 +3,42 @@
 // ThreadMeUp styles
 // ------------------------------------------------------------
 
-$pcolor:	#f46272;
-body.threadmeup {
-	header {
-		background: $pcolor;
-		.fade {
-			@include gradient-vert-d(rgba($pcolor, 0), 75%, $pcolor, 100%);
+	$pcolor:	#f46272;
+	body.threadmeup {
+		header {
+			background: $pcolor;
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 75%, $pcolor, 100%);
+			}
+		}
+		.splash {
+			.vid {
+				video {
+					background-color: $pcolor !important;
+				}
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
 		}
 	}
-	.splash {
-		.vid {
-			video {
-				background-color: $pcolor !important;
+
+// next
+	body.project {
+		section.next.threadmeup {
+			img {
+				width: 384px;
+				height: 96px;
+				@include leader(5.5);
+				margin-left: 2.5%;
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
 			}
 		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
-
-
-// Next
-body.project {
-	section.next.threadmeup {
-		img {
-			width: 384px;
-			height: 96px;
-			@include leader(5.5);
-			margin-left: 2.5%;
-		}
-		&:hover {
-			.peek {
-				background: $pcolor;
-			}
-		}
-	}
-}

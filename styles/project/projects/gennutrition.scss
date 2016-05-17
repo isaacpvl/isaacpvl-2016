@@ -3,32 +3,32 @@
 // Generation Nutrition styles
 // ------------------------------------------------------------
 
-$pcolor:	#2d293d;
-body.gennutrition {
-	header {
-		background: $pcolor;
-		.fade {
-			display: none;
+	$pcolor:	#2d293d;
+	body.gennutrition {
+		header {
+			background: $pcolor;
+			.fade {
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
 		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
 
-// Next
-body.project {
-	section.next.gennutrition {
-		img {
-			@include leader(1.5);
-		}
-		&:hover {
-			.peek {
-				background: $pcolor;
+// next
+	body.project {
+		section.next.gennutrition {
+			img {
+				@include leader(1.5);
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
 			}
 		}
 	}
-}

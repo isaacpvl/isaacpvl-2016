@@ -3,26 +3,26 @@
 // Toggle TV styles
 // ------------------------------------------------------------
 
-$pcolor:	#00345e;
-body.toggle {
-	.base.project {
-		background: $pcolor;
+	$pcolor:	#00345e;
+	body.toggle {
+		.base.project {
+			background: $pcolor;
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
 
-// Next
-body.project {
-	section.next.toggle {
-		&:hover {
-			.peek {
-				background: #004073;
+// next
+	body.project {
+		section.next.toggle {
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
 			}
 		}
 	}
-}

@@ -4,18 +4,16 @@ html
 		title Isaac Paavola | ThreadMeUp
 		link(rel="stylesheet", href="/_styles/project.css")
 		link(rel="stylesheet", href="/_styles/style.css")
-		include ../../_resource/head
+		include ../../resource/head
 		script(src="/_scripts/loaderp.js")
 
 	body.project.threadmeup
-		a#project
-		include ../../projects/threadmeup
-		.navslide
-			.slide.pslide
-			.slide.hslide
-			.overlay
-		.base.hide
+		.twrap
+			a#project
+			include ../../projects/threadmeup
+		include ../../resource/base
 
-	include ../../_resource/loader
+	include ../../resource/loader
 
+	script(src="/_scripts/plugins.js")
 	script(src="/_scripts/project.js")

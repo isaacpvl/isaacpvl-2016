@@ -3,45 +3,36 @@
 // Past work styles
 // ------------------------------------------------------------
 
-$pcolor:	$blu-d;
-body.past {
-	header {
-		background: $pcolor;
-		.fade {
-			@include gradient-vert-d(rgba($pcolor, 0), 65%, $pcolor, 100%);
-		}
-	}
-	.splash {
-		.vid {
-			opacity: 0.5;
-			video {
-				background-color: $pcolor !important;
+	$pcolor:	$blu-d;
+	body.past {
+		header {
+			background: $pcolor;
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 65%, $pcolor, 100%);
 			}
 		}
+		.splash {
+			.vid {
+				opacity: 0.5;
+				video {
+					background-color: $pcolor !important;
+				}
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
 	}
-	.arrow {
-		@include arrow(27px, $pcolor);
-	}
-	.base {
-		background: $pcolor;
-	}
-}
 
-// Next
-body.project {
-	section.next.past {
-		.peekbg {
-			background: $pcolor url('/images/home/wallbanner.jpg') no-repeat;
-			background-size: 100%;
-			opacity: 0;
-		}
-		&:hover {
-			.peek {
-				background: none;
-			}
+// next
+	body.project {
+		section.next.past {
 			.peekbg {
-				opacity: 1;
+				background: $pcolor url('/images/home/wallbanner.jpg') no-repeat;
+				background-size: 100%;
 			}
 		}
 	}
-}

@@ -3,134 +3,136 @@
 // Header styles
 // ------------------------------------------------------------
 
-body.project {
-	header {
-		text-shadow: 1px 2px $blk-1;
-		.logo {
-			position: relative;
-			z-index: 2;
-			width: 100%;
-			height: 45%;
-			min-height: 270px;
-			max-height: 408px;
-			span {
+	body.project {
+		header {
+			text-shadow: 1px 2px $blk-1;
+			.logo {
+				position: relative;
+				z-index: 2;
+				width: 100%;
+				height: 45%;
+				min-height: 270px;
+				max-height: 408px;
+				span {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+				img {
+					@include animatereset(.8s);
+					@include fadeindown;
+				}
+			}
+			.title {
+				position: relative;
+				z-index: 2;
+				width: 100%;
+				height: 38%;
+				min-height: 240px;
+				max-height: 276px;
+				span {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+				h1 {
+					max-width: 720px;
+					margin: auto;
+					@include trailer(3);
+					font-weight: 600;
+					@include animatereset(.8s);
+					@include fadeinup;
+				}
+			}
+			.slide {
 				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
+				z-index: 3;
+				top: 100%;
+				width: 100%;
+				height: 100%;
+				background: $wht;
+				@include animatereset(.6s);
+				@include slideout;
 			}
-			img {
-				@include animatereset(.8s);
-				@include fadeindown;
-			}
-		}
-		.title {
-			position: relative;
-			z-index: 2;
-			width: 100%;
-			height: 38%;
-			min-height: 240px;
-			max-height: 276px;
-			span {
+			.fade {
 				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
 			}
-			h1 {
-				max-width: 720px;
-				margin: auto;
-				@include trailer(3);
-				font-weight: 600;
-				@include animatereset(.8s);
-				@include fadeinup;
-			}
-		}
-		.slide {
-			position: absolute;
-			z-index: 3;
-			top: 100%;
-			width: 100%;
-			height: 100%;
-			background: $wht;
-			@include animatereset(.6s);
-			@include slideout;
-		}
-		.fade {
-			position: absolute;
-			z-index: 1;
-			width: 100%;
-			height: 100%;
-		}
 
-	}
-	header.dark {
-		color: $blk;
-		text-shadow: none;
-	}
-	header.more {
-		.logo {
-			display: none;
 		}
-		.title {
-			height: 75%;
-			min-height: none;
-			max-height: none;
-			h1 {
-				max-width: 720px;
-				@include lineh(8.5);
-				font-size: 66px;
-				font-weight: 600;
-				@include animatereset(.8s, .2s);
+		header.dark {
+			color: $blk;
+			text-shadow: none;
+		}
+		header.more {
+			.logo {
+				display: none;
+			}
+			.title {
+				height: 75%;
+				min-height: none;
+				max-height: none;
+				h1 {
+					max-width: 720px;
+					@include lineh(8.5);
+					font-size: 66px;
+					font-weight: 600;
+					@include animatereset(.8s, .2s);
+				}
 			}
 		}
 	}
-}
 
-.splash {
-	text-align: right;
-	position: fixed;
-	top: 0;
-	z-index: 0;
-	width: 100%;
-	min-width: 320px;
-	max-width: 1600px;
-	height: 92.5%;
-	min-height: 600px;
-	max-height: 960px;
-	margin: auto;
-	opacity: 1;
-	@include trans(.375s);
-	.splashfade {
-		z-index: -1;
-		min-width: 1280px;
-		height: 100%;
-		overflow: hidden;
-		@include trans(.6s, 0s);
-		img {
-			pointer-events: none;
-			width: 100%;
-			height: 100%;
-			min-height: 540px;
-		}
-	}
-	.vid {
-		position: absolute;
+	.splash {
+		text-align: right;
+		position: fixed;
 		top: 0;
-		bottom: 0;
-		right: 0;
-		z-index: -1000;
-		@include trans(.6s, 0s);
-		video {
-			position: relative;
-			float: right;
-			width: auto;
-			min-width: 100%;
-			height: auto;
+		z-index: 0;
+		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
+		height: 92.5%;
+		min-height: 600px;
+		max-height: 960px;
+		margin: auto;
+		opacity: 1;
+		@include trans(.375s);
+		.splashfade {
+			z-index: -1;
+			min-width: 1280px;
 			height: 100%;
+			overflow: hidden;
+			@include trans(.6s, 0s);
+			img {
+				pointer-events: none;
+				width: 100%;
+				height: 100%;
+				min-height: 540px;
+			}
+		}
+		.vid {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1000;
+			@include trans(.6s, 0s);
+			video {
+				position: relative;
+				float: right;
+				width: auto;
+				min-width: 100%;
+				height: auto;
+				height: 100%;
+			}
 		}
 	}
-}
 
 
 // Media queries
+// ------------------------------------------------------------
+

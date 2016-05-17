@@ -1,0 +1,183 @@
+
+
+// Loader styles
+// ------------------------------------------------------------
+
+	.loader {
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		min-width: 320px;
+		max-width: 1600px;
+		margin: auto;
+		text-align: left;
+		color: $wht;
+		@include padding-x(5%);
+		#lockscroll {
+			position: absolute;
+			@include onepos(0);
+			z-index: 9999;
+		}
+		.overlay {
+			position: absolute;
+			@include onepos(0);
+			z-index: 9997;
+			background: $red;
+			@include trans(0.5s);
+		}
+		.status {
+			position: relative;
+			z-index: 9998;
+			width: 100%;
+			height: 100%;
+			min-height: 588px;
+			max-height: 828px;
+			@include trans(0.5s, 0s);
+			@include ttimingcb(.1, .7, .3, 1);
+			h3 {
+				display: inline-block;
+				@include leader(4);
+				font-family: $caps;
+				font-size: 34px;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				font-weight: 800;
+				font-style: italic;
+				@include fadein;
+				@include animatereset(.6s, .2s)
+				// @include animatereset(.9s, .2s);
+				// @include atimingcb(.1, .7, .3, 1);
+				// @include loaderinleft;
+				i {
+					letter-spacing: 0.04em;
+				}
+				span {
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					margin-bottom: -1px;
+					margin-right: 5px;
+					border-radius: 50%;
+					background: $wht;
+					@include torigin(50%, 50%);
+					&:nth-of-type(1) {
+						@include animateinf(2.4s, 0.1s);
+						@include loadinga;
+						margin-left: 6px;
+					}
+					&:nth-of-type(2) {
+						@include animateinf(2.4s, 0.175s);
+						@include loadingb;
+					}
+					&:nth-of-type(3) {
+						@include animateinf(2.4s, 0.25s);
+						@include loadingc;
+					}
+				}
+			}
+		}
+	}
+	.loader.out {
+		.overlay {
+			opacity: 0;
+		}
+		.status {
+			h3 {
+				opacity: 0;
+				@include tmove(90px, 0);
+				@include trans(0.6s);
+				@include ttimingcb(.7, .3, .7, .3);
+			}
+		}
+	}
+
+
+// project page
+	body.project {
+		.loader {
+			text-align: center;
+			color: $blk;
+			.overlay {
+				display: none;
+				background: $wht;
+			}
+			.status {
+				h3 {
+					position: absolute;
+					top: 52.5%;
+					left: 50%;
+					width: 320px;
+					height: 120px;
+					margin: -60px 0 0 -160px;
+					// @include loaderinright;
+					// @include animatereset(0.9s, 0.2s);
+					span {
+						margin-bottom: 0;
+						background: $blk;
+						&:nth-of-type(1) {
+							@include animateinf(2.4s, 0.1s);
+						}
+						&:nth-of-type(2) {
+							@include animateinf(2.4s, 0.175s);
+						}
+						&:nth-of-type(3) {
+							@include animateinf(2.4s, 0.25s);
+						}
+					}
+				}
+			}
+		}
+		.loader.out {
+			.status {
+				h3 {
+					@include tmove(0px, 60px);
+					@include trans(0.5s, 0.2s);
+				}
+			}
+		}
+	}
+
+
+// effected elements
+	nav.hide,
+	.arrowbar.hide,
+	.tagline.hide,
+	.taglinem.hide,
+	header .wrap.hide,
+	.overview.hide,
+	header.hide {
+		display: none;
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-height: 810px) {
+		.loader {
+			.status {
+				height: 89%;
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		.loader {
+			.status {
+				h3 {
+					@include leader(2);
+					@include lineh(4);
+					font-size: 24px;
+					span {
+						width: 6px;
+						height: 6px;
+						margin-right: 4px;
+						&:nth-of-type(1) {
+							margin-left: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
