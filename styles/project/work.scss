@@ -49,17 +49,20 @@
 			}
 		}
 		.context {
+			h6 {
+				@extend .caps;
+			}
+			em {
+				font-size: 18px;
+				letter-spacing: -0.02em;
+				margin-right: 4px;
+				opacity: 0.6;
+			}
 			div {
 				display: inline-block;
 				vertical-align: top;
 				text-align: left;
 				margin-right: 8%;
-				em {
-					font-size: 18px;
-					letter-spacing: -0.02em;
-					margin-right: 4px;
-					opacity: 0.6;
-				}
 				&:last-of-type {
 					margin-right: 0;
 				}
@@ -97,9 +100,9 @@
 	.itemhead {
 		h2, h3 {
 			position: relative;
-			font-family: $caps;
-			text-transform: uppercase;
+			@extend .caps;
 			font-weight: 800;
+			letter-spacing: 0;
 			&::after {
 				content:'';
 				position: absolute;
@@ -166,6 +169,7 @@
 			img, video {
 				width: 100%;
 				max-width: 1280px;
+				@include noselect;
 			}
 			img.frame {
 				max-width: 1282px;
@@ -190,13 +194,19 @@
 			max-width: 800px;
 			&.small {
 				max-width: 660px;
+				img.frame {
+					max-width: 662px;
+				}
+			}
+			img.frame {
+				max-width: 802px;
 			}
 		}
 	}
 	.visual.two-col {
 		.shot {
 			width: 48.5%;
-			max-width: 544px;
+			max-width: 542px;
 			display: inline-block;
 			vertical-align: top;
 			&:first-of-type {
@@ -237,9 +247,8 @@
 		}
 	}
 	.visual.gap {
-		@include leader(6);
+		@include leader(9);
 	}
-
 	.footlink {
 		@include leader(12);
 		@include trailer(-8);
@@ -252,11 +261,6 @@
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (min-width: 1360px) and (min-height: 800px) {
-		.visual.video {
-
-		}
-	}
 	@media screen and (max-width: 1240px) {
 		.visual.multiphone {
 			.phone {

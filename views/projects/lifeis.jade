@@ -3,11 +3,11 @@ block nav
 	nav.dark.hide
 		ul
 			include ../resource/pvl
-			li.navb.caps#navb
+			li.navb#navb
 				a#navlink(data-pathname="socialcrunch")
 					span &#8249;
 					| Prev Project
-			li.navc.caps#navc
+			li.navc#navc
 				a#navlink(data-pathname="overdog")
 					| Next Project
 					span &#8250;
@@ -32,20 +32,20 @@ block work
 		.arrowbar.hide
 			.arrow#work
 		.head
-			h5.caps Overview
+			h5 Overview
 		.wrap
 			.overview
 				.detail.single
 					p I did a happy feel-good brand for this new e-magazine and fundraising platform, and then carried those vibes onto the web.
 				.context
 					div
-						h6.caps My Role:
+						h6 My Role:
 						p web design & brand
 					div
-						h6.caps When:
+						h6 When:
 						p late 2013
 					div
-						h6.caps With:
+						h6 With:
 						p just me, freelancing
 		.itemhead
 			h3 Brand & landing page
@@ -62,9 +62,9 @@ block work
 					source(src="/images/lifeis/life-menu.mp4", type="video/mp4")
 		.visual.two-col.gap
 			.shot
-				img(src="/images/lifeis/life-brand.gif")
+				img.frame(src="/images/lifeis/life-brand.gif")
 			.shot
-				img(src="/images/lifeis/life-landing.jpg")
+				img.frame(src="/images/lifeis/life-landing.jpg")
 		.itemhead
 			h3 Community fundraiser page
 		.visual
@@ -88,11 +88,11 @@ block work
 					span life.is/fundraiser/ny-community-garden#buy
 				img(src="/images/lifeis/life-04.jpg")
 		.footlink
-			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/167510-life-is", target="_blank">this project on dribbble</a>
+			p you can also check out <a  href="https://dribbble.com/isaacpvl/projects/167510-life-is", target="_blank">this project on dribbble</a>
 
 block next
 	section.next.overdog#navlink(data-pathname="overdog")
 		.head
-			h5.caps Next Project
+			h5 Next Project
 		.peek
 			img(src="/images/overdog/logo.png")

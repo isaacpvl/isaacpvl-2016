@@ -16,6 +16,9 @@
 		overflow: hidden;
 		color: $wht;
 		@include trans(.45s);
+		img {
+			@include noselect;
+		}
 		.wrap {
 			position: absolute;
 			z-index: 2;
@@ -67,11 +70,22 @@
 	}
 	@media screen and (max-width: 959px) {
 		header {
+			// position: relative;
 			.wrap {
-				display: none;
+				// display: none;
 			}
 			.wrapm {
-				display: block;
+				// display: block;
+			}
+		}
+		body.home {
+			.push {
+				// height: 0;
+				// min-height: 0;
+				// max-height: 0;
+			}
+			.push.reveal {
+				// @include fadein;
 			}
 		}
 	}

@@ -78,14 +78,9 @@
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (max-width: 1120px) {
+	@media screen and (max-width: 1200px) {
 		section.wall {
-			max-height: 600px;
-		}
-	}
-	@media screen and (max-width: 1023px) {
-		section.wall {
-			max-height: 504px;
+			max-height: 720px;
 		}
 	}
 	@media screen and (max-width: 959px) {

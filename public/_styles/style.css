@@ -623,13 +623,19 @@ em {
   letter-spacing: -0.02em;
   opacity: 0.6; }
 
-.caps, .button {
+.caps, .button, nav .navb, nav .navc, nav .navd, nav li.nava a, header .tagline, header .taglinem, header .speech h4, section.work .project .info h1, section.work .project .info .role h6, section h5 {
   font-family: "jaf-facitweb", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.07em; }
-
-h6.caps, h6.button {
+  letter-spacing: 0.07em;
   font-weight: 600; }
+
+br {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 @font-face {
   font-family: 'socicon';
@@ -645,22 +651,19 @@ h6.caps, h6.button {
   -webkit-text-size-adjust: none; }
 
 a, a img {
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
   color: #000;
   transition-duration: 0.3s;
   transition-delay: 0s; }
   a:hover, a img:hover {
-    color: #000;
+    color: #d12b52;
     transition-duration: 0.15s;
     transition-delay: 0s; }
   a:active, a img:active {
-    color: #000;
+    color: #941f3a;
     transition-duration: 0.1s;
     transition-delay: 0s; }
-
-a.texta {
-  text-decoration: underline; }
 
 .button {
   display: inline-block;
@@ -670,7 +673,6 @@ a.texta {
   line-height: 72px;
   text-align: center;
   font-size: 20px;
-  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
   color: #fff;
@@ -728,7 +730,13 @@ a.texta {
     width: 100%;
     height: auto;
     margin-bottom: -1px;
-    border-radius: 0 0 1px 1px; }
+    border-radius: 0 0 1px 1px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
   .browser .top {
     position: relative;
     width: 100%;
@@ -1261,7 +1269,13 @@ a.texta {
   .phone img {
     width: 100%;
     height: auto;
-    border: 1px solid #999; }
+    border: 1px solid #999;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
   .phone div {
     position: absolute;
     left: 0;
@@ -1406,13 +1420,16 @@ a.texta {
 
 @media screen and (max-width: 1200px) {
   .phone {
-    top: 24%;
+    top: 22%;
     right: 0; } }
 
 @media screen and (max-width: 959px) {
   .phone {
-    top: 18%;
-    right: 0; } }
+    top: 21%; } }
+
+@media screen and (max-width: 839px) {
+  .phone {
+    top: 18%; } }
 
 @media screen and (max-width: 640px) {
   .phone {
@@ -1533,7 +1550,13 @@ a.texta {
   max-width: 1600px;
   margin: auto;
   text-align: left;
-  color: #fff; }
+  color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .loader #lockscroll {
     position: absolute;
     top: 0;
@@ -1801,6 +1824,8 @@ nav {
       animation-delay: 1.1825s;
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both; }
+  nav .navb, nav .navc, nav .navd {
+    font-weight: 600; }
   nav li.active {
     box-shadow: inset 0 -2px #fff, 0 1px #fff; }
     nav li.active a {
@@ -1834,6 +1859,7 @@ nav {
     height: 102px;
     padding-top: 66px;
     color: #fff;
+    text-decoration: none;
     transition-duration: 0.2s;
     transition-delay: 0s; }
     nav a:focus {
@@ -1872,11 +1898,9 @@ nav {
     animation-timing-function: ease-out;
     -webkit-animation-name: pvlin;
             animation-name: pvlin; }
-    nav li.nava a, nav li.nava b {
-      font-weight: 800; }
     nav li.nava a {
-      height: 105px; }
-    nav li.nava .caps, nav li.nava .button {
+      height: 105px;
+      font-weight: 800;
       font-size: 32px;
       color: #fff; }
     nav li.nava .initials {
@@ -2032,8 +2056,7 @@ nav.sticky {
       box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
     nav.sticky li.nava a {
       height: 60px;
-      padding-top: 27px; }
-    nav.sticky li.nava .caps, nav.sticky li.nava .button {
+      padding-top: 27px;
       font-size: 28px;
       color: #d12b52; }
     nav.sticky li.nava .initials {
@@ -2105,9 +2128,7 @@ nav.bluebg {
     box-shadow: inset 0 0px rgba(255, 255, 255, 0), 0 0px rgba(255, 255, 255, 0); }
     nav.bluebg li.nava:hover, nav.bluebg li.nava.hover {
       box-shadow: inset 0 -3px #fff, 0 1px #fff; }
-    nav.bluebg li.nava .caps, nav.bluebg li.nava .button {
-      color: #fff; }
-    nav.bluebg li.nava h6 {
+    nav.bluebg li.nava a, nav.bluebg li.nava h6 {
       color: #fff; }
   nav.bluebg li:nth-of-type(5):hover {
     box-shadow: inset 0 -2px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
@@ -2264,14 +2285,11 @@ nav.bluebg {
       width: 48px;
       height: 72px;
       box-shadow: inset 0 -3px #fff, 0 1px #fff; }
-      nav li.nava .caps, nav li.nava .button {
-        font-size: 24px; }
-      nav li.nava .lastname {
-        display: none; }
-      nav li.nava h6 {
-        display: none; }
       nav li.nava a {
-        padding-top: 40px; }
+        padding-top: 40px;
+        font-size: 24px; }
+      nav li.nava .lastname, nav li.nava h6 {
+        display: none; }
     nav li.nava.full:hover, nav li.nava.full.hover {
       width: 48px;
       padding-right: 0; }
@@ -2295,10 +2313,9 @@ nav.bluebg {
       height: 48px;
       margin: 0; }
       nav.sticky li.nava a {
+        font-size: 24px;
         height: 48px;
         padding-top: 20px; }
-      nav.sticky li.nava .caps, nav.sticky li.nava .button {
-        font-size: 24px; }
       nav.sticky li.nava:hover, nav.sticky li.nava.hover {
         width: 48px;
         padding-right: 0; }
@@ -2331,6 +2348,13 @@ header {
   color: #fff;
   transition-duration: 0.45s;
   transition-delay: 0s; }
+  header img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
   header .wrap {
     position: absolute;
     z-index: 2;
@@ -2374,12 +2398,6 @@ body.home .push.reveal {
   header .wrap {
     padding-left: 10%;
     padding-right: 10%; } }
-
-@media screen and (max-width: 959px) {
-  header .wrap {
-    display: none; }
-  header .wrapm {
-    display: block; } }
 
 @media screen and (max-width: 640px) {
   header, .push {
@@ -2637,10 +2655,7 @@ header .speech {
     margin-top: 33px;
     margin-bottom: 12px;
     padding-right: 30px;
-    font-family: "jaf-facitweb", sans-serif;
-    text-transform: uppercase;
     letter-spacing: 0.025em;
-    font-weight: 600;
     opacity: 0;
     -webkit-transform: translate(0, 24px);
     transform: translate(0, 24px);
@@ -2684,13 +2699,7 @@ header .speech {
         -webkit-transform: scale(1) rotate(-50deg) translate(120px, -36px);
         transform: scale(1) rotate(-50deg) translate(120px, -36px);
         transition-duration: 0.5s;
-        transition-delay: 0.15s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none; }
+        transition-delay: 0.15s; }
 
 header .speech.face h4 {
   opacity: 1;
@@ -2795,35 +2804,95 @@ header .speech.face span {
   header .tagline.face > span {
     left: 5%; }
   header .speech {
-    display: none; } }
+    display: none; }
+  header .tagline {
+    position: relative;
+    z-index: 2;
+    height: 84%;
+    min-height: 528px;
+    max-height: 732px;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-name: fadeinup;
+            animation-name: fadeinup; }
+    header .tagline > span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition-duration: 0.4s;
+      transition-delay: 0s; }
+    header .tagline h1 {
+      position: relative;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+      -webkit-animation-name: fadeinup;
+              animation-name: fadeinup;
+      transition-duration: 0.3s;
+      transition-delay: 0s; }
+      header .tagline h1:nth-of-type(1) {
+        height: 78px;
+        line-height: 84px;
+        font-size: 62px;
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards; }
+      header .tagline h1:nth-of-type(2) {
+        height: 78px;
+        line-height: 78px;
+        font-size: 62px;
+        -webkit-animation-duration: 0.65s;
+        animation-duration: 0.65s;
+        -webkit-animation-delay: 1.15s;
+        animation-delay: 1.15s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards; }
+      header .tagline h1:nth-of-type(3) {
+        height: 90px;
+        line-height: 90px;
+        font-size: 72px;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-delay: 1.3s;
+        animation-delay: 1.3s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards; } }
 
 @media screen and (max-width: 640px) {
-  header .taglinem {
+  header .taglinem, header .tagline {
     height: 90%;
     min-height: 0; }
-    header .taglinem h1:nth-of-type(1) {
+    header .taglinem h1:nth-of-type(1), header .tagline h1:nth-of-type(1) {
       height: 48px;
       line-height: 48px;
       font-size: 42px; }
-    header .taglinem h1:nth-of-type(2) {
+    header .taglinem h1:nth-of-type(2), header .tagline h1:nth-of-type(2) {
       height: 48px;
       line-height: 48px;
       font-size: 42px; }
-    header .taglinem h1:nth-of-type(3) {
+    header .taglinem h1:nth-of-type(3), header .tagline h1:nth-of-type(3) {
       height: 60px;
       line-height: 60px;
       font-size: 48px; } }
 
 @media screen and (max-width: 420px) {
-  header .taglinem h1:nth-of-type(1) {
+  header .taglinem h1:nth-of-type(1), header .tagline h1:nth-of-type(1) {
     height: 40px;
     line-height: 38px;
     font-size: 32px; }
-  header .taglinem h1:nth-of-type(2) {
+  header .taglinem h1:nth-of-type(2), header .tagline h1:nth-of-type(2) {
     height: 44px;
     line-height: 38px;
     font-size: 32px; }
-  header .taglinem h1:nth-of-type(3) {
+  header .taglinem h1:nth-of-type(3), header .tagline h1:nth-of-type(3) {
     height: 38px;
     line-height: 38px;
     font-size: 36px; } }
@@ -2893,13 +2962,9 @@ section.wall {
       max-width: 1600px;
       background-color: #fff !important; }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1200px) {
   section.wall {
-    max-height: 600px; } }
-
-@media screen and (max-width: 1023px) {
-  section.wall {
-    max-height: 504px; } }
+    max-height: 720px; } }
 
 @media screen and (max-width: 959px) {
   section.wall {
@@ -2918,8 +2983,7 @@ section.work {
   z-index: 3;
   padding-bottom: 216px;
   text-align: center;
-  background: #fff;
-  overflow: visible; }
+  background: #fff; }
   section.work .head {
     margin-top: 156px;
     margin-bottom: 72px; }
@@ -2928,28 +2992,31 @@ section.work {
     z-index: 1;
     display: inline-block;
     width: 100%;
-    max-width: 1280px;
-    min-height: 480px;
     margin: auto;
-    margin-top: 60px;
-    margin-bottom: 108px;
-    overflow: visible; }
+    padding-top: 60px;
+    padding-bottom: 108px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: hidden; }
     section.work .project:first-of-type {
-      margin-top: -20%; }
+      margin-top: -324px; }
+    section.work .project .pwrap {
+      position: relative;
+      max-width: 1280px;
+      margin: auto; }
     section.work .project .shield {
       position: absolute;
-      left: 0;
-      right: 0;
+      left: -7.5%;
+      right: -7.5%;
       z-index: 3;
       display: none;
-      max-height: 372px;
       padding-bottom: 24px;
       opacity: 0; }
       section.work .project .shield img {
         width: 100%;
         height: auto;
-        max-height: 372px;
-        opacity: 0; }
+        opacity: 0;
+        pointer-events: none; }
     section.work .project .preview {
       position: relative;
       z-index: 2;
@@ -2995,8 +3062,7 @@ section.work {
         line-height: 60px;
         font-size: 48px;
         font-weight: 800;
-        font-family: "jaf-facitweb", sans-serif;
-        text-transform: uppercase;
+        letter-spacing: 0;
         white-space: nowrap; }
       section.work .project .info p {
         margin-top: 12px;
@@ -3047,6 +3113,7 @@ section.work {
         line-height: 33px;
         padding-left: 12px;
         padding-right: 12px;
+        font-family: "jaf-facitweb", sans-serif;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 0.03em;
@@ -3055,7 +3122,7 @@ section.work {
         section.work .project .info.more h6 span {
           letter-spacing: -0.04em; }
   section.work .project.offset {
-    padding-bottom: 48px; }
+    margin-bottom: 48px; }
     section.work .project.offset .info {
       margin-top: 78px; }
   section.work .ileft {
@@ -3071,32 +3138,42 @@ section.work {
     section.work .pright .browser.cond {
       margin-left: 7.5%; }
 
+body.home section.work {
+  overflow: visible;
+  padding-left: 0%;
+  padding-right: 0%; }
+
+@media screen and (min-width: 1601px) {
+  section.work .project {
+    padding-left: 9%;
+    padding-right: 9%; } }
+
 @media screen and (max-width: 1320px) {
-  section.work .project .info .button {
-    min-width: 65%; }
+  section.work .project .info {
+    margin-top: 42px; }
+    section.work .project .info .button {
+      min-width: 65%; }
   section.work .project .info.more {
     margin-top: 36px; }
   section.work .project.offset .info {
-    margin-top: 36px; } }
+    margin-top: 48px; } }
 
 @media screen and (max-width: 1200px) {
   section.work {
     text-align: center; }
-    section.work .head {
-      margin-top: 132px;
-      margin-bottom: 60px; }
     section.work .project.offset {
-      padding: 0; }
+      margin-bottom: 0px; }
       section.work .project.offset .info {
         margin-top: 72px; }
     section.work .project {
       width: 100%;
       min-height: 480px;
-      max-width: 782px;
-      margin-top: 36px;
-      margin-bottom: 108px; }
+      padding-top: 48px;
+      padding-bottom: 108px; }
       section.work .project:first-of-type {
-        margin-top: -25%; }
+        margin-top: -264px; }
+      section.work .project .pwrap {
+        max-width: 782px; }
       section.work .project .preview {
         width: 100%;
         margin: auto; }
@@ -3147,18 +3224,11 @@ section.work {
           font-size: 44px; }
         section.work .project .info.more h6 {
           display: none; }
-    section.work .ileft {
+    section.work .ileft, section.work .iright, section.work .pleft, section.work .pright {
       float: none; }
-    section.work .iright {
-      float: none; }
-    section.work .pleft {
-      float: none; }
-      section.work .pleft .browser.cond {
-        margin-right: 0; }
-    section.work .pright {
-      float: none; }
-      section.work .pright .browser.cond {
-        margin-left: 0; } }
+      section.work .ileft .browser.cond, section.work .iright .browser.cond, section.work .pleft .browser.cond, section.work .pright .browser.cond {
+        margin-left: 0%;
+        margin-right: 0%; } }
 
 @media screen and (max-width: 959px) {
   section.work {
@@ -3166,17 +3236,19 @@ section.work {
     section.work::after {
       display: none; }
     section.work .head {
-      margin-top: 96px;
-      margin-bottom: 48px; }
+      margin-top: 132px;
+      margin-bottom: 60px; }
     section.work .project {
-      margin-top: 48px;
-      margin-bottom: 84px; }
+      padding-top: 48px;
+      padding-bottom: 96px;
+      padding-left: 5%;
+      padding-right: 5%; }
       section.work .project:first-of-type {
-        margin-top: 48px; }
-      section.work .project .info .button#navlink {
-        display: none; }
-      section.work .project .info .button#livelink {
-        display: inline-block; } }
+        margin-top: 0px; }
+      section.work .project .preview.free {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px; } }
 
 @media screen and (max-width: 640px) {
   section.work {
@@ -3187,8 +3259,12 @@ section.work {
     section.work .project.offset .info {
       margin-top: 36px; }
     section.work .project {
-      max-width: 542px;
-      margin-bottom: 24px; }
+      padding-top: 48px;
+      padding-bottom: 24px;
+      padding-left: 2%;
+      padding-right: 2%; }
+      section.work .project .pwrap {
+        max-width: 542px; }
       section.work .project .shield {
         display: block; }
       section.work .project .info {
@@ -3227,18 +3303,16 @@ section.work {
           margin-top: -6px;
           margin-bottom: 12px;
           line-height: 36px;
-          font-size: 28px; }
-    section.work .project.dribs .preview {
-      margin-bottom: 0px; } }
+          font-size: 28px; } }
 
 @media screen and (max-width: 420px) {
   section.work {
     padding-bottom: 120px; }
     section.work .project {
-      margin-bottom: -12px; }
+      padding-bottom: -12px; }
     section.work .project.triphone {
-      margin-top: 48px;
-      margin-bottom: 24px; } }
+      padding-top: 48px;
+      padding-bottom: 24px; } }
 
 section.about {
   padding-bottom: 168px;
@@ -3350,7 +3424,13 @@ section.aboutme {
     left: 55%;
     width: 50%;
     min-width: 660px;
-    text-align: right; }
+    text-align: right;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     section.aboutme .bg img, section.aboutme .fade img {
       width: 90%;
       min-width: 540px;
@@ -3545,53 +3625,51 @@ section.contact {
     margin-top: 8.4px;
     font-style: italic;
     opacity: 0.6; }
-  section.contact .container {
+  section.contact .col {
     position: relative;
     display: inline-block;
     padding-top: 48px;
     padding-bottom: 24px; }
-    section.contact .container h5 {
+    section.contact .col h5 {
       display: inline-block;
       vertical-align: middle;
-      font-family: "jaf-facitweb", sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
       letter-spacing: 0.025em; }
-    section.contact .container img {
+    section.contact .col img {
       display: inline-block;
       vertical-align: middle;
       margin-right: 12px; }
-    section.contact .container a {
+    section.contact .col a {
       padding-top: 24px;
       padding-bottom: 24px;
       padding-right: 10px; }
-      section.contact .container a span {
+      section.contact .col a span {
         display: inline-block; }
-      section.contact .container a img, section.contact .container a span, section.contact .container a h5 {
+      section.contact .col a img, section.contact .col a span, section.contact .col a h5 {
         opacity: 1;
         transition-duration: 0.2s;
         transition-delay: 0s; }
-      section.contact .container a:hover {
+      section.contact .col a:hover {
+        color: #000;
         box-shadow: 0 3px #000; }
-        section.contact .container a:hover img, section.contact .container a:hover span, section.contact .container a:hover h5 {
+        section.contact .col a:hover img, section.contact .col a:hover span, section.contact .col a:hover h5 {
           -webkit-transform: translate(0, -2px);
           transform: translate(0, -2px);
           opacity: 1; }
-      section.contact .container a:active img, section.contact .container a:active span, section.contact .container a:active h5 {
+      section.contact .col a:active img, section.contact .col a:active span, section.contact .col a:active h5 {
         opacity: 1;
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
         transition-duration: 0.1s;
         transition-delay: 0s; }
-    section.contact .container.left {
+    section.contact .col.left {
       margin-right: 8%; }
-    section.contact .container.middle {
+    section.contact .col.middle {
       margin-right: 10%; }
-  section.contact .container.method a {
+  section.contact .col.method a {
     padding-right: 10px; }
-    section.contact .container.method a .skype {
+    section.contact .col.method a .skype {
       padding-left: 58px; }
-    section.contact .container.method a span.social {
+    section.contact .col.method a span.social {
       position: absolute;
       margin: 14px 0 0 8px; }
   section.contact .social {
@@ -3604,24 +3682,24 @@ section.contact {
         font-weight: 600; }
       section.contact .social a:nth-of-type(3) {
         font-weight: 400; }
-  section.contact .container.social a {
+  section.contact .col.social a {
     margin: 0 6px;
     padding-right: 0; }
-    section.contact .container.social a:nth-of-type(2) {
+    section.contact .col.social a:nth-of-type(2) {
       font-size: 26px;
       font-weight: 600; }
-    section.contact .container.social a:nth-of-type(3) {
+    section.contact .col.social a:nth-of-type(3) {
       font-weight: 400; }
-    section.contact .container.social a span {
+    section.contact .col.social a span {
       width: 48px; }
-  section.contact .container.office {
+  section.contact .col.office {
     width: 100%;
     padding-bottom: 72px;
     white-space: nowrap; }
-    section.contact .container.office a {
+    section.contact .col.office a {
       width: 286px;
       margin-right: 10%; }
-    section.contact .container.office .digits {
+    section.contact .col.office .digits {
       margin-right: 5%; }
 
 @media screen and (max-width: 1280px) {
@@ -3632,25 +3710,25 @@ section.contact {
   section.contact {
     background-position: 60% 100%;
     background-size: 150%; }
-    section.contact .container {
+    section.contact .col {
       display: block;
       width: auto;
       min-width: 0;
       padding-top: 36px;
       padding-bottom: 24px; }
-      section.contact .container.left {
+      section.contact .col.left {
         margin-right: 0%; }
-      section.contact .container.middle {
+      section.contact .col.middle {
         margin-right: 0%; }
-    section.contact .container.social {
+    section.contact .col.social {
       margin-top: 12px; }
-    section.contact .container.office {
+    section.contact .col.office {
       width: auto;
       height: auto; }
-      section.contact .container.office a {
+      section.contact .col.office a {
         width: auto;
         margin-right: 0; }
-      section.contact .container.office .digits {
+      section.contact .col.office .digits {
         display: block;
         margin-top: 60px;
         margin-right: 0; } }
@@ -3664,17 +3742,17 @@ section.contact {
       padding-bottom: 24px; }
       section.contact .head.visit h6 {
         margin: 0; }
-    section.contact .container {
+    section.contact .col {
       padding-top: 36px;
       padding-bottom: 0px; }
-      section.contact .container h5 {
+      section.contact .col h5 {
         line-height: 48px;
         font-size: 18px; }
-    section.contact .container.social {
+    section.contact .col.social {
       margin-top: 12px; }
-    section.contact .container.office {
+    section.contact .col.office {
       padding-top: 48px; }
-      section.contact .container.office .digits {
+      section.contact .col.office .digits {
         margin-top: 36px; } }
 
 @media screen and (max-width: 420px) {
@@ -3725,8 +3803,6 @@ section {
     transition-delay: 0s; }
     section .head h5 {
       display: inline-block;
-      letter-spacing: 0.075em;
-      font-weight: 600;
       color: rgba(0, 0, 0, 0.7); }
       section .head h5::after {
         content: '';
@@ -3737,6 +3813,8 @@ section {
         height: 3px;
         margin-left: -25px;
         background: rgba(0, 0, 0, 0.6); }
+  section h5 {
+    letter-spacing: 0.08em; }
 
 .base {
   position: fixed;
@@ -3993,14 +4071,14 @@ body.home.foldb section.wall .wall {
 
 @media screen and (min-width: 1601px) {
   section {
-    padding-left: 6%;
-    padding-right: 6%; } }
+    padding-left: 6.5%;
+    padding-right: 6.5%; } }
 
 @media screen and (max-width: 959px) {
   .base {
-    z-index: -999; }
+    z-index: -9; }
   section.work, section.about, section.aboutme, section.contact {
-    z-index: 999; }
+    z-index: 9; }
   section {
     padding-left: 5%;
     padding-right: 5%; }

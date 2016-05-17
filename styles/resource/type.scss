@@ -75,9 +75,10 @@
 		font-family: $caps;
 		text-transform: uppercase;
 		letter-spacing: 0.07em;
-	}
-	h6.caps {
 		font-weight: 600;
+	}
+	br {
+		@include noselect;
 	}
 
 // socicon webfont

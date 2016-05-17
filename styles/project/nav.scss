@@ -61,12 +61,12 @@
 			li.nava {
 				@include twowayshadow(0px, 0px, $wht-0);
 				&:hover, &.hover {
-					.caps {
+					a {
 						color: $red;
 					}
 					@include twowayshadow(-3px, 1px, $red);
 				}
-				.caps {
+				a {
 					color: $red;
 				}
 			}
@@ -91,12 +91,12 @@
 			li.nava {
 				@include twowayshadow(-4px, 1px, $red);
 				&:hover, &.hover {
-					.caps {
+					a {
 						color: $red;
 					}
 					@include twowayshadow(-4px, 1px, $red);
 				}
-				.caps {
+				a {
 					color: $red;
 				}
 				h6 {

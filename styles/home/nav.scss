@@ -53,6 +53,10 @@
 				@include animate(.9s, 1.1825s);
 			}
 		}
+		.navb, .navc, .navd {
+			@extend .caps;
+			font-weight: 600;
+		}
 		li.active {
 			@include twowayshadow(-2px, 1px, $wht);
 			a {
@@ -96,6 +100,7 @@
 			height: 102px;
 			padding-top: 66px;
 			color: $wht;
+			text-decoration: none;
 			&:focus {
 				color: $wht;
 			}
@@ -132,13 +137,10 @@
 			@include animatereset(.35s, 1s);
 			@include atiming(ease-out);
 			@include pvlin;
-			a, b {
-				font-weight: 800;
-			}
 			a {
 				height: 105px;
-			}
-			.caps {
+				@extend .caps;
+				font-weight: 800;
 				font-size: 32px;
 				color: $wht;
 			}
@@ -316,8 +318,6 @@
 			a {
 				height: 60px;
 				padding-top: 27px;
-			}
-			.caps {
 				font-size: 28px;
 				color: $red;
 			}
@@ -428,10 +428,7 @@
 			&:hover, &.hover {
 				@include twowayshadow(-3px, 1px, $wht);
 			}
-			.caps {
-				color: $wht;
-			}
-			h6 {
+			a, h6 {
 				color: $wht;
 			}
 		}
@@ -614,17 +611,12 @@
 				width: 48px;
 				height: 72px;
 				@include twowayshadow(-3px, 1px, $wht);
-				.caps {
-					font-size: 24px;
-				}
-				.lastname {
-					display: none;
-				}
-				h6 {
-					display: none;
-				}
 				a {
 					padding-top: 40px;
+					font-size: 24px;
+				}
+				.lastname, h6 {
+					display: none;
 				}
 			}
 			li.nava.full {
@@ -662,11 +654,9 @@
 				height: 48px;
 				margin: 0;
 				a {
+					font-size: 24px;
 					height: 48px;
 					padding-top: 20px;
-				}
-				.caps {
-					font-size: 24px;
 				}
 				&:hover, &.hover {
 					width: 48px;

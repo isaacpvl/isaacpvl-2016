@@ -24,18 +24,14 @@
 				opacity: 0.6;
 			}
 		}
-		.container {
+		.col {
 			position: relative;
-
 			display: inline-block;
 			@include padding-leader(4);
 			@include padding-trailer(2);
 			h5 {
 				display: inline-block;
 				vertical-align: middle;
-				font-family: $caps;
-				text-transform: uppercase;
-				font-weight: 700;
 				letter-spacing: 0.025em;
 			}
 			img {
@@ -55,6 +51,7 @@
 					@include trans(.2s, 0s);
 				}
 				&:hover {
+					color: $blk;
 					@include dropshadow(3px, $blk);
 					img, span, h5 {
 						@include tmove(0, -2px);
@@ -75,7 +72,7 @@
 				margin-right: 10%;
 			}
 		}
-		.container.method {
+		.col.method {
 			a {
 				padding-right: 10px;
 				.skype {
@@ -101,7 +98,7 @@
 				}
 			}
 		}
-		.container.social {
+		.col.social {
 			a {
 				margin: 0 6px;
 				padding-right: 0;
@@ -117,7 +114,7 @@
 				}
 			}
 		}
-		.container.office {
+		.col.office {
 			width: 100%;
 			@include padding-trailer(6);
 			white-space: nowrap;
@@ -144,7 +141,7 @@
 		section.contact {
 			background-position: 60% 100%;
 			background-size: 150%;
-			.container {
+			.col {
 				display: block;
 				width: auto;
 				min-width: 0;
@@ -157,10 +154,10 @@
 					margin-right: 0%;
 				}
 			}
-			.container.social {
+			.col.social {
 				@include leader(1);
 			}
-			.container.office {
+			.col.office {
 				width: auto;
 				height: auto;
 				a {
@@ -186,7 +183,7 @@
 					margin: 0;
 				}
 			}
-			.container {
+			.col {
 				@include padding-leader(3);
 				@include padding-trailer(0);
 				h5 {
@@ -194,10 +191,10 @@
 					font-size: 18px;
 				}
 			}
-			.container.social {
+			.col.social {
 				@include leader(1);
 			}
-			.container.office {
+			.col.office {
 				@include padding-leader(4);
 				.digits {
 					@include leader(3);

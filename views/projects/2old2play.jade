@@ -3,11 +3,11 @@ block nav
 	nav.hide
 		ul
 			include ../resource/pvl
-			li.navb.caps#navb
+			li.navb#navb
 				a#navlink(data-pathname="overdog")
 					span &#8249;
 					| Prev Project
-			li.navc.caps#navc
+			li.navc#navc
 				a#navlink(data-pathname="threadmeup")
 					| Next Project
 					span &#8250;
@@ -30,20 +30,20 @@ block work
 		.arrowbar.hide
 			.arrow#work
 		.head
-			h5.caps Overview
+			h5 Overview
 		.wrap
 			.overview
 				.detail.single
 					p I took a large community's dated website and designed it to be a social hub that gats people to start playing together.
 				.context
 					div
-						h6.caps My Role:
+						h6 My Role:
 						p web design & brand
 					div
-						h6.caps When:
+						h6 When:
 						p late 2013
 					div
-						h6.caps With:
+						h6 With:
 						p just me, freelancing
 		.itemhead
 			h3 Homepage & community feed
@@ -68,16 +68,16 @@ block work
 					span 2old2play.com
 				img(src="/images/2old2play/2o2p-01.jpg")
 		.footlink
-			p you can also check out <a class="texta" href="https://dribbble.com/isaacpvl/projects/173459-2old2play", target="_blank">this project on dribbble</a>
+			p you can also check out <a  href="https://dribbble.com/isaacpvl/projects/173459-2old2play", target="_blank">this project on dribbble</a>
 
 block next
 	section.next.threadmeup#navlink(data-pathname="threadmeup")
 		.head
-			h5.caps Next Project
+			h5 Next Project
 		.peek
 			img(src="/images/threadmeup/logo.png")
 	//- section.next.toggle#navlink(data-pathname="toggle")
 		.head
-			h5.caps Next Project
+			h5 Next Project
 		.peek
 			img(src="/images/toggle/logo.png")

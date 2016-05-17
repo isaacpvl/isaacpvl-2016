@@ -45,8 +45,6 @@
 			@include trans(.5s);
 			h5 {
 				display: inline-block;
-				letter-spacing: 0.075em;
-				font-weight: 600;
 				color: $blk-7;
 				&::after {
 					content:'';
@@ -59,6 +57,10 @@
 					background: $blk-6;
 				}
 			}
+		}
+		h5 {
+			@extend .caps;
+			letter-spacing: 0.08em;
 		}
 	}
 	.base {
@@ -256,7 +258,7 @@
 }
 
 
-// Page transitions
+// Fold transitions
 // ------------------------------------------------------------
 
 	body.fold {
@@ -337,16 +339,16 @@
 
 	@media screen and (min-width: 1601px) {
 		section {
-			@include padding-x(6%);
+			@include padding-x(6.5%);
 		}
 	}
 	@media screen and (max-width: 959px) {
 		.base {
-			z-index: -999;
+			z-index: -9;
 		}
 		section.work, section.about, section.aboutme, section.contact {
-			z-index: 999;
-		} 
+			z-index: 9;
+		}
 		section {
 			@include padding-x(5%);
 			.head {

@@ -139,6 +139,7 @@
 			width: 50%;
 			min-width: 660px;
 			text-align: right;
+			@include noselect;
 			img {
 				width: 90%;
 				min-width: 540px;

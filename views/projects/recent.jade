@@ -3,11 +3,11 @@ block nav
 	nav.dark.hide
 		ul
 			include ../resource/pvl
-			li.navb.caps#navb
+			li.navb#navb
 				a#navlink(data-pathname="huddlepass")
 					span &#8249;
 					| Prev Project
-			li.navc.caps#navc
+			li.navc#navc
 				a#navlink(data-pathname="past")
 					| Next Project
 					span &#8250;
@@ -31,7 +31,7 @@ block work
 		.arrowbar.hide
 			.arrow#work
 		.head
-			h5.caps Overview
+			h5 Overview
 		.wrap
 			.overview
 				.detail.single
@@ -145,7 +145,7 @@ block work
 block next
 	section.next.past#navlink(data-pathname="past")
 		.head
-			h5.caps Also check out
+			h5 Also check out
 		.peek
 			h1 A long time ago...
 		.peekbg

@@ -8,7 +8,6 @@
 		@include padding-trailer(18);
 		text-align: center;
 		background: $wht;
-		overflow: visible;
 		.head {
 			@include leader(13);
 			@include trailer(6);
@@ -18,29 +17,32 @@
 			z-index: 1;
 			display: inline-block;
 			width: 100%;
-			max-width: 1280px;
-			min-height: 480px;
 			margin: auto;
-			@include leader(5);
-			@include trailer(9);
-			overflow: visible;
+			@include padding-leader(5);
+			@include padding-trailer(9);
+			@include padding-x(5%);
+			overflow: hidden;
 			&:first-of-type {
-				margin-top: -20%;
+				@include leader(-27);
+			}
+			.pwrap {
+				position: relative;
+				max-width: 1280px;
+				margin: auto;
 			}
 			.shield {
 				position: absolute;
-				left: 0;
-				right: 0;
+				left: -7.5%;
+				right: -7.5%;
 				z-index: 3;
 				display: none;
-				max-height: 372px;
-				padding-bottom: 24px;
+				@include padding-trailer(2);
 				opacity: 0;
 				img {
 					width: 100%;
 					height: auto;
-					max-height: 372px;
 					opacity: 0;
+					pointer-events: none;
 				}
 			}
 			.preview {
@@ -99,10 +101,10 @@
 				h1 {
 					margin-left: -2px;
 					@include lineh(5);
+					@extend .caps;
 					font-size: 48px;
 					font-weight: 800;
-					font-family: $caps;
-					text-transform: uppercase;
+					letter-spacing: 0;
 					white-space: nowrap;
 				}
 				p {
@@ -120,6 +122,7 @@
 						top: 0;
 						left: 0;
 						@include lineh(2.5);
+						@extend .caps;
 					}
 					div {
 						margin-left: 57px;
@@ -166,6 +169,7 @@
 					@include leader(-5);
 					@include lineh(2.75);
 					@include padding-x(12px);
+					font-family: $caps;
 					font-size: 14px;
 					font-weight: 700;
 					letter-spacing: 0.03em;
@@ -178,7 +182,7 @@
 			}
 		}
 		.project.offset {
-			@include padding-trailer(4);
+			@include trailer(4);
 			.info {
 				@include leader(6.5);
 			}
@@ -203,15 +207,29 @@
 			}
 		}
 	}
+	body.home {
+		section.work {
+			overflow: visible;
+			@include padding-x(0%);
+		}
+	}
 
 
 // Media queries
 // ------------------------------------------------------------
 
+	@media screen and (min-width: 1601px) {
+		section.work {
+			.project {
+				@include padding-x(9%);
+			}
+		}
+	}
 	@media screen and (max-width: 1320px) {
 		section.work {
 			.project {
 				.info {
+					@include leader(3.5);
 					.button {
 						min-width: 65%;
 					}
@@ -222,7 +240,7 @@
 			}
 			.project.offset {
 				.info {
-					@include leader(3);
+					@include leader(4);
 				}
 			}		
 		}
@@ -230,12 +248,12 @@
 	@media screen and (max-width: 1200px) {
 		section.work {
 			text-align: center;
-			.head {
-				@include leader(11);
-				@include trailer(5);
-			}
+			// .head {
+			// 	@include leader(11);
+			// 	@include trailer(5);
+			// }
 			.project.offset {
-				padding: 0;
+				@include trailer(0);
 				.info {
 					@include leader(6);
 				}
@@ -243,11 +261,13 @@
 			.project {
 				width: 100%;
 				min-height: 480px;
-				max-width: 782px;
-				@include leader(3);
-				@include trailer(9);
+				@include padding-leader(4);
+				@include padding-trailer(9);
 				&:first-of-type {
-					margin-top: -25%;
+					@include leader(-22);
+				}
+				.pwrap {
+					max-width: 782px;
 				}
 				.preview {
 					width: 100%;
@@ -313,22 +333,10 @@
 					}
 				}
 			}
-			.ileft {
-				float: none;
-			}
-			.iright {
-				float: none;
-			}
-			.pleft {
+			.ileft, .iright, .pleft, .pright {
 				float: none;
 				.browser.cond {
-					margin-right: 0;
-				}
-			}
-			.pright {
-				float: none;
-				.browser.cond {
-					margin-left: 0;
+					@include margin-x(0%);
 				}
 			}
 		}
@@ -340,23 +348,32 @@
 				display: none;
 			}
 			.head {
-				@include leader(8);
-				@include trailer(4);
+				@include leader(11);
+				@include trailer(5);
 			}
 			.project {
-				@include leader(4);
-				@include trailer(7);
+				@include padding-leader(4);
+				@include padding-trailer(8);
+				@include padding-x(5%);
 				&:first-of-type {
-					@include leader(4);
+					@include leader(0);
 				}
-				.info {
-					.button#navlink {
-						display: none;
-					}
-					.button#livelink {
-						display: inline-block;
-					}				
+				.preview.free {
+					float: none;
+					width: 100%;
+					@include trailer(2.5);
 				}
+				// .shield {
+				// 	display: block;
+				// }
+				// .info {
+				// 	.button#navlink {
+				// 		display: none;
+				// 	}
+				// 	.button#livelink {
+				// 		display: inline-block;
+				// 	}				
+				// }
 			}
 		}
 	}
@@ -373,8 +390,12 @@
 				}
 			}
 			.project {
-				max-width: 542px;
-				@include trailer(2);
+				@include padding-leader(4);
+				@include padding-trailer(2);
+				@include padding-x(2%);
+				.pwrap {
+					max-width: 542px;
+				}
 				.shield {
 					display: block;
 				}
@@ -427,22 +448,17 @@
 					}
 				}
 			}
-			.project.dribs {
-				.preview {
-					@include trailer(0);
-				}
-			}
 		}
 	}
 	@media screen and (max-width: 420px) {
 		section.work {
 			@include padding-trailer(10);
 			.project {
-				@include trailer(-1);
+				@include padding-trailer(-1);
 			}
 			.project.triphone {
-				@include leader(4);
-				@include trailer(2);
+				@include padding-leader(4);
+				@include padding-trailer(2);
 			}
 		}
 	}

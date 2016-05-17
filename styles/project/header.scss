@@ -101,6 +101,7 @@
 		margin: auto;
 		overflow: hidden;
 		opacity: 1;
+		@include noselect;
 		@include trans(.375s);
 		.splashfade {
 			z-index: -1;

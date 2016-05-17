@@ -12,6 +12,7 @@
 			height: 84%;
 			min-height: 516px;
 			max-height: 720px;
+			@extend .caps;
 			@include animatereset(.8s, .8s);
 			@include fadeinup;
 			> span {
@@ -51,8 +52,8 @@
 				@include trans(.5s, 0s);
 				span {
 					@include trans(.2s, 0s);
-					}
 				}
+			}
 			#sweet {
 				left: 248px;
 			}
@@ -70,6 +71,7 @@
 			height: 84%;
 			min-height: 528px;
 			max-height: 732px;
+			@extend .caps;
 			@include animatereset(.8s, .8s);
 			@include fadeinup;
 			> span {
@@ -200,10 +202,8 @@
 				@include leader(2.75);
 				@include trailer(1);
 				padding-right: 30px;
-				font-family: $caps;
-				text-transform: uppercase;
+				@extend .caps;
 				letter-spacing: 0.025em;
-				font-weight: 600;
 				opacity: 0;
 				@include tmove(0, 24px);
 				@include trans(.4s, .2s);
@@ -242,7 +242,6 @@
 						pointer-events: none;
 						@include tfree(1, -50deg, 120px, -36px);
 						@include trans(.5s, .15s);
-						@include noselect;
 					}
 				}
 			}
@@ -403,11 +402,53 @@
 			.speech {
 				display: none;
 			}
+			.tagline {
+				position: relative;
+				z-index: 2;
+				height: 84%;
+				min-height: 528px;
+				max-height: 732px;
+				@include animatereset(.8s, .8s);
+				@include fadeinup;
+				> span {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					@include trans(.4s, 0s);
+				}
+				h1 {
+					position: relative;
+					font-weight: 800;
+					letter-spacing: 0;
+					white-space: nowrap;
+					@include fadeinup;
+					@include trans(.3s, 0s);
+					&:nth-of-type(1) {
+						height: 78px;
+						@include lineh(7);
+						font-size: 62px;
+						@include animatereset(.8s, 1s);
+					}
+					&:nth-of-type(2) {
+						height: 78px;
+						@include lineh(6.5);
+						font-size: 62px;
+						@include animatereset(.65s, 1.15s);
+					}
+					&:nth-of-type(3) {
+						height: 90px;
+						@include lineh(7.5);
+						font-size: 72px;
+						@include animatereset(.5s, 1.3s);
+					}
+				}
+			}
 		}
 	}
 	@media screen and (max-width: 640px) {
 		header {
-			.taglinem {
+			.taglinem, .tagline {
 				height: 90%;
 				min-height: 0;
 				h1 {
@@ -432,7 +473,7 @@
 	}
 	@media screen and (max-width: 420px) {
 		header {
-			.taglinem {
+			.taglinem, .tagline {
 				h1 {
 					&:nth-of-type(1) {
 						height: 40px;

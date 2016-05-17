@@ -88,14 +88,14 @@ jQuery(function($) {
 	}
 
 // homepage redirect
-	$(window).on('resize', function() {
-		if (window.matchMedia('(max-width: 959px)').matches) {
-			window.location.href = "/";
-		}
-	});
-	if (window.matchMedia('(max-width: 959px)').matches) {
-		window.location.href = "/";
-	}
+	// $(window).on('resize', function() {
+	// 	if (window.matchMedia('(max-width: 959px)').matches) {
+	// 		window.location.href = "/";
+	// 	}
+	// });
+	// if (window.matchMedia('(max-width: 959px)').matches) {
+	// 	window.location.href = "/";
+	// }
 
 // page links & transitions
 	$('#nava').on('mouseup', function(event) {

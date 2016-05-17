@@ -19,9 +19,9 @@ jQuery(function() {
 	var tagline = $("#tagline");
 	var liToggleEnabled = true;
 
-		$("nav li.caps").on('click', 'a', function() {
-			$('nav li.caps').removeClass('active'); 
-				$(this).closest('li.caps').addClass('active');
+		$("nav li").on('click', 'a', function() {
+			$('nav li').removeClass('active'); 
+				$(this).closest('li').addClass('active');
 				liToggleEnabled = false;
 				return liToggleEnabled;
 		});

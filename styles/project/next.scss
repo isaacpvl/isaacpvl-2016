@@ -10,10 +10,12 @@
 		overflow: hidden;
 		color: $wht;
 		background: $wht;
+		@include noselect;
 		&:hover, &.active {
 			.head {
 				opacity: 0;
 				@include tmove(0, -24px);
+				@include trans(.25s);
 			}
 			.peek {
 				top: 0;
@@ -35,7 +37,7 @@
 		.head {
 			margin: 0;
 			z-index: 2;
-			@include trans(.4s);
+			@include trans(.1s);
 			h5 {
 				color: $wht;
 				line-height: 84px;

@@ -16,6 +16,7 @@
 			height: auto;
 			margin-bottom: -1px;
 			border-radius: 0 0 1px 1px;
+			@include noselect;
 		}
 		.top {
 			position: relative;
@@ -372,6 +373,7 @@
 			width: 100%;
 			height: auto;
 			@include border(1px, $drk-l);
+			@include noselect;
 		}
 		div {
 			position: absolute;
@@ -559,14 +561,18 @@
 
 	@media screen and (max-width: 1200px) {
 		.phone {
-			top: 24%;
+			top: 22%;
 			right: 0;
 		}
 	}
 	@media screen and (max-width: 959px) {
 		.phone {
+			top: 21%;
+		}
+	}
+	@media screen and (max-width: 839px) {
+		.phone {
 			top: 18%;
-			right: 0;
 		}
 	}
 	@media screen and (max-width: 640px) {
