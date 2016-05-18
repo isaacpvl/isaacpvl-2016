@@ -122,15 +122,6 @@
 				display: none;
 			}
 		}
-	}
-	nav.dark {
-		li.active {
-			@include twowayshadow(-2px, 1px, $red);
-			a {
-				color: $red;
-			}
-		}
-	}
 
 	// PVL link
 		li.nava {
@@ -264,200 +255,211 @@
 				}
 			}
 		}
+	}
 
-	// sticky state
-		nav.sticky {
-			z-index: 95;
+// sticky state
+	nav.sticky {
+		z-index: 95;
+		height: 60px;
+		@include innershadow(60px, $wht-9);
+		a {
 			height: 60px;
-			@include innershadow(60px, $wht-9);
+			padding-top: 28px;
+			color: $blk-5;
+			&:hover {
+				color: $blk;
+			}
+		}
+		ul {
+			@include dropshadow(1px, $blk-1);
+		}
+		li {
+			&:hover {
+				@include twowayshadow(-2px, 1px, $blk-5);
+			}
+		}
+		li.active {
+			@include twowayshadow(-2px, 1px, $red);
+			a {
+				color: $red;
+				&:hover {
+					@include treset;
+				}
+			}
+		}
+		li.disabled {
+			box-shadow: none;
+			a {
+				opacity: .6;
+				color: $drk-l;
+			}
+			&:hover {
+				box-shadow: none;
+			}
+		}
+		li.social {
+			a {
+				span {
+					font-size: 24px;
+				}
+			}
+			&:last-of-type {
+				span {
+					font-size: 22px;
+				}
+			}
+		}
+		li.nava {
+			width: 56px;
+			@include twowayshadow(0px, 0px, $wht-0);
+			&:hover, &.hover {
+				@include twowayshadow(-3px, 1px, $red);
+			}
 			a {
 				height: 60px;
-				padding-top: 28px;
-				color: $blk-5;
-				&:hover {
-					color: $blk;
+				padding-top: 27px;
+				font-size: 28px;
+				color: $red;
+			}
+			.initials {
+				letter-spacing: 2px;
+			}
+			.lastname {
+				letter-spacing: 4px;
+				b {
+					color: $wht-0;
 				}
-			}
-			ul {
-				@include dropshadow(1px, $blk-1);
-			}
-			li {
-				&:hover {
-					@include twowayshadow(-2px, 1px, $blk-5);
-				}
-			}
-			li.active {
-				@include twowayshadow(-2px, 1px, $red);
-				a {
-					color: $red;
-					&:hover {
-						@include treset;
+				span {
+					&:nth-of-type(2) {
+						margin-left: -1px;
 					}
 				}
 			}
-			li.disabled {
-				box-shadow: none;
-				a {
-					opacity: .6;
-					color: $drk-l;
-				}
-				&:hover {
-					box-shadow: none;
-				}
-			}
-			li.social {
-				a {
-					span {
-						font-size: 24px;
-					}
-				}
+			h6 {
+				left: 0;
+				@include padding-leader(1);
+				font-size: 16px;
+				letter-spacing: -0.016em;
+				color: $red;
+				@include tmove(0, -15px);
 				&:last-of-type {
-					span {
-						font-size: 22px;
-					}
+					@include padding-leader(3);
+					letter-spacing: -0.01em;
+					@include tmove(0, -30px);
 				}
 			}
-			li.nava {
-				width: 56px;
-				@include twowayshadow(0px, 0px, $wht-0);
-				&:hover, &.hover {
-					@include twowayshadow(-3px, 1px, $red);
-				}
-				a {
-					height: 60px;
-					padding-top: 27px;
-					font-size: 28px;
-					color: $red;
-				}
+			&:hover, &.hover {
+				width: 150px;
+				padding-right: 28px;
 				.initials {
-					letter-spacing: 2px;
+					div {
+						&:first-of-type {
+							width: 44px;
+						}
+						&:last-of-type {
+							width: 25px;
+						}
+					}
 				}
 				.lastname {
-					letter-spacing: 4px;
-					b {
-						color: $wht-0;
-					}
-					span {
+					div {
+						&:nth-of-type(1) {
+							width: 21px;
+						}
 						&:nth-of-type(2) {
-							margin-left: -1px;
+							width: 20px;
+						}
+						&:nth-of-type(3) {
+							width: 19px;
 						}
 					}
 				}
 				h6 {
-					left: 0;
-					@include padding-leader(1);
-					font-size: 16px;
-					letter-spacing: -0.016em;
-					color: $red;
-					@include tmove(0, -15px);
-					&:last-of-type {
-						@include padding-leader(3);
-						letter-spacing: -0.01em;
-						@include tmove(0, -30px);
-					}
-				}
-				&:hover, &.hover {
-					width: 150px;
-					padding-right: 28px;
-					.initials {
-						div {
-							&:first-of-type {
-								width: 44px;
-							}
-							&:last-of-type {
-								width: 25px;
-							}
-						}
-					}
-					.lastname {
-						div {
-							&:nth-of-type(1) {
-								width: 21px;
-							}
-							&:nth-of-type(2) {
-								width: 20px;
-							}
-							&:nth-of-type(3) {
-								width: 19px;
-							}
-						}
-					}
-					h6 {
-						@include treset;
-					}
-				}
-			}
-			li:nth-of-type(5) {
-				&:hover {
-					@include twowayshadow(-2px, 1px, #4da7de);
-					a:hover {
-						color: #4da7de;
-					}
-				}
-			}
-			li:nth-of-type(6) {
-				&:hover {
-					@include twowayshadow(-2px, 1px, #e84d88);
-					a:hover {
-						color: #e84d88;
-					}
+					@include treset;
 				}
 			}
 		}
-		nav.blue {
-			@include innershadow(60px, rgba($blu, .8));
-			li {
-				&:hover {
-					@include twowayshadow(-2px, 1px, $wht-8);
-					}
-				}
-			li.active {
-				@include twowayshadow(-2px, 1px, $wht);
-				a {
-					color: $wht;
-					&:hover {
-						@include treset;
-					}
+		li:nth-of-type(5) {
+			&:hover {
+				@include twowayshadow(-2px, 1px, #4da7de);
+				a:hover {
+					color: #4da7de;
 				}
 			}
-			li.disabled {
-				a {
-					color: $wht-5;
+		}
+		li:nth-of-type(6) {
+			&:hover {
+				@include twowayshadow(-2px, 1px, #e84d88);
+				a:hover {
+					color: #e84d88;
 				}
 			}
+		}
+	}
+	nav.blue {
+		@include innershadow(60px, rgba($blu, .8));
+		li {
+			&:hover {
+				@include twowayshadow(-2px, 1px, $wht-8);
+				}
+			}
+		li.active {
+			@include twowayshadow(-2px, 1px, $wht);
 			a {
-				color: $wht-8;
+				color: $wht;
 				&:hover {
-					color: $wht;
-				}
-			}
-			li.nava {
-				@include twowayshadow(0px, 0px, $wht-0);
-				&:hover, &.hover {
-					@include twowayshadow(-3px, 1px, $wht);
-				}
-				a, h6 {
-					color: $wht;
-				}
-			}
-			li:nth-of-type(5) {
-				&:hover {
-					@include twowayshadow(-2px, 1px, $wht-8);
-					a:hover {
-						color: $wht;
-					}
-				}
-			}
-			li:nth-of-type(6) {
-				&:hover {
-					@include twowayshadow(-2px, 1px, $wht-8);
-					a:hover {
-						color: $wht;
-					}
+					@include treset;
 				}
 			}
 		}
+		li.disabled {
+			a {
+				color: $wht-5;
+			}
+		}
+		a {
+			color: $wht-8;
+			&:hover {
+				color: $wht;
+			}
+		}
+		li.nava {
+			@include twowayshadow(0px, 0px, $wht-0);
+			&:hover, &.hover {
+				@include twowayshadow(-3px, 1px, $wht);
+			}
+			a, h6 {
+				color: $wht;
+			}
+		}
+		li:nth-of-type(5) {
+			&:hover {
+				@include twowayshadow(-2px, 1px, $wht-8);
+				a:hover {
+					color: $wht;
+				}
+			}
+		}
+		li:nth-of-type(6) {
+			&:hover {
+				@include twowayshadow(-2px, 1px, $wht-8);
+				a:hover {
+					color: $wht;
+				}
+			}
+		}
+	}
 
+	nav.dark {
+		li.active {
+			@include twowayshadow(-2px, 1px, $red);
+			a {
+				color: $red;
+			}
+		}
+	}
+
+// arrows
 	.arrowbar {
 		position: relative;
 		width: 100%;

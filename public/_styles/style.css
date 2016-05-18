@@ -85,7 +85,7 @@ em {
   letter-spacing: -0.02em;
   opacity: 0.6; }
 
-.caps, .button, nav .navb, nav .navc, nav .navd, li.nava a, header .tagline, header .speech h4, section.work .project .info h1, section.work .project .info .role h6, .overview .context h6, .overview .live p strong, .itemhead h2, .itemhead h3, section h5 {
+.caps, .button, nav .navb, nav .navc, nav .navd, nav li.nava a, header .tagline, header .speech h4, section.work .project .info h1, section.work .project .info .role h6, .overview .context h6, .overview .live p strong, .itemhead h2, .itemhead h3, section h5 {
   font-family: "jaf-facitweb", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -1876,152 +1876,144 @@ nav {
     font-weight: 500; }
   nav li.navb span:last-of-type, nav li.navc span:last-of-type, nav li.navd span:last-of-type {
     display: none; }
-
-nav.dark li.active {
-  box-shadow: inset 0 -2px #d12b52, 0 1px #d12b52; }
-  nav.dark li.active a {
-    color: #d12b52; }
-
-li.nava {
-  position: absolute;
-  top: 0;
-  left: 5%;
-  width: 64px;
-  margin: 0;
-  text-align: left;
-  cursor: pointer;
-  box-shadow: inset 0 -4px #fff, 0 1px #fff;
-  transition-duration: 0.4s;
-  transition-delay: 0s;
-  -webkit-animation-duration: 0.35s;
-  animation-duration: 0.35s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-name: pvlin;
-          animation-name: pvlin; }
-  li.nava a {
-    height: 105px;
-    font-weight: 800;
-    font-size: 32px;
-    color: #fff; }
-  li.nava .initials {
-    position: relative;
-    z-index: 1;
-    letter-spacing: 2px; }
-    li.nava .initials span {
-      -webkit-animation-name: fadein;
-              animation-name: fadein; }
-      li.nava .initials span:nth-of-type(1) {
-        -webkit-animation-duration: 0.5s;
-        animation-duration: 0.5s;
-        -webkit-animation-delay: 0.3s;
-        animation-delay: 0.3s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both; }
-      li.nava .initials span:nth-of-type(2) {
-        -webkit-animation-duration: 0.5s;
-        animation-duration: 0.5s;
-        -webkit-animation-delay: 0.45s;
-        animation-delay: 0.45s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both; }
-      li.nava .initials span:nth-of-type(3) {
-        -webkit-animation-duration: 0.5s;
-        animation-duration: 0.5s;
-        -webkit-animation-delay: 0.6s;
-        animation-delay: 0.6s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both; }
-    li.nava .initials div {
-      position: relative;
-      display: inline-block;
-      width: 0;
-      transition-duration: 0.37s;
-      transition-delay: 0.03s; }
-  li.nava .lastname {
+  nav li.nava {
     position: absolute;
     top: 0;
-    letter-spacing: 4px;
-    opacity: 0; }
-    li.nava .lastname b {
-      color: rgba(255, 255, 255, 0);
-      opacity: 0; }
-    li.nava .lastname span {
-      position: relative; }
-      li.nava .lastname span:nth-of-type(2) {
-        margin-left: 1px; }
-    li.nava .lastname div {
+    left: 5%;
+    width: 64px;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: inset 0 -4px #fff, 0 1px #fff;
+    transition-duration: 0.4s;
+    transition-delay: 0s;
+    -webkit-animation-duration: 0.35s;
+    animation-duration: 0.35s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-name: pvlin;
+            animation-name: pvlin; }
+    nav li.nava a {
+      height: 105px;
+      font-weight: 800;
+      font-size: 32px;
+      color: #fff; }
+    nav li.nava .initials {
       position: relative;
-      display: inline-block;
-      width: 0;
-      transition-duration: 0.4s;
-      transition-delay: 0s; }
-  li.nava h6 {
-    position: absolute;
-    left: 1px;
-    width: 180px;
-    padding-top: 18px;
-    font-size: 18px;
-    opacity: 0;
-    letter-spacing: -0.005em;
-    -webkit-transform: translate(0, -15px);
-    transform: translate(0, -15px);
-    transition-duration: 0.18s;
-    transition-delay: 0.03s;
-    transition-timing-function: ease-in; }
-    li.nava h6:last-of-type {
-      padding-top: 45px;
-      letter-spacing: 0;
-      -webkit-transform: translate(0, -36px);
-      transform: translate(0, -36px);
-      transition-duration: 0.25s;
-      transition-delay: 0s; }
-
-li.nava.full a:hover {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0); }
-
-li.nava.full:hover, li.nava.full.hover {
-  width: 176px;
-  padding-right: 28px;
-  transition-duration: 0.25s;
-  transition-delay: 0s; }
-  li.nava.full:hover .initials div, li.nava.full.hover .initials div {
+      z-index: 1;
+      letter-spacing: 2px; }
+      nav li.nava .initials span {
+        -webkit-animation-name: fadein;
+                animation-name: fadein; }
+        nav li.nava .initials span:nth-of-type(1) {
+          -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+          -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+        nav li.nava .initials span:nth-of-type(2) {
+          -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+          -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+        nav li.nava .initials span:nth-of-type(3) {
+          -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+          -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+      nav li.nava .initials div {
+        position: relative;
+        display: inline-block;
+        width: 0;
+        transition-duration: 0.37s;
+        transition-delay: 0.03s; }
+    nav li.nava .lastname {
+      position: absolute;
+      top: 0;
+      letter-spacing: 4px;
+      opacity: 0; }
+      nav li.nava .lastname b {
+        color: rgba(255, 255, 255, 0);
+        opacity: 0; }
+      nav li.nava .lastname span {
+        position: relative; }
+        nav li.nava .lastname span:nth-of-type(2) {
+          margin-left: 1px; }
+      nav li.nava .lastname div {
+        position: relative;
+        display: inline-block;
+        width: 0;
+        transition-duration: 0.4s;
+        transition-delay: 0s; }
+    nav li.nava h6 {
+      position: absolute;
+      left: 1px;
+      width: 180px;
+      padding-top: 18px;
+      font-size: 18px;
+      opacity: 0;
+      letter-spacing: -0.005em;
+      -webkit-transform: translate(0, -15px);
+      transform: translate(0, -15px);
+      transition-duration: 0.18s;
+      transition-delay: 0.03s;
+      transition-timing-function: ease-in; }
+      nav li.nava h6:last-of-type {
+        padding-top: 45px;
+        letter-spacing: 0;
+        -webkit-transform: translate(0, -36px);
+        transform: translate(0, -36px);
+        transition-duration: 0.25s;
+        transition-delay: 0s; }
+  nav li.nava.full a:hover {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  nav li.nava.full:hover, nav li.nava.full.hover {
+    width: 176px;
+    padding-right: 28px;
     transition-duration: 0.25s;
     transition-delay: 0s; }
-    li.nava.full:hover .initials div:first-of-type, li.nava.full.hover .initials div:first-of-type {
-      width: 53px; }
-    li.nava.full:hover .initials div:last-of-type, li.nava.full.hover .initials div:last-of-type {
-      width: 30px; }
-  li.nava.full:hover .lastname, li.nava.full.hover .lastname {
-    opacity: 1; }
-    li.nava.full:hover .lastname div, li.nava.full.hover .lastname div {
+    nav li.nava.full:hover .initials div, nav li.nava.full.hover .initials div {
+      transition-duration: 0.25s;
+      transition-delay: 0s; }
+      nav li.nava.full:hover .initials div:first-of-type, nav li.nava.full.hover .initials div:first-of-type {
+        width: 53px; }
+      nav li.nava.full:hover .initials div:last-of-type, nav li.nava.full.hover .initials div:last-of-type {
+        width: 30px; }
+    nav li.nava.full:hover .lastname, nav li.nava.full.hover .lastname {
+      opacity: 1; }
+      nav li.nava.full:hover .lastname div, nav li.nava.full.hover .lastname div {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        transition-duration: 0.25s;
+        transition-delay: 0s; }
+        nav li.nava.full:hover .lastname div:nth-of-type(1), nav li.nava.full.hover .lastname div:nth-of-type(1) {
+          width: 25px; }
+        nav li.nava.full:hover .lastname div:nth-of-type(2), nav li.nava.full.hover .lastname div:nth-of-type(2) {
+          width: 25px; }
+        nav li.nava.full:hover .lastname div:nth-of-type(3), nav li.nava.full.hover .lastname div:nth-of-type(3) {
+          width: 23px; }
+    nav li.nava.full:hover h6, nav li.nava.full.hover h6 {
       opacity: 1;
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
-      transition-duration: 0.25s;
-      transition-delay: 0s; }
-      li.nava.full:hover .lastname div:nth-of-type(1), li.nava.full.hover .lastname div:nth-of-type(1) {
-        width: 25px; }
-      li.nava.full:hover .lastname div:nth-of-type(2), li.nava.full.hover .lastname div:nth-of-type(2) {
-        width: 25px; }
-      li.nava.full:hover .lastname div:nth-of-type(3), li.nava.full.hover .lastname div:nth-of-type(3) {
-        width: 23px; }
-  li.nava.full:hover h6, li.nava.full.hover h6 {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-    transition-duration: 0.24s;
-    transition-delay: 0.06s;
-    transition-timing-function: ease-out; }
-    li.nava.full:hover h6:last-of-type, li.nava.full.hover h6:last-of-type {
-      transition-duration: 0.32s;
-      transition-delay: 0s; }
+      transition-duration: 0.24s;
+      transition-delay: 0.06s;
+      transition-timing-function: ease-out; }
+      nav li.nava.full:hover h6:last-of-type, nav li.nava.full.hover h6:last-of-type {
+        transition-duration: 0.32s;
+        transition-delay: 0s; }
 
 nav.sticky {
   z-index: 95;
@@ -2145,6 +2137,11 @@ nav.blue {
     box-shadow: inset 0 -2px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
     nav.blue li:nth-of-type(6):hover a:hover {
       color: #fff; }
+
+nav.dark li.active {
+  box-shadow: inset 0 -2px #d12b52, 0 1px #d12b52; }
+  nav.dark li.active a {
+    color: #d12b52; }
 
 .arrowbar {
   position: relative;
