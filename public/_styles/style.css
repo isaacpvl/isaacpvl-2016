@@ -3314,7 +3314,7 @@ section.work {
     section.work .pright .browser.cond {
       margin-left: 7.5%; }
 
-body.home section.work {
+body.home section.work, body.past section.work {
   overflow: visible;
   padding-left: 0%;
   padding-right: 0%; }

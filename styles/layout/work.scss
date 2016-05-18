@@ -207,7 +207,7 @@
 			}
 		}
 	}
-	body.home {
+	body.home, body.past {
 		section.work {
 			overflow: visible;
 			@include padding-x(0%);
@@ -248,10 +248,6 @@
 	@media screen and (max-width: 1200px) {
 		section.work {
 			text-align: center;
-			// .head {
-			// 	@include leader(11);
-			// 	@include trailer(5);
-			// }
 			.project.offset {
 				@include trailer(0);
 				.info {
