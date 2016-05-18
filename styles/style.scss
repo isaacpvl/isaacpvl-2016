@@ -1,5 +1,27 @@
-@import "resource/_all";
-@import "home/_all";
+
+
+// Settings
+@import "settings/reset";
+@import "settings/mixins";
+@import "settings/colors";
+@import "settings/type";
+
+// Resources
+@import "resource/animations";
+@import "resource/ui";
+@import "resource/frames";
+@import "resource/loader";
+
+// Layout
+@import "layout/nav";
+@import "layout/header";
+@import "layout/tagline";
+@import "layout/wall";
+@import "layout/work";
+@import "layout/about";
+@import "layout/contact";
+@import "layout/project";
+
 
 
 // Base styles

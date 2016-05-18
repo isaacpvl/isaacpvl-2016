@@ -1,6 +1,78 @@
 
 
-// Work styles
+// Projects
+@import "projects/recent";
+@import "projects/past";
+@import "projects/threadmeup";
+@import "projects/dostoros";
+@import "projects/coolhouse";
+@import "projects/huddlepass";
+@import "projects/socialcrunch";
+@import "projects/lifeis";
+@import "projects/overdog";
+@import "projects/gennutrition";
+@import "projects/2old2play";
+@import "projects/toggle";
+
+
+
+// Base styles
+// ------------------------------------------------------------
+
+	body.project, header, nav, section {
+		width: 100%;
+		max-width: 1600px;
+	}
+
+	body.project {
+		text-align: center;
+		.base.hide {
+			background: $wht;
+		}
+		section {
+			@include trans(.5s);
+			.head {
+				@include trans(.5s);
+			}
+		}
+	}
+
+	body.project.fold {
+		.arrow {
+			@include tmove(0, -27px);
+			@include trans(.2s);
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 959px) {
+		body.project {
+			nav {
+				z-index: 3;
+			}
+			header {
+				z-index: 2;
+			}
+			.push {
+				display: none;
+			}
+			section {
+				z-index: 2;
+			}
+			.base {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				height: auto;
+			}
+		}
+	}
+
+
+// Project content styles
 // ------------------------------------------------------------
 
 	body.project {
@@ -301,6 +373,92 @@
 			}
 			.shot {
 				max-width: 1080px;
+			}
+		}
+	}
+
+
+// Next project styles
+// ------------------------------------------------------------
+
+	section.next {
+		height: 144px;
+		@include padding-leader(3);
+		cursor: pointer;
+		overflow: hidden;
+		color: $wht;
+		background: $wht;
+		@include noselect;
+		&:hover, &.active {
+			.head {
+				opacity: 0;
+				@include tmove(0, -24px);
+				@include trans(.25s);
+			}
+			.peek {
+				top: 0;
+				background: none;
+			}
+			.peekbg {
+				top: 0;
+				opacity: 1;
+			}
+			img {
+				opacity: 1;
+				@include tmove(0, -24px);
+			}
+			h1 {
+				@include tmove(0, -18px);
+				opacity: 1;
+			}
+		}
+		.head {
+			margin: 0;
+			z-index: 2;
+			@include trans(.1s);
+			h5 {
+				color: $wht;
+				line-height: 84px;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 3px;
+				&::after {
+					content: none;
+				}
+			}
+		}
+		.peek {
+			position: absolute;
+			z-index: 1;
+			top: 36px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: $red;
+			@include trans(.35s);
+		}
+		.peekbg {
+			position: absolute;
+			top: 36px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			@include trans(.35s);
+		}
+		img {
+			opacity: .3;
+			@include trans(.6s);
+		}
+		h1 {
+			@include leader(4.5);
+			opacity: 0.3;
+			@include trans(.6s);
+		}
+	}
+	body.out {
+		section.next {
+			.head {
+				display: none;
 			}
 		}
 	}

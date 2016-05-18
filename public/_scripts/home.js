@@ -134,11 +134,11 @@ jQuery(function() {
 			});
 			about.waypoint({
 				handler: function(event, direction) {
-				nav.toggleClass('bluebg');}, offset: 60
+				nav.toggleClass('blue');}, offset: 60
 			});
 			contact.waypoint({
 				handler: function(event, direction) {
-				nav.toggleClass('bluebg');}, offset: 60
+				nav.toggleClass('blue');}, offset: 60
 			});
 		// nav active item
 			wall.waypoint({
