@@ -14,6 +14,7 @@
 	$baseline						: 12px;		// baseline grid
 	$relative-font-sizing			: false;	// absolute pixel styles
 	$round-to-nearest-half-line		: true;		// line-height rounding
+	$h 								: $baseline;
 
 // headings & paragraphs
 	h1, h2, h3, h4, h5 {

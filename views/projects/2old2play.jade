@@ -3,11 +3,11 @@ block nav
 	nav.hide
 		ul
 			include ../resource/pvl
-			li.navb#navb
+			li.nav.navb#navb
 				a#navlink(data-pathname="overdog")
 					span &#8249;
 					| Prev Project
-			li.navc#navc
+			li.nav.navc#navc
 				a#navlink(data-pathname="threadmeup")
 					| Next Project
 					span &#8250;
@@ -27,7 +27,7 @@ block header
 
 block work
 	section.work.bgfade
-		.arrowbar.hide
+		.arrowbar#arrow.hide
 			.arrow#work
 		.head
 			h5 Overview
@@ -74,10 +74,10 @@ block next
 	section.next.threadmeup#navlink(data-pathname="threadmeup")
 		.head
 			h5 Next Project
-		.peek
+		.peek#next
 			img(src="/images/threadmeup/logo.png")
 	//- section.next.toggle#navlink(data-pathname="toggle")
 		.head
 			h5 Next Project
-		.peek
+		.peek#next
 			img(src="/images/toggle/logo.png")

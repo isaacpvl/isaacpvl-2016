@@ -25,7 +25,7 @@
 			width: 100%;
 			height: 100%;
 			@include padding-x(8%);
-			@include trans(.375s);
+			@include trans(.3s);
 		}
 		.wrapm {
 			display: none;
@@ -40,6 +40,11 @@
 	}
 
 	body.home {
+		header {
+			.wrap {
+				@include torigin(40% 50%);
+			}
+		}
 		.push {
 			height: 100%;
 			min-height: 100%;
@@ -48,7 +53,7 @@
 		.push.reveal {
 			@include animate(.6s);
 			@include ttiming(ease-out);
-			@include headerin;
+			@include reveal;
 		}
 	}
 
@@ -61,45 +66,469 @@
 			height: 89%;
 		}
 	}
-	@media screen and (min-width: 1601px) {
+	@media screen and (max-width: 640px) {
+		header, .push {
+			height: 93%;
+			min-height: 360px;
+		}
+	}
+
+
+// Header tagline styles
+// ------------------------------------------------------------
+
+	header {
+		.tagline {
+			position: relative;
+			z-index: 2;
+			display: inline-block;
+			width: 740px;
+			height: 84%;
+			@extend .caps;
+			@include animatereset(.8s, .8s);
+			@include fadeinup;
+			> span {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				cursor: pointer;
+			}
+			h1 {
+				position: relative;
+				font-weight: 800;
+				letter-spacing: 0;
+				@include fadeinup;
+				@include trans(.3s);
+				&:nth-of-type(1) {
+					height: 88px;
+					line-height: $h*7.5;
+					font-size: 72px;
+					@include animatereset(.8s, 1s);
+				}
+				&:nth-of-type(2) {
+					height: 92px;
+					line-height: $h*7.5;
+					font-size: 72px;
+					@include animatereset(.65s, 1.15s);
+				}
+				&:nth-of-type(3) {
+					height: 96px;
+					line-height: $h*8.5;
+					font-size: 84px;
+					@include animatereset(.5s, 1.3s);
+				}
+			}
+			#comma, #super, #sweet, #unique, #design {
+				position: absolute;
+				@include trans(.5s);
+				span {
+					@include trans(.2s);
+				}
+			}
+			#sweet {
+				left: 248px;
+			}
+			#comma {
+				left: 486px;
+				opacity: 1;
+				@include trans(.4s, .2s);
+			}
+		}
+		.tagline.face {
+			>span {
+				@include tfree (1.04, 0deg, -6px, -3px);
+				@include trans(.4s);
+			}
+			#comma {
+				opacity: 0;
+				@include tfree(1, 0deg, 60px, -18px);
+				@include trans(.2s);
+			}
+			#super {
+				@include tfree(.65, -30deg, 60px, -240px);
+			}
+			#sweet {
+				@include tfree(.65, -7.5deg, 140px, -344px);
+			}
+			#unique {
+				@include tfree(.765, -14deg, -22px, -150px);
+				span {
+					margin: 0 5px;
+				}
+			}
+			#design {
+				@include tfree(.7, -15deg, 44px, 60px);
+				.char9 {
+					margin-left: -24px;
+				}
+			}
+		}
+		.tagline.face.wink {
+			>span {
+				@include tfree (1, 15deg, -6px, -21px);
+			}
+			#super {
+				@include tfree(.55, -10deg, 0px, -318px);
+				@include trans(.25s);
+				span {
+					margin: 0 3px;
+					@include trans(.25s);
+					} }
+			#sweet {
+				@include tfree(.7, 7.5deg, 66px, -130px);
+				@include trans(.25s);
+			}
+			#unique {
+				@include tfree(.75, 0deg, -100px, -84px);
+				@include trans(.25s);
+			}
+			#design {
+				@include tfree(.7, 0deg, -72px, 120px);
+				@include trans(.25s);
+			}
+		}
+		.speech {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: auto;
+			height: 85%;
+			text-align: center;
+			color: $red;
+			h4 {
+				position: relative;
+				z-index: 2;
+				@include leader(2.75);
+				@include trailer(1);
+				padding-right: 30px;
+				@extend .caps;
+				letter-spacing: 0.025em;
+				opacity: 0;
+				@include tmove(0, 24px);
+				@include trans(.4s, .2s);
+			}
+			h1 {
+				position: relative;
+				z-index: 2;
+				font-family: $script;
+				line-height: $h*5;
+				font-size: 90px;
+				font-weight: 400;
+				opacity: 0;
+				@include tmove(-100px, 0);
+				@include trans(.4s, .2s);
+			}
+			span {
+				position: absolute;
+				top: 40%;
+				left: -68px;
+				opacity: 0;
+				@include tfree(.7, 4deg, -200px, 160px);
+				@include trans(.5s, .2s);
+				.bubble {
+					position: relative;
+					display: inline-block;
+					width: 420px;
+					height: 216px;
+					border-radius: 240px / 120px;
+					background: $wht;
+					img {
+						position: absolute;
+						top: 151px;
+						left: -28px;
+						width: 100px;
+						height: 60px;
+						pointer-events: none;
+						@include tfree(1, -50deg, 120px, -36px);
+						@include trans(.5s, .15s);
+					}
+				}
+			}
+		}
+		.speech.face {
+			h4 {
+				@include treset;
+				@include trans(.4s, .3s);
+			}
+			h1 {
+				@include treset;
+				@include trans(.6s, .3s);
+			}
+			span {
+				opacity: 1;
+				@include tfree(1, 8deg, 0, 0);
+				@include trans(.5s, .2s);
+				.bubble {
+					@include animate(.6s, .2s);
+					@include bouncein;
+					img {
+						@include treset;
+						@include trans(.3s, .4s);
+					}
+				}
+			}
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (min-width: 960px) {
 		header {
-			.wrap {
-				@include padding-x(10%);
+			.tagline:not(.face).trigger {
+				>span {
+					@include trans(.3s);
+					&:hover {
+						@include trans(.2s);
+						h1:nth-of-type(1) {
+							@include tmove(0, -24px);
+						}
+						h1:nth-of-type(2) {
+							@include tmove(0, -18px);
+						}
+						h1:nth-of-type(3) {
+							@include tmove(0, -12px);
+						}
+					}
+					&:active {
+						@include tmovescale(.925, -24px, 18px);
+						@include trans(.1s);
+						h1:nth-of-type(1), h1:nth-of-type(2), h1:nth-of-type(3) {
+							@include treset;
+							@include trans(.1s);
+						}
+					}
+				}
+			}
+		}
+		body.fold {
+			.tagline:not(.face) {
+				>span, >span:hover {
+					@include trans(.2s);
+					h1:nth-of-type(1) {
+						@include tmove(-24px, -42px);
+					}
+					h1:nth-of-type(2) {
+						@include tmovescale(.96, -42px, -33px);
+					}
+					h1:nth-of-type(3) {
+						@include tmovescale(.92, -56px, -24px);
+					}
+				}
 			}
 		}
 	}
 	@media screen and (max-width: 959px) {
 		header {
-			// position: relative;
-			.wrap {
-				// display: none;
-			}
-			.wrapm {
-				// display: block;
+			.tagline {
+				height: 89%;
+				h1 {
+					&:nth-of-type(1) {
+						height: 78px;
+						line-height: $h*7;
+						font-size: 62px;
+					}
+					&:nth-of-type(2) {
+						height: 78px;
+						line-height: $h*6.5;
+						font-size: 62px;
+					}
+					&:nth-of-type(3) {
+						height: 90px;
+						line-height: $h*7.5;
+						font-size: 72px;
+					}
+				}
+				#comma, #super, #sweet, #unique, #design {
+					position: relative;
+					left: auto;
+				}
+				#sweet {
+					&::before {
+						content: ' ';
+					}
+				}
 			}
 		}
 		body.home {
-			.push {
-				// height: 0;
-				// min-height: 0;
-				// max-height: 0;
-			}
-			.push.reveal {
-				// @include fadein;
+			header {
+				.wrap {
+					@include padding-x(5%);
+					@include torigin(50% 50%);
+				}
 			}
 		}
 	}
 	@media screen and (max-width: 640px) {
-		header, .push {
+		header {
 			height: 100%;
-			min-height: 360px;
-			max-height: 100%;
+			max-height: 780px;
+			.tagline {
+				h1 {
+					&:nth-of-type(1) {
+						height: $h*4;
+						line-height: $h*4;
+						font-size: 42px;
+					}
+					&:nth-of-type(2) {
+						height: $h*4;
+						line-height: $h*4;
+						font-size: 42px;
+					}
+					&:nth-of-type(3) {
+						height: 60px;
+						line-height: $h*4.75;
+						font-size: 48px;
+					}
+				}
+			}
+		}
+		body.home {
+			header, .push {
+				.wrap {
+					@include torigin(70% 50%);
+				}
+			}
 		}
 	}
 	@media screen and (max-width: 420px) {
 		header {
-			.wrap {
-				@include padding-x(5%);
+			.taglinem, .tagline {
+				h1 {
+					@include fadeinup;
+					&:nth-of-type(1) {
+						height: 40px;
+						line-height: 38px;
+						font-size: 32px;
+					}
+					&:nth-of-type(2) {
+						height: 44px;
+						line-height: 38px;
+						font-size: 32px;
+					}
+					&:nth-of-type(3) {
+						height: 38px;
+						line-height: 38px;
+						font-size: 36px;
+					}
+				}
+			}
+		}
+		body.home {
+			header {
+				.wrap {
+					@include torigin(100% 50%);
+				}
+			}
+		}
+	}
+
+// face animation
+	@media screen and (max-height: 834px) {
+		header {
+			.tagline.face {
+				>span {
+					@include tfree (1, 0deg, 12px, 9px);
+				}
+			}
+			.tagline.face.wink {
+				>span {
+					@include tfree (.97, 15deg, 27px, -3px);
+				}
+			}
+		}
+	}
+	@media screen and (max-height: 762px) {
+		header {
+			.tagline.face {
+				>span {
+					@include tfree (.95, 0deg, 0, 12px);
+				}
+			}
+			.tagline.face.wink {
+				>span {
+					@include tfree (.925, 15deg, 30px, 0px);
+				}
+			}
+		}
+	}
+	@media screen and (max-height: 720px) {
+		header {
+			.tagline.face {
+				>span {
+					@include tfree(.875, 0deg, 6px, 30px);
+				}
+			}
+			.tagline.face.wink {
+				>span {
+					@include tfree (.85, 15deg, 30px, 12px);
+				}
+			}
+			.speech.face {
+				span {
+					@include tfree(.95, 8deg, 0, -12px);
+				}
+			}
+		}
+	}
+	@media screen and (max-height: 654px) {
+		header {
+			.tagline.face {
+				>span {
+					@include tfree(.85, 0deg, -6px, 24px);
+				}
+			}
+			.tagline.face.wink {
+				>span {
+					@include tfree (.825, 15deg, 21px, 3px);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1280px) {
+		header {
+			.tagline.face {
+				> span {
+					left: -6%;
+				}
+			}
+			.speech {
+				span {
+					left: -120px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1120px) {
+		header {
+			.tagline.face {
+				> span {
+					left: -9%;
+				}
+			}
+			.speech {
+				span {
+					left: -210px;
+				}
+			}
+			.speech.face {
+				span {
+					@include tfree(.9, 8deg, 0, 0);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1040px) {
+		header {
+			.speech {
+				width: 0;
+			}
+			.speech.face {
+				span {
+					@include tfree(.8, 8deg, 0, 0);
+				}
 			}
 		}
 	}

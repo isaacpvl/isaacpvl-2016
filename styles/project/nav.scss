@@ -78,6 +78,12 @@
 					@include twowayshadow(-2px, 1px, $blk-6);
 				}
 			}
+			li.active {
+				@include twowayshadow(-2px, 1px, $red);
+				a {
+					color: $red;
+				}
+			}
 			li.disabled {
 				a {
 					color: $blk-4;

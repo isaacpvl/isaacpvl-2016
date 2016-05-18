@@ -77,3 +77,10 @@
 			@include trans(.6s);
 		}
 	}
+	body.out {
+		section.next {
+			.head {
+				display: none;
+			}
+		}
+	}

@@ -256,6 +256,14 @@
 			}
 		}
 	}
+	nav.dark {
+		li.active {
+			@include twowayshadow(-2px, 1px, $red);
+			a {
+				color: $red;
+			}
+		}
+	}
 
 // sticky state
 	nav.sticky {

@@ -3,11 +3,11 @@ block nav
 	nav.hide
 		ul
 			include ../resource/pvl
-			li.navb#navb
+			li.nav.navb#navb
 				a#navlink(data-pathname="overdog")
 					span &#8249;
 					| Prev Project
-			li.navc#navc
+			li.nav.navc#navc
 				a#navlink(data-pathname="2old2play")
 					| Next Project
 					span &#8250;
@@ -27,7 +27,7 @@ block header
 
 block work
 	section.work.bgfade
-		.arrowbar.hide
+		.arrowbar#arrow.hide
 			.arrow#work
 		.head
 			h5 Overview
@@ -68,5 +68,5 @@ block next
 	section.next.toldtplay#navlink(data-pathname="2old2play")
 		.head
 			h5 Next Project
-		.peek
+		.peek#next
 			img(src="/images/2old2play/logo.png")

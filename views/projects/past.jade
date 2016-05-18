@@ -3,11 +3,11 @@ block nav
 	nav.hide
 		ul
 			include ../resource/pvl
-			li.navb#navb
+			li.nav.navb#navb
 				a#navlink(data-pathname="huddlepass")
 					span &#8249;
 					| Prev Project
-			li.navc#navc
+			li.nav.navc#navc
 				a#navlink(data-pathname="socialcrunch")
 					| Next Project
 					span &#8250;
@@ -33,7 +33,7 @@ block header
 
 block work
 	section.work.bgfade
-		.arrowbar.hide
+		.arrowbar#arrow.hide
 			.arrow#work
 		.head
 			h5 Overview
@@ -53,6 +53,6 @@ block next
 	section.next.socialcrunch#navlink(data-pathname="socialcrunch")
 		.head
 			h5 Next Project
-		.peek
+		.peek#next
 			img(src="/images/socialcrunch/logo.png")
 		.peekbg

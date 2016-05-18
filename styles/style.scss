@@ -267,20 +267,6 @@
 				opacity: .3;
 				@include tscale(.92);
 			}
-			.tagline:not(.face) {
-				>span, >span:hover {
-					@include trans(.2s);
-					h1:nth-of-type(1) {
-						@include tmove(-24px, -42px);
-					}
-					h1:nth-of-type(2) {
-						@include tmovescale(.96, -42px, -33px);
-					}
-					h1:nth-of-type(3) {
-						@include tmovescale(.92, -56px, -24px);
-					}
-				}
-			}
 		}
 		.arrow {
 			@include trans(.25s);
@@ -303,7 +289,6 @@
 			@include trans(0s);
 			.splash, .fade {
 				display: none;
-				@include trans(0s);
 			}
 		}
 	}
@@ -318,10 +303,6 @@
 		}
 	}
 	body.home.foldb {
-		.base {
-			background: $wht;
-			@include trans(0s);
-		}
 		section.wall {
 			.wall {
 				position: fixed;
