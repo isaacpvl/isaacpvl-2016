@@ -134,7 +134,7 @@ jQuery(function($) {
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
 		if((event.which == 1)) {
 			body.addClass('out').addClass('next');
-			next.addClass('active'); 
+			$('.next').addClass('active'); 
 			var projectDelay = setTimeout(function() { 
 				location.href = projectPath;
 			}, loadDelay);
