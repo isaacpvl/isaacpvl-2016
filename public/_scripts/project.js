@@ -89,12 +89,21 @@ jQuery(function($) {
 	}
 
 // active nav item
-	$('.nav').on('click', 'a', function() {
+	$(".nav").on('click', 'a', function() {
 		$('.nav').removeClass('active'); 
 		$(this).closest('.nav').addClass('active');
 		navToggle = false;
 		return navToggle;
 	});
+
+// autoscroll to top
+	var callbackScroll = { 
+		callbackAfter: function () {
+			navToggle = true;
+			return navToggle;
+		}
+	};
+	smoothScroll.animateScroll(null, '#project', callbackScroll);
 
 // page links & transitions
 	nava.on('mouseup', function(event) {
@@ -135,24 +144,17 @@ jQuery(function($) {
 	});
 
 // homepage redirect
-	// $(window).on('resize', function() {
-	// 	if (window.matchMedia('(max-width: 959px)').matches) {
-	// 		window.location.href = '/';
-	// 	}
-	// });
-	// if (window.matchMedia('(max-width: 959px)').matches) {
-	// 	window.location.href = '/';
-	// }
+	$(window).on('resize', function() {
+		if (window.matchMedia('(max-width: 959px)').matches) {
+			window.location.href = '/';
+		}
+	});
+	if (window.matchMedia('(max-width: 959px)').matches) {
+		window.location.href = '/';
+	}
 
 });
 
 
 // smooth scroll
-	var callbackScroll = {
-		callbackAfter: function () {
-			navToggle = true;
-			return navToggle;
-		}
-	};
-	smoothScroll.animateScroll(null, '#project', callbackScroll);
 	smoothScroll.init();

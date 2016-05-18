@@ -363,17 +363,17 @@
 					width: 100%;
 					@include trailer(2.5);
 				}
-				// .shield {
-				// 	display: block;
-				// }
-				// .info {
-				// 	.button#navlink {
-				// 		display: none;
-				// 	}
-				// 	.button#livelink {
-				// 		display: inline-block;
-				// 	}				
-				// }
+				.shield {
+					display: block;
+				}
+				.info {
+					.button#navlink {
+						display: none;
+					}
+					.button#livelink {
+						display: inline-block;
+					}				
+				}
 			}
 		}
 	}

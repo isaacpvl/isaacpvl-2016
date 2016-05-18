@@ -2691,7 +2691,6 @@ body.project section.next.toggle:hover .peek, body.project section.next.toggle.a
 
 body.project, header, nav, section {
   width: 100%;
-  min-width: 960px;
   max-width: 1600px; }
 
 body.project {

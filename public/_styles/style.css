@@ -3155,7 +3155,13 @@ body.home section.work {
       section.work .project .preview.free {
         float: none;
         width: 100%;
-        margin-bottom: 30px; } }
+        margin-bottom: 30px; }
+      section.work .project .shield {
+        display: block; }
+      section.work .project .info .button#navlink {
+        display: none; }
+      section.work .project .info .button#livelink {
+        display: inline-block; } }
 
 @media screen and (max-width: 640px) {
   section.work {

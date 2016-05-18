@@ -36,62 +36,62 @@ jQuery(function() {
 			$('.base').removeClass('hide');
 			arrow.removeClass('hide');
 
-		setTimeout(function() {
-			home.addClass('reveal');
-		}, 1200);
+			setTimeout(function() {
+				home.addClass('reveal');
+			}, 1200);
 
-		setTimeout(function() {
-			nava.addClass('full');
-		}, 1800);
+			setTimeout(function() {
+				nava.addClass('full');
+			}, 1800);
 
-	// PVL automatic expand
-		var pvlStartTimer = setTimeout(function() {
-			nava.addClass('hover');   
-		}, 6600);
-		var pvlStopTimer = setTimeout(function() {
-			nava.removeClass('hover');
-		}, 9600);
+		// PVL automatic expand
+			var pvlStartTimer = setTimeout(function() {
+				nava.addClass('hover');   
+			}, 6600);
+			var pvlStopTimer = setTimeout(function() {
+				nava.removeClass('hover');
+			}, 9600);
 
-	// face animation arctext
-		var firstSmile,
-				happyFace,
-				winkyFace,
-				happyFaceAgain,
-				noFace;
-		if(($(window).innerWidth() > 959) && screen.width > 768) {
-			$('#super').lettering();
-			$('#sweet').lettering();
-			$('#unique').lettering();
-			$('#design').lettering();
-			init();
-		}
+		// face animation arctext
+			var firstSmile,
+					happyFace,
+					winkyFace,
+					happyFaceAgain,
+					noFace;
+			if(($(window).innerWidth() > 959) && screen.width > 768) {
+				$('#super').lettering();
+				$('#sweet').lettering();
+				$('#unique').lettering();
+				$('#design').lettering();
+				init();
+			}
 
-	// face animation trigger
-		function init() {
-			$('#super').arctext({radius: -1});
-			$('#sweet').arctext({radius: -1});
-			$('#unique').arctext({radius: -1});
-			$('#design').arctext({radius: -1});
-			$('#tagline h1 > span').arctext({radius: -1});
-			firstSmile = setTimeout(function() {
-				faceSmile();
-			}, 2400);
-			tagline.on('click', '> span', function() {
-				if(!tagline.hasClass('face')) {
+		// face animation trigger
+			function init() {
+				$('#super').arctext({radius: -1});
+				$('#sweet').arctext({radius: -1});
+				$('#unique').arctext({radius: -1});
+				$('#design').arctext({radius: -1});
+				$('#tagline h1 > span').arctext({radius: -1});
+				firstSmile = setTimeout(function() {
 					faceSmile();
+				}, 2400);
+				tagline.on('click', '> span', function() {
+					if(!tagline.hasClass('face')) {
+						faceSmile();
+					}
+				});
+			}
+			$(window).on('resize', function() {
+				if (window.matchMedia('(min-width: 960px)').matches) {
+					tagline.addClass('smile');
+				} else {
+					tagline.removeClass('smile').removeClass('trigger');
 				}
 			});
-		}
-		$(window).on('resize', function() {
 			if (window.matchMedia('(min-width: 960px)').matches) {
 				tagline.addClass('smile');
-			} else {
-				tagline.removeClass('smile').removeClass('trigger');
 			}
-		});
-		if (window.matchMedia('(min-width: 960px)').matches) {
-			tagline.addClass('smile');
-		}
 
 
 // Waypoints
@@ -213,12 +213,21 @@ jQuery(function() {
 	});
 
 // active nav item
-	$('.nav').on('click', 'a', function() {
+	$(".nav").on('click', 'a', function() {
 		$('.nav').removeClass('active'); 
 		$(this).closest('.nav').addClass('active');
 		navToggle = false;
 		return navToggle;
 	});
+
+// autoscroll to top
+	var callbackScroll = { 
+		callbackAfter: function () {
+			navToggle = true;
+			return navToggle;
+		}
+	};
+	smoothScroll.animateScroll(null, '#home', callbackScroll);
 
 // page links & transitions
 	$('section.work').on('mouseup', '#navlink', function(event) {
@@ -326,11 +335,4 @@ jQuery(function() {
 
 
 // smooth scroll
-	var callbackScroll = {
-		callbackAfter: function () {
-			navToggle = true;
-			return navToggle;
-		}
-	};
-	smoothScroll.animateScroll(null, '#home', callbackScroll);
 	smoothScroll.init();
