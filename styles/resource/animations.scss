@@ -51,7 +51,7 @@
 		100% { @include tmove(-100%, 0); }
 	}
 
-// header in
+// push reveal
 	@mixin reveal { animation-name: reveal; }
 	@keyframes reveal {
 		0% { height: 100%; min-height: 100%; max-height: 100%; }

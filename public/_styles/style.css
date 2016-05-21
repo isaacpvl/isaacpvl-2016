@@ -36,33 +36,41 @@ h1, h2, h3, h4, h5 {
   font-weight: 600; }
 
 h1 {
-  font-size: 54px;
-  line-height: 84px; }
+  line-height: 90px;
+  font-size: 54px; }
 
 h2 {
-  font-size: 48px;
-  line-height: 72px; }
+  line-height: 60px;
+  font-size: 48px; }
 
 h3 {
-  font-size: 30px;
-  line-height: 60px; }
+  line-height: 60px;
+  font-size: 30px; }
 
 h4 {
-  font-size: 24px;
-  line-height: 42px; }
+  line-height: 42px;
+  font-size: 24px; }
 
 h5 {
-  font-size: 20px;
-  line-height: 36px; }
+  line-height: 36px;
+  font-size: 20px; }
 
 h6 {
-  font-size: 16px;
-  line-height: 24px; }
+  line-height: 24px;
+  font-size: 16px; }
 
 p {
   line-height: 42px;
   font-size: 22px;
   text-align: left; }
+
+p.small {
+  line-height: 42px;
+  font-size: 22px; }
+
+p.large {
+  line-height: 48px;
+  font-size: 26px; }
 
 b {
   font-weight: 600; }
@@ -76,6 +84,14 @@ strong {
 em {
   font-style: italic; }
 
+br {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 .strikethru {
   text-decoration: line-through; }
 
@@ -85,19 +101,17 @@ em {
   letter-spacing: -0.02em;
   opacity: 0.6; }
 
-.caps, .button, nav .navb, nav .navc, nav .navd, nav li.nava a, header .tagline, header .speech h4, section.work .project .info h1, section.work .project .info .role h6, .overview .context h6, .overview .live p strong, .itemhead h2, .itemhead h3, section h5 {
+.caps, .button, nav li a, header .speech h4, section.work .project .info .role h6, section.work .project .info.more h6, .overview .context h6, .overview .live p strong, .itemhead h2, .itemhead h3, section h5 {
   font-family: "jaf-facitweb", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   font-weight: 600; }
 
-br {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+.caps-d, nav li.nava a, header .tagline h1, section.work .project .info h2 {
+  font-family: "jaf-facitweb", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-weight: 800; }
 
 @font-face {
   font-family: 'socicon';
@@ -106,8 +120,38 @@ br {
   font-weight: normal;
   font-style: normal; }
 
-.social {
-  font-family: "socicon" !important; }
+.social, nav li.social a {
+  font-family: "socicon" !important;
+  text-transform: none; }
+
+@media screen and (max-width: 640px) {
+  h1 {
+    line-height: 42px;
+    font-size: 30px; }
+  h2 {
+    line-height: 48px;
+    font-size: 28px; }
+  h3 {
+    line-height: 42px;
+    font-size: 24px; }
+  h4 {
+    line-height: 36px;
+    font-size: 20px; }
+  h5 {
+    line-height: 24px;
+    font-size: 14px; }
+  h6 {
+    line-height: 18px;
+    font-size: 12px; }
+  p {
+    line-height: 24px;
+    font-size: 16px; }
+  p.small {
+    line-height: 24px;
+    font-size: 14px; }
+  p.large {
+    line-height: 33px;
+    font-size: 18px; } }
 
 @media screen and (max-width: 769px) {
   -webkit-text-size-adjust: none; }
@@ -1228,20 +1272,20 @@ a, a img {
     opacity: 0; }
 
 @media screen and (max-width: 640px) {
-  .browser {
+  section.work .browser {
     border-radius: 3px 3px 2px 2px;
     overflow: hidden; }
-    .browser .top {
+    section.work .browser .top {
       height: 28px;
       border-radius: 2px 2px 0 0; }
-      .browser .top ul {
+      section.work .browser .top ul {
         top: 11px;
         left: 8px; }
-        .browser .top ul li {
+        section.work .browser .top ul li {
           width: 6px;
           height: 6px;
           margin-right: 3px; }
-      .browser .top span {
+      section.work .browser .top span {
         top: 5px;
         bottom: 6px;
         left: 42px;
@@ -1318,7 +1362,6 @@ a, a img {
     border: 1px solid #999; }
     .phone .frame img, .phone .frame video {
       width: 100%;
-      margin-bottom: -1px;
       border: none; }
   .phone .frame.scroll {
     overflow-y: scroll;
@@ -1419,123 +1462,123 @@ a, a img {
     transition-delay: 0s; }
 
 @media screen and (max-width: 1200px) {
-  .phone {
+  section.work .phone {
     top: 22%;
     right: 0; } }
 
 @media screen and (max-width: 959px) {
-  .phone {
+  section.work .phone {
     top: 21%; } }
 
 @media screen and (max-width: 839px) {
-  .phone {
+  section.work .phone {
     top: 18%; } }
 
 @media screen and (max-width: 640px) {
-  .phone {
+  section.work .phone {
     top: 15%;
     width: 30%;
     min-width: 0;
     padding: 0 1%;
     border-radius: 12px; }
-    .phone .top {
+    section.work .phone .top {
       height: 36px; }
-      .phone .top .camera {
+      section.work .phone .top .camera {
         top: 11px; }
-        .phone .top .camera span {
+        section.work .phone .top .camera span {
           width: 5px;
           height: 5px;
           border-radius: 2.5px; }
-      .phone .top .speaker {
+      section.work .phone .top .speaker {
         top: 22px; }
-        .phone .top .speaker span {
+        section.work .phone .top .speaker span {
           width: 24px;
           height: 3px; }
-    .phone .bottom {
+    section.work .phone .bottom {
       height: 36px; }
-      .phone .bottom div {
+      section.work .phone .bottom div {
         top: 4px; }
-        .phone .bottom div span {
+        section.work .phone .bottom div span {
           width: 26px;
           height: 26px;
           border-radius: 13px; }
-  .multiphone .phone {
+  section.work .multiphone .phone {
     min-width: 0;
     max-width: 170px;
     padding: 0 6px;
     border-radius: 14px; }
-    .multiphone .phone .top {
+    section.work .multiphone .phone .top {
       height: 44px; }
-      .multiphone .phone .top .camera {
+      section.work .multiphone .phone .top .camera {
         top: 14px; }
-        .multiphone .phone .top .camera span {
+        section.work .multiphone .phone .top .camera span {
           width: 6px;
           height: 6px;
           border-radius: 3px; }
-      .multiphone .phone .top .speaker {
+      section.work .multiphone .phone .top .speaker {
         top: 27px; }
-        .multiphone .phone .top .speaker span {
+        section.work .multiphone .phone .top .speaker span {
           width: 30px;
           height: 3px; }
-    .multiphone .phone .bottom {
+    section.work .multiphone .phone .bottom {
       height: 44px; }
-      .multiphone .phone .bottom div {
+      section.work .multiphone .phone .bottom div {
         top: 6px; }
-        .multiphone .phone .bottom div span {
+        section.work .multiphone .phone .bottom div span {
           width: 32px;
           height: 32px;
           border-radius: 16px; } }
 
 @media screen and (max-width: 420px) {
-  .phone {
+  section.work .phone {
     top: 22%;
     width: 30%;
     min-width: 0;
     padding: 0 1.5%;
     border-radius: 9px; }
-    .phone .top {
+    section.work .phone .top {
       height: 26px; }
-      .phone .top .camera {
+      section.work .phone .top .camera {
         top: 8px; }
-        .phone .top .camera span {
+        section.work .phone .top .camera span {
           width: 4px;
           height: 4px;
           border-radius: 2px; }
-      .phone .top .speaker {
+      section.work .phone .top .speaker {
         top: 16px; }
-        .phone .top .speaker span {
+        section.work .phone .top .speaker span {
           width: 18px;
           height: 2px; }
-    .phone .bottom {
+    section.work .phone .bottom {
       height: 26px; }
-      .phone .bottom div {
+      section.work .phone .bottom div {
         top: 4px; }
-        .phone .bottom div span {
+        section.work .phone .bottom div span {
           width: 18px;
           height: 18px;
           border-radius: 9px; }
-  .multiphone .phone {
+  section.work .multiphone .phone {
     max-width: 140px;
     padding: 0 4px;
     border-radius: 14px; }
-    .multiphone .phone .top {
+    section.work .multiphone .phone .top {
       height: 40px; }
-      .multiphone .phone .top .camera {
+      section.work .multiphone .phone .top .camera {
         top: 12px; }
-        .multiphone .phone .top .camera span {
+        section.work .multiphone .phone .top .camera span {
           width: 6px;
           height: 6px;
           border-radius: 3px; }
-      .multiphone .phone .top .speaker {
+      section.work .multiphone .phone .top .speaker {
         top: 24px; }
-        .multiphone .phone .top .speaker span {
+        section.work .multiphone .phone .top .speaker span {
           width: 26px;
           height: 3px; }
-    .multiphone .phone .bottom {
+    section.work .multiphone .phone .bottom {
       height: 40px; }
-      .multiphone .phone .bottom div {
+      section.work .multiphone .phone .bottom div {
         top: 6px; }
-        .multiphone .phone .bottom div span {
+        section.work .multiphone .phone .bottom div span {
           width: 28px;
           height: 28px;
           border-radius: 14px; } }
@@ -1823,8 +1866,6 @@ nav {
       animation-delay: 1.1825s;
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both; }
-  nav .navb, nav .navc, nav .navd {
-    font-weight: 600; }
   nav li.active {
     box-shadow: inset 0 -2px #fff, 0 1px #fff; }
     nav li.active a {
@@ -1899,7 +1940,6 @@ nav {
             animation-name: pvlin; }
     nav li.nava a {
       height: 105px;
-      font-weight: 800;
       font-size: 32px;
       color: #fff; }
     nav li.nava .initials {
@@ -1961,7 +2001,7 @@ nav {
       padding-top: 18px;
       font-size: 18px;
       opacity: 0;
-      letter-spacing: -0.005em;
+      letter-spacing: -0.002em;
       -webkit-transform: translate(0, -15px);
       transform: translate(0, -15px);
       transition-duration: 0.18s;
@@ -2227,8 +2267,8 @@ nav.dark li.active {
     nav li.social a {
       height: 66px;
       padding-top: 30px; }
-  nav li:last-of-type {
-    top: 180px; }
+    nav li.social:last-of-type {
+      top: 180px; }
   nav.sticky li.social {
     display: none; } }
 
@@ -2240,7 +2280,7 @@ nav.dark li.active {
     nav li.social a {
       height: 102px;
       padding-top: 66px; }
-  nav li:last-of-type {
+  nav li.social:last-of-type {
     top: auto; }
   nav li.navb span:first-of-type, nav li.navc span:first-of-type, nav li.navd span:first-of-type {
     display: none; }
@@ -2272,7 +2312,7 @@ nav.dark li.active {
       nav li.social a {
         height: 66px;
         padding-top: 30px; }
-    nav li:last-of-type {
+    nav li.social:last-of-type {
       top: 142px; }
     nav a {
       height: 72px;
@@ -2333,9 +2373,11 @@ nav.dark li.active {
     opacity: 0; } }
 
 @media screen and (max-width: 420px) {
+  nav li.nava {
+    left: 6%; }
   nav li.social {
     top: 72px; }
-  nav li:last-of-type {
+  nav li.social:last-of-type {
     top: 130px; } }
 
 body.project nav ul {
@@ -2346,11 +2388,13 @@ body.project nav ul {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-body.project nav .navb span, body.project nav .navc span {
+body.project nav .navb a span, body.project nav .navc a span {
   position: absolute;
   line-height: 8px;
-  font-size: 30px;
-  font-weight: 300; }
+  font-size: 30px; }
+
+body.project nav .navb a::after, body.project nav .navc a::after {
+  content: ' Project'; }
 
 body.project nav .navb {
   margin: 0 30px 0 24px; }
@@ -2450,17 +2494,25 @@ body.project .arrow {
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
-@media screen and (max-height: 810px) {
-  body.project header {
-    height: 89%; }
-  body.project .push {
-    height: 89%; } }
-
 @media screen and (max-width: 959px) {
-  body.project header {
-    z-index: 2; }
-  body.project .push {
-    display: none; } }
+  body.project nav ul {
+    padding: 0 5%; } }
+
+@media screen and (max-width: 720px) {
+  body.project nav .navb a::after, body.project nav .navc a::after {
+    content: ''; }
+  body.project nav .navb {
+    margin: 0 4%;
+    padding: 0 8px 0 22px; }
+  body.project nav .navc {
+    margin: 0 4%;
+    padding: 0 22px 0 8px; } }
+
+@media screen and (max-width: 420px) {
+  body.project nav .navb {
+    margin: 0 2%; }
+  body.project nav .navc {
+    margin: 0 2%; } }
 
 header {
   position: fixed;
@@ -2570,7 +2622,6 @@ body.project header {
       max-width: 720px;
       margin: auto;
       margin-bottom: 36px;
-      font-weight: 600;
       -webkit-animation-duration: 0.8s;
       animation-duration: 0.8s;
       -webkit-animation-delay: 0s;
@@ -2615,7 +2666,6 @@ body.project header.more .title {
     max-width: 720px;
     line-height: 102px;
     font-size: 66px;
-    font-weight: 600;
     -webkit-animation-duration: 0.8s;
     animation-duration: 0.8s;
     -webkit-animation-delay: 0.2s;
@@ -2673,6 +2723,10 @@ body.project header.more .title {
       height: auto;
       height: 100%; }
 
+@media screen and (max-width: 960px) {
+  body.project header .title {
+    display: none; } }
+
 header .tagline {
   position: relative;
   z-index: 2;
@@ -2691,12 +2745,9 @@ header .tagline {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    cursor: pointer; }
+    right: 0; }
   header .tagline h1 {
     position: relative;
-    font-weight: 800;
-    letter-spacing: 0;
     -webkit-animation-name: fadeinup;
             animation-name: fadeinup;
     transition-duration: 0.3s;
@@ -2745,6 +2796,9 @@ header .tagline {
     opacity: 1;
     transition-duration: 0.4s;
     transition-delay: 0.2s; }
+
+header .tagline.trigger > span {
+  cursor: pointer; }
 
 header .tagline.face > span {
   -webkit-transform: scale(1.04) rotate(0deg) translate(-6px, -3px);
@@ -2825,7 +2879,6 @@ header .speech {
     margin-top: 33px;
     margin-bottom: 12px;
     padding-right: 30px;
-    letter-spacing: 0.025em;
     opacity: 0;
     -webkit-transform: translate(0, 24px);
     transform: translate(0, 24px);
@@ -2994,18 +3047,18 @@ header .speech.face span {
     transform-origin: 70% 50%; } }
 
 @media screen and (max-width: 420px) {
-  header .taglinem h1, header .tagline h1 {
+  header .tagline h1 {
     -webkit-animation-name: fadeinup;
             animation-name: fadeinup; }
-    header .taglinem h1:nth-of-type(1), header .tagline h1:nth-of-type(1) {
+    header .tagline h1:nth-of-type(1) {
       height: 40px;
       line-height: 38px;
       font-size: 32px; }
-    header .taglinem h1:nth-of-type(2), header .tagline h1:nth-of-type(2) {
+    header .tagline h1:nth-of-type(2) {
       height: 44px;
       line-height: 38px;
       font-size: 32px; }
-    header .taglinem h1:nth-of-type(3), header .tagline h1:nth-of-type(3) {
+    header .tagline h1:nth-of-type(3) {
       height: 38px;
       line-height: 38px;
       font-size: 36px; }
@@ -3175,7 +3228,7 @@ section.work {
       margin-top: -324px; }
     section.work .project .pwrap {
       position: relative;
-      max-width: 1280px;
+      max-width: 1282px;
       margin: auto; }
     section.work .project .shield {
       position: absolute;
@@ -3230,18 +3283,12 @@ section.work {
       width: 34%;
       margin-top: 66px;
       text-align: left; }
-      section.work .project .info h1 {
+      section.work .project .info h2 {
         margin-left: -2px;
-        line-height: 60px;
-        font-size: 48px;
-        font-weight: 800;
-        letter-spacing: 0;
         white-space: nowrap; }
       section.work .project .info p {
         margin-top: 12px;
-        margin-bottom: 42px;
-        line-height: 42px;
-        font-size: 22px; }
+        margin-bottom: 42px; }
       section.work .project .info .role {
         position: relative;
         width: 105%;
@@ -3256,12 +3303,10 @@ section.work {
         section.work .project .info .role span {
           line-height: 30px;
           font-size: 20px;
-          font-weight: 500;
           white-space: nowrap; }
           section.work .project .info .role span em {
             font-size: 16px;
             letter-spacing: -0.02em;
-            margin-right: 4px;
             opacity: 0.6; }
       section.work .project .info .role.weird div {
         margin-left: 124px; }
@@ -3271,10 +3316,8 @@ section.work {
         display: none; }
     section.work .project .info.more {
       margin-top: 54px; }
-      section.work .project .info.more h1 {
+      section.work .project .info.more h2 {
         margin-bottom: 30px;
-        line-height: 66px;
-        font-size: 50px;
         font-family: "utopia-std-subhead", serif;
         letter-spacing: -0.01em;
         text-transform: none;
@@ -3286,10 +3329,9 @@ section.work {
         line-height: 33px;
         padding-left: 12px;
         padding-right: 12px;
-        font-family: "jaf-facitweb", sans-serif;
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.02em;
         box-shadow: inset 0 0 0 2px #d12b52;
         color: #d12b52; }
         section.work .project .info.more h6 span {
@@ -3342,7 +3384,9 @@ body.home section.work, body.past section.work {
       width: 100%;
       min-height: 480px;
       padding-top: 48px;
-      padding-bottom: 108px; }
+      padding-bottom: 108px;
+      padding-left: 0%;
+      padding-right: 0%; }
       section.work .project:first-of-type {
         margin-top: -264px; }
       section.work .project .pwrap {
@@ -3373,9 +3417,9 @@ body.home section.work, body.past section.work {
         margin-top: 66px;
         text-align: center; }
         section.work .project .info p {
-          text-align: left;
           margin-top: 24px;
-          margin-bottom: 48px; }
+          margin-bottom: 48px;
+          padding-left: 3%; }
         section.work .project .info .role {
           margin-top: 18px;
           position: relative;
@@ -3390,11 +3434,9 @@ body.home section.work, body.past section.work {
           min-width: 70%; }
       section.work .project .info.more {
         margin-top: 66px; }
-        section.work .project .info.more h1 {
-          margin-top: -18px;
-          margin-bottom: 18px;
-          line-height: 60px;
-          font-size: 44px; }
+        section.work .project .info.more h2 {
+          margin-top: -6px;
+          margin-bottom: 18px; }
         section.work .project .info.more h6 {
           display: none; }
     section.work .ileft, section.work .iright, section.work .pleft, section.work .pright {
@@ -3421,20 +3463,14 @@ body.home section.work, body.past section.work {
       section.work .project .preview.free {
         float: none;
         width: 100%;
-        margin-bottom: 30px; }
-      section.work .project .shield {
-        display: block; }
-      section.work .project .info .button#navlink {
-        display: none; }
-      section.work .project .info .button#livelink {
-        display: inline-block; } }
+        margin-bottom: 30px; } }
 
 @media screen and (max-width: 640px) {
   section.work {
     padding-bottom: 120px; }
     section.work .head {
       margin-top: 96px;
-      margin-bottom: 36px; }
+      margin-bottom: 24px; }
     section.work .project.offset .info {
       margin-top: 36px; }
     section.work .project {
@@ -3444,31 +3480,22 @@ body.home section.work, body.past section.work {
       padding-right: 2%; }
       section.work .project .pwrap {
         max-width: 542px; }
-      section.work .project .shield {
-        display: block; }
       section.work .project .info {
         width: 80%;
         min-width: 0;
         max-width: 330px;
         margin-top: 30px; }
-        section.work .project .info h1 {
-          line-height: 48px;
-          font-size: 28px;
+        section.work .project .info h2 {
           margin-top: 0px;
           margin-bottom: 0px; }
-        section.work .project .info h6 {
-          font-size: 12px; }
         section.work .project .info p {
           margin-top: 12px;
-          margin-bottom: 0px;
-          line-height: 24px;
-          font-size: 14px; }
+          margin-bottom: 0px; }
         section.work .project .info .role {
           margin: auto; }
           section.work .project .info .role div {
             margin-left: 4px; }
           section.work .project .info .role span {
-            line-height: 22px;
             font-size: 14px; }
             section.work .project .info .role span em {
               font-size: 12px; }
@@ -3478,11 +3505,10 @@ body.home section.work, body.past section.work {
           margin-bottom: 36px; }
       section.work .project .info.more {
         margin-top: 30px; }
-        section.work .project .info.more h1 {
+        section.work .project .info.more h2 {
           margin-top: -6px;
           margin-bottom: 12px;
-          line-height: 36px;
-          font-size: 28px; } }
+          line-height: 36px; } }
 
 @media screen and (max-width: 420px) {
   section.work {
@@ -3505,7 +3531,8 @@ section.about {
   section.about .head h5 {
     color: #fff; }
     section.about .head h5::after {
-      background-color: #fff; }
+      background-color: #fff;
+      box-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
   section.about .pitch {
     position: relative;
     z-index: 2;
@@ -3516,26 +3543,18 @@ section.about {
       width: 100%;
       max-width: 1080px;
       padding-bottom: 30px;
-      margin: auto;
-      line-height: 90px;
-      font-size: 54px;
-      font-weight: 600; }
+      margin: auto; }
     section.about .pitch p {
       display: inline-block;
       vertical-align: top;
       width: 47.5%;
-      margin-top: 48px;
-      line-height: 48px;
-      font-size: 26px;
-      font-weight: 500; }
+      margin-top: 48px; }
       section.about .pitch p:last-of-type {
         margin-left: 5%; }
-    section.about .pitch i {
-      font-weight: 600; }
   section.about .cell {
     display: table-cell;
     vertical-align: middle; }
-  section.about .bfade {
+  section.about .fade {
     position: absolute;
     top: 70%;
     bottom: 0;
@@ -3560,21 +3579,12 @@ section.aboutme {
     padding-bottom: 120px; }
     section.aboutme .bio h1 {
       min-width: 700px;
-      margin-bottom: 36px;
-      line-height: 90px;
+      margin-bottom: 48px;
       font-weight: 500;
       white-space: nowrap; }
-      section.aboutme .bio h1 strong {
-        display: block;
-        font-size: 60px;
-        font-weight: 800; }
     section.aboutme .bio p {
       margin-bottom: 24px;
-      padding-right: 12%;
-      line-height: 48px;
-      font-size: 26px; }
-    section.aboutme .bio i {
-      font-weight: 600; }
+      padding-right: 12%; }
   section.aboutme .cred {
     position: relative;
     z-index: 9;
@@ -3620,6 +3630,12 @@ section.aboutme {
     z-index: 1;
     display: none; }
 
+@media screen and (min-width: 1201px) {
+  section.aboutme .bio strong {
+    display: block;
+    font-size: 60px;
+    font-weight: 800; } }
+
 @media screen and (max-width: 1200px) {
   section.about .pitch {
     max-width: 780px;
@@ -3643,9 +3659,6 @@ section.aboutme {
     section.aboutme .bio h1 {
       min-width: 0;
       white-space: normal; }
-      section.aboutme .bio h1 strong {
-        display: inline;
-        font-size: 54px; }
     section.aboutme .bio p {
       display: block;
       width: 100%;
@@ -3669,13 +3682,8 @@ section.aboutme {
       max-width: 540px;
       margin: auto;
       padding-left: 2%; }
-      section.about .pitch h1 {
-        line-height: 42px;
-        font-size: 28px; }
       section.about .pitch p {
-        padding-top: 12px;
-        line-height: 33px;
-        font-size: 18px; }
+        padding-top: 12px; }
   section.aboutme {
     padding-bottom: 120px; }
     section.aboutme .bio {
@@ -3685,38 +3693,31 @@ section.aboutme {
       padding-left: 2%;
       padding-bottom: 48px; }
       section.aboutme .bio h1 {
-        margin-bottom: 24px;
-        line-height: 54px;
-        font-size: 36px; }
-        section.aboutme .bio h1 strong {
-          font-size: 36px; }
+        margin-bottom: 24px; }
       section.aboutme .bio p {
-        padding-top: 12px;
-        line-height: 33px;
-        font-size: 18px; }
-    section.aboutme .cred {
-      line-height: 84px; }
-      section.aboutme .cred h5 {
-        margin-bottom: 36px; }
-      section.aboutme .cred li {
-        padding-left: 12px;
-        padding-right: 12px; }
-        section.aboutme .cred li:last-of-type {
-          display: none; }
-      section.aboutme .cred img {
-        width: 75%;
-        height: auto; } }
+        padding-top: 12px; }
+    section.aboutme .cred h5 {
+      margin-top: 36px;
+      margin-bottom: 48px; }
+    section.aboutme .cred li {
+      padding-left: 12px;
+      padding-right: 12px; }
+      section.aboutme .cred li:last-of-type {
+        display: none; }
+    section.aboutme .cred img {
+      width: 75%;
+      height: auto; } }
 
 @media screen and (max-width: 420px) {
   section.aboutme {
     padding-bottom: 72px; }
     section.aboutme .cred {
-      width: 120%;
-      margin-left: -10%;
-      line-height: 66px; }
+      width: 100%;
+      margin-left: auto;
+      line-height: 72px; }
       section.aboutme .cred li {
-        padding-left: 0px;
-        padding-right: 0px; }
+        padding-left: 12px;
+        padding-right: 12px; }
         section.aboutme .cred li:nth-of-type(7) {
           display: none; }
       section.aboutme .cred img {
@@ -3851,25 +3852,25 @@ section.contact {
     section.contact .col.method a span.social {
       position: absolute;
       margin: 14px 0 0 8px; }
-  section.contact .social {
+  section.contact .social, section.contact nav li.social a, nav li.social section.contact a {
     font-size: 28px; }
-    section.contact .social a {
+    section.contact .social a, nav li.social section.contact a a {
       margin: 0 6px;
       padding-right: 0; }
-      section.contact .social a:nth-of-type(2) {
+      section.contact .social a:nth-of-type(2), nav li.social section.contact a a:nth-of-type(2) {
         font-size: 26px;
         font-weight: 600; }
-      section.contact .social a:nth-of-type(3) {
+      section.contact .social a:nth-of-type(3), nav li.social section.contact a a:nth-of-type(3) {
         font-weight: 400; }
-  section.contact .col.social a {
+  section.contact .col.social a, section.contact nav li.social a.col a, nav li.social section.contact a.col a {
     margin: 0 6px;
     padding-right: 0; }
-    section.contact .col.social a:nth-of-type(2) {
+    section.contact .col.social a:nth-of-type(2), section.contact nav li.social a.col a:nth-of-type(2), nav li.social section.contact a.col a:nth-of-type(2) {
       font-size: 26px;
       font-weight: 600; }
-    section.contact .col.social a:nth-of-type(3) {
+    section.contact .col.social a:nth-of-type(3), section.contact nav li.social a.col a:nth-of-type(3), nav li.social section.contact a.col a:nth-of-type(3) {
       font-weight: 400; }
-    section.contact .col.social a span {
+    section.contact .col.social a span, section.contact nav li.social a.col a span, nav li.social section.contact a.col a span {
       width: 48px; }
   section.contact .col.office {
     width: 100%;
@@ -3899,8 +3900,8 @@ section.contact {
         margin-right: 0%; }
       section.contact .col.middle {
         margin-right: 0%; }
-    section.contact .col.social {
-      margin-top: 12px; }
+    section.contact .col.social, section.contact nav li.social a.col, nav li.social section.contact a.col {
+      margin-top: 30px; }
     section.contact .col.office {
       width: auto;
       height: auto; }
@@ -3918,17 +3919,11 @@ section.contact {
     background-size: 1000px auto;
     background-position: 76% 100%; }
     section.contact .head.visit {
-      padding-bottom: 24px; }
-      section.contact .head.visit h6 {
-        margin: 0; }
+      padding-top: 12px;
+      padding-bottom: 6px; }
     section.contact .col {
       padding-top: 36px;
       padding-bottom: 0px; }
-      section.contact .col h5 {
-        line-height: 48px;
-        font-size: 18px; }
-    section.contact .col.social {
-      margin-top: 12px; }
     section.contact .col.office {
       padding-top: 48px; }
       section.contact .col.office .digits {
@@ -3941,35 +3936,37 @@ section.contact {
     background-position: 60% 100%; } }
 
 body.recent header {
-  background: #fff url("/images/home/contactbg.jpg") no-repeat;
-  background-size: 140%;
-  background-position: 60% 100%; }
+  background: #bcbab9 url("/images/recent/recentbg.jpg") no-repeat;
+  background-size: 100%;
+  background-position: 0% 75%; }
   body.recent header .fade {
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.4) 100%); }
-
-body.recent .splash {
-  display: none; }
-  body.recent .splash .splashfade {
-    opacity: 0.1; }
+    background: linear-gradient(to bottom, rgba(188, 186, 185, 0) 50%, #bcbab9 100%);
+    display: none; }
 
 body.recent .arrow {
   width: 0;
   height: 0;
   border-left: 27px solid transparent;
   border-right: 27px solid transparent;
-  border-top: 27px solid #7e7e7e; }
+  border-top: 27px solid #bcbab9; }
 
 body.recent .base {
-  background: #7e7e7e; }
+  background: #bcbab9; }
 
-body.project section.next.recent .peekbg {
-  background: rgba(0, 0, 0, 0.4) url("/images/home/contactbg.jpg") no-repeat;
-  background-size: 100%;
-  background-position: 50% 100%;
-  opacity: 0; }
+body.recent.fold .arrow {
+  transition-duration: 0.1s;
+  transition-delay: 0s; }
+
+body.project section.next.recent:hover h1, body.project section.next.recent.active h1 {
+  color: #d12b52; }
 
 body.project section.next.recent:hover .peek, body.project section.next.recent.active .peek {
-  background: rgba(0, 0, 0, 0.4); }
+  background: rgba(0, 0, 0, 0.15); }
+
+body.project section.next.recent .peekbg {
+  background: #bcbab9 url("/images/home/contactbg.jpg") no-repeat;
+  background-size: 100%;
+  background-position: 50% 90%; }
 
 body.past header {
   background: #0768a8; }
@@ -3990,6 +3987,9 @@ body.past .arrow {
 
 body.past .base {
   background: #0768a8; }
+
+body.project section.next.past h1 {
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.1); }
 
 body.project section.next.past .peekbg {
   background: #0768a8 url("/images/home/wallbanner.jpg") no-repeat;
@@ -4080,7 +4080,8 @@ body.project section.next.coolhouse img {
 
 body.project section.next.coolhouse .peekbg {
   background: #033f64 url("/images/coolhouse/bg.jpg") no-repeat;
-  background-size: cover; }
+  background-size: 100%;
+  background-position: 50% 100%; }
 
 body.huddlepass header {
   background: #404759 url("/images/huddlepass/linesbg.png"); }
@@ -4320,90 +4321,70 @@ body.toggle .base {
 body.project section.next.toggle:hover .peek, body.project section.next.toggle.active .peek {
   background: #00345e; }
 
-body.project, header, nav, section {
-  width: 100%;
-  max-width: 1600px; }
-
 body.project {
   text-align: center; }
-  body.project .base.hide {
-    background: #fff; }
   body.project section {
     transition-duration: 0.5s;
     transition-delay: 0s; }
     body.project section .head {
       transition-duration: 0.5s;
       transition-delay: 0s; }
-
-body.project.fold .arrow {
-  -webkit-transform: translate(0, -27px);
-  transform: translate(0, -27px);
-  transition-duration: 0.2s;
-  transition-delay: 0s; }
-
-@media screen and (max-width: 959px) {
-  body.project nav {
-    z-index: 3; }
-  body.project header {
-    z-index: 2; }
-  body.project .push {
-    display: none; }
-  body.project section {
-    z-index: 2; }
-  body.project .base {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    height: auto; } }
-
-body.project section.work {
-  min-height: 1600px;
-  margin-top: 0px;
-  padding-bottom: 180px;
-  background: #fff; }
-  body.project section.work .head {
-    margin-top: 192px;
-    margin-bottom: 24px; }
-  body.project section.work .twrap {
-    width: 100%;
-    max-width: 1282px;
-    margin: auto; }
-  body.project section.work .head, body.project section.work .overview, body.project section.work .itemhead, body.project section.work .visual, body.project section.work .detail, body.project section.work .project, body.project section.work .footlink {
-    transition-duration: 0.75s;
-    transition-delay: 0.3s; }
-
-body.project section.work.bgfade .head, body.project section.work.bgfade .overview, body.project section.work.bgfade .itemhead, body.project section.work.bgfade .visual, body.project section.work.bgfade .detail, body.project section.work.bgfade .project, body.project section.work.bgfade .footlink {
-  opacity: 0; }
+  body.project section.work {
+    min-height: 1600px;
+    margin-top: 0px;
+    padding-bottom: 180px;
+    background: #fff; }
+    body.project section.work .head {
+      margin-top: 192px;
+      margin-bottom: 24px; }
+    body.project section.work .twrap {
+      width: 100%;
+      max-width: 1282px;
+      margin: auto; }
+    body.project section.work .head, body.project section.work .overview, body.project section.work .itemhead, body.project section.work .visual, body.project section.work .detail, body.project section.work .project, body.project section.work .footlink {
+      transition-duration: 0.75s;
+      transition-delay: 0.3s; }
+  body.project section.work.bgfade .head, body.project section.work.bgfade .overview, body.project section.work.bgfade .itemhead, body.project section.work.bgfade .visual, body.project section.work.bgfade .detail, body.project section.work.bgfade .project, body.project section.work.bgfade .footlink {
+    opacity: 0; }
+  body.project .base.hide {
+    background: #fff; }
+  body.project.fold .arrow {
+    -webkit-transform: translate(0, -27px);
+    transform: translate(0, -27px);
+    transition-duration: 0.2s;
+    transition-delay: 0s; }
 
 .overview {
   position: relative;
   max-width: 1140px;
   margin: auto;
   padding-bottom: 48px; }
+  .overview .detail {
+    width: 100%; }
   .overview .detail.two-col {
     padding-top: 96px;
     padding-bottom: 48px; }
     .overview .detail.two-col em {
       font-style: italic;
       font-weight: 600; }
-  .overview .detail.single p {
-    line-height: 48px;
-    font-size: 24px; }
-  .overview .context em {
-    font-size: 18px;
-    letter-spacing: -0.02em;
-    margin-right: 4px;
-    opacity: 0.6; }
-  .overview .context div {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin-right: 8%; }
-    .overview .context div:last-of-type {
-      margin-right: 0; }
+  .overview .context {
+    white-space: nowrap; }
+    .overview .context em {
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      margin-right: 4px;
+      opacity: 0.6; }
+    .overview .context div {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      margin-right: 8%; }
+      .overview .context div:last-of-type {
+        margin-right: 0; }
   .overview .live {
     position: relative;
-    width: 480px;
+    width: 75%;
+    max-width: 480px;
     margin: auto;
     padding-top: 72px; }
     .overview .live .button {
@@ -4426,7 +4407,8 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
 .itemhead h2, .itemhead h3 {
   position: relative;
   font-weight: 800;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  white-space: nowrap; }
   .itemhead h2::after, .itemhead h3::after {
     content: '';
     position: absolute;
@@ -4451,6 +4433,8 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
 
 .detail {
   position: relative;
+  width: 80%;
+  margin: auto;
   padding-top: 72px;
   padding-bottom: 72px; }
   .detail p {
@@ -4462,13 +4446,6 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
   .detail .button {
     margin-top: 72px;
     min-width: 35%; }
-
-.detail.two-col p {
-  display: inline-block;
-  vertical-align: top;
-  width: 47.5%; }
-  .detail.two-col p:last-of-type {
-    margin-left: 5%; }
 
 .visual {
   position: relative;
@@ -4502,7 +4479,8 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
   margin-top: 24px;
   margin-bottom: 24px; }
   .visual.single .shot, .visual.single .browser {
-    max-width: 800px; }
+    width: 90%;
+    max-width: 802px; }
     .visual.single .shot.small, .visual.single .browser.small {
       max-width: 660px; }
       .visual.single .shot.small img.frame, .visual.single .browser.small img.frame {
@@ -4554,6 +4532,56 @@ body.project section.work.bgfade .head, body.project section.work.bgfade .overvi
   margin-bottom: -96px; }
   .footlink p {
     text-align: center; }
+
+@media screen and (min-width: 1201px) {
+  .overview .detail.two-col {
+    padding-top: 96px;
+    padding-bottom: 48px; }
+  .detail.two-col p {
+    display: inline-block;
+    vertical-align: top;
+    width: 47.5%; }
+    .detail.two-col p:last-of-type {
+      margin-left: 5%; } }
+
+@media screen and (max-width: 1200px) {
+  .overview {
+    width: 95%;
+    max-width: 680px; }
+    .overview .context {
+      margin-top: 24px;
+      margin-bottom: 24px; }
+      .overview .context em {
+        display: block;
+        line-height: 24px; }
+  .visual.single .shot, .visual.single .browser {
+    width: 85%;
+    max-width: 682px; } }
+
+@media screen and (max-width: 959px) {
+  .visual.two-col .shot, .visual.two-col .browser, .visual.single .shot, .visual.single .browser {
+    display: block;
+    width: 85%;
+    max-width: 642px;
+    margin: auto;
+    padding-bottom: 48px; }
+    .visual.two-col .shot img, .visual.two-col .shot video, .visual.two-col .browser img, .visual.two-col .browser video, .visual.single .shot img, .visual.single .shot video, .visual.single .browser img, .visual.single .browser video {
+      width: 100%;
+      max-width: 542px; }
+    .visual.two-col .shot:first-of-type, .visual.two-col .browser:first-of-type, .visual.single .shot:first-of-type, .visual.single .browser:first-of-type {
+      margin: auto; }
+    .visual.two-col .shot:last-of-type, .visual.two-col .browser:last-of-type, .visual.single .shot:last-of-type, .visual.single .browser:last-of-type {
+      padding-bottom: 0px; }
+    .visual.two-col .shot.last, .visual.two-col .browser.last, .visual.single .shot.last, .visual.single .browser.last {
+      max-width: 100%;
+      margin-top: 0px; } }
+
+@media screen and (max-width: 640px) {
+  body.project .overview, body.project .detail {
+    width: 95%; }
+  body.project section.work {
+    padding-left: 3%;
+    padding-right: 3%; } }
 
 @media screen and (max-width: 1240px) {
   .visual.multiphone .phone {
@@ -4623,10 +4651,8 @@ section.next {
     transition-delay: 0s; }
     section.next .head h5 {
       color: #fff;
-      line-height: 84px;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 3px; }
+      padding-top: 24px;
+      padding-bottom: 24px; }
       section.next .head h5::after {
         content: none; }
   section.next .peek {
@@ -4679,7 +4705,7 @@ body {
   margin: auto;
   color: #000;
   font-family: "utopia-std-subhead", serif;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 12px; }
 
 section {
@@ -4712,8 +4738,6 @@ section {
         height: 3px;
         margin-left: -25px;
         background: rgba(0, 0, 0, 0.6); }
-  section h5 {
-    letter-spacing: 0.08em; }
 
 .base {
   position: fixed;
@@ -4905,9 +4929,7 @@ body.fold.out.prev.project .overview .detail, body.fold.out.return.project .over
     transform: translate(0, 0); } }
 
 body.fold header .wrap {
-  opacity: .3;
-  -webkit-transform: scale(0.92);
-  transform: scale(0.92); }
+  opacity: .3; }
 
 body.fold .arrow {
   transition-duration: 0.25s;
@@ -4917,18 +4939,6 @@ body.fold section.wall .wall {
   opacity: 1;
   transition-duration: 0.8s;
   transition-delay: 0s; }
-
-body.foldb .base {
-  background: #fff;
-  transition-duration: 0s;
-  transition-delay: 0s; }
-
-body.foldb header {
-  background: none;
-  transition-duration: 0s;
-  transition-delay: 0s; }
-  body.foldb header .splash, body.foldb header .fade {
-    display: none; }
 
 body.home.fold .base {
   background: #941f3a;
@@ -4942,10 +4952,22 @@ body.home.fold .arrow {
   border-right: 27px solid transparent;
   border-top: 27px solid #941f3a; }
 
-body.home.foldb section.wall .wall {
+body.foldb .base, body.home.foldb .base {
+  background: #fff;
+  transition-duration: 0s;
+  transition-delay: 0s; }
+
+body.foldb header, body.home.foldb header {
+  background: none;
+  transition-duration: 0s;
+  transition-delay: 0s; }
+  body.foldb header .splash, body.foldb header .fade, body.home.foldb header .splash, body.home.foldb header .fade {
+    display: none; }
+
+body.foldb section.wall .wall, body.home.foldb section.wall .wall {
   position: fixed;
   bottom: 0; }
-  body.home.foldb section.wall .wall .fade {
+  body.foldb section.wall .wall .fade, body.home.foldb section.wall .wall .fade {
     display: block; }
 
 @media screen and (min-width: 1601px) {
@@ -4953,29 +4975,27 @@ body.home.foldb section.wall .wall {
     padding-left: 6.5%;
     padding-right: 6.5%; } }
 
+@media screen and (min-width: 960px) {
+  body.fold header .wrap {
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92); } }
+
 @media screen and (max-width: 959px) {
   .base {
     z-index: -9; }
   section.work, section.about, section.aboutme, section.contact {
     z-index: 9; }
-  section {
-    padding-left: 5%;
-    padding-right: 5%; }
-    section .head {
-      margin-top: 144px;
-      margin-bottom: 72px; } }
+  section .head {
+    margin-top: 144px;
+    margin-bottom: 72px; } }
 
 @media screen and (max-width: 640px) {
   section {
     padding-left: 2%;
     padding-right: 2%; }
     section .head {
-      margin-top: 96px;
-      margin-bottom: 24px; }
-      section .head h5 {
-        font-size: 18px; }
-        section .head h5::after {
-          bottom: -9px;
-          width: 40px;
-          height: 3px;
-          margin-left: -20px; } }
+      margin-top: 132px;
+      margin-bottom: 36px; }
+      section .head h5::after {
+        width: 40px;
+        margin-left: -20px; } }

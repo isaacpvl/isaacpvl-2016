@@ -30,6 +30,9 @@
 // next
 	body.project {
 		section.next.past {
+			h1 {
+				text-shadow: 1px 2px $blk-1;
+			}
 			.peekbg {
 				background: $pcolor url('/images/home/wallbanner.jpg') no-repeat;
 				background-size: 100%;

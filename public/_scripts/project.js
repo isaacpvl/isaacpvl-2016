@@ -32,8 +32,7 @@ jQuery(function($) {
 			arrow.removeClass('hide');
 
 			setTimeout(function() {
-				$('.work').removeClass('bgfade');
-				$('.next').removeClass('bgfade');
+				$('section').removeClass('bgfade');
 				$('.base').removeClass('hide');
 			}, 600);
 
@@ -144,14 +143,14 @@ jQuery(function($) {
 	});
 
 // homepage redirect
-	$(window).on('resize', function() {
-		if (window.matchMedia('(max-width: 959px)').matches) {
-			window.location.href = '/';
-		}
-	});
-	if (window.matchMedia('(max-width: 959px)').matches) {
-		window.location.href = '/';
-	}
+	// $(window).on('resize', function() {
+	// 	if (window.matchMedia('(max-width: 959px)').matches) {
+	// 		window.location.href = '/';
+	// 	}
+	// });
+	// if (window.matchMedia('(max-width: 959px)').matches) {
+	// 	window.location.href = '/';
+	// }
 
 });
 

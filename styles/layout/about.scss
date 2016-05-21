@@ -19,6 +19,7 @@
 				color: $wht;
 				&::after {
 					background-color: $wht;
+					box-shadow: 1px 1px $blk-2;
 				}
 			}
 		}
@@ -33,31 +34,22 @@
 				max-width: 1080px;
 				@include padding-trailer(2.5);
 				margin: auto;
-				@include lineh(7.5);
-				font-size: 54px;
-				font-weight: 600;
 			}
 			p {
 				display: inline-block;
 				vertical-align: top;
 				width: 47.5%;
 				@include leader(4);
-				@include lineh(4);
-				font-size: 26px;
-				font-weight: 500;
 				&:last-of-type {
 					margin-left: 5%;
 				}
-			}
-			i {
-				font-weight: 600;
 			}
 		}
 		.cell {
 			display: table-cell;
 			vertical-align: middle;
 		}
-		.bfade {
+		.fade {
 			position: absolute;
 			top: 70%;
 			bottom: 0;
@@ -85,24 +77,13 @@
 			@include padding-trailer(10);
 			h1 {
 				min-width: 700px;
-				@include trailer(3);
-				@include lineh(7.5);
+				@include trailer(4);
 				font-weight: 500;
 				white-space: nowrap;
-				strong {
-					display: block;
-					font-size: 60px;
-					font-weight: 800;
-				}
 			}
 			p {
 				@include trailer(2);
 				padding-right: 12%;
-				@include lineh(4);
-				font-size: 26px;
-			}
-			i {
-				font-weight: 600;
 			}
 		}
 		.cred {
@@ -158,6 +139,15 @@
 // Media queries
 // ------------------------------------------------------------
 
+	@media screen and (min-width: 1201px) {
+		section.aboutme {
+			.bio strong {
+				display: block;
+				font-size: 60px;
+				font-weight: 800;
+			}
+		}
+	}
 	@media screen and (max-width: 1200px) {
 		section.about {
 			.pitch {
@@ -189,10 +179,6 @@
 				h1 {
 					min-width: 0;
 					white-space: normal;
-					strong {
-						display: inline;
-						font-size: 54px;
-					}
 				}
 				p {
 					display: block;
@@ -225,14 +211,8 @@
 				max-width: 540px;
 				margin: auto;
 				padding-left: 2%;
-				h1 {
-					@include lineh(3.5);
-					font-size: 28px;
-				}
 				p {
 					@include padding-leader(1);
-					@include lineh(2.75);
-					font-size: 18px;
 				}
 			}
 		}
@@ -246,22 +226,15 @@
 				@include padding-trailer(4);
 				h1 {
 					@include trailer(2);
-					@include lineh(4.5);
-					font-size: 36px;
-					strong {
-						font-size: 36px;
-					}
 				}
 				p {
 					@include padding-leader(1);
-					@include lineh(2.75);
-					font-size: 18px;
 				}
 			}
 			.cred {
-				@include lineh(7);
 				h5 {
-					@include trailer(3);
+					@include leader(3);
+					@include trailer(4);
 				}
 				li {
 					@include padding-x(12px);
@@ -280,11 +253,11 @@
 		section.aboutme {
 			@include padding-trailer(6);
 			.cred {
-				width: 120%;
-				margin-left: -10%;
-				@include lineh(5.5);
+				width: 100%;
+				margin-left: auto;
+				@include lineh(6);
 				li {
-					@include padding-x(0px);
+					@include padding-x(12px);
 					&:nth-of-type(7) {
 						display: none;
 					}

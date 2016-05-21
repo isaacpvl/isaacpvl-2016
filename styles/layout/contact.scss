@@ -155,7 +155,7 @@
 				}
 			}
 			.col.social {
-				@include leader(1);
+				@include leader(2.5);
 			}
 			.col.office {
 				width: auto;
@@ -178,21 +178,12 @@
 			background-size: 1000px auto;
 			background-position: 76% 100%;
 			.head.visit {
-				@include padding-trailer(2);
-				h6 {
-					margin: 0;
-				}
+				@include padding-leader(1);
+				@include padding-trailer(0.5);
 			}
 			.col {
 				@include padding-leader(3);
 				@include padding-trailer(0);
-				h5 {
-					@include lineh(4);
-					font-size: 18px;
-				}
-			}
-			.col.social {
-				@include leader(1);
 			}
 			.col.office {
 				@include padding-leader(4);

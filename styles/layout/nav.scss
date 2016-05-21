@@ -34,6 +34,9 @@
 			text-align: center;
 			@include trans(.2s);
 			@include fadeindown;
+			a {
+				@extend .caps;
+			}
 			&:hover {
 				@include twowayshadow(-2px, 1px, $wht);
 			}
@@ -52,10 +55,6 @@
 			&:nth-of-type(6) {
 				@include animate(.9s, 1.1825s);
 			}
-		}
-		.navb, .navc, .navd {
-			@extend .caps;
-			font-weight: 600;
 		}
 		li.active {
 			@include twowayshadow(-2px, 1px, $wht);
@@ -81,6 +80,7 @@
 			margin: 0 0 0 18px;
 			a {
 				width: 42px;
+				@extend .social;
 				span {
 					font-size: 26px;
 				}
@@ -139,8 +139,7 @@
 			@include pvlin;
 			a {
 				height: 105px;
-				@extend .caps;
-				font-weight: 800;
+				@extend .caps-d;
 				font-size: 32px;
 				color: $wht;
 			}
@@ -196,7 +195,7 @@
 				@include padding-leader(1.5);
 				font-size: 18px;
 				opacity: 0;
-				letter-spacing: -0.005em;
+				letter-spacing: -0.002em;
 				@include tmove(0, -15px);
 				@include trans(.18s, .03s);
 				@include ttiming(ease-in);
@@ -539,16 +538,16 @@
 					height: 66px;
 					padding-top: 30px;
 				}
-			}
-			li:last-of-type {
-				top: 180px;
+				&:last-of-type {
+					top: 180px;
+				}
 			}
 		}
 		nav.sticky {
 			li.social {
 				display: none;
 			}
-		}
+		}			
 	}
 	@media screen and (max-width: 720px) {
 		nav {
@@ -561,7 +560,7 @@
 					padding-top: 66px;
 				}
 			}
-			li:last-of-type {
+			li.social:last-of-type {
 				top: auto;
 			}
 			li.navb, li.navc, li.navd {
@@ -605,7 +604,7 @@
 					padding-top: 30px;
 				}
 			}
-			li:last-of-type {
+			li.social:last-of-type {
 				top: 142px;
 			}
 			a {
@@ -694,10 +693,13 @@
 	}
 	@media screen and (max-width: 420px) {
 		nav {
+			li.nava {
+				left: 6%;
+			}
 			li.social {
 				top: 72px;
 			}
-			li:last-of-type {
+			li.social:last-of-type {
 				top: 130px;
 			}
 		}
@@ -713,11 +715,15 @@
 				@include animate(1s, .5s);
 			}
 			.navb, .navc {
-				span {
-					position: absolute;
-					line-height: 8px;
-					font-size: 30px;
-					font-weight: 300;
+				a {
+					span {
+						position: absolute;
+						line-height: 8px;
+						font-size: 30px;
+					}
+					&::after {
+						content: ' Project';
+					}
 				}
 			}
 			.navb {
@@ -842,23 +848,46 @@
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (max-height: 810px) {
-		body.project {
-			header {
-				height: 89%;
-			}
-			.push {
-				height: 89%;
-			}
-		}
-	}
 	@media screen and (max-width: 959px) {
 		body.project {
-			header {
-				z-index: 2;
-			}
-			.push {
-				display: none;
+			nav {
+				ul {
+					padding: 0 5%;
+				}
 			}
 		}
 	}
+	@media screen and (max-width: 720px) {
+		body.project {
+			nav {
+				.navb, .navc {
+					a {
+						&::after {
+							content: '';
+						}
+					}
+				}
+				.navb {
+					margin: 0 4%;
+					padding: 0 8px 0 22px;
+				}
+				.navc {
+					margin: 0 4%;
+					padding: 0 22px 0 8px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 420px) {
+		body.project {
+			nav {
+				.navb {
+					margin: 0 2%;
+				}
+				.navc {
+					margin: 0 2%;
+				}
+			}
+		}
+	}
+

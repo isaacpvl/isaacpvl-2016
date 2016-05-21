@@ -10,7 +10,6 @@
 			display: inline-block;
 			width: 740px;
 			height: 84%;
-			@extend .caps;
 			@include animatereset(.8s, .8s);
 			@include fadeinup;
 			> span {
@@ -18,12 +17,10 @@
 				bottom: 0;
 				left: 0;
 				right: 0;
-				cursor: pointer;
 			}
 			h1 {
 				position: relative;
-				font-weight: 800;
-				letter-spacing: 0;
+				@extend .caps-d;
 				@include fadeinup;
 				@include trans(.3s);
 				&:nth-of-type(1) {
@@ -59,6 +56,11 @@
 				left: 486px;
 				opacity: 1;
 				@include trans(.4s, .2s);
+			}
+		}
+		.tagline.trigger {
+			> span {
+				cursor: pointer;
 			}
 		}
 		.tagline.face {
@@ -129,7 +131,6 @@
 				@include trailer(1);
 				padding-right: 30px;
 				@extend .caps;
-				letter-spacing: 0.025em;
 				opacity: 0;
 				@include tmove(0, 24px);
 				@include trans(.4s, .2s);
@@ -321,7 +322,7 @@
 	}
 	@media screen and (max-width: 420px) {
 		header {
-			.taglinem, .tagline {
+			.tagline {
 				h1 {
 					@include fadeinup;
 					&:nth-of-type(1) {

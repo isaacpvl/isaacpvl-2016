@@ -3,44 +3,49 @@
 // Recent work styles
 // ------------------------------------------------------------
 
-	$pcolor:	$blk-4;
-	$pcolorb:	#7e7e7e;
+	$pcolor:	#bcbab9;
+	$pcolorb:	#a64c61;
 	body.recent {
 		header {
-			background: $wht url('/images/home/contactbg.jpg') no-repeat;
-			background-size: 140%;
-			background-position: 60% 100%;
+			background: $pcolor url('/images/recent/recentbg.jpg') no-repeat;
+			background-size: 100%;
+			background-position: 0% 75%;
+			// background: $wht url('/images/home/contactbg.jpg') no-repeat;
+			// background-size: 140%;
+			// background-position: 60% 100%;
 			.fade {
 				@include gradient-vert-d(rgba($pcolor, 0), 50%, $pcolor, 100%);
-			}
-		}
-		.splash {
-			display: none;
-			.splashfade {
-				opacity: 0.1;
+				display: none;
 			}
 		}
 		.arrow {
-			@include arrow(27px, $pcolorb);
+			@include arrow(27px, $pcolor);
 		}
 		.base {
-			background: $pcolorb;
+			background: $pcolor;
+		}
+	}
+	body.recent.fold {
+		.arrow {
+			@include trans(0.1s);
 		}
 	}
 
 // next
 	body.project {
 		section.next.recent {
+			&:hover, &.active {
+				h1 {
+					color: $red;
+				}
+				.peek {
+					background: $blk-15;
+				}
+			}
 			.peekbg {
 				background: $pcolor url('/images/home/contactbg.jpg') no-repeat;
 				background-size: 100%;
-				background-position: 50% 100%;
-				opacity: 0;
-			}
-			&:hover, &.active {
-				.peek {
-					background: $blk-4;
-				}
+				background-position: 50% 90%;
 			}
 		}
 	}

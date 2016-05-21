@@ -322,31 +322,33 @@
 // ------------------------------------------------------------
 
 	@media screen and (max-width: 640px) {
-		.browser {
-			border-radius: 3px 3px 2px 2px;
-			overflow: hidden;
-			.top {
-				height: 28px;
-				border-radius: 2px 2px 0 0;
-				ul {
-					top: 11px;
-					left: 8px;
-					li {
-						width: 6px;
-						height: 6px;
-						margin-right: 3px;
+		section.work {
+			.browser {
+				border-radius: 3px 3px 2px 2px;
+				overflow: hidden;
+				.top {
+					height: 28px;
+					border-radius: 2px 2px 0 0;
+					ul {
+						top: 11px;
+						left: 8px;
+						li {
+							width: 6px;
+							height: 6px;
+							margin-right: 3px;
+						}
 					}
-				}
-				span {
-					top: 5px;
-					bottom: 6px;
-					left: 42px;
-					right: 5px;
-					padding-left: 5px;
-					font-size: 9px;
-					font-weight: 500;
-					border-radius: 1px;
-					line-height: 18px;
+					span {
+						top: 5px;
+						bottom: 6px;
+						left: 42px;
+						right: 5px;
+						padding-left: 5px;
+						font-size: 9px;
+						font-weight: 500;
+						border-radius: 1px;
+						line-height: 18px;
+					}
 				}
 			}
 		}
@@ -428,7 +430,6 @@
 			@include border(1px, $drk-l);
 			img, video {
 				width: 100%;
-				margin-bottom: -1px;
 				border: none;
 			}
 		}
@@ -560,90 +561,98 @@
 // ------------------------------------------------------------
 
 	@media screen and (max-width: 1200px) {
-		.phone {
-			top: 22%;
-			right: 0;
+		section.work {
+			.phone {
+				top: 22%;
+				right: 0;
+			}
 		}
 	}
 	@media screen and (max-width: 959px) {
-		.phone {
-			top: 21%;
+		section.work {
+			.phone {
+				top: 21%;
+			}
 		}
 	}
 	@media screen and (max-width: 839px) {
-		.phone {
-			top: 18%;
+		section.work {
+			.phone {
+				top: 18%;
+			}
 		}
 	}
 	@media screen and (max-width: 640px) {
-		.phone {
-			top: 15%;
-			width: 30%;
-			min-width: 0;
-			padding: 0 1%;
-			border-radius: 12px;
-			.top {
-				height: 36px;
-				.camera {
-					top: 11px;
-					span {
-						width: 5px;
-						height: 5px;
-						border-radius: 2.5px;
-					}
-				}
-				.speaker {
-					top: 22px;
-					span {
-						width: 24px;
-						height: 3px;
-					}
-				}
-			}
-			.bottom {
-				height: 36px;
-				div {
-					top: 4px;
-					span {
-						width: 26px;
-						height: 26px;
-						border-radius: 13px;
-					}
-				}
-			}
-		}
-		.multiphone {
+		section.work {
 			.phone {
+				top: 15%;
+				width: 30%;
 				min-width: 0;
-				max-width: 170px;
-				padding: 0 6px;
-				border-radius: 14px;
+				padding: 0 1%;
+				border-radius: 12px;
 				.top {
-					height: 44px;
+					height: 36px;
 					.camera {
-						top: 14px;
+						top: 11px;
 						span {
-							width: 6px;
-							height: 6px;
-							border-radius: 3px;
+							width: 5px;
+							height: 5px;
+							border-radius: 2.5px;
 						}
 					}
 					.speaker {
-						top: 27px;
+						top: 22px;
 						span {
-							width: 30px;
+							width: 24px;
 							height: 3px;
 						}
 					}
 				}
 				.bottom {
-					height: 44px;
+					height: 36px;
 					div {
-						top: 6px;
+						top: 4px;
 						span {
-							width: 32px;
-							height: 32px;
-							border-radius: 16px;
+							width: 26px;
+							height: 26px;
+							border-radius: 13px;
+						}
+					}
+				}
+			}
+			.multiphone {
+				.phone {
+					min-width: 0;
+					max-width: 170px;
+					padding: 0 6px;
+					border-radius: 14px;
+					.top {
+						height: 44px;
+						.camera {
+							top: 14px;
+							span {
+								width: 6px;
+								height: 6px;
+								border-radius: 3px;
+							}
+						}
+						.speaker {
+							top: 27px;
+							span {
+								width: 30px;
+								height: 3px;
+							}
+						}
+					}
+					.bottom {
+						height: 44px;
+						div {
+							top: 6px;
+							span {
+								width: 32px;
+								height: 32px;
+								border-radius: 16px;
+							}
 						}
 					}
 				}
@@ -651,73 +660,75 @@
 		}
 	}
 	@media screen and (max-width: 420px) {
-		.phone {
-			top: 22%;
-			width: 30%;
-			min-width: 0;
-			padding: 0 1.5%;
-			border-radius: 9px;
-			.top {
-				height: 26px;
-				.camera {
-					top: 8px;
-					span {
-						width: 4px;
-						height: 4px;
-						border-radius: 2px;
-					}
-				}
-				.speaker {
-					top: 16px;
-					span {
-						width: 18px;
-						height: 2px;
-					}
-				}
-			}
-			.bottom {
-				height: 26px;
-				div {
-					top: 4px;
-					span {
-						width: 18px;
-						height: 18px;
-						border-radius: 9px;
-					}
-				}
-			}
-		}
-		.multiphone {
+		section.work {
 			.phone {
-				max-width: 140px;
-				padding: 0 4px;
-				border-radius: 14px;
+				top: 22%;
+				width: 30%;
+				min-width: 0;
+				padding: 0 1.5%;
+				border-radius: 9px;
 				.top {
-					height: 40px;
+					height: 26px;
 					.camera {
-						top: 12px;
+						top: 8px;
 						span {
-							width: 6px;
-							height: 6px;
-							border-radius: 3px;
+							width: 4px;
+							height: 4px;
+							border-radius: 2px;
 						}
 					}
 					.speaker {
-						top: 24px;
+						top: 16px;
 						span {
-							width: 26px;
-							height: 3px;
+							width: 18px;
+							height: 2px;
 						}
 					}
 				}
 				.bottom {
-					height: 40px;
+					height: 26px;
 					div {
-						top: 6px;
+						top: 4px;
 						span {
-							width: 28px;
-							height: 28px;
-							border-radius: 14px;
+							width: 18px;
+							height: 18px;
+							border-radius: 9px;
+						}
+					}
+				}
+			}
+			.multiphone {
+				.phone {
+					max-width: 140px;
+					padding: 0 4px;
+					border-radius: 14px;
+					.top {
+						height: 40px;
+						.camera {
+							top: 12px;
+							span {
+								width: 6px;
+								height: 6px;
+								border-radius: 3px;
+							}
+						}
+						.speaker {
+							top: 24px;
+							span {
+								width: 26px;
+								height: 3px;
+							}
+						}
+					}
+					.bottom {
+						height: 40px;
+						div {
+							top: 6px;
+							span {
+								width: 28px;
+								height: 28px;
+								border-radius: 14px;
+							}
 						}
 					}
 				}

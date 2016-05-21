@@ -10,44 +10,51 @@
 	$icon						: "socicon" !important;
 
 // base sizing settings
-	$basefont						: 18px;		// browser default size
+	$basefont						: 24px;		// browser default size
 	$baseline						: 12px;		// baseline grid
 	$relative-font-sizing			: false;	// absolute pixel styles
 	$round-to-nearest-half-line		: true;		// line-height rounding
-	$h 								: $baseline;
 
 // headings & paragraphs
 	h1, h2, h3, h4, h5 {
 		font-weight: 600;
 	}
 	h1 {
+		@include lineh(7.5);
 		font-size: 54px;
-		line-height: 84px;
 	}
 	h2 {
+		@include lineh(5);
 		font-size: 48px;
-		line-height: 72px;
 	}
 	h3 {
+		@include lineh(5);
 		font-size: 30px;
-		line-height: 60px;
 	}
 	h4 {
+		@include lineh(3.5);
 		font-size: 24px;
-		line-height: 42px;
 	}
 	h5 {
+		@include lineh(3);
 		font-size: 20px;
-		line-height: 36px;
 	}
 	h6 {
+		@include lineh(2);
 		font-size: 16px;
-		line-height: 24px;
 	}
 	p {
-		line-height: 42px;
+		@include lineh(3.5);
 		font-size: 22px;
 		text-align: left;
+	}
+	p.small {
+		@include lineh(3.5);
+		font-size: 22px;
+	}
+	p.large {
+		@include lineh(4);
+		font-size: 26px;
 	}
 
 // style tags & classes
@@ -62,6 +69,9 @@
 	}
 	em {
 		font-style: italic;
+	}
+	br {
+		@include noselect;
 	}
 	.strikethru {
 		text-decoration: line-through;
@@ -78,8 +88,11 @@
 		letter-spacing: 0.07em;
 		font-weight: 600;
 	}
-	br {
-		@include noselect;
+	.caps-d {
+		font-family: $caps;
+		text-transform: uppercase;
+		letter-spacing: 0;
+		font-weight: 800;
 	}
 
 // socicon webfont
@@ -95,12 +108,51 @@
 	}
 	.social {
 		font-family: $icon;
+		text-transform: none;
 	}
 
 
 // Media queries
 // ------------------------------------------------------------
 
+@media screen and (max-width: 640px) {
+	h1 {
+		@include lineh(3.5);
+		font-size: 30px;
+	}
+	h2 {
+		@include lineh(4);
+		font-size: 28px;
+	}
+	h3 {
+		@include lineh(3.5);
+		font-size: 24px;
+	}
+	h4 {
+		@include lineh(3);
+		font-size: 20px;
+	}
+	h5 {
+		@include lineh(2);
+		font-size: 14px;
+	}
+	h6 {
+		@include lineh(1.5);
+		font-size: 12px;
+	}
+	p {
+		@include lineh(2);
+		font-size: 16px;
+	}
+	p.small {
+		@include lineh(2);
+		font-size: 14px;
+	}
+	p.large {
+		@include lineh(2.75);
+		font-size: 18px;
+	}
+}
 
 
 // iOS specifics

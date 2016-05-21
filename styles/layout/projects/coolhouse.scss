@@ -40,7 +40,8 @@
 			}
 			.peekbg {
 				background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
-				background-size: cover;
+				background-size: 100%;
+				background-position: 50% 100%;
 			}
 		}
 	}

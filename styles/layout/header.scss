@@ -115,7 +115,6 @@
 					max-width: 720px;
 					margin: auto;
 					@include trailer(3);
-					font-weight: 600;
 					@include animatereset(.8s);
 					@include fadeinup;
 				}
@@ -154,7 +153,6 @@
 					max-width: 720px;
 					@include lineh(8.5);
 					font-size: 66px;
-					font-weight: 600;
 					@include animatereset(.8s, .2s);
 				}
 			}
@@ -203,6 +201,20 @@
 				min-width: 100%;
 				height: auto;
 				height: 100%;
+			}
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 960px) {
+		body.project {
+			header {
+				.title {
+					display: none;
+				}
 			}
 		}
 	}

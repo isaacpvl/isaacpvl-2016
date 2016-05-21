@@ -141,6 +141,9 @@
 	@mixin lineh($variable) {
 		line-height: $baseline*$variable;
 	}
+	@mixin fonth($variable) {
+		line-height: $baseline*$variable;
+	}
 	@mixin leader($variable) {
 		margin-top: $baseline*$variable;
 	}

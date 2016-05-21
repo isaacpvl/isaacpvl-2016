@@ -27,7 +27,7 @@
 			}
 			.pwrap {
 				position: relative;
-				max-width: 1280px;
+				max-width: 1282px;
 				margin: auto;
 			}
 			.shield {
@@ -98,20 +98,14 @@
 				width: 34%;
 				@include leader(5.5);
 				text-align: left;
-				h1 {
+				h2 {
 					margin-left: -2px;
-					@include lineh(5);
-					@extend .caps;
-					font-size: 48px;
-					font-weight: 800;
-					letter-spacing: 0;
+					@extend .caps-d;
 					white-space: nowrap;
 				}
 				p {
 					@include leader(1);
 					@include trailer(3.5);
-					@include lineh(3.5);
-					font-size: 22px;
 				}
 				.role {
 					position: relative;
@@ -130,12 +124,11 @@
 					span {
 						@include lineh(2.5);
 						font-size: 20px;
-						font-weight: 500;
 						white-space: nowrap;
 						em {
 							font-size: 16px;
 							letter-spacing: -0.02em;
-							margin-right: 4px;
+							// margin-right: 4px;
 							opacity: 0.6;
 						}
 					}
@@ -154,10 +147,8 @@
 			}
 			.info.more {
 				@include leader(4.5);
-				h1 {
+				h2 {
 					@include trailer(2.5);
-					@include lineh(5.5);
-					font-size: 50px;
 					font-family: $serif;
 					letter-spacing: -0.01em;
 					text-transform: none;
@@ -169,10 +160,10 @@
 					@include leader(-5);
 					@include lineh(2.75);
 					@include padding-x(12px);
-					font-family: $caps;
+					@extend .caps;
 					font-size: 14px;
 					font-weight: 700;
-					letter-spacing: 0.03em;
+					letter-spacing: 0.02em;
 					@include stroke(2px, $red);
 					color: $red;
 					span {
@@ -259,6 +250,7 @@
 				min-height: 480px;
 				@include padding-leader(4);
 				@include padding-trailer(9);
+				@include padding-x(0%);
 				&:first-of-type {
 					@include leader(-22);
 				}
@@ -295,9 +287,9 @@
 					@include leader(5.5);
 					text-align: center;
 					p {
-						text-align: left;
 						@include leader(2);
 						@include trailer(4);
+						padding-left: 3%;
 					}
 					.role {
 						@include leader(1.5);
@@ -318,11 +310,9 @@
 				}
 				.info.more {
 					@include leader(5.5);
-					h1 {
-						@include leader(-1.5);
+					h2 {
+						@include leader(-0.5);
 						@include trailer(1.5);
-						@include lineh(5);
-						font-size: 44px;
 					}
 					h6 {
 						display: none;
@@ -360,15 +350,7 @@
 					@include trailer(2.5);
 				}
 				.shield {
-					display: block;
-				}
-				.info {
-					.button#navlink {
-						display: none;
-					}
-					.button#livelink {
-						display: inline-block;
-					}				
+					// display: block;
 				}
 			}
 		}
@@ -378,7 +360,7 @@
 			@include padding-trailer(10);
 			.head {
 				@include leader(8);
-				@include trailer(3);
+				@include trailer(2);
 			}
 			.project.offset {
 				.info {
@@ -392,28 +374,18 @@
 				.pwrap {
 					max-width: 542px;
 				}
-				.shield {
-					display: block;
-				}
 				.info {
 					width: 80%;
 					min-width: 0;
 					max-width: 330px;
 					@include leader(2.5);
-					h1 {
-						@include lineh(4);
-						font-size: 28px;
+					h2 {
 						@include leader(0);
 						@include trailer(0);
-					}
-					h6 {
-						font-size: 12px;
 					}
 					p {
 						@include leader(1);
 						@include trailer(0);
-						@include lineh(2);
-						font-size: 14px;
 					}
 					.role {
 						margin: auto;
@@ -421,7 +393,6 @@
 							margin-left: 4px;
 						}
 						span {
-							line-height: 22px;
 							font-size: 14px;
 							em {
 								font-size: 12px;
@@ -436,11 +407,10 @@
 				}
 				.info.more {
 					@include leader(2.5);
-					h1 {
+					h2 {
 						@include leader(-0.5);
 						@include trailer(1);
 						@include lineh(3);
-						font-size: 28px;
 					}
 				}
 			}
