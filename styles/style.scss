@@ -349,11 +349,6 @@
 			}
 		}
 	}
-	@media screen and (max-width: 1200px) {
-		section {
-			// @include padding-x(5%);
-		}
-	}
 	@media screen and (max-width: 959px) {
 		.base {
 			z-index: -9;

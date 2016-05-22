@@ -3,10 +3,13 @@
 // Toggle TV styles
 // ------------------------------------------------------------
 
-	$pcolor:	#00345e;
+	$pcolor:	#334253;
 	body.toggle {
-		.base.project {
+		header {
 			background: $pcolor;
+			.fade {
+				display: none;
+			}
 		}
 		.arrow {
 			@include arrow(27px, $pcolor);
@@ -19,6 +22,11 @@
 // next
 	body.project {
 		section.next.toggle {
+			img {
+				width: 480px;
+				height: 160px;
+				@include leader(3);
+			}
 			&:hover, &.active {
 				.peek {
 					background: $pcolor;

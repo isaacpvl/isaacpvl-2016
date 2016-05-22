@@ -1,0 +1,81 @@
+
+block nav
+	nav.hide
+		ul
+			include ../resource/pvl
+			li.nav.navb#navb
+				a#navlink(data-pathname="2old2play")
+					span &#8249;
+					| Prev
+			li.nav.navc#navc
+				a#navlink(data-pathname="threadmeup")
+					| Next
+					span &#8250;
+
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/images/toggle/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 A social hub that sparks community playing together.
+		.fade
+		.slide
+	.push#push
+
+block work
+	section.work.bgfade
+		.arrowbar#arrow.hide
+			.arrow#work
+		.head
+			h5 Overview
+		.wrap
+			.overview
+				.detail
+					p I designed a native TV app for a dedicated device and built prototypes fleshing out unique but intuitive interactions.
+				.context
+					div
+						h6 My Role:
+						p web design & brand
+					div
+						h6 When:
+						p late 2013
+					div
+						h6 With:
+						p just me, freelancing
+		.itemhead
+			h3 Browse UI
+		.visual
+			.shot
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/toggle/toggle-poster.jpg")
+					source(src="/images/toggle/toggle.webm", type="video/webm")
+					source(src="/images/toggle/toggle.mp4", type="video/mp4")
+		.itemhead
+			h3 Universal menu
+		.visual.single
+			.shot
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/toggle/toggle-menu-poster.jpg")
+					source(src="/images/toggle/toggle-menu.webm", type="video/webm")
+					source(src="/images/toggle/toggle-menu.mp4", type="video/mp4")
+		.itemhead
+			h3 Web landing page
+		.visual.full
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span toggletv.com
+				img(src="/images/toggle/toggle-landing.jpg")
+		.footlink
+			p You can also check out <a  href="https://dribbble.com/isaacpvl/projects/195013-Toggle-TV", target="_blank">this project on dribbble</a>.
+
+block next
+	section.next.threadmeup#navlink(data-pathname="threadmeup")
+		.head
+			h5 Next Project
+		.peek#next
+			img(src="/images/threadmeup/logo.png")

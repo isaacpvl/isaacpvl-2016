@@ -4,11 +4,11 @@ block nav
 		ul
 			include ../resource/pvl
 			li.nav.navb#navb
-				a#navlink(data-pathname="overdog")
+				a#navlink(data-pathname="gennutrition")
 					span &#8249;
 					| Prev
 			li.nav.navc#navc
-				a#navlink(data-pathname="threadmeup")
+				a#navlink(data-pathname="toggle")
 					| Next
 					span &#8250;
 
@@ -33,8 +33,8 @@ block work
 			h5 Overview
 		.wrap
 			.overview
-				.detail.single
-					p I took a large community's dated website and designed it to be a social hub that gats people to start playing together.
+				.detail
+					p I took a large community's dated website and designed it to be a social hub that gets people to start playing together.
 				.context
 					div
 						h6 My Role:
@@ -57,6 +57,13 @@ block work
 					span 2old2play.com
 				img(src="/images/2old2play/2o2p-02.jpg")
 		.itemhead
+			h3 Features slider front-end
+		.visual.single
+			.shot
+				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/2old2play/2o2p-slider-poster.jpg")
+					source(src="/images/2old2play/2o2p-slider.webm", type="video/webm")
+					source(src="/images/2old2play/2o2p-slider.mp4", type="video/mp4")
+		.itemhead
 			h3 Alternate homepage
 		.visual
 			.browser.large
@@ -68,15 +75,10 @@ block work
 					span 2old2play.com
 				img(src="/images/2old2play/2o2p-01.jpg")
 		.footlink
-			p you can also check out <a  href="https://dribbble.com/isaacpvl/projects/173459-2old2play", target="_blank">this project on dribbble</a>
+			p You can also check out <a  href="https://dribbble.com/isaacpvl/projects/170094-2old2play", target="_blank">this project on dribbble</a>.
 
 block next
-	section.next.threadmeup#navlink(data-pathname="threadmeup")
-		.head
-			h5 Next Project
-		.peek#next
-			img(src="/images/threadmeup/logo.png")
-	//- section.next.toggle#navlink(data-pathname="toggle")
+	section.next.toggle#navlink(data-pathname="toggle")
 		.head
 			h5 Next Project
 		.peek#next

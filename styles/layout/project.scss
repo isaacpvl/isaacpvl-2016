@@ -144,7 +144,7 @@
 		}
 		h2 {
 			@include padding-leader(14);
-			@include padding-trailer(4);
+			@include padding-trailer(5);
 			&::after {
 				bottom: 11%;
 				height: 5px;
@@ -154,10 +154,15 @@
 			@include padding-leader(12);
 			@include padding-trailer(3);
 			&::after {
-				bottom: 12%;
+				bottom: 11%;
 				height: 4px;
+				width: 48px;
+				margin-left: -24px;
 			}
 		}
+	}
+	.itemhead.small {
+		@include leader(-4);
 	}
 	.detail {
 		position: relative;
@@ -191,7 +196,7 @@
 				max-width: 1280px;
 				@include noselect;
 			}
-			img.frame {
+			img.frame, video.frame {
 				max-width: 1282px;
 				@include border(1px, $drk-l);
 			}
@@ -215,11 +220,11 @@
 			max-width: 802px;
 			&.small {
 				max-width: 660px;
-				img.frame {
+				img.frame, video.frame {
 					max-width: 662px;
 				}
 			}
-			img.frame {
+			img.frame, video.frame {
 				max-width: 802px;
 			}
 		}
@@ -320,31 +325,6 @@
 			}
 		}
 	}
-	@media screen and (max-width: 959px) {
-		.visual.two-col, .visual.single {
-			.shot, .browser {
-				display: block;
-				width: 85%;
-				max-width: 642px;
-				margin: auto;
-				@include padding-trailer(4);
-				img, video {
-					width: 100%;
-					max-width: 542px;
-				}
-				&:first-of-type {
-					margin: auto;
-				}
-				&:last-of-type {
-					@include padding-trailer(0);
-				}
-				&.last {
-					max-width: 100%;
-					@include leader(0);
-				}
-			}
-		}
-	}
 	@media screen and (max-width: 640px) {
 		body.project {
 			.overview, .detail {
@@ -374,6 +354,57 @@
 				@include padding-x(12px);
 				.frame.scroll {
 					height: 504px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		.visual.two-col, .visual.single {
+			.shot, .browser {
+				display: block;
+				width: 85%;
+				max-width: 642px;
+				margin: auto;
+				@include padding-trailer(4);
+				img, video {
+					width: 100%;
+					max-width: 542px;
+				}
+				&:first-of-type {
+					margin: auto;
+				}
+				&:last-of-type {
+					@include padding-trailer(0);
+				}
+				&.last {
+					max-width: 100%;
+					@include leader(0);
+				}
+			}
+		}
+		.visual.multiphone {
+			.phone {
+				display: block;
+				width: 50%;
+				max-width: 348px;
+				margin: auto;
+				@include trailer(4);
+				&:last-of-type {
+					margin: auto;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		section.work {
+			.visual.multiphone {
+				.phone {
+					width: 60%;
+					max-width: 252 px;
+					@include trailer(3);
+					.frame.scroll {
+						height: 396px;
+					}
 				}
 			}
 		}

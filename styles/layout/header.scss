@@ -209,11 +209,14 @@
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 959px) {
 		body.project {
 			header {
 				.title {
-					display: none;
+					h1 {
+						// @include lineh(6);
+						// font-size: 42px;
+					}
 				}
 			}
 		}

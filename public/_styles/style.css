@@ -331,7 +331,7 @@ br {
     100% {
       height: 100%;
       min-height: 360px;
-      max-height: 780px; } }
+      max-height: 828px; } }
   @keyframes reveal {
     0% {
       height: 100%;
@@ -340,7 +340,7 @@ br {
     100% {
       height: 100%;
       min-height: 360px;
-      max-height: 780px; } } }
+      max-height: 828px; } } }
 
 @-webkit-keyframes slideout {
   0% {
@@ -2723,10 +2723,6 @@ body.project header.more .title {
       height: auto;
       height: 100%; }
 
-@media screen and (max-width: 960px) {
-  body.project header .title {
-    display: none; } }
-
 header .tagline {
   position: relative;
   z-index: 2;
@@ -4081,7 +4077,7 @@ body.project section.next.coolhouse img {
 body.project section.next.coolhouse .peekbg {
   background: #033f64 url("/images/coolhouse/bg.jpg") no-repeat;
   background-size: 100%;
-  background-position: 50% 100%; }
+  background-position: 50% 35%; }
 
 body.huddlepass header {
   background: #404759 url("/images/huddlepass/linesbg.png"); }
@@ -4305,21 +4301,28 @@ body.project section.next.toldtplay img {
 body.project section.next.toldtplay:hover .peek, body.project section.next.toldtplay.active .peek {
   background: #212833; }
 
-body.toggle .base.project {
-  background: #00345e; }
+body.toggle header {
+  background: #334253; }
+  body.toggle header .fade {
+    display: none; }
 
 body.toggle .arrow {
   width: 0;
   height: 0;
   border-left: 27px solid transparent;
   border-right: 27px solid transparent;
-  border-top: 27px solid #00345e; }
+  border-top: 27px solid #334253; }
 
 body.toggle .base {
-  background: #00345e; }
+  background: #334253; }
+
+body.project section.next.toggle img {
+  width: 480px;
+  height: 160px;
+  margin-top: 36px; }
 
 body.project section.next.toggle:hover .peek, body.project section.next.toggle.active .peek {
-  background: #00345e; }
+  background: #334253; }
 
 body.project {
   text-align: center; }
@@ -4419,7 +4422,7 @@ body.project {
 
 .itemhead h2 {
   padding-top: 168px;
-  padding-bottom: 48px; }
+  padding-bottom: 60px; }
   .itemhead h2::after {
     bottom: 11%;
     height: 5px; }
@@ -4428,8 +4431,13 @@ body.project {
   padding-top: 144px;
   padding-bottom: 36px; }
   .itemhead h3::after {
-    bottom: 12%;
-    height: 4px; }
+    bottom: 11%;
+    height: 4px;
+    width: 48px;
+    margin-left: -24px; }
+
+.itemhead.small {
+  margin-top: -48px; }
 
 .detail {
   position: relative;
@@ -4464,7 +4472,7 @@ body.project {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none; }
-    .visual .shot img.frame {
+    .visual .shot img.frame, .visual .shot video.frame {
       max-width: 1282px;
       border: 1px solid #999; }
   .visual .browser {
@@ -4483,9 +4491,9 @@ body.project {
     max-width: 802px; }
     .visual.single .shot.small, .visual.single .browser.small {
       max-width: 660px; }
-      .visual.single .shot.small img.frame, .visual.single .browser.small img.frame {
+      .visual.single .shot.small img.frame, .visual.single .shot.small video.frame, .visual.single .browser.small img.frame, .visual.single .browser.small video.frame {
         max-width: 662px; }
-    .visual.single .shot img.frame, .visual.single .browser img.frame {
+    .visual.single .shot img.frame, .visual.single .shot video.frame, .visual.single .browser img.frame, .visual.single .browser video.frame {
       max-width: 802px; }
 
 .visual.two-col .shot {
@@ -4558,24 +4566,6 @@ body.project {
     width: 85%;
     max-width: 682px; } }
 
-@media screen and (max-width: 959px) {
-  .visual.two-col .shot, .visual.two-col .browser, .visual.single .shot, .visual.single .browser {
-    display: block;
-    width: 85%;
-    max-width: 642px;
-    margin: auto;
-    padding-bottom: 48px; }
-    .visual.two-col .shot img, .visual.two-col .shot video, .visual.two-col .browser img, .visual.two-col .browser video, .visual.single .shot img, .visual.single .shot video, .visual.single .browser img, .visual.single .browser video {
-      width: 100%;
-      max-width: 542px; }
-    .visual.two-col .shot:first-of-type, .visual.two-col .browser:first-of-type, .visual.single .shot:first-of-type, .visual.single .browser:first-of-type {
-      margin: auto; }
-    .visual.two-col .shot:last-of-type, .visual.two-col .browser:last-of-type, .visual.single .shot:last-of-type, .visual.single .browser:last-of-type {
-      padding-bottom: 0px; }
-    .visual.two-col .shot.last, .visual.two-col .browser.last, .visual.single .shot.last, .visual.single .browser.last {
-      max-width: 100%;
-      margin-top: 0px; } }
-
 @media screen and (max-width: 640px) {
   body.project .overview, body.project .detail {
     width: 95%; }
@@ -4598,6 +4588,40 @@ body.project {
     padding-right: 12px; }
     .visual.multiphone .phone .frame.scroll {
       height: 504px; } }
+
+@media screen and (max-width: 959px) {
+  .visual.two-col .shot, .visual.two-col .browser, .visual.single .shot, .visual.single .browser {
+    display: block;
+    width: 85%;
+    max-width: 642px;
+    margin: auto;
+    padding-bottom: 48px; }
+    .visual.two-col .shot img, .visual.two-col .shot video, .visual.two-col .browser img, .visual.two-col .browser video, .visual.single .shot img, .visual.single .shot video, .visual.single .browser img, .visual.single .browser video {
+      width: 100%;
+      max-width: 542px; }
+    .visual.two-col .shot:first-of-type, .visual.two-col .browser:first-of-type, .visual.single .shot:first-of-type, .visual.single .browser:first-of-type {
+      margin: auto; }
+    .visual.two-col .shot:last-of-type, .visual.two-col .browser:last-of-type, .visual.single .shot:last-of-type, .visual.single .browser:last-of-type {
+      padding-bottom: 0px; }
+    .visual.two-col .shot.last, .visual.two-col .browser.last, .visual.single .shot.last, .visual.single .browser.last {
+      max-width: 100%;
+      margin-top: 0px; }
+  .visual.multiphone .phone {
+    display: block;
+    width: 50%;
+    max-width: 348px;
+    margin: auto;
+    margin-bottom: 48px; }
+    .visual.multiphone .phone:last-of-type {
+      margin: auto; } }
+
+@media screen and (max-width: 640px) {
+  section.work .visual.multiphone .phone {
+    width: 60%;
+    max-width: 252 px;
+    margin-bottom: 36px; }
+    section.work .visual.multiphone .phone .frame.scroll {
+      height: 396px; } }
 
 @media screen and (max-height: 900px) {
   .visual.full .browser {
