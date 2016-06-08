@@ -131,6 +131,7 @@
 				@include trailer(1);
 				padding-right: 30px;
 				@extend .caps;
+				font-size: 22px;
 				opacity: 0;
 				@include tmove(0, 24px);
 				@include trans(.4s, .2s);

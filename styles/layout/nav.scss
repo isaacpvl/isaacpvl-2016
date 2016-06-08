@@ -38,7 +38,7 @@
 				@extend .caps;
 			}
 			&:hover {
-				@include twowayshadow(-2px, 1px, $wht);
+				@include twowayshadow(-3px, 1px, $wht);
 			}
 			&:nth-of-type(2) {
 				@include animate(.55s, 1s);
@@ -57,7 +57,7 @@
 			}
 		}
 		li.active {
-			@include twowayshadow(-2px, 1px, $wht);
+			@include twowayshadow(-3px, 1px, $wht);
 			a {
 				color: $wht;
 				&:hover {
@@ -274,11 +274,11 @@
 		}
 		li {
 			&:hover {
-				@include twowayshadow(-2px, 1px, $blk-5);
+				@include twowayshadow(-3px, 1px, $blk-5);
 			}
 		}
 		li.active {
-			@include twowayshadow(-2px, 1px, $red);
+			@include twowayshadow(-3px, 1px, $red);
 			a {
 				color: $red;
 				&:hover {
@@ -289,7 +289,7 @@
 		li.disabled {
 			box-shadow: none;
 			a {
-				opacity: .6;
+				opacity: 0.6;
 				color: $drk-l;
 			}
 			&:hover {
@@ -380,7 +380,7 @@
 		}
 		li:nth-of-type(5) {
 			&:hover {
-				@include twowayshadow(-2px, 1px, #4da7de);
+				@include twowayshadow(-3px, 1px, #4da7de);
 				a:hover {
 					color: #4da7de;
 				}
@@ -388,7 +388,7 @@
 		}
 		li:nth-of-type(6) {
 			&:hover {
-				@include twowayshadow(-2px, 1px, #e84d88);
+				@include twowayshadow(-3px, 1px, #e84d88);
 				a:hover {
 					color: #e84d88;
 				}
@@ -433,7 +433,7 @@
 		}
 		li:nth-of-type(5) {
 			&:hover {
-				@include twowayshadow(-2px, 1px, $wht-8);
+				@include twowayshadow(-3px, 1px, $wht-8);
 				a:hover {
 					color: $wht;
 				}
@@ -441,7 +441,7 @@
 		}
 		li:nth-of-type(6) {
 			&:hover {
-				@include twowayshadow(-2px, 1px, $wht-8);
+				@include twowayshadow(-3px, 1px, $wht-8);
 				a:hover {
 					color: $wht;
 				}
@@ -451,7 +451,7 @@
 
 	nav.dark {
 		li.active {
-			@include twowayshadow(-2px, 1px, $red);
+			@include twowayshadow(-3px, 1px, $red);
 			a {
 				color: $red;
 			}
@@ -795,11 +795,15 @@
 				}
 			}
 			li.disabled {
+				box-shadow: none;
 				a {
 					color: $blk-4;
 				}
 				&:hover {
 					box-shadow: none;
+					a {
+						opacity: 0.6;
+					}
 				}
 			}
 		}

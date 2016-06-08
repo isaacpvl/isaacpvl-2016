@@ -1830,7 +1830,7 @@ nav {
     -webkit-animation-name: fadeindown;
             animation-name: fadeindown; }
     nav li:hover {
-      box-shadow: inset 0 -2px #fff, 0 1px #fff; }
+      box-shadow: inset 0 -3px #fff, 0 1px #fff; }
     nav li:nth-of-type(2) {
       -webkit-animation-duration: 0.55s;
       animation-duration: 0.55s;
@@ -1867,7 +1867,7 @@ nav {
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both; }
   nav li.active {
-    box-shadow: inset 0 -2px #fff, 0 1px #fff; }
+    box-shadow: inset 0 -3px #fff, 0 1px #fff; }
     nav li.active a {
       color: #fff; }
       nav li.active a:hover {
@@ -2068,9 +2068,9 @@ nav.sticky {
   nav.sticky ul {
     box-shadow: 0 1px rgba(0, 0, 0, 0.1); }
   nav.sticky li:hover {
-    box-shadow: inset 0 -2px rgba(0, 0, 0, 0.5), 0 1px rgba(0, 0, 0, 0.5); }
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5), 0 1px rgba(0, 0, 0, 0.5); }
   nav.sticky li.active {
-    box-shadow: inset 0 -2px #d12b52, 0 1px #d12b52; }
+    box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
     nav.sticky li.active a {
       color: #d12b52; }
       nav.sticky li.active a:hover {
@@ -2080,7 +2080,7 @@ nav.sticky {
   nav.sticky li.disabled {
     box-shadow: none; }
     nav.sticky li.disabled a {
-      opacity: .6;
+      opacity: 0.6;
       color: #999; }
     nav.sticky li.disabled:hover {
       box-shadow: none; }
@@ -2137,11 +2137,11 @@ nav.sticky {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0); }
   nav.sticky li:nth-of-type(5):hover {
-    box-shadow: inset 0 -2px #4da7de, 0 1px #4da7de; }
+    box-shadow: inset 0 -3px #4da7de, 0 1px #4da7de; }
     nav.sticky li:nth-of-type(5):hover a:hover {
       color: #4da7de; }
   nav.sticky li:nth-of-type(6):hover {
-    box-shadow: inset 0 -2px #e84d88, 0 1px #e84d88; }
+    box-shadow: inset 0 -3px #e84d88, 0 1px #e84d88; }
     nav.sticky li:nth-of-type(6):hover a:hover {
       color: #e84d88; }
 
@@ -2170,16 +2170,16 @@ nav.blue {
     nav.blue li.nava a, nav.blue li.nava h6 {
       color: #fff; }
   nav.blue li:nth-of-type(5):hover {
-    box-shadow: inset 0 -2px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
     nav.blue li:nth-of-type(5):hover a:hover {
       color: #fff; }
   nav.blue li:nth-of-type(6):hover {
-    box-shadow: inset 0 -2px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
     nav.blue li:nth-of-type(6):hover a:hover {
       color: #fff; }
 
 nav.dark li.active {
-  box-shadow: inset 0 -2px #d12b52, 0 1px #d12b52; }
+  box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
   nav.dark li.active a {
     color: #d12b52; }
 
@@ -2456,11 +2456,14 @@ body.project nav.sticky li.active {
   body.project nav.sticky li.active a {
     color: #d12b52; }
 
-body.project nav.sticky li.disabled a {
-  color: rgba(0, 0, 0, 0.4); }
-
-body.project nav.sticky li.disabled:hover {
+body.project nav.sticky li.disabled {
   box-shadow: none; }
+  body.project nav.sticky li.disabled a {
+    color: rgba(0, 0, 0, 0.4); }
+  body.project nav.sticky li.disabled:hover {
+    box-shadow: none; }
+    body.project nav.sticky li.disabled:hover a {
+      opacity: 0.6; }
 
 body.project nav.dark li.nava {
   box-shadow: inset 0 -4px #d12b52, 0 1px #d12b52; }
@@ -2875,6 +2878,7 @@ header .speech {
     margin-top: 33px;
     margin-bottom: 12px;
     padding-right: 30px;
+    font-size: 22px;
     opacity: 0;
     -webkit-transform: translate(0, 24px);
     transform: translate(0, 24px);
