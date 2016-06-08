@@ -2148,9 +2148,9 @@ nav.sticky {
 nav.blue {
   box-shadow: inset 0 60px rgba(21, 137, 214, 0.8); }
   nav.blue li:hover {
-    box-shadow: inset 0 -2px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
   nav.blue li.active {
-    box-shadow: inset 0 -2px #fff, 0 1px #fff; }
+    box-shadow: inset 0 -3px #fff, 0 1px #fff; }
     nav.blue li.active a {
       color: #fff; }
       nav.blue li.active a:hover {
@@ -2449,10 +2449,10 @@ body.project nav.sticky li a {
   color: rgba(0, 0, 0, 0.6); }
 
 body.project nav.sticky li:hover {
-  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.6); }
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.6); }
 
 body.project nav.sticky li.active {
-  box-shadow: inset 0 -2px #d12b52, 0 1px #d12b52; }
+  box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
   body.project nav.sticky li.active a {
     color: #d12b52; }
 
@@ -2477,7 +2477,7 @@ body.project nav.dark li.nava {
     color: #d12b52; }
 
 body.project nav.dark li:hover {
-  box-shadow: inset 0 -2px #d12b52, 0 1px #d12b52; }
+  box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
 
 body.project nav.dark a {
   color: rgba(0, 0, 0, 0.6); }
@@ -2488,6 +2488,12 @@ body.project nav.dark.sticky li.nava {
   box-shadow: inset 0 0px rgba(255, 255, 255, 0), 0 0px rgba(255, 255, 255, 0); }
   body.project nav.dark.sticky li.nava:hover, body.project nav.dark.sticky li.nava.hover {
     box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
+
+body.project nav.dark.sticky li a:hover {
+  color: #000; }
+
+body.project nav.dark.sticky li:hover {
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.6); }
 
 body.project .arrow {
   -webkit-animation-duration: 0.3s;

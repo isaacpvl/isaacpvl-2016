@@ -399,11 +399,11 @@
 		@include innershadow(60px, rgba($blu, .8));
 		li {
 			&:hover {
-				@include twowayshadow(-2px, 1px, $wht-8);
+				@include twowayshadow(-3px, 1px, $wht-8);
 				}
 			}
 		li.active {
-			@include twowayshadow(-2px, 1px, $wht);
+			@include twowayshadow(-3px, 1px, $wht);
 			a {
 				color: $wht;
 				&:hover {
@@ -785,11 +785,11 @@
 					color: $blk-6;
 				}
 				&:hover {
-					@include twowayshadow(-2px, 1px, $blk-6);
+					@include twowayshadow(-3px, 1px, $blk-6);
 				}
 			}
 			li.active {
-				@include twowayshadow(-2px, 1px, $red);
+				@include twowayshadow(-3px, 1px, $red);
 				a {
 					color: $red;
 				}
@@ -825,7 +825,7 @@
 			}
 			li {
 				&:hover {
-					@include twowayshadow(-2px, 1px, $red);
+					@include twowayshadow(-3px, 1px, $red);
 				}
 			}
 			a {
@@ -842,6 +842,17 @@
 					@include twowayshadow(-3px, 1px, $red);
 				}
 			}
+			li {
+				a {
+					&:hover {
+						color: $blk;
+					}
+				}
+				&:hover {
+					@include twowayshadow(-3px, 1px, $blk-6);
+				}
+			}
+
 		}
 		.arrow {
 			@include animatereset(.3s, .65s);
