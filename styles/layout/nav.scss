@@ -312,7 +312,7 @@
 			width: 56px;
 			@include twowayshadow(0px, 0px, $wht-0);
 			&:hover, &.hover {
-				@include twowayshadow(-3px, 1px, $red);
+				@include twowayshadow(-4px, 1px, $red);
 			}
 			a {
 				height: 60px;
@@ -425,7 +425,7 @@
 		li.nava {
 			@include twowayshadow(0px, 0px, $wht-0);
 			&:hover, &.hover {
-				@include twowayshadow(-3px, 1px, $wht);
+				@include twowayshadow(-4px, 1px, $wht);
 			}
 			a, h6 {
 				color: $wht;
@@ -448,7 +448,6 @@
 			}
 		}
 	}
-
 	nav.dark {
 		li.active {
 			@include twowayshadow(-3px, 1px, $red);
@@ -774,7 +773,7 @@
 					a {
 						color: $red;
 					}
-					@include twowayshadow(-3px, 1px, $red);
+					@include twowayshadow(-4px, 1px, $red);
 				}
 				a {
 					color: $red;

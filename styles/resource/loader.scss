@@ -13,7 +13,6 @@
 		max-width: 1600px;
 		margin: auto;
 		text-align: left;
-		color: $wht;
 		@include noselect;
 		#lockscroll {
 			position: absolute;
@@ -47,6 +46,7 @@
 				letter-spacing: 0.06em;
 				font-weight: 800;
 				font-style: italic;
+				color: $wht;
 				@include fadein;
 				@include animatereset(.6s, .2s)
 				&:first-letter {
@@ -70,7 +70,7 @@
 					&:nth-of-type(1) {
 						@include animateinf(2.4s, 0.1s);
 						@include loadinga;
-						margin-left: 3px;
+						margin-left: 5px;
 					}
 					&:nth-of-type(2) {
 						@include animateinf(2.4s, 0.175s);
@@ -81,6 +81,17 @@
 						@include loadingc;
 					}
 				}
+			}
+		}
+	}
+	.loader.center {
+		.status {
+			h3 {
+				top: 52.5%;
+				left: 50%;
+				width: 320px;
+				height: 120px;
+				margin: -60px 0 0 -160px;
 			}
 		}
 	}
@@ -98,36 +109,20 @@
 		}
 	}
 
-
 // project page
 	body.project {
 		.loader {
-			text-align: center;
-			color: $blk;
+			@extend .center;
 			.overlay {
 				display: none;
 				background: $wht;
 			}
 			.status {
 				h3 {
-					position: absolute;
-					top: 52.5%;
-					left: 50%;
-					width: 320px;
-					height: 120px;
-					margin: -60px 0 0 -160px;
+					color: $blk;
 					span {
 						margin-bottom: 0;
 						background: $blk;
-						&:nth-of-type(1) {
-							@include animateinf(2.4s, 0.1s);
-						}
-						&:nth-of-type(2) {
-							@include animateinf(2.4s, 0.175s);
-						}
-						&:nth-of-type(3) {
-							@include animateinf(2.4s, 0.25s);
-						}
 					}
 				}
 			}
@@ -136,21 +131,10 @@
 			.status {
 				h3 {
 					@include tmove(0px, 60px);
-					@include trans(0.5s, 0.2s);
+					@include trans(0.5s);
 				}
 			}
 		}
-	}
-
-
-// effected elements
-	nav.hide,
-	.arrowbar.hide,
-	.tagline.hide,
-	header .wrap.hide,
-	.overview.hide,
-	header.hide {
-		display: none;
 	}
 
 
@@ -182,4 +166,15 @@
 				}
 			}
 		}
+	}
+
+
+// effected elements
+	nav.hide,
+	.arrowbar.hide,
+	.tagline.hide,
+	header .wrap.hide,
+	.overview.hide,
+	header.hide {
+		display: none;
 	}
