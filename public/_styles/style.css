@@ -61,14 +61,14 @@ h6 {
 
 p {
   line-height: 42px;
-  font-size: 22px;
+  font-size: 24px;
   text-align: left; }
 
-p.small {
+p.small, body.project p {
   line-height: 42px;
   font-size: 22px; }
 
-p.large {
+p.large, section.about .item p.lead {
   line-height: 48px;
   font-size: 26px; }
 
@@ -146,10 +146,10 @@ br {
   p {
     line-height: 24px;
     font-size: 16px; }
-  p.small {
+  p.small, body.project p {
     line-height: 24px;
     font-size: 14px; }
-  p.large {
+  p.large, section.about .item p.lead {
     line-height: 33px;
     font-size: 18px; } }
 
@@ -835,21 +835,21 @@ a, a img {
       height: auto;
       background-color: #f7e7e2 !important; }
 
-.browser.large {
+.browser.large, section.about .item p.browser.lead {
   border-radius: 6px 6px 4px 4px; }
-  .browser.large img {
+  .browser.large img, section.about .item p.browser.lead img {
     border-radius: 0 0 3px 3px; }
-  .browser.large .top {
+  .browser.large .top, section.about .item p.browser.lead .top {
     height: 50px;
     border-radius: 5px 5px 0 0; }
-    .browser.large .top ul {
+    .browser.large .top ul, section.about .item p.browser.lead .top ul {
       top: 19px;
       left: 16px; }
-      .browser.large .top ul li {
+      .browser.large .top ul li, section.about .item p.browser.lead .top ul li {
         width: 11px;
         height: 11px;
         margin-right: 7px; }
-    .browser.large .top span {
+    .browser.large .top span, section.about .item p.browser.lead .top span {
       top: 8px;
       bottom: 10px;
       left: 90px;
@@ -860,19 +860,19 @@ a, a img {
       border-radius: 3px;
       line-height: 32px; }
 
-.browser.small {
+.browser.small, body.project p.browser {
   border-radius: 3px 3px 2px 2px; }
-  .browser.small .top {
+  .browser.small .top, body.project p.browser .top {
     height: 28px;
     border-radius: 2px 2px 0 0; }
-    .browser.small .top ul {
+    .browser.small .top ul, body.project p.browser .top ul {
       top: 11px;
       left: 8px; }
-      .browser.small .top ul li {
+      .browser.small .top ul li, body.project p.browser .top ul li {
         width: 6px;
         height: 6px;
         margin-right: 3px; }
-    .browser.small .top span {
+    .browser.small .top span, body.project p.browser .top span {
       top: 5px;
       bottom: 6px;
       left: 42px;
@@ -1378,29 +1378,29 @@ a, a img {
     height: auto;
     border: none; }
 
-.phone.small {
+.phone.small, body.project p.phone {
   width: 30%;
   min-width: 0;
   padding: 0 1%;
   border-radius: 12px; }
-  .phone.small .top {
+  .phone.small .top, body.project p.phone .top {
     height: 36px; }
-    .phone.small .top .camera {
+    .phone.small .top .camera, body.project p.phone .top .camera {
       top: 11px; }
-      .phone.small .top .camera span {
+      .phone.small .top .camera span, body.project p.phone .top .camera span {
         width: 5px;
         height: 5px;
         border-radius: 2.5px; }
-    .phone.small .top .speaker {
+    .phone.small .top .speaker, body.project p.phone .top .speaker {
       top: 22px; }
-      .phone.small .top .speaker span {
+      .phone.small .top .speaker span, body.project p.phone .top .speaker span {
         width: 24px;
         height: 3px; }
-  .phone.small .bottom {
+  .phone.small .bottom, body.project p.phone .bottom {
     height: 36px; }
-    .phone.small .bottom div {
+    .phone.small .bottom div, body.project p.phone .bottom div {
       top: 4px; }
-      .phone.small .bottom div span {
+      .phone.small .bottom div span, body.project p.phone .bottom div span {
         width: 26px;
         height: 26px;
         border-radius: 13px; }
@@ -1747,6 +1747,8 @@ body.project .loader.out .status h3 {
       .loader .status h3 span:nth-of-type(1) {
         margin-left: 5px; } }
 
+#lockscroll.hide,
+.overlay.hide,
 nav.hide,
 .arrowbar.hide,
 .tagline.hide,
@@ -1886,8 +1888,6 @@ nav {
       opacity: 1;
       -webkit-transform: translate(0, 0);
       transform: translate(0, 0); }
-  nav li.navb a, nav li.navc a, nav li.navd a {
-    font-weight: 500; }
   nav li.navb span:last-of-type, nav li.navc span:last-of-type, nav li.navd span:last-of-type {
     display: none; }
   nav li.nava {
@@ -2123,7 +2123,7 @@ nav.blue {
   nav.blue li:hover {
     box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8), 0 1px rgba(255, 255, 255, 0.8); }
   nav.blue li.active {
-    box-shadow: inset 0 -3px #fff, 0 1px #fff; }
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.85), 0 1px rgba(255, 255, 255, 0.85); }
     nav.blue li.active a {
       color: #fff; }
       nav.blue li.active a:hover {
@@ -2364,7 +2364,8 @@ body.project nav ul {
 body.project nav .navb a span, body.project nav .navc a span {
   position: absolute;
   line-height: 8px;
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: 500; }
 
 body.project nav .navb a::after, body.project nav .navc a::after {
   content: ' Project'; }
@@ -3499,25 +3500,34 @@ body.home section.work, body.past section.work {
       padding-bottom: 24px; } }
 
 section.about {
-  padding-bottom: 168px;
+  padding-bottom: 180px;
   text-align: center;
   color: #fff;
-  background: rgba(21, 137, 214, 0.88); }
-  section.about h1 {
-    text-shadow: 1px 2px rgba(0, 0, 0, 0.1); }
-  section.about h5, section.about p {
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+  background: rgba(21, 137, 214, 0.92); }
   section.about .head h5 {
-    color: #fff; }
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
     section.about .head h5::after {
       background-color: #fff;
       box-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+  section.about h1, section.about h2 {
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.15); }
+  section.about p {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+  section.about .fade {
+    position: absolute;
+    top: 70%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(21, 137, 214, 0) 0%, #1589d6 100%); }
   section.about .pitch {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding-top: 48px;
-    padding-bottom: 48px; }
+    padding-top: 36px;
+    padding-bottom: 144px; }
     section.about .pitch h1 {
       width: 100%;
       max-width: 1080px;
@@ -3530,26 +3540,92 @@ section.about {
       margin-top: 48px; }
       section.about .pitch p:last-of-type {
         margin-left: 5%; }
-  section.about .cell {
-    display: table-cell;
-    vertical-align: middle; }
-  section.about .fade {
-    position: absolute;
-    top: 70%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background: linear-gradient(to bottom, rgba(21, 137, 214, 0) 0%, #1589d6 100%); }
+  section.about .item {
+    position: relative;
+    z-index: 2;
+    width: 68%;
+    margin: auto;
+    text-align: left;
+    padding-top: 120px;
+    padding-bottom: 96px; }
+    section.about .item h5 {
+      position: relative;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+      section.about .item h5::before, section.about .item h5::after {
+        position: absolute;
+        bottom: 11px;
+        width: 83%;
+        height: 2px;
+        background: #fff;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+      section.about .item h5::before {
+        content: none;
+        right: 92%;
+        margin-right: 28px; }
+      section.about .item h5::after {
+        content: '';
+        margin-left: 24px; }
+    section.about .item h1 {
+      padding-top: 30px;
+      padding-bottom: 54px;
+      line-height: 84px; }
+      section.about .item h1 br {
+        display: none; }
+    section.about .item p {
+      margin-bottom: 30px; }
+      section.about .item p.lead {
+        margin-top: 48px;
+        margin-bottom: 12px;
+        font-style: italic; }
+    section.about .item h5 {
+      padding-left: 0;
+      padding-right: 8%; }
+    section.about .item h1, section.about .item p {
+      padding-left: 8%;
+      padding-right: 0; }
+    section.about .item.alt h5::before {
+      content: ''; }
+    section.about .item.alt h5::after {
+      content: none; }
+    section.about .item.alt h5 {
+      padding-left: 8%;
+      padding-right: 0; }
+    section.about .item.alt h1, section.about .item.alt p {
+      padding-left: 0;
+      padding-right: 8%; }
 
 section.aboutme {
   padding-bottom: 144px;
   color: #fff;
   background: #1589d6; }
   section.aboutme h1 {
-    text-shadow: 1px 2px rgba(0, 0, 0, 0.1); }
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.15); }
   section.aboutme p {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
+  section.aboutme .bg, section.aboutme .fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 55%;
+    width: 50%;
+    min-width: 660px;
+    text-align: right;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    section.aboutme .bg img, section.aboutme .fade img {
+      width: 90%;
+      min-width: 540px;
+      max-width: 660px;
+      height: auto;
+      pointer-events: none; }
+  section.aboutme .fade {
+    z-index: 1;
+    display: none; }
   section.aboutme .bio {
     position: relative;
     z-index: 9;
@@ -3585,29 +3661,6 @@ section.aboutme {
       display: inline-block;
       padding-left: 30px;
       padding-right: 30px; }
-  section.aboutme .bg, section.aboutme .fade {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 55%;
-    width: 50%;
-    min-width: 660px;
-    text-align: right;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-    section.aboutme .bg img, section.aboutme .fade img {
-      width: 90%;
-      min-width: 540px;
-      max-width: 660px;
-      height: auto;
-      pointer-events: none; }
-  section.aboutme .fade {
-    z-index: 1;
-    display: none; }
 
 @media screen and (min-width: 1201px) {
   section.aboutme .bio strong {
@@ -4399,27 +4452,27 @@ body.project {
     content: '';
     position: absolute;
     left: 50%;
-    width: 60px;
-    margin-left: -30px;
+    width: 72px;
+    margin-left: -36px;
     background: #000; }
 
 .itemhead h2 {
   padding-top: 168px;
-  padding-bottom: 60px; }
+  padding-bottom: 72px; }
   .itemhead h2::after {
-    bottom: 11%;
+    bottom: 13.5%;
     height: 5px; }
 
 .itemhead h3 {
   padding-top: 144px;
   padding-bottom: 36px; }
   .itemhead h3::after {
-    bottom: 11%;
-    height: 4px;
-    width: 48px;
-    margin-left: -24px; }
+    bottom: 9%;
+    height: 5px;
+    width: 54px;
+    margin-left: -27px; }
 
-.itemhead.small {
+.itemhead.small, body.project p.itemhead {
   margin-top: -48px; }
 
 .detail {
@@ -4472,9 +4525,9 @@ body.project {
   .visual.single .shot, .visual.single .browser {
     width: 90%;
     max-width: 802px; }
-    .visual.single .shot.small, .visual.single .browser.small {
+    .visual.single .shot.small, .visual.single body.project p.shot, body.project .visual.single p.shot, .visual.single .browser.small, .visual.single body.project p.browser, body.project .visual.single p.browser {
       max-width: 660px; }
-      .visual.single .shot.small img.frame, .visual.single .shot.small video.frame, .visual.single .browser.small img.frame, .visual.single .browser.small video.frame {
+      .visual.single .shot.small img.frame, .visual.single body.project p.shot img.frame, body.project .visual.single p.shot img.frame, .visual.single .shot.small video.frame, .visual.single body.project p.shot video.frame, body.project .visual.single p.shot video.frame, .visual.single .browser.small img.frame, .visual.single body.project p.browser img.frame, body.project .visual.single p.browser img.frame, .visual.single .browser.small video.frame, .visual.single body.project p.browser video.frame, body.project .visual.single p.browser video.frame {
         max-width: 662px; }
     .visual.single .shot img.frame, .visual.single .shot video.frame, .visual.single .browser img.frame, .visual.single .browser video.frame {
       max-width: 802px; }
@@ -4739,10 +4792,10 @@ section {
       section .head h5::after {
         content: '';
         position: absolute;
-        bottom: -15px;
+        bottom: -16px;
         left: 50%;
         width: 50px;
-        height: 3px;
+        height: 4px;
         margin-left: -25px;
         background: rgba(0, 0, 0, 0.6); }
 

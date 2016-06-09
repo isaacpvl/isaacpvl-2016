@@ -27,6 +27,9 @@
 				@include trans(.5s);
 			}
 		}
+		p {
+			@extend .small;
+		}
 		section.work {
 			min-height: 1600px;
 			@include leader(0);
@@ -137,16 +140,16 @@
 				content:'';
 				position: absolute;
 				left: 50%;
-				width: 60px;
-				margin-left: -30px;
+				width: 72px;
+				margin-left: -36px;
 				background: $blk;
 			}
 		}
 		h2 {
 			@include padding-leader(14);
-			@include padding-trailer(5);
+			@include padding-trailer(6);
 			&::after {
-				bottom: 11%;
+				bottom: 13.5%;
 				height: 5px;
 			}
 		}
@@ -154,10 +157,10 @@
 			@include padding-leader(12);
 			@include padding-trailer(3);
 			&::after {
-				bottom: 11%;
-				height: 4px;
-				width: 48px;
-				margin-left: -24px;
+				bottom: 9%;
+				height: 5px;
+				width: 54px;
+				margin-left: -27px;
 			}
 		}
 	}

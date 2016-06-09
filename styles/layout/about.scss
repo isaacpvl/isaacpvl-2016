@@ -4,31 +4,43 @@
 // ------------------------------------------------------------
 
 	section.about {
-		@include padding-trailer(14);
+		@include padding-trailer(15);
 		text-align: center;
 		color: $wht;
-		background: rgba($blu, .88);
-		h1 {
-			text-shadow: 1px 2px $blk-1;
-		}
-		h5, p {
-			text-shadow: 1px 1px $blk-2;
-		}
+		background: rgba($blu, .92);
 		.head {
 			h5 {
 				color: $wht;
+				text-shadow: 1px 1px $blk-2;
 				&::after {
 					background-color: $wht;
 					box-shadow: 1px 1px $blk-2;
 				}
 			}
 		}
+		h1, h2 {
+			text-shadow: 1px 2px $blk-15;
+		}
+		p {
+			text-shadow: 1px 1px $blk-2;
+		}
+		.fade {
+			position: absolute;
+			top: 70%;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			@include gradient-vert($blu-n, $blu);
+		}
+
+	// pitch
 		.pitch {
 			position: relative;
 			z-index: 2;
 			width: 100%;
-			@include padding-leader(4);
-			@include padding-trailer(4);
+			@include padding-leader(3);
+			@include padding-trailer(12);
 			h1 {
 				width: 100%;
 				max-width: 1080px;
@@ -45,30 +57,122 @@
 				}
 			}
 		}
-		.cell {
-			display: table-cell;
-			vertical-align: middle;
-		}
-		.fade {
-			position: absolute;
-			top: 70%;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 1;
-			@include gradient-vert($blu-n, $blu);
+
+	// items
+		.item {
+			$offset: 8%;
+			position: relative;
+			z-index: 2;
+			width: 60% +$offset;
+			margin: auto;
+			text-align: left;
+			@include padding-leader(10);
+			@include padding-trailer(8);
+			h5 {
+				position: relative;
+				@include trailer(2.5);
+				text-shadow: 1px 1px $blk-2;
+				&::before, &::after {
+					position: absolute;
+					bottom: 11px;
+					width: 75%+$offset;
+					height: 2px;
+					background: $wht;
+					box-shadow: 1px 1px $blk-2;
+				}
+				&::before {
+					content: none;
+					right: 100% -$offset;
+					margin-right: 28px;
+				}
+				&::after {
+					content: '';
+					margin-left: 24px;
+				}
+			}
+			h1 {
+				@include padding-leader(2.5);
+				@include padding-trailer(4.5);
+				@include lineh(7);
+				br {
+					display: none;
+				}
+			}
+			p {
+				@include trailer(2.5);
+				&.lead {
+					@include leader(4);
+					@include trailer(1);
+					@extend .large;
+					font-style: italic;
+				}
+			}
+			h5 {
+				padding-left: 0; padding-right: $offset;
+				// padding-left: $offset; padding-right: 0;
+			}
+			h1, p {
+				// padding-left: 0; padding-right: $offset;
+				padding-left: $offset; padding-right: 0;
+			}
+			&.alt {
+				h5 {
+					&::before {
+						content: '';
+					}
+					&::after {
+						content: none;
+					}	
+				}
+				h5 {
+					// padding-left: 0; padding-right: $offset;
+					padding-left: $offset; padding-right: 0;
+				}
+				h1, p {
+					padding-left: 0; padding-right: $offset;
+					// padding-left: $offset; padding-right: 0;
+				}
+			}
 		}
 	}
+
+
+// About me styles
+// ------------------------------------------------------------
+
 	section.aboutme {
 		@include padding-trailer(12);
 		color: $wht;
 		background: $blu;
 		h1 {
-			text-shadow: 1px 2px $blk-1;
+			text-shadow: 1px 2px $blk-15;
 		}
 		p {
 			text-shadow: 1px 1px $blk-2;
 		}
+		.bg, .fade {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 55%;
+			width: 50%;
+			min-width: 660px;
+			text-align: right;
+			@include noselect;
+			img {
+				width: 90%;
+				min-width: 540px;
+				max-width: 660px;
+				height: auto;
+				pointer-events: none;
+			}
+		}
+		.fade {
+			z-index: 1;
+			display: none;
+		}
+
+	// bio
 		.bio {
 			position: relative;
 			z-index: 9;
@@ -111,27 +215,6 @@
 				display: inline-block;
 				@include padding-x(30px);
 			}
-		}
-		.bg, .fade {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 55%;
-			width: 50%;
-			min-width: 660px;
-			text-align: right;
-			@include noselect;
-			img {
-				width: 90%;
-				min-width: 540px;
-				max-width: 660px;
-				height: auto;
-				pointer-events: none;
-			}
-		}
-		.fade {
-			z-index: 1;
-			display: none;
 		}
 	}
 
@@ -324,9 +407,9 @@
 		}
 	}
 
-// media queries
-	@media screen and (max-width: 640px) {
-		.news {
-			display: none;
+	// media queries
+		@media screen and (max-width: 640px) {
+			.news {
+				display: none;
+			}
 		}
-	}

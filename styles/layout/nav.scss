@@ -115,9 +115,6 @@
 			@include trans(.2s);
 		}
 		li.navb, li.navc, li.navd {
-			a {
-				font-weight: 500;
-			}
 			span:last-of-type {
 				display: none;
 			}
@@ -403,7 +400,7 @@
 				}
 			}
 		li.active {
-			@include twowayshadow(-3px, 1px, $wht);
+			@include twowayshadow(-3px, 1px, $wht-85);
 			a {
 				color: $wht;
 				&:hover {
@@ -719,6 +716,7 @@
 						position: absolute;
 						line-height: 8px;
 						font-size: 30px;
+						font-weight: 500;
 					}
 					&::after {
 						content: ' Project';
