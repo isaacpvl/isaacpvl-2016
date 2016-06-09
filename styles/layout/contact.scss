@@ -43,6 +43,7 @@
 				@include padding-leader(2);
 				@include padding-trailer(2);
 				padding-right: 10px;
+				@include twowayshadow(0px, 0px, $blk);
 				span {
 					display: inline-block;
 				}
@@ -52,7 +53,7 @@
 				}
 				&:hover {
 					color: $blk;
-					@include dropshadow(3px, $blk);
+					@include twowayshadow(-3px, 1px, $blk);
 					img, span, h5 {
 						@include tmove(0, -2px);
 						opacity: 1;

@@ -2031,15 +2031,15 @@ nav {
 nav.sticky {
   z-index: 95;
   height: 60px;
-  box-shadow: inset 0 60px rgba(255, 255, 255, 0.9); }
+  box-shadow: inset 0 60px rgba(255, 255, 255, 0.925); }
   nav.sticky a {
     height: 60px;
     padding-top: 28px;
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.4); }
     nav.sticky a:hover {
-      color: #000; }
+      color: rgba(0, 0, 0, 0.65); }
   nav.sticky ul {
-    box-shadow: 0 1px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 1px rgba(0, 0, 0, 0.15); }
   nav.sticky li:hover {
     box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5), 0 1px rgba(0, 0, 0, 0.5); }
   nav.sticky li.active {
@@ -2405,11 +2405,6 @@ body.project nav li.disabled a {
 body.project nav .navb span:last-of-type, body.project nav .navc span:last-of-type, body.project nav .navd span:last-of-type {
   display: inline-block; }
 
-body.project nav.sticky a {
-  color: rgba(0, 0, 0, 0.6); }
-  body.project nav.sticky a:hover {
-    color: #000; }
-
 body.project nav.sticky li.nava {
   box-shadow: inset 0 0px rgba(255, 255, 255, 0), 0 0px rgba(255, 255, 255, 0); }
   body.project nav.sticky li.nava:hover, body.project nav.sticky li.nava.hover {
@@ -2420,10 +2415,9 @@ body.project nav.sticky li.nava {
     color: #d12b52; }
 
 body.project nav.sticky li a {
-  color: rgba(0, 0, 0, 0.6); }
-
-body.project nav.sticky li:hover {
-  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.6); }
+  color: rgba(0, 0, 0, 0.4); }
+  body.project nav.sticky li a:hover {
+    color: rgba(0, 0, 0, 0.65); }
 
 body.project nav.sticky li.active {
   box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
@@ -2461,13 +2455,13 @@ body.project nav.dark a {
 body.project nav.dark.sticky li.nava {
   box-shadow: inset 0 0px rgba(255, 255, 255, 0), 0 0px rgba(255, 255, 255, 0); }
   body.project nav.dark.sticky li.nava:hover, body.project nav.dark.sticky li.nava.hover {
-    box-shadow: inset 0 -3px #d12b52, 0 1px #d12b52; }
+    box-shadow: inset 0 -4px #d12b52, 0 1px #d12b52; }
 
-body.project nav.dark.sticky li a:hover {
-  color: #000; }
+body.project nav.dark.sticky li.navb a:hover, body.project nav.dark.sticky li.navc a:hover {
+  color: rgba(0, 0, 0, 0.6); }
 
-body.project nav.dark.sticky li:hover {
-  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.6); }
+body.project nav.dark.sticky li.navb:hover, body.project nav.dark.sticky li.navc:hover {
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5), 0 1px rgba(0, 0, 0, 0.5); }
 
 body.project .arrow {
   -webkit-animation-duration: 0.3s;
@@ -3853,7 +3847,8 @@ section.contact {
     section.contact .col a {
       padding-top: 24px;
       padding-bottom: 24px;
-      padding-right: 10px; }
+      padding-right: 10px;
+      box-shadow: inset 0 0px #000, 0 0px #000; }
       section.contact .col a span {
         display: inline-block; }
       section.contact .col a img, section.contact .col a span, section.contact .col a h5 {
@@ -3862,7 +3857,7 @@ section.contact {
         transition-delay: 0s; }
       section.contact .col a:hover {
         color: #000;
-        box-shadow: 0 3px #000; }
+        box-shadow: inset 0 -3px #000, 0 1px #000; }
         section.contact .col a:hover img, section.contact .col a:hover span, section.contact .col a:hover h5 {
           -webkit-transform: translate(0, -2px);
           transform: translate(0, -2px);

@@ -21,11 +21,7 @@ jQuery(function() {
 	var arrow =$('#arrow');
 	var navToggle = true;
 	var loadDelay = 1200;
-	var introStart = 100;
-
-	$('#push').addClass('reveal');
-	$('#lockscroll').addClass('hide');
-	$('.overlay').addClass('hide');
+	var introStart = 1000;
 
 
 // Intro sequence
@@ -241,13 +237,13 @@ jQuery(function() {
 	});
 
 // autoscroll to top
-	// var callbackScroll = { 
-	// 	callbackAfter: function () {
-	// 		navToggle = true;
-	// 		return navToggle;
-	// 	}
-	// };
-	// smoothScroll.animateScroll(null, '#home', callbackScroll);
+	var callbackScroll = { 
+		callbackAfter: function () {
+			navToggle = true;
+			return navToggle;
+		}
+	};
+	smoothScroll.animateScroll(null, '#home', callbackScroll);
 
 // page links & transitions
 	$('section.work').on('mouseup', '#navlink', function(event) {

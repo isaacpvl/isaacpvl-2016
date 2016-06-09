@@ -257,17 +257,17 @@
 	nav.sticky {
 		z-index: 95;
 		height: 60px;
-		@include innershadow(60px, $wht-9);
+		@include innershadow(60px, rgba($wht, .925));
 		a {
 			height: 60px;
 			padding-top: 28px;
-			color: $blk-5;
+			color: $blk-4;
 			&:hover {
-				color: $blk;
+				color: $blk-65;
 			}
 		}
 		ul {
-			@include dropshadow(1px, $blk-1);
+			@include dropshadow(1px, $blk-15);
 		}
 		li {
 			&:hover {
@@ -759,12 +759,6 @@
 			}
 		}
 		nav.sticky {
-			a {
-				color: $blk-6;
-				&:hover {
-					color: $blk;
-				}
-			}
 			li.nava {
 				@include twowayshadow(0px, 0px, $wht-0);
 				&:hover, &.hover {
@@ -779,10 +773,10 @@
 			}
 			li {
 				a {
-					color: $blk-6;
-				}
-				&:hover {
-					@include twowayshadow(-3px, 1px, $blk-6);
+					color: $blk-4;
+					&:hover {
+						color: $blk-65;
+					}
 				}
 			}
 			li.active {
@@ -836,20 +830,19 @@
 			li.nava {
 				@include twowayshadow(0px, 0px, $wht-0);
 				&:hover, &.hover {
-					@include twowayshadow(-3px, 1px, $red);
+					@include twowayshadow(-4px, 1px, $red);
 				}
 			}
-			li {
+			li.navb, li.navc {
 				a {
 					&:hover {
-						color: $blk;
+						color: $blk-6;
 					}
 				}
 				&:hover {
-					@include twowayshadow(-3px, 1px, $blk-6);
+					@include twowayshadow(-3px, 1px, $blk-5);
 				}
 			}
-
 		}
 		.arrow {
 			@include animatereset(.3s, .65s);

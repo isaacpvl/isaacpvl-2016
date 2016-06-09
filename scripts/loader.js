@@ -1,5 +1,5 @@
 $(window).load(function() {
-	var introStart = 100;
+	var introStart = 1000;
 
 	setTimeout(function() {
 		$('#loader').addClass('out');
