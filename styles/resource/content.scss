@@ -1,0 +1,305 @@
+
+
+// Content styles
+// ------------------------------------------------------------
+
+// headings
+	.head {
+		position: relative;
+		width: 100%;
+		@include leader(16);
+		@include trailer(7.5);
+		text-align: center;
+		@include trans(0.5s);
+		h5 {
+			display: inline-block;
+			color: $blk-55;
+			&::after {
+				content:'';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				width: 45px;
+				height: 5px;
+				margin-left: -23px;
+				background: $blk-55;
+			}
+		}
+	}
+	.itemhead {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		@include leader(13);
+		@include trailer(5);
+		h2, h3 {
+			position: relative;
+			@extend .caps-d;
+			&::after {
+				content:'';
+				position: absolute;
+				left: 50%;
+				background: $blk;
+			}
+		}
+		h2 {
+			@include padding-leader(4);
+			@include padding-trailer(4);
+			&::after {
+				bottom: 16%;
+				height: 7px;
+				width: 72px;
+				margin-left: -36px;
+			}
+		}
+		h3 {
+			@include padding-leader(4);
+			@include padding-trailer(2);
+			&::after {
+				bottom: 7.5%;
+				height: 5px;
+				width: 54px;
+				margin-left: -27px;
+			}
+		}
+		br {
+			display: none;
+		}
+	}
+	.itemhead.short {
+		@include leader(0);
+		@include padding-leader(6);
+	}
+	h5.lead {
+		position: relative;
+		@include trailer(2.5);
+		overflow: hidden;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 11px;
+			width: 100%;
+			height: 1px;
+			margin-left: 24px;
+			background: $blk;
+		}
+	}
+	p.lead {
+		@include padding-leader(1);
+		@extend .large;
+		font-style: italic;
+	}
+
+// content
+	.detail, .overview, .point {
+		position: relative;
+		z-index: 2;
+		width: 65%;
+		max-width: 780px;
+		margin: auto;
+		text-align: left;
+		p {
+			@include padding-trailer(2.5);
+			&:last-of-type {
+				@include padding-trailer(0);
+			}
+		}
+	}
+	.detail {
+		@include padding-leader(6);
+		@include padding-trailer(6);
+		text-align: center;
+		.button {
+			@include leader(6);
+			min-width: 35%;
+		}
+	}
+	.detail.two-col {
+		p {
+			display: inline-block;
+			vertical-align: top;
+			width: 47.5%;
+			&:last-of-type {
+				margin-left: 5%;
+			}
+		}
+	}
+
+	.overview {
+		@include trailer(9);
+		text-align: center;
+		.detail {
+			width: 100%;
+			@include padding-leader(6);
+			@include padding-trailer(4);
+		}
+		p.lead {
+			padding-right: 7.5%;
+			text-align: center;
+		}
+	}
+	.point {
+		@include padding-leader(8);
+		@include padding-trailer(5);
+		h1, h2 {
+			@include padding-leader(2);
+			@include padding-trailer(4);
+			white-space: nowrap;
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (min-width: 1201px) {
+		.overview, .detail.two-col {
+			width: 100%;
+			max-width: 1280px;
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		.detail, .overview, .point {
+			width: 80%;
+			max-width: 780px;
+		}
+		.detail.two-col {
+			p {
+				display: block;
+				width: 100%;
+				&:last-of-type {
+					margin-left: 0;
+				}
+			}
+		}
+		.overview {
+			.detail {
+				@include padding-leader(2);
+				p {
+					@include padding-leader(2);
+					@include padding-trailer(1);
+				}
+			}
+			p.lead {
+				padding-right: 0;
+				text-align: left;
+			}
+		}
+		.point {
+			h1, h2 {
+				width: 100%;
+				@include padding-trailer(2);
+				white-space: normal;
+			}
+			p {
+				@include padding-leader(2);
+				@include padding-trailer(1);
+			}
+			br {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		.head {
+			@include leader(12);
+			@include trailer(6);
+		}
+		.detail, .overview, .point {
+			width: 100%;
+			max-width: 680px;
+		}
+	}
+	@media screen and (max-width: 640px) {
+		.head {
+			@include leader(8);
+			@include trailer(3);
+			h5 {
+				&::after {
+					bottom: -18px;
+					width: 36px;
+					height: 4px;
+					margin-left: -18px;
+				}
+			}
+		}
+		.itemhead {
+			width: 100%;
+			margin: auto;
+			@include leader(7.5);
+			@include trailer(3);
+			h2 {
+				@include padding-leader(2);
+				@include padding-trailer(2.25);
+				@include lineh(2.5);
+				font-size: 24px;
+				&::after {
+					bottom: 10%;
+					height: 5px;
+					width: 42px;
+					margin-left: -21px;
+					background: $blk;
+				}
+			}
+			h3 {
+				@include padding-leader(2);
+				@include padding-trailer(1.75);
+				@include lineh(2);
+				&::after {
+					bottom: 6%;
+					height: 4px;
+					width: 30px;
+					margin-left: -15px;
+				}
+			}
+			br {
+				display: block;
+			}
+		}
+		h5.lead {
+			@include trailer(1);
+			&::after {
+				bottom: 7px;
+				margin-left: 12px;
+			}
+		}
+		p.lead {
+			@include leader(0.75);
+		}
+		.detail, .overview, .point {
+			max-width: 420px;
+		}
+		.detail {
+			@include padding-leader(2);
+			@include padding-trailer(2);
+			p {
+				@include padding-trailer(1);
+			}
+			.button {
+				@include leader(3.5);
+			}
+		}
+		.overview {
+			@include trailer(4);
+			.detail {
+				@include padding-trailer(1);
+				p {
+					@include padding-leader(2);
+					@include padding-trailer(0);
+				}
+			}
+		}
+		.point {
+			@include padding-leader(6);
+			@include padding-trailer(2);
+			h1, h2 {
+				@include padding-leader(1);
+				@include padding-trailer(1);
+				@include lineh(3.5);
+			}
+			p {
+				@include padding-leader(1);
+				@include padding-trailer(0.5);
+			}
+		}
+	}

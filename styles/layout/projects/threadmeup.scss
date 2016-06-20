@@ -30,11 +30,13 @@
 // next
 	body.project {
 		section.next.threadmeup {
-			img {
-				width: 384px;
-				height: 96px;
-				@include leader(5.5);
-				margin-left: 2.5%;
+			@media screen and (min-width: 641px) {
+				img {
+					width: 384px;
+					height: 96px;
+					@include leader(5.5);
+					margin-left: 2.5%;
+				}
 			}
 			&:hover, &.active {
 				.peek {

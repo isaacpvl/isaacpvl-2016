@@ -21,12 +21,12 @@ block header
 					h1 More projects I've<br> done from the past.
 		.splash
 			.splashfade
-				img(src="/images/home/splashfadeblu.png")
+				img(src="/_img/home/splashfadeblu.png")
 			.vid
-				video(preload="auto", autoplay="true", loop="true", muted="muted", poster="/images/home/wallposter.jpg")
-					source(src="/images/home/wall.mp4", type="video/mp4")
-					source(src="/images/home/wall.webm", type="video/webm")
-					source(src="/images/home/wall-iosp.mp4", type="video/mp4")
+				video(preload="auto", autoplay="true", loop="true", muted="muted", poster="/_img/home/wallposter.jpg")
+					source(src="/_img/home/wall.mp4", type="video/mp4")
+					source(src="/_img/home/wall.webm", type="video/webm")
+					source(src="/_img/home/wall-iosp.mp4", type="video/mp4")
 		.fade
 		.slide
 	.push#push
@@ -37,22 +37,22 @@ block work
 			.arrow#work
 		.head
 			h5 Basically...
-		.wrap
-			.overview
-				.detail
-					p This is a separate place for a bunch of random older projects from over 2 years ago that I keep around because why not.
-		.visual.gap
+		.overview
+			.detail
+				p This is a separate place for a bunch of random older projects from over 2 years ago that I keep around because why not.
 		include ../home/projects/socialcrunch
 		include ../home/projects/lifeis
 		include ../home/projects/overdog
 		include ../home/projects/gennutrition
 		include ../home/projects/2old2play
 		include ../home/projects/toggle
+		.footlink
+			p You can also check out what I've <a href="https://dribbble.com/isaacpvl", target="_blank">put up on dribbble</a>
 
 block next
-	section.next.socialcrunch#navlink(data-pathname="socialcrunch")
+	section.next.hide.socialcrunch#navlink(data-pathname="socialcrunch")
 		.head
 			h5 Next Project
 		.peek#next
-			img(src="/images/socialcrunch/logo.png")
+			img(src="/_img/socialcrunch/logo.png")
 		.peekbg

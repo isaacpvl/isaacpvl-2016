@@ -8,97 +8,27 @@
 		@include padding-trailer(18);
 		text-align: center;
 		background: $wht;
-		.head {
-			@include leader(13);
-			@include trailer(6);
-		}
 		.project {
 			position: relative;
 			z-index: 1;
 			display: inline-block;
 			width: 100%;
 			margin: auto;
-			@include padding-leader(5);
+			@include padding-leader(4);
 			@include padding-trailer(9);
-			@include padding-x(5%);
 			overflow: hidden;
 			&:first-of-type {
 				@include leader(-27);
 			}
-			.pwrap {
-				position: relative;
-				max-width: 1282px;
-				margin: auto;
-			}
-			.shield {
-				position: absolute;
-				left: -7.5%;
-				right: -7.5%;
-				z-index: 3;
-				display: none;
-				@include padding-trailer(2);
-				opacity: 0;
-				img {
-					width: 100%;
-					height: auto;
-					opacity: 0;
-					pointer-events: none;
-				}
-			}
-			.preview {
-				position: relative;
-				z-index: 2;
-				width: 62.5%;
-				max-width: 782px;
-				height: 100%;
-				.left {
-					left: 0;
-				}
-				.right {
-					right: 0;
-				}
-				.browser {
-					img {
-						max-width: 780px;
-					}
-				}
-				.browser.cond {
-					width: 92.5%;
-					max-width: 722px;
-				}
-				.shots {
-					position: relative;
-					width: 100%;
-					img {
-						position: relative;
-						display: inline-block;
-						float: left;
-						width: 50%;
-						max-width: 400px;
-					}
-				}
-				img.shot {
-					width: 100%;
-					max-width: 780px;
-				}
-				img.frame {
-					width: 100%;
-					@include border(1px, $drk-l);
-				}
-				img.cover {
-					width: 100%;
-					max-width: 780px;
-					display: none;
-				}
-			}
-			.preview.free {
-				max-width: 780px;
+			&:nth-of-type(4) {
+				@include trailer(0);
 			}
 			.info {
 				width: 34%;
 				@include leader(5.5);
 				text-align: left;
 				h2 {
+					@include lineh(5.5);
 					margin-left: -2px;
 					@extend .caps-d;
 					white-space: nowrap;
@@ -107,39 +37,34 @@
 					@include leader(1);
 					@include trailer(3.5);
 				}
+				h2.short {
+					@include lineh(4.5);
+					@include trailer(2);
+				}
 				.role {
 					position: relative;
 					width: 105%;
-					@include leader(2);
+					@include leader(1.5);
+					padding-left: 57px;
+					@include lineh(2.5);
+					font-size: 20px;
+					white-space: nowrap;
+					i {
+						font-size: 16px;
+						letter-spacing: -0.02em;
+						opacity: 0.6;
+					}
 					h6 {
 						position: absolute;
 						top: 0;
 						left: 0;
+						margin-right: 4px;
 						@include lineh(2.5);
-						@extend .caps;
-					}
-					div {
-						margin-left: 57px;
-					}
-					span {
-						@include lineh(2.5);
-						font-size: 20px;
-						white-space: nowrap;
-						em {
-							font-size: 16px;
-							letter-spacing: -0.02em;
-							// margin-right: 4px;
-							opacity: 0.6;
-						}
-					}
-				}
-				.role.weird {
-					div {
-						margin-left: 124px;
+						@extend .caps-l;
 					}
 				}
 				.button {
-					min-width: 60%;
+					width: 60%;
 				}
 				.button#livelink {
 					display: none;
@@ -148,7 +73,7 @@
 			.info.more {
 				@include leader(4.5);
 				h2 {
-					@include trailer(2.5);
+					@include trailer(2);
 					font-family: $serif;
 					letter-spacing: -0.01em;
 					text-transform: none;
@@ -160,7 +85,7 @@
 					@include leader(-5);
 					@include lineh(2.75);
 					@include padding-x(12px);
-					@extend .caps;
+					@extend .caps-l;
 					font-size: 14px;
 					font-weight: 700;
 					letter-spacing: 0.02em;
@@ -178,7 +103,67 @@
 				@include leader(6.5);
 			}
 		}
-
+		.pwrap {
+			position: relative;
+			max-width: 1282px;
+			margin: auto;
+		}
+		.preview {
+			position: relative;
+			z-index: 2;
+			width: 62.5%;
+			max-width: 782px;
+			height: 100%;
+			cursor: pointer;
+			img {
+				max-width: 780px;
+			}
+			.browser.cond {
+				width: 92.5%;
+				max-width: 722px;
+			}
+			.multiphone {
+				width: 97.5%;
+			}
+			.phone {
+				img {
+					@include border(1px, $drk-l);
+				}
+			}
+			.shot {
+				position: relative;
+				@include border(1px, $drk-l);
+				img {
+					width: 100%;
+				}
+			}
+			.shots {
+				position: relative;
+				width: 100%;
+				img {
+					position: relative;
+					display: inline-block;
+					float: left;
+					width: 50%;
+					height: auto;
+					max-width: 400px;
+				}
+			}
+			img.cover {
+				width: 100%;
+				height: auto;
+				display: none;
+			}
+			.left {
+				left: 0;
+			}
+			.right {
+				right: 0;
+			}
+		}
+		.preview.free {
+			max-width: 780px;
+		}
 		.ileft {
 			float: left;
 		}
@@ -198,31 +183,18 @@
 			}
 		}
 	}
-	body.home, body.past {
-		section.work {
-			overflow: visible;
-			@include padding-x(0%);
-		}
-	}
 
 
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (min-width: 1601px) {
-		section.work {
-			.project {
-				@include padding-x(9%);
-			}
-		}
-	}
 	@media screen and (max-width: 1320px) {
 		section.work {
 			.project {
 				.info {
 					@include leader(3.5);
 					.button {
-						min-width: 65%;
+						width: 65%;
 					}
 				}
 				.info.more {
@@ -233,90 +205,59 @@
 				.info {
 					@include leader(4);
 				}
-			}		
+			}
 		}
 	}
 	@media screen and (max-width: 1200px) {
 		section.work {
 			text-align: center;
-			.project.offset {
-				@include trailer(0);
-				.info {
-					@include leader(6);
-				}
-			}
 			.project {
 				width: 100%;
 				min-height: 480px;
-				@include padding-leader(4);
-				@include padding-trailer(9);
 				@include padding-x(0%);
 				&:first-of-type {
 					@include leader(-22);
 				}
-				.pwrap {
-					max-width: 782px;
-				}
-				.preview {
-					width: 100%;
-					margin: auto;
-					.shots {
-						position: absolute;
-						img {
-							opacity: 1;
-						}
-					}
-					img.cover {
-						display: block;
-						width: 100%;
-						height: auto;
-						opacity: 0;
-					}
-				}
-				.preview.free {
-					float: none;
-					width: 100%;
-					@include trailer(4.5);
-				}
 				.info {
 					display: block;
 					width: 100%;
-					min-width: 290px;
+					min-width: 300px;
 					max-width: 480px;
-					@include margin-x(auto);
+					margin: auto;
 					@include leader(5.5);
 					text-align: center;
 					p {
 						@include leader(2);
 						@include trailer(4);
-						padding-left: 3%;
+						padding-left: 5%;
 					}
 					.role {
-						@include leader(1.5);
-						position: relative;
 						width: auto;
+						padding-left: 0;
 						h6 {
 							position: relative;
 							display: inline-block;
 						}
-						div {
-							display: inline-block;
-							margin-left: 6px;
-						}
 					}
 					.button {
-						min-width: 70%;
+						width: 70%;
 					}
 				}
 				.info.more {
 					@include leader(5.5);
 					h2 {
 						@include leader(-0.5);
-						@include trailer(1.5);
+						@include trailer(2);
 					}
 					h6 {
 						display: none;
 					}
+				}
+			}
+			.project.offset {
+				@include trailer(0);
+				.info {
+					@include leader(6);
 				}
 			}
 			.ileft, .iright, .pleft, .pright {
@@ -324,6 +265,32 @@
 				.browser.cond {
 					@include margin-x(0%);
 				}
+			}
+			.pwrap {
+				max-width: 780px;
+			}
+			.preview {
+				left: -0.5%;
+				width: 101%;
+				margin: auto;
+				.multiphone {
+					width: 100%;
+				}
+				.shots {
+					position: absolute;
+					left: -0.5%;
+					width: 101%;
+				}
+				img.cover {
+					display: block;
+					width: 101%;
+					height: auto;
+					opacity: 0;
+				}
+			}
+			.preview.free {
+				float: none;
+				width: 100%;
 			}
 		}
 	}
@@ -333,24 +300,9 @@
 			&::after {
 				display: none;
 			}
-			.head {
-				@include leader(11);
-				@include trailer(5);
-			}
 			.project {
-				@include padding-leader(4);
-				@include padding-trailer(8);
-				@include padding-x(5%);
 				&:first-of-type {
 					@include leader(0);
-				}
-				.preview.free {
-					float: none;
-					width: 100%;
-					@include trailer(2.5);
-				}
-				.shield {
-					// display: block;
 				}
 			}
 		}
@@ -358,73 +310,134 @@
 	@media screen and (max-width: 640px) {
 		section.work {
 			@include padding-trailer(10);
-			.head {
-				@include leader(8);
-				@include trailer(2);
-			}
-			.project.offset {
-				.info {
-					@include leader(3);
-				}
-			}
 			.project {
-				@include padding-leader(4);
-				@include padding-trailer(2);
-				@include padding-x(2%);
-				.pwrap {
-					max-width: 542px;
+				@include padding-leader(2.5);
+				@include padding-trailer(3.5);
+				&:nth-of-type(4) {
+					@include padding-trailer(2);
+				}
+				.browser {
+					right: auto;
+					left: 12.5%;
+				}
+				.multibrowser {
+					.browser.stack {
+						left: 12.5%;
+					}
+				}
+				.shot {
+					right: auto;
+					left: 12.5%;
+					width: 92.5%;
 				}
 				.info {
-					width: 80%;
-					min-width: 0;
-					max-width: 330px;
-					@include leader(2.5);
+					width: 75%;
+					min-width: 250px;
+					max-width: 300px;
+					@include leader(2.75);
+					h2, .button {
+						margin-left: -10%;
+					}
 					h2 {
 						@include leader(0);
 						@include trailer(0);
+						@include lineh(4);
 					}
 					p {
-						@include leader(1);
-						@include trailer(0);
+						@include leader(0.5);
+						@include trailer(1);
+						padding-left: 0;
+					}
+					h2.short {
+						@include lineh(2.75);
+						@include trailer(1);
 					}
 					.role {
-						margin: auto;
-						div {
-							margin-left: 4px;
-						}
-						span {
-							font-size: 14px;
-							em {
-								font-size: 12px;
-							}
+						@include leader(0.25);
+						margin-left: -10%;
+						font-size: 14px;
+						i {
+							font-size: 12px;
 						}
 					}
 					.button {
-						min-width: 70%;
-						@include leader(2);
-						@include trailer(3);
+						width: 90%;
+						max-width: 192px;
+						@include leader(1.5);
+						@include trailer(1);
 					}
 				}
 				.info.more {
-					@include leader(2.5);
+					@include leader(2.75);
 					h2 {
-						@include leader(-0.5);
-						@include trailer(1);
+						@include leader(0);
+						@include trailer(1.5);
 						@include lineh(3);
 					}
+				}
+			}
+			.project.offset {
+				.browser {
+					right: auto;
+					left: 12.5%;
+				}
+				.phone {
+					top: auto;
+					bottom: 0;
+					right: -2.5%;
+					width: 30%;
+					@include trailer(-2.5);
+				}
+				.info {
+					@include leader(3.5);
+				}
+			}
+			.pwrap {
+				max-width: 542px;
+			}
+			.preview {
+				width: 120%;
+				left: -10%;
+				.multiphone {
+					left: 12.5%;
+					width: 88%;
+				}
+				.shots {
+					left: 5%;
+					width: 110%;
+					img {
+						width: 50%;
+						height: auto;
+						max-width: none;
+					}
+				}
+				img.cover {
+					width: 110%;
 				}
 			}
 		}
 	}
 	@media screen and (max-width: 420px) {
 		section.work {
-			@include padding-trailer(10);
+			@include padding-trailer(7.5);
 			.project {
-				@include padding-trailer(-1);
+				.info {
+					margin-left: 15%;
+				}
 			}
-			.project.triphone {
-				@include padding-leader(4);
-				@include padding-trailer(2);
+			.project.offset {
+				.phone {
+					right: 0;
+					width: 31.5%;
+					@include trailer(-2.5);
+				}
+			}
+			.preview {
+				.multibrowser {
+					.browser.stack {
+						left: 17.5%;
+					}
+				}
 			}
 		}
 	}

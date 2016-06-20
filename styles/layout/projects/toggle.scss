@@ -22,9 +22,13 @@
 // next
 	body.project {
 		section.next.toggle {
+			@media screen and (min-width: 641px) {
+				img {
+					width: 480px;
+					height: 160px;
+				}
+			}
 			img {
-				width: 480px;
-				height: 160px;
 				@include leader(3);
 			}
 			&:hover, &.active {

@@ -10,7 +10,7 @@
 			display: inline-block;
 			width: 740px;
 			height: 84%;
-			@include animatereset(.8s, .8s);
+			@include animatereset(0.8s, 0.8s);
 			@include fadeinup;
 			> span {
 				position: absolute;
@@ -22,40 +22,40 @@
 				position: relative;
 				@extend .caps-d;
 				@include fadeinup;
-				@include trans(.3s);
+				@include trans(0.3s);
 				&:nth-of-type(1) {
 					height: 88px;
 					@include lineh(7.5);
 					font-size: 72px;
-					@include animatereset(.8s, 1s);
+					@include animatereset(0.8s, 1s);
 				}
 				&:nth-of-type(2) {
 					height: 92px;
 					@include lineh(7.5);
 					font-size: 72px;
-					@include animatereset(.65s, 1.15s);
+					@include animatereset(0.65s, 1.15s);
 				}
 				&:nth-of-type(3) {
 					height: 96px;
 					@include lineh(8.5);
 					font-size: 84px;
-					@include animatereset(.5s, 1.3s);
+					@include animatereset(0.5s, 1.3s);
 				}
 			}
 			#comma, #super, #sweet, #unique, #design {
 				position: absolute;
-				@include trans(.5s);
+				@include trans(0.5s);
 				span {
-					@include trans(.2s);
+					@include trans(0.2s);
 				}
 			}
 			#sweet {
-				left: 248px;
+				left: 256px;
 			}
 			#comma {
-				left: 486px;
+				left: 494px;
 				opacity: 1;
-				@include trans(.4s, .2s);
+				@include trans(0.4s, 0.2s);
 			}
 		}
 		.tagline.trigger {
@@ -65,28 +65,28 @@
 		}
 		.tagline.face {
 			>span {
-				@include tfree (1.04, 0deg, -6px, -3px);
-				@include trans(.4s);
+				@include tfree(1.04, 0deg, -6px, -3px);
+				@include trans(0.4s);
 			}
 			#comma {
 				opacity: 0;
 				@include tfree(1, 0deg, 60px, -18px);
-				@include trans(.2s);
+				@include trans(0.2s);
 			}
 			#super {
-				@include tfree(.65, -30deg, 60px, -240px);
+				@include tfree(0.65, -30deg, 60px, -240px);
 			}
 			#sweet {
-				@include tfree(.65, -7.5deg, 140px, -344px);
+				@include tfree(0.65, -7.5deg, 140px, -344px);
 			}
 			#unique {
-				@include tfree(.765, -14deg, -22px, -150px);
+				@include tfree(0.765, -14deg, -22px, -150px);
 				span {
 					margin: 0 5px;
 				}
 			}
 			#design {
-				@include tfree(.7, -15deg, 44px, 60px);
+				@include tfree(0.7, -15deg, 44px, 60px);
 				.char9 {
 					margin-left: -24px;
 				}
@@ -94,26 +94,26 @@
 		}
 		.tagline.face.wink {
 			>span {
-				@include tfree (1, 15deg, -6px, -21px);
+				@include tfree(1, 15deg, -6px, -21px);
 			}
 			#super {
-				@include tfree(.55, -10deg, 0px, -318px);
-				@include trans(.25s);
+				@include tfree(0.55, -10deg, 0px, -318px);
+				@include trans(0.25s);
 				span {
 					margin: 0 3px;
-					@include trans(.25s);
+					@include trans(0.25s);
 					} }
 			#sweet {
-				@include tfree(.7, 7.5deg, 66px, -130px);
-				@include trans(.25s);
+				@include tfree(0.7, 7.5deg, 66px, -130px);
+				@include trans(0.25s);
 			}
 			#unique {
-				@include tfree(.75, 0deg, -100px, -84px);
-				@include trans(.25s);
+				@include tfree(0.75, 0deg, -100px, -84px);
+				@include trans(0.25s);
 			}
 			#design {
-				@include tfree(.7, 0deg, -72px, 120px);
-				@include trans(.25s);
+				@include tfree(0.7, 0deg, -72px, 120px);
+				@include trans(0.25s);
 			}
 		}
 		.speech {
@@ -127,14 +127,14 @@
 			h4 {
 				position: relative;
 				z-index: 2;
-				@include leader(2.75);
-				@include trailer(1);
+				@include leader(3);
+				@include trailer(1.25);
 				padding-right: 30px;
-				@extend .caps;
+				@extend .caps-l;
 				font-size: 22px;
 				opacity: 0;
 				@include tmove(0, 24px);
-				@include trans(.4s, .2s);
+				@include trans(0.4s, 0.2s);
 			}
 			h1 {
 				position: relative;
@@ -145,15 +145,15 @@
 				font-weight: 400;
 				opacity: 0;
 				@include tmove(-100px, 0);
-				@include trans(.4s, .2s);
+				@include trans(0.4s, 0.2s);
 			}
 			span {
 				position: absolute;
 				top: 40%;
 				left: -68px;
 				opacity: 0;
-				@include tfree(.7, 4deg, -200px, 160px);
-				@include trans(.5s, .2s);
+				@include tfree(0.7, 4deg, -200px, 160px);
+				@include trans(0.5s, 0.2s);
 				.bubble {
 					position: relative;
 					display: inline-block;
@@ -169,7 +169,7 @@
 						height: 60px;
 						pointer-events: none;
 						@include tfree(1, -50deg, 120px, -36px);
-						@include trans(.5s, .15s);
+						@include trans(0.5s, 0.15s);
 					}
 				}
 			}
@@ -177,22 +177,22 @@
 		.speech.face {
 			h4 {
 				@include treset;
-				@include trans(.4s, .3s);
+				@include trans(0.4s, 0.3s);
 			}
 			h1 {
 				@include treset;
-				@include trans(.6s, .3s);
+				@include trans(0.6s, 0.3s);
 			}
 			span {
 				opacity: 1;
 				@include tfree(1, 8deg, 0, 0);
-				@include trans(.5s, .2s);
+				@include trans(0.5s, 0.2s);
 				.bubble {
-					@include animate(.6s, .2s);
+					@include animate(0.6s, 0.2s);
 					@include bouncein;
 					img {
 						@include treset;
-						@include trans(.3s, .4s);
+						@include trans(0.3s, 0.4s);
 					}
 				}
 			}
@@ -207,9 +207,9 @@
 		header {
 			.tagline:not(.face).trigger {
 				>span {
-					@include trans(.3s);
+					@include trans(0.3s);
 					&:hover {
-						@include trans(.2s);
+						@include trans(0.2s);
 						h1:nth-of-type(1) {
 							@include tmove(0, -24px);
 						}
@@ -221,11 +221,11 @@
 						}
 					}
 					&:active {
-						@include tmovescale(.925, -24px, 18px);
-						@include trans(.1s);
+						@include tmovescale(0.925, -24px, 18px);
+						@include trans(0.1s);
 						h1:nth-of-type(1), h1:nth-of-type(2), h1:nth-of-type(3) {
 							@include treset;
-							@include trans(.1s);
+							@include trans(0.1s);
 						}
 					}
 				}
@@ -234,15 +234,15 @@
 		body.fold {
 			.tagline:not(.face) {
 				>span, >span:hover {
-					@include trans(.2s);
+					@include trans(0.2s);
 					h1:nth-of-type(1) {
 						@include tmove(-24px, -42px);
 					}
 					h1:nth-of-type(2) {
-						@include tmovescale(.96, -42px, -33px);
+						@include tmovescale(0.96, -42px, -33px);
 					}
 					h1:nth-of-type(3) {
-						@include tmovescale(.92, -56px, -24px);
+						@include tmovescale(0.92, -56px, -24px);
 					}
 				}
 			}
@@ -280,20 +280,11 @@
 				}
 			}
 		}
-		body.home {
-			header {
-				.wrap {
-					@include padding-x(5%);
-					@include torigin(50% 50%);
-				}
-			}
-		}
 	}
 	@media screen and (max-width: 640px) {
 		header {
-			height: 100%;
-			max-height: 780px;
 			.tagline {
+				// height: 89%;
 				h1 {
 					&:nth-of-type(1) {
 						height: 48px;
@@ -310,13 +301,6 @@
 						@include lineh(4.75);
 						font-size: 48px;
 					}
-				}
-			}
-		}
-		body.home {
-			header, .push {
-				.wrap {
-					@include torigin(70% 50%);
 				}
 			}
 		}
@@ -344,13 +328,6 @@
 				}
 			}
 		}
-		body.home {
-			header {
-				.wrap {
-					@include torigin(100% 50%);
-				}
-			}
-		}
 	}
 
 // face animation
@@ -358,12 +335,12 @@
 		header {
 			.tagline.face {
 				>span {
-					@include tfree (1, 0deg, 12px, 9px);
+					@include tfree(1, 0deg, 12px, 9px);
 				}
 			}
 			.tagline.face.wink {
 				>span {
-					@include tfree (.97, 15deg, 27px, -3px);
+					@include tfree(0.97, 15deg, 27px, -3px);
 				}
 			}
 		}
@@ -372,12 +349,12 @@
 		header {
 			.tagline.face {
 				>span {
-					@include tfree (.95, 0deg, 0, 12px);
+					@include tfree(0.95, 0deg, 0, 12px);
 				}
 			}
 			.tagline.face.wink {
 				>span {
-					@include tfree (.925, 15deg, 30px, 0px);
+					@include tfree(0.925, 15deg, 30px, 0px);
 				}
 			}
 		}
@@ -386,17 +363,17 @@
 		header {
 			.tagline.face {
 				>span {
-					@include tfree(.875, 0deg, 6px, 30px);
+					@include tfree(0.875, 0deg, 6px, 30px);
 				}
 			}
 			.tagline.face.wink {
 				>span {
-					@include tfree (.85, 15deg, 30px, 12px);
+					@include tfree(0.85, 15deg, 30px, 12px);
 				}
 			}
 			.speech.face {
 				span {
-					@include tfree(.95, 8deg, 0, -12px);
+					@include tfree(0.95, 8deg, 0, -12px);
 				}
 			}
 		}
@@ -405,12 +382,12 @@
 		header {
 			.tagline.face {
 				>span {
-					@include tfree(.85, 0deg, -6px, 24px);
+					@include tfree(0.85, 0deg, -6px, 24px);
 				}
 			}
 			.tagline.face.wink {
 				>span {
-					@include tfree (.825, 15deg, 21px, 3px);
+					@include tfree(0.825, 15deg, 21px, 3px);
 				}
 			}
 		}
@@ -443,7 +420,7 @@
 			}
 			.speech.face {
 				span {
-					@include tfree(.9, 8deg, 0, 0);
+					@include tfree(0.9, 8deg, 0, 0);
 				}
 			}
 		}
@@ -455,7 +432,7 @@
 			}
 			.speech.face {
 				span {
-					@include tfree(.8, 8deg, 0, 0);
+					@include tfree(0.8, 8deg, 0, 0);
 				}
 			}
 		}

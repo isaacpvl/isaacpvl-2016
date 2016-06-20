@@ -10,7 +10,7 @@
 		@include border(1px, $drk-l);
 		background: $drk-l;
 		overflow: hidden;
-		@include trans(.7s, 0s);
+		@include trans(0.5s);
 		img {
 			width: 100%;
 			height: auto;
@@ -25,6 +25,7 @@
 			border-radius: 3px 3px 0 0;
 			background: $wht;
 			@include innershadow(-1px, $drk-l);
+			@include trans(0.5s);
 			ul {
 				position: absolute;
 				top: 15px;
@@ -73,64 +74,107 @@
 			}
 		}
 	}
-	.browser.large {
-		border-radius: 6px 6px 4px 4px;
-		img {
-			border-radius: 0 0 3px 3px;
-		}
-		.top {
-			height: 50px;
-			border-radius: 5px 5px 0 0;
-			ul {
-				top: 19px;
-				left: 16px;
-				li {
-					width: 11px;
-					height: 11px;
-					margin-right: 7px;
-				}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (min-width: 1080px) {
+		.browser.large {
+			border-radius: 6px 6px 4px 4px;
+			img {
+				border-radius: 0 0 3px 3px;
 			}
-			span {
-				top: 8px;
-				bottom: 10px;
-				left: 90px;
-				right: 8px;
-				padding-left: 12px;
-				font-size: 14px;
-				font-weight: 500;
-				border-radius: 3px;
-				line-height: 32px;
+			.top {
+				height: 50px;
+				border-radius: 5px 5px 0 0;
+				ul {
+					top: 19px;
+					left: 16px;
+					li {
+						width: 11px;
+						height: 11px;
+						margin-right: 7px;
+					}
+				}
+				span {
+					top: 8px;
+					bottom: 10px;
+					left: 90px;
+					right: 8px;
+					padding-left: 12px;
+					font-size: 14px;
+					font-weight: 500;
+					border-radius: 3px;
+					line-height: 32px;
+				}
 			}
 		}
 	}
-	.browser.small {
-		border-radius: 3px 3px 2px 2px;
-		.top {
-			height: 28px;
-			border-radius: 2px 2px 0 0;
-			ul {
-				top: 11px;
-				left: 8px;
-				li {
-					width: 6px;
-					height: 6px;
-					margin-right: 3px;
+	@media screen and (max-width: 1080px) {
+		.browser.small {
+			border-radius: 3px 3px 2px 2px;
+			.top {
+				height: 28px;
+				border-radius: 2px 2px 0 0;
+				ul {
+					top: 11px;
+					left: 8px;
+					li {
+						width: 6px;
+						height: 6px;
+						margin-right: 3px;
+					}
+				}
+				span {
+					top: 5px;
+					bottom: 6px;
+					left: 42px;
+					right: 5px;
+					padding-left: 5px;
+					font-size: 9px;
+					font-weight: 500;
+					border-radius: 1px;
+					line-height: 18px;
 				}
 			}
-			span {
-				top: 5px;
-				bottom: 6px;
-				left: 42px;
-				right: 5px;
-				padding-left: 5px;
-				font-size: 9px;
-				font-weight: 500;
-				border-radius: 1px;
-				line-height: 18px;
+		}
+	}
+	@media screen and (max-width: 640px) {
+		.browser {
+			border-radius: 3px 3px 2px 2px;
+			overflow: hidden;
+			.top {
+				height: 28px;
+				border-radius: 2px 2px 0 0;
+				ul {
+					top: 11px;
+					left: 8px;
+					li {
+						width: 6px;
+						height: 6px;
+						margin-right: 3px;
+					}
+				}
+				span {
+					top: 5px;
+					bottom: 6px;
+					left: 42px;
+					right: 5px;
+					height: 17px;
+					padding-left: 5px;
+					font-size: 9px;
+					font-weight: 500;
+					border-radius: 1px;
+					line-height: 18px;
+				}
 			}
 		}
 	}
 
+
+// Multibrowser styles
+// ------------------------------------------------------------
 
 	.multibrowser {
 		position: relative;
@@ -151,208 +195,273 @@
 		}
 	}
 
-	@mixin faded-itemr {
-		z-index: 8;
-		opacity: 0;
-		@include tmove(-8%*0.825, 0%);
-		@include trans(0.3s);
-		@include ttimingcb(.4, .7, .4, .9);
-	}
-	@mixin first-itemr {
-		z-index: 6;
-		opacity: 1;
-		@include tmove(0%, 0%);
-	}
-	@mixin second-itemr {
-		z-index: 4;
-		opacity: 1;
-		@include tmove(11.5%*0.825, 0%);
-		img { opacity: 0.5; }
-	}
-	@mixin third-itemr {
-		z-index: 2;
-		opacity: 1;
-		@include tmove(22%*0.825, 0%);
-		img { opacity: 0.25; }
-	}
-	@mixin prep-itemr {
-		z-index: 2;
-		opacity: 0;
-		@include tmove(29%*0.825, 0%);
-		@include trans(0s);
-		img { opacity: 0; }
-	}
+	// cycle states
+		$gap: 0.825;
+		@mixin faded-itemr {
+			z-index: 8;
+			opacity: 0;
+			@include tmove(-8%*$gap, 0%);
+			@include trans(0.3s);
+			@include ttimingcb(0.4, 0.7, 0.4, 0.9);
+		}
+		@mixin first-itemr {
+			z-index: 6;
+			opacity: 1;
+			@include tmove(0%, 0%);
+		}
+		@mixin second-itemr {
+			z-index: 4;
+			opacity: 1;
+			@include tmove(11.5%*$gap, 0%);
+			img { opacity: 0.5; }
+		}
+		@mixin third-itemr {
+			z-index: 2;
+			opacity: 1;
+			@include tmove(22%*$gap, 0%);
+			img { opacity: 0.25; }
+		}
+		@mixin prep-itemr {
+			z-index: 2;
+			opacity: 0;
+			@include tmove(29%*$gap, 0%);
+			@include trans(0s);
+			img { opacity: 0; }
+		}
+		@mixin faded-iteml {
+			z-index: 8;
+			opacity: 0;
+			@include tmove(8%*$gap, 0%);
+			@include trans(0.3s);
+			@include ttimingcb(0.4, 0.7, 0.4, 0.9);
+		}
+		@mixin first-iteml {
+			z-index: 6;
+			opacity: 1;
+			@include tmove(0%, 0%);
+		}
+		@mixin second-iteml {
+			z-index: 4;
+			opacity: 1;
+			@include tmove(-11.5%*$gap, 0%);
+			img { opacity: 0.5; }
+		}
+		@mixin third-iteml {
+			z-index: 2;
+			opacity: 1;
+			@include tmove(-22%*$gap, 0%);
+			img { opacity: 0.25; }
+		}
+		@mixin prep-iteml {
+			z-index: 2;
+			opacity: 0;
+			@include tmove(-29%*$gap, 0%);
+			@include trans(0s);
+			img { opacity: 0; }
+		}
 
-	@mixin faded-iteml {
-		z-index: 8;
-		opacity: 0;
-		@include tmove(8%*0.825, 0%);
-		@include trans(0.3s);
-		@include ttimingcb(.4, .7, .4, .9);
-	}
-	@mixin first-iteml {
-		z-index: 6;
-		opacity: 1;
-		@include tmove(0%, 0%);
-	}
-	@mixin second-iteml {
-		z-index: 4;
-		opacity: 1;
-		@include tmove(-11.5%*0.825, 0%);
-		img { opacity: 0.5; }
-	}
-	@mixin third-iteml {
-		z-index: 2;
-		opacity: 1;
-		@include tmove(-22%*0.825, 0%);
-		img { opacity: 0.25; }
-	}
-	@mixin prep-iteml {
-		z-index: 2;
-		opacity: 0;
-		@include tmove(-29%*0.825, 0%);
-		@include trans(0s);
-		img { opacity: 0; }
-	}
-
-	.multibrowser.cycle {
-		.browser {
-			@include trans(1s);
-			@include ttimingcb(.1, .7, .3, 1);
-			background: $lgt-d;
-		}
-		&.stepa {
-			.stacka { @include first-itemr; }
-			.stackb { @include second-itemr; }
-			.stackc { @include third-itemr; }
-			.stackd { @include faded-itemr; }
-		}
-		&.prepb {
-			.stacka { z-index: 8; }
-			.stackb { z-index: 6; }
-			.stackc { z-index: 4; }
-			.stackd { @include prep-itemr; }
-		}
-		&.stepb {
-			.stacka { @include faded-itemr; }
-			.stackb { @include first-itemr; }
-			.stackc { @include second-itemr; }
-			.stackd { @include third-itemr; }
-		}
-		&.prepc {
-			.stacka { @include prep-itemr; }
-			.stackb { z-index: 8; }
-			.stackc { z-index: 6; }
-			.stackd { z-index: 4; }
-		}
-		&.stepc {
-			.stacka { @include third-itemr; }
-			.stackb { @include faded-itemr; }
-			.stackc { @include first-itemr; }
-			.stackd { @include second-itemr; }
-		}
-		&.prepd {
-			.stacka { z-index: 4; }
-			.stackb { @include prep-itemr; }
-			.stackc { z-index: 8; }
-			.stackd { z-index: 6; }
-		}
-		&.stepd {
-			.stacka { @include second-itemr; }
-			.stackb { @include third-itemr; }
-			.stackc { @include faded-itemr; }
-			.stackd { @include first-itemr; }
-		}
-		&.prepa {
-			.stacka { z-index: 6; }
-			.stackb { z-index: 4; }
-			.stackc { @include prep-itemr; }
-			.stackd { z-index: 8; }
-		}
-	}
-
-	.preview.pleft {
-		.multibrowser {
-			.browser.stack {
-				left: 5%;
-			}
-		}
+	// cycle sequence
 		.multibrowser.cycle {
-			&.stepa {
-				.stacka { @include first-iteml; }
-				.stackb { @include second-iteml; }
-				.stackc { @include third-iteml; }
-				.stackd { @include faded-iteml; }
-			}
-			&.prepb {
-				.stackd { @include prep-iteml; }
-			}
-			&.stepb {
-				.stacka { @include faded-iteml; }
-				.stackb { @include first-iteml; }
-				.stackc { @include second-iteml; }
-				.stackd { @include third-iteml; }
-			}
-			&.prepc {
-				.stacka { @include prep-iteml; }
-			}
-			&.stepc {
-				.stacka { @include third-iteml; }
-				.stackb { @include faded-iteml; }
-				.stackc { @include first-iteml; }
-				.stackd { @include second-iteml; }
-			}
-			&.prepd {
-				.stackb { @include prep-iteml; }
-			}
-			&.stepd {
-				.stacka { @include second-iteml; }
-				.stackb { @include third-iteml; }
-				.stackc { @include faded-iteml; }
-				.stackd { @include first-iteml; }
-			}
-			&.prepa {
-				.stackc { @include prep-iteml; }
+			.browser {
+				@include trans(1s);
+				@include ttimingcb(0.1, 0.7, 0.3, 1);
+				background: $lgt-d;
 			}
 		}
-	}
+		.preview.pleft {
+			.multibrowser {
+				.browser.stack {
+					left: 5%;
+				}
+			}
+			.multibrowser.cycle {
+				&.stepa {
+					.stacka { @include first-iteml; }
+					.stackb { @include second-iteml; }
+					.stackc { @include third-iteml; }
+					.stackd { @include faded-iteml; }
+				}
+				&.prepb {
+					.stackd { @include prep-iteml; }
+				}
+				&.stepb {
+					.stacka { @include faded-iteml; }
+					.stackb { @include first-iteml; }
+					.stackc { @include second-iteml; }
+					.stackd { @include third-iteml; }
+				}
+				&.prepc {
+					.stacka { @include prep-iteml; }
+				}
+				&.stepc {
+					.stacka { @include third-iteml; }
+					.stackb { @include faded-iteml; }
+					.stackc { @include first-iteml; }
+					.stackd { @include second-iteml; }
+				}
+				&.prepd {
+					.stackb { @include prep-iteml; }
+				}
+				&.stepd {
+					.stacka { @include second-iteml; }
+					.stackb { @include third-iteml; }
+					.stackc { @include faded-iteml; }
+					.stackd { @include first-iteml; }
+				}
+				&.prepa {
+					.stackc { @include prep-iteml; }
+				}
+			}
+		}
+		.preview.pright {
+			.multibrowser.cycle {
+				&.stepa {
+					.stacka { @include first-itemr; }
+					.stackb { @include second-itemr; }
+					.stackc { @include third-itemr; }
+					.stackd { @include faded-itemr; }
+				}
+				&.prepb {
+					.stackd { @include prep-itemr; }
+				}
+				&.stepb {
+					.stacka { @include faded-itemr; }
+					.stackb { @include first-itemr; }
+					.stackc { @include second-itemr; }
+					.stackd { @include third-itemr; }
+				}
+				&.prepc {
+					.stacka { @include prep-itemr; }
+				}
+				&.stepc {
+					.stacka { @include third-itemr; }
+					.stackb { @include faded-itemr; }
+					.stackc { @include first-itemr; }
+					.stackd { @include second-itemr; }
+				}
+				&.prepd {
+					.stackb { @include prep-itemr; }
+				}
+				&.stepd {
+					.stacka { @include second-itemr; }
+					.stackb { @include third-itemr; }
+					.stackc { @include faded-itemr; }
+					.stackd { @include first-itemr; }
+				}
+				&.prepa {
+					.stackc { @include prep-itemr; }
+				}
+			}
+		}
 
+	// responsive cycle states
+		$gapb: 0.5;
+		@mixin faded-itemlb {
+			z-index: 8;
+			opacity: 1;
+			@include tmove(180%*$gapb, 0%);
+			@include trans(0.75s);
+			@include ttimingcb(0.4, 0.7, 0.4, 0.9);
+		}
+		@mixin first-itemlb {
+			z-index: 6;
+			opacity: 1;
+			@include tmove(0%, 0%);
+		}
+		@mixin second-itemlb {
+			z-index: 4;
+			opacity: 1;
+			@include tmove(-11.5%*$gapb, 0%);
+			img { opacity: 0.5; }
+		}
+		@mixin third-itemlb {
+			z-index: 2;
+			opacity: 1;
+			@include tmove(-22%*$gapb, 0%);
+			img { opacity: 0.25; }
+		}
+		@mixin prep-itemlb {
+			z-index: 2;
+			opacity: 0;
+			@include tmove(-29%*$gapb, 0%);
+			@include trans(0s);
+			img { opacity: 0; }
+		}
+		@mixin faded-itemrb {
+			z-index: 8;
+			opacity: 1;
+			@include tmove(-180%*$gapb, 0%);
+			@include trans(0.75s);
+			@include ttimingcb(0.4, 0.7, 0.4, 0.9);
+		}
+		@mixin first-itemrb {
+			z-index: 6;
+			opacity: 1;
+			@include tmove(0%, 0%);
+		}
+		@mixin second-itemrb {
+			z-index: 4;
+			opacity: 1;
+			@include tmove(11.5%*$gapb, 0%);
+			img { opacity: 0.5; }
+		}
+		@mixin third-itemrb {
+			z-index: 2;
+			opacity: 1;
+			@include tmove(22%*$gapb, 0%);
+			img { opacity: 0.25; }
+		}
+		@mixin prep-itemrb {
+			z-index: 2;
+			opacity: 0;
+			@include tmove(29%*$gapb, 0%);
+			@include trans(0s);
+			img { opacity: 0; }
+		}
 
-// Media queries
-// ------------------------------------------------------------
-
-	@media screen and (max-width: 640px) {
-		section.work {
-			.browser {
-				border-radius: 3px 3px 2px 2px;
-				overflow: hidden;
-				.top {
-					height: 28px;
-					border-radius: 2px 2px 0 0;
-					ul {
-						top: 11px;
-						left: 8px;
-						li {
-							width: 6px;
-							height: 6px;
-							margin-right: 3px;
-						}
+	// media queries
+		@media screen and (max-width: 640px) {
+			.preview.pleft, .preview.pright {
+				.multibrowser.cycle {
+					&.stepa {
+						.stacka { @include first-itemlb; }
+						.stackb { @include second-itemlb; }
+						.stackc { @include third-itemlb; }
+						.stackd { @include faded-itemlb; }
 					}
-					span {
-						top: 5px;
-						bottom: 6px;
-						left: 42px;
-						right: 5px;
-						padding-left: 5px;
-						font-size: 9px;
-						font-weight: 500;
-						border-radius: 1px;
-						line-height: 18px;
+					&.prepb {
+						.stackd { @include prep-itemlb; }
+					}
+					&.stepb {
+						.stacka { @include faded-itemlb; }
+						.stackb { @include first-itemlb; }
+						.stackc { @include second-itemlb; }
+						.stackd { @include third-itemlb; }
+					}
+					&.prepc {
+						.stacka { @include prep-itemlb; }
+					}
+					&.stepc {
+						.stacka { @include third-itemlb; }
+						.stackb { @include faded-itemlb; }
+						.stackc { @include first-itemlb; }
+						.stackd { @include second-itemlb; }
+					}
+					&.prepd {
+						.stackb { @include prep-itemlb; }
+					}
+					&.stepd {
+						.stacka { @include second-itemlb; }
+						.stackb { @include third-itemlb; }
+						.stackc { @include faded-itemlb; }
+						.stackd { @include first-itemlb; }
+					}
+					&.prepa {
+						.stackc { @include prep-itemlb; }
 					}
 				}
 			}
 		}
-	}
 
 
 // Phone styles
@@ -363,18 +472,16 @@
 		z-index: 1;
 		top: 24%;
 		width: 30%;
-		min-width: 180px;
-		max-width: 220px;
+		// max-width: 220px;
 		padding: 0 10px;
 		border-radius: 15px;
 		@include border(1px, $drk-l);
 		background: $wht;
 		text-align: center;
-		@include trans(.6s, 0s);
+		@include trans(0.6s);
 		img {
 			width: 100%;
 			height: auto;
-			@include border(1px, $drk-l);
 			@include noselect;
 		}
 		div {
@@ -425,67 +532,106 @@
 				}
 			}
 		}
-		.frame {
-			position: relative;
-			@include border(1px, $drk-l);
-			img, video {
-				width: 100%;
-				border: none;
-			}
-		}
-		.frame.scroll {
-			overflow-y: scroll;
-			height: 568px;
-		}
-		.frame.scroll.app {
-			overflow: hidden;
-		}
-		img.header {
-			position: absolute;
-			top: 79px;
-			left: 17px;
-			right: 17px;
-			z-index: 9;
-			width: 320px;
-			height: auto;
-			border: none;
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 1200px) {
+		.phone {
+			top: 22%;
+			right: 0;
 		}
 	}
-	.phone.small {
-		width: 30%;
-		min-width: 0;
-		padding: 0 1%;
-		border-radius: 12px;
-		.top {
-			height: 36px;
-			.camera {
-				top: 11px;
-				span {
-					width: 5px;
-					height: 5px;
-					border-radius: 2.5px;
-				}
-			}
-			.speaker {
-				top: 22px;
-				span {
-					width: 24px;
-					height: 3px;
-				}
-			}
+	@media screen and (max-width: 959px) {
+		.phone {
+			top: 21%;
 		}
-		.bottom {
-			height: 36px;
-			div {
-				top: 4px;
-				span {
-					width: 26px;
-					height: 26px;
-					border-radius: 13px;
+	}
+	@media screen and (max-width: 839px) {
+		.phone {
+			top: 18%;
+		}
+	}
+	@media screen and (max-width: 640px) {
+		.phone {
+			top: 15%;
+			width: 30%;
+			padding: 0 1%;
+			border-radius: 12px;
+			.top {
+				height: 36px;
+				.camera {
+					top: 11px;
+					span {
+						width: 5px;
+						height: 5px;
+						border-radius: 2.5px;
+					}
+				}
+				.speaker {
+					top: 22px;
+					span {
+						width: 24px;
+						height: 3px;
+					}
+				}
+			}
+			.bottom {
+				height: 36px;
+				div {
+					top: 4px;
+					span {
+						width: 26px;
+						height: 26px;
+						border-radius: 13px;
+					}
 				}
 			}
 		}
 	}
+	@media screen and (max-width: 420px) {
+		.phone {
+			top: 22%;
+			width: 30%;
+			padding: 0 1%;
+			border-radius: 9px;
+			.top {
+				height: 26px;
+				.camera {
+					top: 8px;
+					span {
+						width: 4px;
+						height: 4px;
+						border-radius: 2px;
+					}
+				}
+				.speaker {
+					top: 16px;
+					span {
+						width: 18px;
+						height: 2px;
+					}
+				}
+			}
+			.bottom {
+				height: 26px;
+				div {
+					top: 4px;
+					span {
+						width: 18px;
+						height: 18px;
+						border-radius: 9px;
+					}
+				}
+			}
+		}
+	}
+
+
+// Multiphone styles
+// ------------------------------------------------------------
 
 	.multiphone {
 		position: relative;
@@ -542,88 +688,27 @@
 		.stacka {
 			left: 0;
 			z-index: 3;
-			@include trans(.8s, 0s);
+			@include trans(0.8s);
 		}
 		.stackb {
 			left: 32.5%;
 			z-index: 2;
-			@include trans(.7s, 0s);
+			@include trans(0.7s);
 		}
 		.stackc {
 			right: 0;
 			z-index: 1;
-			@include trans(.6s, 0s);
+			@include trans(0.6s);
 		}
 	}
 
-
-// Media queries
-// ------------------------------------------------------------
-
-	@media screen and (max-width: 1200px) {
-		section.work {
-			.phone {
-				top: 22%;
-				right: 0;
-			}
-		}
-	}
-	@media screen and (max-width: 959px) {
-		section.work {
-			.phone {
-				top: 21%;
-			}
-		}
-	}
-	@media screen and (max-width: 839px) {
-		section.work {
-			.phone {
-				top: 18%;
-			}
-		}
-	}
-	@media screen and (max-width: 640px) {
-		section.work {
-			.phone {
-				top: 15%;
-				width: 30%;
-				min-width: 0;
-				padding: 0 1%;
-				border-radius: 12px;
-				.top {
-					height: 36px;
-					.camera {
-						top: 11px;
-						span {
-							width: 5px;
-							height: 5px;
-							border-radius: 2.5px;
-						}
-					}
-					.speaker {
-						top: 22px;
-						span {
-							width: 24px;
-							height: 3px;
-						}
-					}
-				}
-				.bottom {
-					height: 36px;
-					div {
-						top: 4px;
-						span {
-							width: 26px;
-							height: 26px;
-							border-radius: 13px;
-						}
-					}
-				}
-			}
+	// media queries
+		@media screen and (max-width: 640px) {
 			.multiphone {
 				.phone {
+					width: 45%;
 					min-width: 0;
-					max-width: 170px;
+					max-width: 252px;
 					padding: 0 6px;
 					border-radius: 14px;
 					.top {
@@ -656,52 +741,17 @@
 						}
 					}
 				}
+				.stackb {
+					left: 30%;
+				}
 			}
 		}
-	}
-	@media screen and (max-width: 420px) {
-		section.work {
-			.phone {
-				top: 22%;
-				width: 30%;
-				min-width: 0;
-				padding: 0 1.5%;
-				border-radius: 9px;
-				.top {
-					height: 26px;
-					.camera {
-						top: 8px;
-						span {
-							width: 4px;
-							height: 4px;
-							border-radius: 2px;
-						}
-					}
-					.speaker {
-						top: 16px;
-						span {
-							width: 18px;
-							height: 2px;
-						}
-					}
-				}
-				.bottom {
-					height: 26px;
-					div {
-						top: 4px;
-						span {
-							width: 18px;
-							height: 18px;
-							border-radius: 9px;
-						}
-					}
-				}
-			}
+		@media screen and (max-width: 420px) {
 			.multiphone {
 				.phone {
-					max-width: 140px;
+					width: 42%;
+					max-width: 228px;
 					padding: 0 4px;
-					border-radius: 14px;
 					.top {
 						height: 40px;
 						.camera {
@@ -734,4 +784,3 @@
 				}
 			}
 		}
-	}

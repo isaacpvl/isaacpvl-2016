@@ -6,17 +6,10 @@
 	$pcolor:	#033f64;
 	body.coolhouse {
 		header {
-			background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
+			background: $pcolor url('/_img/coolhouse/bg.jpg') no-repeat;
 			background-size: 100%;
 			.logo {
-				height: 56%;
-				min-height: 336px;
-				max-height: 444px;
-			}
-			.title {
-				height: 32%;
-				min-height: 192px;
-				max-height: 252px;
+				@include leader(5);
 			}
 			.fade {
 				@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 95%);
@@ -28,20 +21,39 @@
 		.base {
 			background: $pcolor;
 		}
+		@media screen and (max-width: 640px) {
+			header {
+				background-size: 225%;
+				background-position: 50% 0%;
+				.logo {
+					width: 90%;
+					max-width: 300px;
+					@include leader(2);
+				}
+			}
+		}
 	}
 
 // next
 	body.project {
 		section.next.coolhouse {
-			img {
-				width: 422px;
-				height: 234px;
-				@include leader(1.5);
+			@media screen and (min-width: 641px) {
+				img {
+					width: 422px;
+					height: 234px;
+					@include leader(1.5);
+				}
 			}
 			.peekbg {
-				background: $pcolor url('/images/coolhouse/bg.jpg') no-repeat;
+				background: $pcolor url('/_img/coolhouse/bg.jpg') no-repeat;
 				background-size: 100%;
 				background-position: 50% 35%;
+			}
+			@media screen and (max-width: 640px) {
+				.peekbg {
+					background-size: 150%;
+					background-position: 50% 20%;
+				}
 			}
 		}
 	}

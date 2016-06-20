@@ -8,14 +8,17 @@
 		text-decoration: underline;
 		cursor: pointer;
 		color: $blk;
-		@include trans(.3s);
+		@include trans(0.3s);
 		&:hover {
 			color: $red;
-			@include trans(.15s);
+			@include trans(0.15s);
 		}
 		&:active {
 			color: $red-d;
-			@include trans(.1s);
+			@include trans(0.1s);
+		}
+		&.disabled {
+			cursor: default;
 		}
 	}
 
@@ -32,25 +35,26 @@
 		color: $wht;
 		background: $blk;
 		box-shadow: inset 0 0 0 1px $blk, inset 0 0px $wht, 0 0px $blk;
-		@extend .caps;
+		@extend .caps-l;
 		@include noselect;
 		&:hover {
 			color: $blk;
-			box-shadow: inset 0 0 0 1px $blk, inset 0 72px $wht, 0 3px $blk;
-			@include tmove(0, -3px);
-			@include trans(.15s, 0s);
+			box-shadow: inset 0 0 0 1px $blk, inset 0 72px $wht, 0 4px $blk;
+			@include tmove(0, -4px);
+			@include trans(0.15s);
 		}
-		&:active {
-			box-shadow: inset 0 0 0 1px $blk, inset 0 72px $wht-8, 0 -2px $blk;
-			@include tmove(0, 2px);
-			@include trans(.05s, 0s);
+		&:active, &.active {
+			color: $blk;
+			box-shadow: inset 0 0 0 1px $blk, inset 0 72px $wht-8, 0 -4px $blk;
+			@include tmove(0, 1px);
+			@include trans(0.05s);
 		}
 	}
 	.button.disabled {
 		cursor: default;
 		font-weight: 500;
 		opacity: 0.3;
-		&:hover, &:focus, &:active {
+		&:hover, &:active, &.active {
 			color: $wht;
 			background: $blk;
 			box-shadow: inset 0 0 0 1px $blk, inset 0 0px $wht, 0 0px $blk;
@@ -68,5 +72,13 @@
 			@include padding-x(24px);
 			@include lineh(4.5);
 			font-size: 14px;
+			&:hover {
+				box-shadow: inset 0 0 0 1px $blk, inset 0 54px $wht, 0 3px $blk;
+				@include tmove(0, -3px);
+			}
+			&:active, &.active {
+				box-shadow: inset 0 0 0 1px $blk, inset 0 54px $wht-8, 0 -3px $blk;
+				@include tmove(0, 1px);
+			}
 		}
 	}

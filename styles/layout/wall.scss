@@ -11,16 +11,14 @@
 		overflow: visible;
 		.head {
 			display: none;
+			@include padding-leader(3);
 		}
 		.fade {
 			position: absolute;
-			top: 0%;
-			bottom: 0%;
-			left: 0;
-			right: 0;
+			@include onepos(0);
 			z-index: -1;
 			width: 100%;
-			max-width: 1600px;
+			max-width: $max-width;
 			margin: auto;
 			@include gradient-vert-d($wht-0, 0%, $wht, 91%);
 		}
@@ -30,12 +28,12 @@
 			left: 0;
 			right: 0;
 			z-index: -1000;
-			max-width: 1600px;
+			max-width: $max-width;
 			height: 100%;
 			margin: 0 auto;
-			opacity: .2;
+			opacity: 0.2;
 			overflow: hidden;
-			@include trans(.5s);
+			@include trans(0.5s);
 			.fade {
 				position: fixed;
 				top: 540px;
@@ -43,7 +41,7 @@
 				display: none;
 				width: 100%;
 				min-width: 320px;
-				max-width: 1600px;
+				max-width: $max-width;
 				height: 270px;
 				margin: auto;
 				@include gradient-vert-d($blu-n, 0%, $blu, 100%);
@@ -55,7 +53,7 @@
 					z-index: 3;
 					width: 100%;
 					min-width: 320px;
-					max-width: 1600px;
+					max-width: $max-width;
 					margin: auto;
 					background: $blu;
 				}
@@ -68,7 +66,7 @@
 				z-index: 1;
 				width: 100%;
 				min-width: 1280px;
-				max-width: 1600px;
+				max-width: $max-width;
 				background-color: $wht !important;
 			}
 		}
@@ -100,3 +98,11 @@
 			}
 		}
 	}
+	@media screen and (max-width: 640px) {
+		section.wall {
+			.head {
+				@include padding-leader(1.5);
+			}
+		}
+	}
+

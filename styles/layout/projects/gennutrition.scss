@@ -23,7 +23,7 @@
 	body.project {
 		section.next.gennutrition {
 			img {
-				@include leader(1.5);
+				@include leader(2);
 			}
 			&:hover, &.active {
 				.peek {

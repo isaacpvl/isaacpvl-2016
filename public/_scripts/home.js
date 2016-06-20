@@ -39,14 +39,13 @@ jQuery(function() {
 			setTimeout(function() {
 				home.addClass('reveal');
 			}, 1200);
-
 			setTimeout(function() {
 				nava.addClass('full');
 			}, 1800);
 
-		// PVL automatic expand
+		// PVL full expand
 			var pvlStartTimer = setTimeout(function() {
-				nava.addClass('hover');   
+				nava.addClass('hover');
 			}, 6600);
 			var pvlStopTimer = setTimeout(function() {
 				nava.removeClass('hover');
@@ -93,132 +92,123 @@ jQuery(function() {
 				tagline.addClass('smile');
 			}
 
-
-// Waypoints
-// ------------------------------------------------------------
-
-		setTimeout(function() {
-
-		// fold transitions
-			home.waypoint({
-				handler: function(event, direction) {
-				body.toggleClass('fold');}, offset: '-5%'
-			});
-			about.waypoint({
-				handler: function(event, direction) {
-				body.toggleClass('foldb');}, offset: '150%'
-			});
-			if (window.matchMedia('(max-width: 959px)').matches) {
+		// waypoints
+			setTimeout(function() {
+				// fold transitions
+				home.waypoint({
+					handler: function(event, direction) {
+					body.toggleClass('fold');}, offset: '-5%'
+				});
+				about.waypoint({
+					handler: function(event, direction) {
+					body.toggleClass('foldb');}, offset: '150%'
+				});
+				// arrows
+				home.waypoint({
+					handler: function(event, direction) {
+					work.toggleClass('out');}, offset: '-5%'
+				});
+				about.waypoint({
+					handler: function(event, direction) {
+					about.toggleClass('out');}, offset: '60%'
+				});
+				contact.waypoint({
+					handler: function(event, direction) {
+					contact.toggleClass('out');}, offset: '60%'
+				});
+				// nav style
 				wall.waypoint({
 					handler: function(event, direction) {
-					tagline.toggleClass('hide');}, offset: '20%'
+					nav.toggleClass('sticky');}, offset: '30%'
 				});
-			}
-		// arrows
-			home.waypoint({
-				handler: function(event, direction) {
-				work.toggleClass('out');}, offset: '-5%'
-			});
-			about.waypoint({
-				handler: function(event, direction) {
-				about.toggleClass('out');}, offset: '60%'
-			});
-			contact.waypoint({
-				handler: function(event, direction) {
-				contact.toggleClass('out');}, offset: '60%'
-			});
-		// nav style
-			wall.waypoint({
-				handler: function(event, direction) {
-				nav.toggleClass('sticky');}, offset: '30%'
-			});
-			about.waypoint({
-				handler: function(event, direction) {
-				nav.toggleClass('blue');}, offset: 60
-			});
-			contact.waypoint({
-				handler: function(event, direction) {
-				nav.toggleClass('blue');}, offset: 60
-			});
-		// nav active item
-			wall.waypoint({
-				handler: function(event, direction) { if (navToggle) {
-				navb.toggleClass('active'); } }, offset: '30%'
-			});
-			about.waypoint({
-				handler: function(event, direction) { if (navToggle) {
-				navb.toggleClass('active'); } }, offset: 60
-			});
-			about.waypoint({
-				handler: function(event, direction) { if (navToggle) {
-				navc.toggleClass('active'); } }, offset: 60
-			});
-			contact.waypoint({
-				handler: function(event, direction) { if (navToggle) {
-				navc.toggleClass('active'); } }, offset: 60
-			});
-			contact.waypoint({
-				handler: function(event, direction) { if (navToggle) {
-				navd.toggleClass('active'); } }, offset: 60
-			});
+				about.waypoint({
+					handler: function(event, direction) {
+					nav.toggleClass('blue');}, offset: 60
+				});
+				contact.waypoint({
+					handler: function(event, direction) {
+					nav.toggleClass('blue');}, offset: 60
+				});
+				// nav active item
+				wall.waypoint({
+					handler: function(event, direction) { if (navToggle) {
+					navb.toggleClass('active'); } }, offset: '30%'
+				});
+				about.waypoint({
+					handler: function(event, direction) { if (navToggle) {
+					navb.toggleClass('active'); } }, offset: 60
+				});
+				about.waypoint({
+					handler: function(event, direction) { if (navToggle) {
+					navc.toggleClass('active'); } }, offset: 60
+				});
+				contact.waypoint({
+					handler: function(event, direction) { if (navToggle) {
+					navc.toggleClass('active'); } }, offset: 60
+				});
+				contact.waypoint({
+					handler: function(event, direction) { if (navToggle) {
+					navd.toggleClass('active'); } }, offset: 60
+				});
+			}, 2000);
 
-		}, 2000);
+		}, 1000+introStart);
+	});
 
-	}, 1000+introStart);
-});
+// lock iOS scroll
+	var lockscroll = document.getElementById('lockscroll');
+	lockscroll.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	}, false);
+	var navslide = document.getElementById('navslide');
+	navslide.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	}, false);
 
+// autoscroll to top
+	var callbackScroll = { 
+		callbackAfter: function () {
+			navToggle = true;
+			return navToggle;
+		}
+	};
+	setTimeout(function() {
+		smoothScroll.animateScroll(null, '#home', callbackScroll);
+	}, 400);
+	// $('#push').addClass('reveal'); $('#lockscroll').addClass('hide'); $('.overlay').addClass('hide');
 
 // header parallax scroll
-	$(window).on('resize', function() {
-		if (window.matchMedia('(min-width: 960px)').matches) {
-			$(document).scroll(function(){
-				var headerTagline = tagline,
-					offsetTagline = headerTagline.offset().top,
-					yPosTagline = -($(window).scrollTop()/headerTagline.data('speed'));
-				headerTagline.css({'-webkit-transform':'translateY('+yPosTagline+'px)','transform':'translateY('+yPosTagline+'px)'}); 
-				var headerSpeech = speech,
-					offsetSpeech = headerSpeech.offset().top,
-					yPosSpeech = -($(window).scrollTop()/headerSpeech.data('speed'));
-				headerSpeech.css({'-webkit-transform':'translateY('+yPosSpeech+'px)','transform':'translateY('+yPosSpeech+'px)'}); 
-			});
-		}
-	});
-	if (window.matchMedia('(min-width: 960px)').matches) {
-		if(($(window).innerWidth() > 959) && screen.width > 768) {
-			$(document).scroll(function(){
-				var headerTagline = tagline,
-					offsetTagline = headerTagline.offset().top,
-					yPosTagline = -($(window).scrollTop()/headerTagline.data('speed'));
-				headerTagline.css({'-webkit-transform':'translateY('+yPosTagline+'px)','transform':'translateY('+yPosTagline+'px)'}); 
-				var headerSpeech = speech,
-					offsetSpeech = headerSpeech.offset().top,
-					yPosSpeech = -($(window).scrollTop()/headerSpeech.data('speed'));
-				headerSpeech.css({'-webkit-transform':'translateY('+yPosSpeech+'px)','transform':'translateY('+yPosSpeech+'px)'}); 
-			});
-		}
-	}
+	// if(!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
+		$(document).scroll(function(){
+			var headerTagline = tagline,
+				offsetTagline = headerTagline.offset().top,
+				yPosTagline = -($(window).scrollTop()/headerTagline.data('speed'));
+			headerTagline.css({'-webkit-transform':'translateY('+yPosTagline+'px)','transform':'translateY('+yPosTagline+'px)'});
+			var headerSpeech = speech,
+				offsetSpeech = headerSpeech.offset().top,
+				yPosSpeech = -($(window).scrollTop()/headerSpeech.data('speed'));
+			headerSpeech.css({'-webkit-transform':'translateY('+yPosSpeech+'px)','transform':'translateY('+yPosSpeech+'px)'});
+		});
+	// }
 
 // face animation scroll disable
 	wall.waypoint({
-			 handler: function(direction) {
-				 tagline.toggleClass('smile');
-			 }, offset: 0 });
+		 handler: function(direction) {
+		 tagline.toggleClass('smile');
+	 }, offset: 0 });
 	$('#push').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
 		$.waypoints('refresh');
 	});
 
-// iOS wall disable
-	if(navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
-		$('body').addClass('nowall');
-	}
-
 // browser cycle animation trigger
-	cycleGo = $(function() {
-		browserCycle();
-	});
-	cycleLoop = setInterval(function() {
-		browserCycle();
-	}, 6400);
+	setTimeout(function() {
+		cycleGo = $(function() {
+			browserCycle();
+		});
+		cycleLoop = setInterval(function() {
+			browserCycle();
+		}, 6400);
+	}, 2400);
 
 // newsflash easter egg trigger
 	$('#newslink').on('mouseup', function() {
@@ -230,24 +220,16 @@ jQuery(function() {
 
 // active nav item
 	$(".nav").on('click', 'a', function() {
-		$('.nav').removeClass('active'); 
+		$('.nav').removeClass('active');
 		$(this).closest('.nav').addClass('active');
 		navToggle = false;
 		return navToggle;
 	});
 
-// autoscroll to top
-	var callbackScroll = { 
-		callbackAfter: function () {
-			navToggle = true;
-			return navToggle;
-		}
-	};
-	smoothScroll.animateScroll(null, '#home', callbackScroll);
-
 // page links & transitions
 	$('section.work').on('mouseup', '#navlink', function(event) {
 		event.preventDefault();
+		$(this).closest('.button').addClass('active');
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
 		if((event.which == 1)) {
 			$('body').addClass('out').addClass('next');
@@ -266,7 +248,6 @@ jQuery(function() {
 // ------------------------------------------------------------
 
 	function faceSmile() {
-
 		if($('#tagline').hasClass('smile')) {
 			happyFace = setTimeout(function() {
 				$('#tagline').addClass('face').addClass('trigger');
@@ -282,7 +263,7 @@ jQuery(function() {
 				$('#tagline').addClass('wink');
 				$('#speech').addClass('pop');
 				$('#super').arctext('set', {radius: 70, dir: 1, animation: { speed: 280}});
-				$('#sweet').arctext('set', {radius: 140, dir: -1, animation: { speed: 160}}); 
+				$('#sweet').arctext('set', {radius: 140, dir: -1, animation: { speed: 160}});
 				$('#unique').arctext('set', {radius: -1, dir: -1, animation: { speed: 280}});
 				$('#design').arctext('set', {radius: 120, dir: -1, animation: { speed: 280}});
 			}, 1650);
@@ -303,7 +284,6 @@ jQuery(function() {
 				$('header #tagline h1 > span').arctext('set', {radius: -1, animation: { speed: 400}});
 			}, 3400);
 		}
-
 	}
 
 
@@ -311,7 +291,6 @@ jQuery(function() {
 // ------------------------------------------------------------
 
 	function browserCycle() {
-
 		if($('.multibrowser').hasClass('cycle')) {
 			prepa = setTimeout(function() {
 				$('.cycle').addClass('prepa');
@@ -346,9 +325,7 @@ jQuery(function() {
 				$('.cycle').addClass('stepd');
 			}, 5800);
 		}
-
-}
-
+	}
 
 // smooth scroll
 	smoothScroll.init();

@@ -10,7 +10,7 @@
 		bottom: 0;
 		width: 100%;
 		min-width: 320px;
-		max-width: 1600px;
+		max-width: $max-width;
 		margin: auto;
 		text-align: left;
 		@include noselect;
@@ -33,13 +33,14 @@
 			height: 100%;
 			min-height: 588px;
 			max-height: 828px;
-			@include trans(0.5s, 0s);
-			@include ttimingcb(.1, .7, .3, 1);
+			@include trans(0.5s);
+			@include ttimingcb(0.1, 0.7, 0.3, 1);
 			h3 {
 				display: inline-block;
 				position: absolute;
 				left: 5%;
 				@include leader(4);
+				@include lineh(5);
 				font-family: $caps;
 				font-size: 34px;
 				text-transform: uppercase;
@@ -48,7 +49,7 @@
 				font-style: italic;
 				color: $wht;
 				@include fadein;
-				@include animatereset(.6s, .2s)
+				@include animatereset(0.6s, 0.2s);
 				&:first-letter {
 					letter-spacing: 0em;
 				}
@@ -60,8 +61,8 @@
 				}
 				span {
 					display: inline-block;
-					width: 8px;
-					height: 8px;
+					width: 9px;
+					height: 9px;
 					margin-bottom: -1px;
 					margin-right: 5px;
 					border-radius: 50%;
@@ -70,7 +71,7 @@
 					&:nth-of-type(1) {
 						@include animateinf(2.4s, 0.1s);
 						@include loadinga;
-						margin-left: 5px;
+						margin-left: 6px;
 					}
 					&:nth-of-type(2) {
 						@include animateinf(2.4s, 0.175s);
@@ -102,9 +103,9 @@
 		.status {
 			h3 {
 				opacity: 0;
-				@include tmove(90px, 0);
+				@include tmove(60px, 0);
 				@include trans(0.6s);
-				@include ttimingcb(.7, .3, .7, .3);
+				@include ttimingcb(0.7, 0.3, 0.7, 0.3);
 			}
 		}
 	}
@@ -112,7 +113,7 @@
 // project page
 	body.project {
 		.loader {
-			@extend .center;
+			// @extend .center;
 			.overlay {
 				display: none;
 				background: $wht;
@@ -141,6 +142,15 @@
 // Media queries
 // ------------------------------------------------------------
 
+	@media screen and (min-width: $max-width+1) {
+		.loader {
+			.status {
+				h3 {
+					left: 6.5%;
+				}
+			}
+		}
+	}
 	@media screen and (max-height: 810px) {
 		.loader {
 			.status {
@@ -154,13 +164,13 @@
 				h3 {
 					@include leader(2);
 					@include lineh(4);
-					font-size: 24px;
+					font-size: 26px;
 					span {
-						width: 6px;
-						height: 6px;
+						width: 7px;
+						height: 7px;
 						margin-right: 4px;
 						&:nth-of-type(1) {
-							margin-left: 5px;
+							margin-left: 4px;
 						}
 					}
 				}
@@ -177,6 +187,7 @@
 	.tagline.hide,
 	header .wrap.hide,
 	.overview.hide,
+	section.next.hide,
 	header.hide {
 		display: none;
 	}

@@ -18,12 +18,21 @@
 			background: $pcolor;
 		}
 	}
+	.visual.multiphone.triphone {
+		.phone {
+			&:nth-of-type(2) {
+				z-index: 3;
+			}
+		}
+	}
 
 // next
 	body.project {
 		section.next.overdog {
-			img {
-				@include leader(3.5);
+			@media screen and (min-width: 641px) {
+				img {
+					@include leader(3.5);
+				}
 			}
 			&:hover, &.active {
 				.peek {

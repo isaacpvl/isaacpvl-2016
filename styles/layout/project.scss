@@ -15,16 +15,15 @@
 @import "projects/toggle";
 
 
-
-// Project content styles
+// Project styles
 // ------------------------------------------------------------
 
 	body.project {
 		text-align: center;
 		section {
-			@include trans(.5s);
+			@include trans(0.5s);
 			.head {
-				@include trans(.5s);
+				@include trans(0.5s);
 			}
 		}
 		p {
@@ -32,59 +31,38 @@
 		}
 		section.work {
 			min-height: 1600px;
-			@include leader(0);
 			@include padding-trailer(15);
 			background: $wht;
-			.head {
-				@include leader(16);
-				@include trailer(2);
+			.overview {
+				max-width: 1140px;
 			}
-			.twrap {
-				width: 100%;
-				max-width: 1282px;
-				margin: auto;
-			}
-			.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
-				@include trans(.75s, .3s);
+			.head, .overview, .itemhead, .visual, .point, .detail, .project, .footlink {
+				@include trans(0.75s, 0.3s);
 			}
 		}
 		section.work.bgfade {
-			.head, .overview, .itemhead, .visual, .detail, .project, .footlink {
+			.head, .overview, .itemhead, .visual, .point, .detail, .project, .footlink {
 				opacity: 0;
 			}
 		}
 		.base.hide {
 			background: $wht;
 		}
-		&.fold {
-			.arrow {
-				@include tmove(0, -27px);
-				@include trans(.2s);
-			}
+	}
+	body.project.fold {
+		.arrow {
+			@include tmove(0, -27px);
+			@include trans(0.2s);
 		}
 	}
 	.overview {
-		position: relative;
-		max-width: 1140px;
-		margin: auto;
-		@include padding-trailer(4);
-		.detail {
-			width: 100%;
-		}
-		.detail.two-col {
-			@include padding-leader(8);
-			@include padding-trailer(4);
-			em {
-				font-style: italic;
-				font-weight: 600;
-			}
-		}
 		.context {
 			white-space: nowrap;
 			h6 {
-				@extend .caps;
+				@extend .caps-l;
 			}
-			em {
+			i {
+				white-space: nowrap;
 				font-size: 18px;
 				letter-spacing: -0.02em;
 				margin-right: 4px;
@@ -95,8 +73,9 @@
 				vertical-align: top;
 				text-align: left;
 				margin-right: 8%;
+				white-space: nowrap;
 				&:last-of-type {
-					margin-right: 0;
+					margin-right: 2.5%;
 				}
 			}
 		}
@@ -116,8 +95,8 @@
 				@include leader(2);
 				@include lineh(2.5);
 				font-size: 18px;
-				strong {
-					@extend .caps;
+				b {
+					@extend .caps-l;
 					font-size: 16px;
 				}
 				span {
@@ -129,122 +108,87 @@
 			}
 		}
 	}
-	.itemhead {
-		h2, h3 {
-			position: relative;
-			@extend .caps;
-			font-weight: 800;
-			letter-spacing: 0;
-			white-space: nowrap;
-			&::after {
-				content:'';
-				position: absolute;
-				left: 50%;
-				width: 72px;
-				margin-left: -36px;
-				background: $blk;
-			}
-		}
-		h2 {
-			@include padding-leader(14);
-			@include padding-trailer(6);
-			&::after {
-				bottom: 13.5%;
-				height: 5px;
-			}
-		}
-		h3 {
-			@include padding-leader(12);
-			@include padding-trailer(3);
-			&::after {
-				bottom: 9%;
-				height: 5px;
-				width: 54px;
-				margin-left: -27px;
-			}
-		}
-	}
-	.itemhead.small {
-		@include leader(-4);
-	}
-	.detail {
-		position: relative;
-		width: 80%;
-		margin: auto;
-		@include padding-leader(6);
-		@include padding-trailer(6);
+	.footlink {
+		@include leader(12);
+		@include trailer(-8);
 		p {
-			max-width: 680px;
-			margin: auto;
-			@include padding-trailer(2.5);
-			&:last-of-type {
-				@include padding-trailer(0);
+			text-align: center;
+		}
+		a {
+			&::after {
+				content: '.';
 			}
 		}
-		.button {
-			@include leader(6);
-			min-width: 35%;
-		}
 	}
+
+// visuals
 	.visual {
 		position: relative;
+		z-index: 3;
 		@include leader(3);
 		@include trailer(3);
+		@include trans(0s);
+		img, video {
+			position: relative;
+			z-index: 9;
+			width: 100%;
+			max-width: 1280px;
+			height: auto;
+			@include noselect;
+			@include trans(0.5s);
+		}
 		.shot {
 			position: relative;
 			width: 100%;
 			margin: auto;
-			img, video {
-				width: 100%;
-				max-width: 1280px;
-				@include noselect;
-			}
-			img.frame, video.frame {
-				max-width: 1282px;
-				@include border(1px, $drk-l);
-			}
+			overflow: hidden;
 		}
 		.browser {
 			max-width: 1282px;
 			margin: auto;
-			video {
-				width: 100%;
-			}
 		}
 		#video {
 			cursor: pointer;
 		}
 	}
 	.visual.single {
-		@include leader(2);
-		@include trailer(2);
-		.shot, .browser {
+		.browser {
 			width: 90%;
 			max-width: 802px;
-			&.small {
-				max-width: 660px;
-				img.frame, video.frame {
-					max-width: 662px;
-				}
+		}
+		.shot {
+			width: 90%;
+			img, video {
+				max-width: 800px;
 			}
-			img.frame, video.frame {
-				max-width: 802px;
+		}
+		.shot.small {
+			img, video {
+				max-width: 660px;
 			}
 		}
 	}
 	.visual.two-col {
 		.shot {
 			width: 48.5%;
-			max-width: 542px;
 			display: inline-block;
 			vertical-align: top;
 			&:first-of-type {
 				margin-right: 3%;
+				text-align: right;
 			}
-			&.last {
-				@include leader(-10);
-				max-width: 400px;
+			&:nth-of-type(2) {
+				text-align: left;
 			}
+		}
+		.shot.small {
+			img, video {
+				max-width: 540px;
+			}
+		}
+		.shot.last {
+			@include leader(-10);
+			max-width: 400px;
 		}
 		.browser {
 			width: 48.5%;
@@ -253,36 +197,54 @@
 			&:first-of-type {
 				margin-right: 3%;
 			}
-			.frame {
-				height: 420px;
-			}
 		}
 	}
+	.visual.gap {
+		@include padding-leader(4);
+	}
 	.visual.multiphone {
-		@include leader(4);
-		@include trailer(4);
+		position: relative;
+		white-space: nowrap;
 		.phone {
 			position: relative;
 			display: inline-block;
 			vertical-align: top;
-			width: 32%;
-			min-width: none;
-			max-width: 356px;
-			@include padding-x(16px);
+			width: 348px;
+			min-width: 0;
+			max-width: none;
 			margin-right: 2%;
-			&:last-of-type {
+			&:nth-of-type(1) {
+				z-index: 3;
+			}
+			&:nth-of-type(2) {
+				z-index: 2;
+			}
+			&:nth-of-type(3) {
+				z-index: 1;
 				margin-right: 0;
 			}
 		}
-	}
-	.visual.gap {
-		@include leader(9);
-	}
-	.footlink {
-		@include leader(12);
-		@include trailer(-8);
-		p {
-			text-align: center;
+		.frame {
+			position: relative;
+			@include border(1px, $drk-l);
+			img, video {
+				width: 100%;
+			}
+		}
+		.frame.scroll {
+			overflow-y: scroll;
+			height: 568px;
+		}
+		.frame.scroll.app {
+			overflow: hidden;
+		}
+		img.header {
+			position: absolute;
+			z-index: 10;
+			top: 79px;
+			left: 13px;
+			width: 320px;
+			height: auto;
 		}
 	}
 
@@ -290,32 +252,12 @@
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (min-width: 1201px) {
-		.overview {
-			.detail.two-col {
-				@include padding-leader(8);
-				@include padding-trailer(4);
-			}
-		}
-		.detail.two-col {
-			p {
-				display: inline-block;
-				vertical-align: top;
-				width: 47.5%;
-				&:last-of-type {
-					margin-left: 5%;
-				}
-			}
-		}
-	}
 	@media screen and (max-width: 1200px) {
 		.overview {
-			width: 95%;
-			max-width: 680px;
 			.context {
 				@include leader(2);
 				@include trailer(2);
-				em {
+				i {
 					display: block;
 					@include lineh(2);
 				}
@@ -327,108 +269,358 @@
 				max-width: 682px;
 			}
 		}
-	}
-	@media screen and (max-width: 640px) {
-		body.project {
-			.overview, .detail {
-				width: 95%;
+		.visual.gap {
+			@include padding-leader(2.5);
+		}
+		.visual.multiphone {
+			.phone {
+				width: 348px;
+				margin-right: -2%;
 			}
-			section.work {
-				@include padding-x(3%);
+			.frame.scroll {
+				height: 568px;
+			}
+			img.header {
+				top: 79px;
+				left: 13px;
+				width: 320px;
 			}
 		}
 	}
-	@media screen and (max-width: 1240px) {
+	@media screen and (min-width: 960px) and (max-width: 1080px) {
 		.visual.multiphone {
 			.phone {
-				@include padding-x(14px);
-				img.header {
-					display: none;
-				}
-				.frame.scroll {
-					height: 510px;
-				}
+				width: 276px;
+				margin-right: 2%;
+				padding: 0 9px;
 			}
-		}
-	}
-	@media screen and (max-width: 1080px) {
-		.visual.multiphone {
-			.phone {
-				@include padding-x(12px);
-				.frame.scroll {
-					height: 504px;
-				}
+			.frame.scroll {
+				height: 450px;
+			}
+			img.header {
+				top: 79px;
+				left: 10px;
+				width: 254px;
 			}
 		}
 	}
 	@media screen and (max-width: 959px) {
+		.footlink {
+			@include leader(8);
+			@include trailer(-8);
+		}
 		.visual.two-col, .visual.single {
 			.shot, .browser {
 				display: block;
 				width: 85%;
-				max-width: 642px;
 				margin: auto;
-				@include padding-trailer(4);
-				img, video {
-					width: 100%;
-					max-width: 542px;
-				}
 				&:first-of-type {
 					margin: auto;
+					@include trailer(4);
 				}
 				&:last-of-type {
-					@include padding-trailer(0);
+					@include trailer(0);
 				}
-				&.last {
-					max-width: 100%;
-					@include leader(0);
+			}
+			.shot.last {
+				max-width: 540px;
+				@include leader(4);
+			}
+			.shot {
+				max-width: 640px;
+			}
+			.browser {
+				max-width: 642px;
+			}
+		}
+		.visual.two-col {
+			.shot {
+				&:first-of-type, &:nth-of-type(2) {
+					@include margin-x(auto);
+					text-align: center;
 				}
 			}
 		}
+		.visual.quad {
+			@include padding-leader(1);
+		}
+		.visual.multiphone {
+			left: -5%;
+			width: 110%;
+			.phone {
+				margin-right: 3.5%;
+				&:nth-of-type(2) {
+					margin-right: 0;
+				}
+				&:nth-of-type(3) {
+					display: none;
+				}
+			}
+		}
+		.visual.multiphone.triphone {
+			.phone {
+				&:nth-of-type(3) {
+					display: block;
+					z-index: 4;
+					margin: auto;
+					@include leader(-5.5);
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 641px) and (max-width: 720px) {
 		.visual.multiphone {
 			.phone {
-				display: block;
-				width: 50%;
-				max-width: 348px;
-				margin: auto;
-				@include trailer(4);
-				&:last-of-type {
-					margin: auto;
-				}
+				width: 276px;
+				margin-right: 3.5%;
+				padding: 0 9px;
+			}
+			.frame.scroll {
+				height: 450px;
+			}
+			img.header {
+				top: 79px;
+				left: 10px;
+				width: 254px;
 			}
 		}
 	}
 	@media screen and (max-width: 640px) {
 		section.work {
-			.visual.multiphone {
-				.phone {
-					width: 60%;
-					max-width: 252 px;
-					@include trailer(3);
-					.frame.scroll {
-						height: 396px;
+			.head {
+				@include padding-leader(1.5);
+			}
+			.overview {
+				.detail {
+					p {
+						@include lineh(2.5);
+						font-size: 16px;
 					}
+				}
+			}
+		}
+		// overview
+			.overview {
+				.context, .live {
+					width: 80%;
+					max-width: 280px;
+				}
+				.context {
+					display: inline-block;
+					white-space: normal;
+					i {
+						display: inline-block;
+						font-size: 14px;
+					}
+					div {
+						display: block;
+						@include leader(0.5);
+						margin-right: 0;
+						h6, p {
+							display: inline-block;
+						}
+						h6 {
+							margin-right: 4px;
+						}
+					}
+				}
+				.live {
+					@include padding-leader(1.5);
+					.button {
+						width: 100%;
+						span {
+							display: none;
+						}
+					}
+					p {
+						width: 100%;
+						height: auto;
+						@include leader(1.5);
+						@include lineh(1.75);
+						font-size: 14px;
+						text-align: center;
+						b {
+							font-size: 12px;
+						}
+						i {
+							font-size: 12px;
+							font-style: normal;
+							white-space: nowrap;
+						}
+						span {
+							@include padding-leader(1);
+							margin: auto;
+							text-align: left;
+						}
+					}
+				}
+			}
+			.footlink {
+				@include leader(6);
+				@include trailer(-9);
+				a {
+					display: block;
+				}
+			}
+		.visual {
+			@include leader(1.5);
+			@include trailer(1.5);
+		}
+		.visual, .visual.single, .visual.two-col, .visual.vport {
+			.browser, .shot {
+				left: -6%;
+				width: 112%;
+			}
+			.shot.small, .shot.last {
+				left: 0;
+				width: 90%;
+			}
+		}
+		.visual.two-col, .visual.single {
+			.shot, .browser {
+				&:first-of-type {
+					@include trailer(2.5);
+				}
+			}
+			.shot.last {
+				@include leader(2.5);
+			}
+		}
+		.visual.gap {
+			@include padding-leader(5);
+		}
+		.visual.zoom, .visual.premier {
+			.browser {
+				background: $wht;
+				@include trans(0.5s);
+				@include animateinf(2.1s);
+				@include ttiming(ease-out);
+				@include browserzoom;
+			}
+			.shot {
+				@include trans(0.5s);
+				@include animateinf(2.1s);
+				@include ttiming(ease-out);
+				@include shotzoom;
+			}
+		}
+		.visual.vzoom {
+			.browser, .shot {
+				overflow-x: visible;
+				@include animatereset(0s);
+			}
+			.browser {
+				box-shadow: 0 -24px rgba($blk, 0.05), 0 27px rgba($blk, 0.05);
+			}
+			.shot {
+				box-shadow: 0 -24px rgba($blk, 0.05), 0 27px rgba($blk, 0.05), 0 0 0 1px $blk-15;
+			}
+			img {
+				width: 200%;
+				height: auto;
+			}
+			.browser .top {
+				width: 200%;
+			}
+		}
+		.visual.premier {
+			.shot {
+				left: -20%;
+				width: 140%;
+			}
+		}
+		.visual.premier.vzoom {
+			.shot {
+				left: -6%;
+				width: 112%;
+			}
+		}
+		.visual.multiphone {
+			left: -10%;
+			width: 120%;
+			.phone {
+				width: 258px;
+				margin-right: 4%;
+				padding: 0 7px;
+			}
+			.frame.scroll {
+				height: 408px;
+			}
+			img.header {
+				top: 45px;
+				left: 8px;
+				width: 240px;
+			}
+		}
+	}
+	@media screen and (max-width: 516px) {
+		.visual.multiphone {
+			.phone {
+				margin-right: -2.5%;
+			}
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.visual.multiphone {
+			.phone {
+				width: 50%;
+				margin-right: -4%;
+			}
+			.frame.scroll {
+				height: 360px;
+			}
+			img.header {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 420px) {
+		.visual.premier {
+			.shot {
+				left: -25%;
+				width: 150%;
+			}
+		}
+		.visual.multiphone {
+			.phone {
+				padding: 0 6px;
+				.frame.scroll {
+					height: 318px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 360px) {
+		.visual.multiphone {
+			.phone {
+				padding: 0 5px;
+				.frame.scroll {
+					height: 282px;
 				}
 			}
 		}
 	}
 	@media screen and (max-height: 900px) {
-		.visual.full {
+		.visual.vport {
+			.shot {
+				img, video {
+					max-width: 1200px;
+				}
+			}
 			.browser {
 				max-width: 1142px;
-			}
-			.shot {
-				max-width: 1200px;
 			}
 		}
 	}
 	@media screen and (max-height: 780px) {
-		.visual.full {
+		.visual.vport {
+			.shot {
+				img, video {
+					max-width: 1080px;
+				}
+			}
 			.browser {
 				max-width: 1026px;
-			}
-			.shot {
-				max-width: 1080px;
 			}
 		}
 	}
@@ -441,7 +633,6 @@
 		height: 144px;
 		@include padding-leader(3);
 		cursor: pointer;
-		overflow: hidden;
 		color: $wht;
 		background: $wht;
 		@include noselect;
@@ -449,7 +640,7 @@
 			.head {
 				opacity: 0;
 				@include tmove(0, -24px);
-				@include trans(.25s);
+				@include trans(0.25s);
 			}
 			.peek {
 				top: 0;
@@ -469,9 +660,9 @@
 			}
 		}
 		.head {
-			margin: 0;
 			z-index: 2;
-			@include trans(.1s);
+			@include leader(0);
+			@include trans(0.1s);
 			h5 {
 				color: $wht;
 				@include padding-leader(2);
@@ -489,7 +680,7 @@
 			left: 0;
 			right: 0;
 			background: $red;
-			@include trans(.35s);
+			@include trans(0.35s);
 		}
 		.peekbg {
 			position: absolute;
@@ -497,16 +688,17 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			@include trans(.35s);
+			@include trans(0.35s);
 		}
 		img {
-			opacity: .3;
-			@include trans(.6s);
+			margin: auto;
+			opacity: 0.3;
+			@include trans(0.6s);
 		}
 		h1 {
 			@include leader(4.5);
 			opacity: 0.3;
-			@include trans(.6s);
+			@include trans(0.6s);
 		}
 	}
 	body.out {
@@ -516,3 +708,36 @@
 			}
 		}
 	}
+
+	// media queries
+		@media screen and (max-width: 640px) {
+			section.next {
+				height: 120px;
+				@include padding-leader(2);
+				img {
+					width: 60%;
+					@include leader(4.5);
+				}
+				.peek, .peekbg {
+					top: 24px;
+				}
+				&:hover, &.active {
+					.head {
+						@include tmove(0, -18px);
+					}
+					img {
+						@include tmove(0, -24px);
+					}
+					h1 {
+						@include tmove(0, -12px);
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 420px) {
+			section.next {
+				img {
+					width: 90%;
+				}
+			}
+		}

@@ -81,56 +81,39 @@
 // ------------------------------------------------------------
 
 	@mixin trans-p($arg...) {
-		-webkit-transition: $arg;
 		transition: $arg;
 	}
-	@mixin trans($duration: .2s, $delay: 0s) {
-		-webkit-transition-duration: $duration;
+	@mixin trans($duration: 0.2s, $delay: 0s) {
 		transition-duration: $duration;
-		-webkit-transition-delay: $delay;
 		transition-delay: $delay;
 	}
 	@mixin ttiming($function: ease-in-out) {
-		-webkit-transition-timing-function: $function;
 		transition-timing-function: $function;
 	}
 	@mixin ttimingcb($p1x: 1, $p1y: 1, $p2x: 1, $p2y: 1) {
-		-webkit-transition-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
 		transition-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
 	}
 
-	@mixin animate($duration: .6s, $delay:   0s) {
-		-webkit-animation-duration: $duration;
+	@mixin animate($duration: 0.6s, $delay: 0s) {
 		animation-duration: $duration;
-		-webkit-animation-delay: $delay;
 		animation-delay: $delay;
-		-webkit-animation-fill-mode:both;
 		animation-fill-mode:both;
 	}
-	@mixin animatereset($duration: .6s, $delay: 0s) {
-		-webkit-animation-duration: $duration;
+	@mixin animatereset($duration: 0.6s, $delay: 0s) {
 		animation-duration: $duration;
-		-webkit-animation-delay: $delay;
 		animation-delay: $delay;
-		-webkit-animation-fill-mode:backwards;
 		animation-fill-mode:backwards;
 	}
-	@mixin animateinf($duration: .6s, $delay: 0s) {
-		-webkit-animation-duration: $duration;
+	@mixin animateinf($duration: 0.6s, $delay: 0s) {
 		animation-duration: $duration;
-		-webkit-animation-delay: $delay;
 		animation-delay: $delay;
-		-webkit-animation-fill-mode:both;
 		animation-fill-mode:both;
-		-webkit-animation-iteration-count: infinite;
 		animation-iteration-count: infinite;
 	}
 	@mixin atiming($function: ease-in-out) {
-		-webkit-animation-timing-function: $function;
 		animation-timing-function: $function;
 	}
 	@mixin atimingcb($p1x: 1, $p1y: 1, $p2x: 1, $p2y: 1) {
-		-webkit-animation-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
 		animation-timing-function: cubic-bezier($p1x, $p1y, $p2x, $p2y);
 	}
 

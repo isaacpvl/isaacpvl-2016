@@ -16,7 +16,7 @@
 				right: 0;
 				height: 9px;
 				@include scrunchbar;
-				@include trans(.25s);
+				@include trans(0.25s);
 			}
 			.fade {
 				display: none;
@@ -34,12 +34,15 @@
 // next
 	body.project {
 		section.next.socialcrunch {
-			img {
-				@include leader(4.5);
-				margin-left: 3%;
+			@media screen and (min-width: 641px) {
+				img {
+					@include leader(4.5);
+					margin-left: 3%;
+				}
 			}
 			.peekbg {
 				@include scrunchbar;
 			}
+
 		}
 	}

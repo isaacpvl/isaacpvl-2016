@@ -1,0 +1,365 @@
+
+
+// Page transition styles
+// ------------------------------------------------------------
+
+	$twrap-speed: 1s;
+	$slide-speed: 0.75s;
+	.twrap {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		min-width: 320px;
+		max-width: $max-width;
+		height: 100%;
+		margin: auto;
+		box-shadow: 0 0 20px $blk-0;
+		@include trans($slide-speed);
+		@include ttimingcb(0.3, 0.7, 0.3, 0.7);
+		@include animate($slide-speed);
+		@include atimingcb(0.3, 0.7, 0.3, 0.7);
+	}
+	.underlay {
+		display: none;
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		width: 100%;
+		max-width: $max-width;
+		height: 100%;
+		background: $blk-4;
+		@include animate($twrap-speed);
+		@include fadeout;
+	}
+	.navslide {
+		display: none;
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		width: 100%;
+		max-width: $max-width;
+		height: 100%;
+		overflow: hidden;
+		.slide {
+			display: none;
+			position: relative;
+			z-index: 999;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 0 30px $blk-0;
+			@include animate($slide-speed, 0.25s);
+			@include atimingcb(0.8, 0.2, 0.8, 0.4);
+		}
+		.pslide {
+			background: $wht;
+		}
+		.hslide {
+			background: $red;
+		}
+		.overlay {
+			position: fixed;
+			z-index: 998;
+			top: 0;
+			width: 100%;
+			max-width: $max-width;
+			height: 100%;
+			background: $blk-4;
+			@include animate($slide-speed);
+			@include fadein;
+		}
+	}
+	@media screen and (max-width: 640px) {
+		.navslide {
+			top: -200%;
+			height: 400%;
+		}
+	}
+
+// page out
+	body.out {
+		overflow: hidden;
+		.navslide {
+			display: block;
+			.slide {
+				box-shadow: 0 0 30px $blk-2;
+			}
+		}
+		.about, .aboutme, .contact {
+			display: none;
+		}
+		&.next {
+			.navslide {
+				.pslide {
+					display: block;
+					@include slideinright;
+				}
+			}
+		}
+		&.prev {
+			.navslide {
+				.pslide {
+					display: block;
+					@include slideinleft;
+				}
+			}
+		}
+		&.return {
+			.navslide {
+				.hslide {
+					display: block;
+					@include slideinleft;
+				}
+			}
+		}
+	}
+
+// page out (from top)
+	body.out:not(.fold), body.out.return:not(.fold) {
+		.twrap {
+			box-shadow: 0 0 20px $blk-2;
+			@include zoomout;
+		}
+		.underlay {
+			display: block;
+			@include animate($slide-speed);
+			@include fadein;
+		}
+		.about, .aboutme, .contact, .project:not(':first-of-type'), .visual, .next {
+			display: none;
+		}
+		&.home {
+			header {
+				background: $red;
+				@include trans(0s);
+			}
+		}
+	}
+
+// next project
+	body.fold.out.next {
+		&.home {
+			header .wrap, .head, .project {
+				@include tmove(-150px, 0);
+				@include trans($twrap-speed);
+				@include ttimingcb(0.9, 0.1, 0.8, 0.4);
+			}
+		}
+		&.project {
+			.wrap, .head, .itemhead, .project, .overview, .visual, .point, .detail, .footlink, .next {
+				@include tmove(-150px, 0);
+				@include trans($twrap-speed);
+				@include ttimingcb(0.9, 0.1, 0.8, 0.4);
+			}
+			.overview .detail {
+				@include tmove(0, 0);
+			}
+		}
+	}
+	@media screen and (min-width: $max-width+1) {
+		body.fold.out.next, body.fold.out.prev, body.fold.out.return {
+			&.project {
+				section.next {
+					@include tmove(0, 0);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		body.fold.out.next {
+			&.home {
+				header .wrap, .head, .project {
+					@include tmove(-96px, 0);
+				}
+			}
+			&.project {
+				.wrap, .head, .itemhead, .project, .overview, .visual, .point, .detail, .footlink, .next {
+					@include tmove(-96px, 0);
+				}
+			}
+		}
+	}
+
+// previous project & return home
+	body.fold.out.prev, body.fold.out.return {
+		&.project {
+			section.work {
+				overflow: hidden;
+			}
+			.wrap, .head, .itemhead, .project, .overview, .visual, .point, .detail, .footlink, .next {
+				@include tmove(150px, 0);
+				@include trans($twrap-speed);
+				@include ttimingcb(0.9, 0.1, 0.8, 0.4);
+			}
+			.overview .detail {
+				@include tmove(0, 0);
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		body.fold.out.prev, body.fold.out.return {
+			&.project {
+				.wrap, .head, .itemhead, .project, .overview, .visual, .point, .detail, .footlink, .next {
+					@include tmove(96px, 0);
+				}
+			}
+		}
+	}
+
+// multibrowser cycle out
+	@media screen and (min-width: $max-width+1) {
+		body.fold.out.next {
+			.preview.pleft {
+				.multibrowser.cycle {
+					.browser {
+						@include trans($twrap-speed);
+						@include ttimingcb(0.9, 0.1, 0.8, 0.4);
+						img { opacity: 0.25; @include trans(0.4s); }
+					}
+					&.stepa {
+						.stacka {
+							@include tmove(0%, 0%);
+							img { opacity: 0.5; @include trans(0.6s); }
+						}
+						.stackb {
+							@include tmove(0%, 0%);
+						}
+						.stackc {
+							@include tmove(0%, 0%);
+						}
+						.stackd {
+							opacity: 1;
+							@include tmove(6.5%, 0%);
+							img { opacity: 1; }
+						}
+					}
+					&.prepb {
+						.stackd {
+							img { opacity: 1; }
+							@include tmove(0%, 0%);
+						}
+					}
+					&.stepb {
+						.stacka {
+							opacity: 1;
+							@include tmove(6.5%, 0%);
+							img { opacity: 1; }
+						}
+						.stackb {
+							@include tmove(0%, 0%);
+							img { opacity: 0.5; @include trans(0.6s); }
+						}
+						.stackc {
+							@include tmove(0%, 0%);
+						}
+						.stackd {
+							@include tmove(0%, 0%);
+						}
+					}
+					&.prepc {
+						.stacka {
+							img { opacity: 1; }
+							@include tmove(0%, 0%);
+						}
+					}
+					&.stepc {
+						.stacka {
+							@include tmove(0%, 0%);
+						}
+						.stackb {
+							opacity: 1;
+							@include tmove(6.5%, 0%);
+							img { opacity: 1; }
+						}
+						.stackc {
+							@include tmove(0%, 0%);
+							img { opacity: 0.5; @include trans(0.6s); }
+						}
+						.stackd {
+							@include tmove(0%, 0%);
+						}
+					}
+					&.prepd {
+						.stackb {
+							@include tmove(0%, 0%);
+							img { opacity: 1; }
+						}
+					}
+					&.stepd {
+						.stacka {
+							@include tmove(0%, 0%);
+						}
+						.stackb {
+							@include tmove(0%, 0%);
+						}
+						.stackc {
+							opacity: 1;
+							@include tmove(6.5%, 0%);
+							img { opacity: 1; }
+						}
+						.stackd {
+							@include tmove(0%, 0%);
+							img { opacity: 0.5; @include trans(0.6s); }
+						}
+					}
+					&.prepa {
+						.stackc {
+							@include tmove(0%, 0%);
+							img { opacity: 1; }
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+// Fold transitions
+// ------------------------------------------------------------
+
+	body.fold {
+		header {
+			.wrap {
+				opacity: 0.3;
+			}
+		}
+		.arrow {
+			@include trans(0.25s);
+		}
+		section.wall {
+			.wall {
+				opacity: 1;
+				@include trans(0.8s);
+			}
+		}
+	}
+	body.home.fold {
+		.base {
+			background: $red-d;
+			@include trans(0.25s);
+		}
+		.arrow {
+			@include arrow(27px, $red-d);
+		}
+	}
+	body.foldb, body.project.foldb, body.home.foldb {
+		.base {
+			background: $wht;
+			@include trans(0s);
+		}
+		header {
+			background: none;
+			@include trans(0s);
+			.splash, .fade {
+				display: none;
+			}
+		}
+		section.wall {
+			.wall {
+				position: fixed;
+				bottom: 0;
+				.fade {
+					display: block;
+				}
+			}
+		}
+	}

@@ -6,7 +6,7 @@
 	section.contact {
 		@include padding-trailer(30);
 		background: $wht;
-		background: url('/images/home/contactbg.jpg') no-repeat bottom $wht;
+		background: url('/_img/home/contactbg.jpg') no-repeat bottom $wht;
 		background-position: 50% 100%;
 		background-size: 100%;
 		text-align: center;
@@ -19,7 +19,9 @@
 			h6 {
 				position: absolute;
 				width: 100%;
-				@include leader(.7);
+				@include leader(0.7);
+				@include lineh(2);
+				font-size: 16px;
 				font-style: italic;
 				opacity: 0.6;
 			}
@@ -27,11 +29,13 @@
 		.col {
 			position: relative;
 			display: inline-block;
+			margin-right: 6%;
 			@include padding-leader(4);
 			@include padding-trailer(2);
-			h5 {
+			h4 {
 				display: inline-block;
 				vertical-align: middle;
+				@extend .caps-d;
 				letter-spacing: 0.025em;
 			}
 			img {
@@ -47,30 +51,24 @@
 				span {
 					display: inline-block;
 				}
-				img, span, h5 {
+				img, span, h4 {
 					opacity: 1;
-					@include trans(.2s, 0s);
+					@include trans(0.2s);
 				}
-				&:hover {
+				&:hover, &:focus {
 					color: $blk;
 					@include twowayshadow(-3px, 1px, $blk);
-					img, span, h5 {
+					img, span, h4 {
 						@include tmove(0, -2px);
 						opacity: 1;
 					}
 				}
 				&:active {
-					img, span, h5 {
+					img, span, h4 {
 						@include treset;
-						@include trans(.1s, 0s);
+						@include trans(0.1s);
 					}
 				}
-			}
-			&.left {
-				margin-right: 8%;
-			}
-			&.middle {
-				margin-right: 10%;
 			}
 		}
 		.col.method {
@@ -85,21 +83,8 @@
 				}
 			}
 		}
-		.social {
-			font-size: 28px;
-			a {
-				margin: 0 6px;
-				padding-right: 0;
-				&:nth-of-type(2) {
-					font-size: 26px;
-					font-weight: 600;
-				}
-				&:nth-of-type(3) {
-					font-weight: 400;
-				}
-			}
-		}
 		.col.social {
+			margin-right: 0;
 			a {
 				margin: 0 6px;
 				padding-right: 0;
@@ -117,6 +102,7 @@
 		}
 		.col.office {
 			width: 100%;
+			margin-right: 0;
 			@include padding-trailer(6);
 			white-space: nowrap;
 			a {
@@ -125,6 +111,20 @@
 			}
 			.digits {
 				margin-right: 5%;
+			}
+		}
+		.social {
+			font-size: 28px;
+			a {
+				margin: 0 6px;
+				padding-right: 0;
+				&:nth-of-type(2) {
+					font-size: 26px;
+					font-weight: 600;
+				}
+				&:nth-of-type(3) {
+					font-weight: 400;
+				}
 			}
 		}
 	}
@@ -146,14 +146,9 @@
 				display: block;
 				width: auto;
 				min-width: 0;
+				margin-right: 0;
 				@include padding-leader(3);
 				@include padding-trailer(2);
-				&.left {
-					margin-right: 0%;
-				}
-				&.middle {
-					margin-right: 0%;
-				}
 			}
 			.col.social {
 				@include leader(2.5);
@@ -179,12 +174,15 @@
 			background-size: 1000px auto;
 			background-position: 76% 100%;
 			.head.visit {
-				@include padding-leader(1);
-				@include padding-trailer(0.5);
+				@include padding-leader(3);
+				@include padding-trailer(0);
 			}
 			.col {
 				@include padding-leader(3);
 				@include padding-trailer(0);
+				strong {
+					display: none;
+				}
 			}
 			.col.office {
 				@include padding-leader(4);

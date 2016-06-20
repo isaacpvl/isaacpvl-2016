@@ -5,35 +5,32 @@
 
 	header {
 		position: fixed;
-		top: 0;
 		z-index: 1;
+		top: 0;
 		width: 100%;
 		min-width: 320px;
-		max-width: 1600px;
-		height: 85%;
-		min-height: 588px;
-		max-height: 828px;
+		max-width: $max-width;
 		overflow: hidden;
 		color: $wht;
-		@include trans(.45s);
+		@include trans(0.45s);
 		img {
 			@include noselect;
 		}
 		.wrap {
-			position: absolute;
+			position: relative;
 			z-index: 2;
-			width: 100%;
+			width: 94%;
+			max-width: 1350px;
 			height: 100%;
-			@include padding-x(8%);
-			@include trans(.3s);
-		}
-		.wrapm {
-			display: none;
+			margin: auto;
+			@include trans(0.3s);
 		}
 	}
 	.push {
 		position: relative;
 		z-index: -1;
+	}
+	header, .push {
 		height: 85%;
 		min-height: 588px;
 		max-height: 828px;
@@ -51,7 +48,7 @@
 			max-height: 100%;
 		}
 		.push.reveal {
-			@include animate(.6s);
+			@include animate(0.6s);
 			@include ttiming(ease-out);
 			@include reveal;
 		}
@@ -61,6 +58,31 @@
 // Media queries
 // ------------------------------------------------------------
 
+	@media screen and (min-width: $max-width+1) {
+		header {
+			.wrap {
+				width: 100%;
+			}
+		}
+	}
+	@media screen and (min-width: 960px) {
+		body.fold {
+			header {
+				.wrap {
+					@include tscale(0.92);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		body.home {
+			header {
+				.wrap {
+					@include torigin(50% 50%);
+				}
+			}
+		}
+	}
 	@media screen and (max-height: 810px) {
 		header, .push {
 			height: 89%;
@@ -68,10 +90,38 @@
 	}
 	@media screen and (max-width: 640px) {
 		header, .push {
-			height: 93%;
+			height: 100%;
 			min-height: 360px;
+			max-height: 570px;
+		}
+		body.home {
+			header, .push {
+				.wrap {
+					@include torigin(70% 50%);
+				}
+			}
 		}
 	}
+	@media screen and (max-width: 420px) {
+		header {
+			.wrap {
+				width: 100%;
+			}
+		}
+		body.home {
+			header {
+				.wrap {
+					@include torigin(100% 50%);
+				}
+			}
+		}
+	}
+	// @media screen and (min-width: 480px) and (max-height: 450px) {
+	// 	header, .push {
+	// 		height: 100%;
+	// 		min-height: 360px;
+	// 	}
+	// }
 
 
 // Project header styles
@@ -79,7 +129,7 @@
 
 	body.project {
 		header {
-			text-shadow: 1px 2px $blk-1;
+			text-shadow: 1px 2px $blk-15;
 			.logo {
 				position: relative;
 				z-index: 2;
@@ -87,6 +137,7 @@
 				height: 45%;
 				min-height: 270px;
 				max-height: 408px;
+				margin: auto;
 				span {
 					position: absolute;
 					bottom: 0;
@@ -94,7 +145,7 @@
 					right: 0;
 				}
 				img {
-					@include animatereset(.8s);
+					@include animatereset(0.8s);
 					@include fadeindown;
 				}
 			}
@@ -105,6 +156,7 @@
 				height: 38%;
 				min-height: 240px;
 				max-height: 276px;
+				margin: auto;
 				span {
 					position: absolute;
 					bottom: 0;
@@ -115,7 +167,7 @@
 					max-width: 720px;
 					margin: auto;
 					@include trailer(3);
-					@include animatereset(.8s);
+					@include animatereset(0.8s);
 					@include fadeinup;
 				}
 			}
@@ -123,14 +175,17 @@
 				position: absolute;
 				z-index: 3;
 				top: 100%;
+				left: 0;
 				width: 100%;
 				height: 100%;
 				background: $wht;
-				@include animatereset(.6s);
+				@include animatereset(0.6s, 0.01s);
 				@include slideout;
 			}
 			.fade {
 				position: absolute;
+				top: 0;
+				left: 0;
 				z-index: 1;
 				width: 100%;
 				height: 100%;
@@ -153,33 +208,32 @@
 					max-width: 720px;
 					@include lineh(8.5);
 					font-size: 66px;
-					@include animatereset(.8s, .2s);
+					@include animatereset(0.8s, 0.2s);
 				}
 			}
 		}
 	}
 	.splash {
-		text-align: right;
-		position: fixed;
-		top: 0;
+		position: absolute;
 		z-index: 0;
+		top: 0;
 		width: 100%;
 		min-width: 320px;
-		max-width: 1600px;
+		max-width: $max-width;
 		height: 92.5%;
 		min-height: 600px;
 		max-height: 960px;
 		margin: auto;
+		text-align: right;
 		overflow: hidden;
 		opacity: 1;
 		@include noselect;
-		@include trans(.375s);
+		@include trans(0.375s);
 		.splashfade {
 			z-index: -1;
 			min-width: 1280px;
 			height: 100%;
-			overflow: hidden;
-			@include trans(.6s, 0s);
+			@include trans(0.6s);
 			img {
 				pointer-events: none;
 				width: 100%;
@@ -189,11 +243,11 @@
 		}
 		.vid {
 			position: absolute;
+			z-index: -1000;
 			top: 0;
 			bottom: 0;
 			right: 0;
-			z-index: -1000;
-			@include trans(.6s, 0s);
+			@include trans(0.6s);
 			video {
 				position: relative;
 				float: right;
@@ -209,14 +263,81 @@
 // Media queries
 // ------------------------------------------------------------
 
-	@media screen and (max-width: 959px) {
+	@media screen and (min-width: 641px) and (max-width: 840px) {
 		body.project {
 			header {
 				.title {
 					h1 {
-						// @include lineh(6);
-						// font-size: 42px;
+						@include lineh(6);
+						font-size: 42px;
 					}
+				}
+			}
+			header.more {
+				.title {
+					h1 {
+						@include lineh(8);
+						font-size: 60px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		body.project {
+			header {
+				.logo {
+					width: 100%;
+					min-height: 180px;
+					max-height: 100%;
+					img {
+						width: 90%;
+						max-width: 420px;
+					}
+				}
+				.title {
+					width: 90%;
+					max-width: 420px;
+					min-height: 0;
+					max-height: 240px;
+					@include leader(4);
+				}
+			}
+			header.more {
+				.title {
+					height: 68%;
+					h1 {
+						@include lineh(5);
+						font-size: 42px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 420px) {
+		body.project {
+			header {
+				.logo {
+					img {
+						width: 100%;
+					}
+				}
+				.title {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 480px) and (max-height: 444px) {
+		body.project {
+			header {
+				.logo {
+					img {
+						width: 75%;
+					}
+				}
+				.title {
+					display: none;
 				}
 			}
 		}

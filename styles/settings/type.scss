@@ -12,6 +12,7 @@
 // base sizing settings
 	$basefont						: 24px;		// browser default size
 	$baseline						: 12px;		// baseline grid
+	$max-width						: 1600px;	// site body max-width
 	$relative-font-sizing			: false;	// absolute pixel styles
 	$round-to-nearest-half-line		: true;		// line-height rounding
 
@@ -20,24 +21,25 @@
 		font-weight: 600;
 	}
 	h1 {
-		@include lineh(7.5);
+		@include lineh(7);
 		font-size: 54px;
 	}
 	h2 {
-		@include lineh(5);
+		@include lineh(6.5);
 		font-size: 48px;
 	}
 	h3 {
-		@include lineh(5);
+		@include lineh(4);
 		font-size: 30px;
 	}
 	h4 {
-		@include lineh(3.5);
+		@include lineh(3);
 		font-size: 24px;
 	}
 	h5 {
 		@include lineh(3);
 		font-size: 20px;
+		@extend .caps;
 	}
 	h6 {
 		@include lineh(2);
@@ -64,34 +66,27 @@
 	i {
 		font-style: italic;
 	}
-	strong {
-		font-weight: 600;
-	}
 	em {
 		font-style: italic;
+		font-weight: 600;
 	}
 	br {
 		@include noselect;
-	}
-	.strikethru {
-		text-decoration: line-through;
-	}
-	.sidenote {
-		font-size: 18px;
-		font-style: italic;
-		letter-spacing: -0.02em;
-		opacity: 0.6;
 	}
 	.caps {
 		font-family: $caps;
 		text-transform: uppercase;
 		letter-spacing: 0.07em;
+		font-weight: 700;
+	}
+	.caps-l {
+		@extend .caps;
+		letter-spacing: 0.07em;
 		font-weight: 600;
 	}
 	.caps-d {
-		font-family: $caps;
-		text-transform: uppercase;
-		letter-spacing: 0;
+		@extend .caps;
+		letter-spacing: 0em;
 		font-weight: 800;
 	}
 
@@ -117,16 +112,16 @@
 
 @media screen and (max-width: 640px) {
 	h1 {
-		@include lineh(3.5);
+		@include lineh(4);
 		font-size: 30px;
 	}
 	h2 {
-		@include lineh(4);
+		@include lineh(4.5);
 		font-size: 28px;
 	}
 	h3 {
-		@include lineh(3.5);
-		font-size: 24px;
+		@include lineh(3);
+		font-size: 20px;
 	}
 	h4 {
 		@include lineh(3);
@@ -141,7 +136,7 @@
 		font-size: 12px;
 	}
 	p {
-		@include lineh(2);
+		@include lineh(2.5);
 		font-size: 16px;
 	}
 	p.small {
@@ -151,6 +146,9 @@
 	p.large {
 		@include lineh(2.75);
 		font-size: 18px;
+	}
+	em {
+		font-weight: 500;
 	}
 }
 

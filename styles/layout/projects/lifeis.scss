@@ -5,34 +5,20 @@
 
 	$pcolor:	rgba(#ff1414, 0.3);
 	$pcolorb:	#ffb8b8;
+
 	body.lifeis {
 		header {
 			background: $wht;
 			.logo {
-				height: 52%;
-				min-height: 300px;
-				max-height: 456px;
-				img {
-					position: relative;
-					width: 540px;
-					height: 196px;
-					@include animate(.6s, .4s);
-					z-index: 1;
-				}
+				@include leader(4);
 			}
 			.title {
 				z-index: 4;
-				height: 35%;
-				min-height: 240px;
-				max-height: 300px;
-				h1 {
-					@include animate(.6s, .4s);
-				}
 			}
 			.fade {
 				display: none;
 				z-index: 3;
-				@include gradient-vert-d(rgba($pcolor, 0), 25%, $pcolor, 100%);
+				@include gradient-vert-d(rgba($pcolor, 0), 30%, $pcolor, 100%);
 			}
 		}
 		.arrow {
@@ -43,32 +29,50 @@
 		}
 		.lifebg {
 			position: absolute;
-			z-index: 3;
+			z-index: 5;
 			top: 100%;
 			left: 0;
 			right: 0;
 			height: 900px;
 			margin-top: -900px;
 			overflow: hidden;
+			@include trans(0.3s);
 			img {
 				position: relative;
-				top: 390px;
-				width: 1600px;
+				top: 360px;
+				width: 100%;
 				height: 600px;
-				@include trans(.5s);
-				@include ttimingcb(.4, .7, .4, .9);
-				@include animatereset(.8s);
+				@include trans(0.5s);
+				@include ttimingcb(0.4, 0.7, 0.4, 0.9);
+				@include animatereset(0.8s);
 				@include lifebgin;
 			}
 		}
 	}
-
 	body.lifeis.fold {
 		.lifebg {
+			background: rgba(#890b0b, 0.12);
 			img {
 				@include tmove(0, -660px);
 				height: 1200px;
-				@include trans(.5s);
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		body.lifeis {
+			header {
+				.logo {
+					width: 90%;
+					@include leader(0);
+				}
+				.fade {
+					display: block;
+				}
+			}
+			.lifebg {
+				img {
+					display: none;
+				}
 			}
 		}
 	}
@@ -76,15 +80,23 @@
 // next
 	body.project {
 		section.next.lifeis {
-			img {
-				width: 384px;
-				height: 96px;
-				@include leader(5.5);
+			@media screen and (min-width: 641px) {
+				img {
+					width: 384px;
+					height: 96px;
+					@include leader(5.5);
+				}
 			}
 			.peekbg {
-				background: $pcolor url('/images/lifeis/bg.png') no-repeat;
+				background: $pcolor url('/_img/lifeis/bg.png') no-repeat;
 				background-size: 100%;
-				background-position: -10% center;
+				background-position: 50% 40%;
+			}
+			@media screen and (max-width: 640px) {
+				.peekbg {
+					background-size: 150%;
+					background-position: 50% 40%;
+				}
 			}
 		}
 	}

@@ -29,31 +29,30 @@ block work
 			.arrow#work
 		.head
 			h5 Basically...
-		.wrap
-			.overview
-				.detail
-					p This is a more casual place for me to throw up a few quick looks of newer things I've been on, even if unorganized or unfinished. 
-					p You can click one of the shots below to jump to its respective section.
+		.overview
+			.detail
+				p This is a more casual place for me to throw up a few quick looks of newer things I've been on, even if unorganized or unfinished. 
+				p You can click one of the shots below to jump to its respective section.
 		.visual.two-col
-			.shot
-				a(data-scroll, data-options="speed: 600", href="#recenta")
-					img.frame(src="/images/recent/vouch.jpg")
-			.shot
+			.shot.small
+				a(data-scroll, data-options="speed: 800", href="#recenta")
+					img(src="/_img/recent/vouch.jpg")
+			.shot.small
 				a(data-scroll, data-options="speed: 1200", href="#recentb")
-					img.frame(src="/images/recent/justcapital.jpg")
-		.visual.two-col
-			.shot
+					img(src="/_img/recent/justcapital.jpg")
+		.visual.two-col.quad
+			.shot.small
 				a(data-scroll, data-options="speed: 1500", href="#recentc")
-					img.frame(src="/images/recent/stump.jpg")
-			.shot
+					img(src="/_img/recent/stump.jpg")
+			.shot.small
 				a(data-scroll, data-options="speed: 2000", href="#recentd")
-					img.frame(src="/images/recent/analytics8.jpg")
+					img(src="/_img/recent/analytics8.jpg")
 
 		.visual.gap
 		a#recenta
 		.itemhead
 			h2 Vouch
-		.visual
+		.visual.fout.zoom
 			.browser.large
 				.top
 					ul
@@ -61,34 +60,35 @@ block work
 						li
 						li
 					span vouchwith.us
-				img(src="/images/recent/vouch-00.jpg")
+				img(src="/_img/recent/vouch-00.jpg")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.itemhead.small
+		.itemhead.short
 			h3 Item interactions/grid
-		.visual.single
+		.visual.single.zoom
 			.shot
-				img(src="/images/recent/vouch-view.gif")
+				img(src="/_img/recent/vouch-view.gif")
+		.detail
+			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
+		.visual.single.zoom
+			.shot
+				img(src="/_img/recent/vouch-add.gif")
+		.detail
+			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
+		.visual.single.zoom
+			.shot
+				img(src="/_img/recent/vouch-quotes.gif")
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 		.visual.single
 			.shot
-				img(src="/images/recent/vouch-add.gif")
+				img(src="/_img/recent/vouch-grid.gif")
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.visual.single
-			.shot
-				img(src="/images/recent/vouch-quotes.gif")
-		.detail
-			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.visual.single
-			.shot
-				img(src="/images/recent/vouch-grid.gif")
-		.detail
-			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.itemhead.small
+		.itemhead.short
 			h3 Item full view
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -96,10 +96,11 @@ block work
 						li
 						li
 					span vouchwith.us
-				img(src="/images/recent/vouch-02.jpg")
-		.itemhead.small
+				img(src="/_img/recent/vouch-02.jpg")
+				.fin
+		.itemhead
 			h3 Collection page
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -107,10 +108,11 @@ block work
 						li
 						li
 					span vouchwith.us
-				img(src="/images/recent/vouch-03.jpg")
-		.itemhead.small
+				img(src="/_img/recent/vouch-03.jpg")
+				.fin
+		.itemhead
 			h3 User profile
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -118,10 +120,11 @@ block work
 						li
 						li
 					span vouchwith.us
-				img(src="/images/recent/vouch-04.gif")
-		.itemhead.small
+				img(src="/_img/recent/vouch-04.gif")
+				.fin
+		.itemhead
 			h3 Page template & elements
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -129,7 +132,8 @@ block work
 						li
 						li
 					span vouchwith.us
-				img(src="/images/recent/vouch-07.jpg")
+				img(src="/_img/recent/vouch-07.jpg")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 
@@ -137,7 +141,7 @@ block work
 		a#recentb
 		.itemhead
 			h2 JUSTCapital
-		.visual.full
+		.visual.fout.vport.premier
 			.browser.large
 				.top
 					ul
@@ -145,37 +149,26 @@ block work
 						li
 						li
 					span justcapital.com
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/recent/justcapital-poster.jpg")
-					source(src="/images/recent/justcapital.webm", type="video/webm")
-					source(src="/images/recent/justcapital.mp4", type="video/mp4")
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/justcapital-poster.jpg")
+					source(src="/_img/recent/justcapital.webm", type="video/webm")
+					source(src="/_img/recent/justcapital.mp4", type="video/mp4")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 		.visual.two-col
-			.browser
-				.top
-					ul
-						li
-						li
-						li
-					span justcapital.com
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/recent/justcapital-intro-poster.jpg")
-					source(src="/images/recent/justcapital-intro.webm", type="video/webm")
-					source(src="/images/recent/justcapital-intro.mp4", type="video/mp4")
-			.browser
-				.top
-					ul
-						li
-						li
-						li
-					span justcapital.com
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/recent/justcapital-landing-poster.jpg")
-					source(src="/images/recent/justcapital-landing.webm", type="video/webm")
-					source(src="/images/recent/justcapital-landing.mp4", type="video/mp4")
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/justcapital-intro-poster.jpg")
+					source(src="/_img/recent/justcapital-intro.webm", type="video/webm")
+					source(src="/_img/recent/justcapital-intro.mp4", type="video/mp4")
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/justcapital-landing-poster.jpg")
+					source(src="/_img/recent/justcapital-landing.webm", type="video/webm")
+					source(src="/_img/recent/justcapital-landing.mp4", type="video/mp4")
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.itemhead.small
-			h3 Social engagement campaign quiz
-		.visual
+		.itemhead.short
+			h3 Social engagement<br> campaign quiz
+		.visual.fout.zoom
 			.browser.large
 				.top
 					ul
@@ -183,12 +176,13 @@ block work
 						li
 						li
 					span justcapital.com/quiz
-				img(src="/images/recent/justcapital-01.jpg")
+				img(src="/_img/recent/justcapital-01.jpg")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 		.visual.single
 			.shot
-				img(src="/images/recent/justcapital-01-comp.gif")
+				img(src="/_img/recent/justcapital-01-comp.gif")
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 
@@ -196,7 +190,7 @@ block work
 		a#recentc
 		.itemhead
 			h2 Stump
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -204,13 +198,14 @@ block work
 						li
 						li
 					span stump.social
-				img(src="/images/recent/stump-06.jpg")
+				img(src="/_img/recent/stump-06.jpg")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.itemhead.small
+		.itemhead.short
 			h3 Landing page
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -218,10 +213,11 @@ block work
 						li
 						li
 					span stump.social
-				img(src="/images/recent/stump-01.jpg")
-		.itemhead.small
+				img(src="/_img/recent/stump-01.jpg")
+				.fin
+		.itemhead.short
 			h3 Campaign page
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -229,10 +225,11 @@ block work
 						li
 						li
 					span stump.social
-				img(src="/images/recent/stump-02.jpg")
-		.itemhead.small
+				img(src="/_img/recent/stump-02.jpg")
+				.fin
+		.itemhead.short
 			h3 Onboarding step
-		.visual.full
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -240,10 +237,11 @@ block work
 						li
 						li
 					span stump.social
-				img(src="/images/recent/stump-05.jpg")
-		.itemhead.small
-			h3 Dashboard & user actions
-		.visual.full
+				img(src="/_img/recent/stump-05.jpg")
+				.fin
+		.itemhead.short
+			h3 Dashboard &<br> user actions
+		.visual.fout.vport.zoom
 			.browser.large
 				.top
 					ul
@@ -251,7 +249,8 @@ block work
 						li
 						li
 					span stump.social
-				img(src="/images/recent/stump-06.gif")
+				img(src="/_img/recent/stump-06.gif")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
 
@@ -259,7 +258,7 @@ block work
 		a#recentd
 		.itemhead
 			h2 Analytics8
-		.visual.full
+		.visual.fout.vport.premier
 			.browser.large
 				.top
 					ul
@@ -267,12 +266,13 @@ block work
 						li
 						li
 					span analytics8.com
-				video(preload="auto", autoplay="true", loop="loop", muted="muted", poster="/images/recent/analytics8-poster.jpg")
-					source(src="/images/recent/analytics8.webm", type="video/webm")
-					source(src="/images/recent/analytics8.mp4", type="video/mp4")
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/analytics8-poster.jpg")
+					source(src="/_img/recent/analytics8.webm", type="video/webm")
+					source(src="/_img/recent/analytics8.mp4", type="video/mp4")
+				.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-		.visual.multiphone
+		.visual.fout.multiphone
 			.phone
 				.top
 					.camera
@@ -280,7 +280,7 @@ block work
 					.speaker
 						span
 				.frame
-					img(src="/images/recent/analytics8-01.jpg")
+					img(src="/_img/recent/analytics8-01.jpg")
 				.bottom
 					div
 						span
@@ -291,7 +291,7 @@ block work
 					.speaker
 						span
 				.frame
-					img(src="/images/recent/analytics8-00.jpg")
+					img(src="/_img/recent/analytics8-00.jpg")
 				.bottom
 					div
 						span
@@ -302,16 +302,18 @@ block work
 					.speaker
 						span
 				.frame
-					img(src="/images/recent/analytics8-02.jpg")
+					img(src="/_img/recent/analytics8-02.jpg")
 				.bottom
 					div
 						span
+			.fin
 		.detail
 			p If you're reading this then you've caught me right as I'm updating my site. Expect explanations written and up within the next day or so.
-
+		.footlink
+			p You can also check out what I've <a href="https://dribbble.com/isaacpvl", target="_blank">put up on dribbble lately</a>
 
 block next
-	section.next.past#navlink(data-pathname="past")
+	section.next.hide.past#navlink(data-pathname="past")
 		.head
 			h5 Also check out
 		.peek#next

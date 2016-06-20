@@ -5,17 +5,12 @@
 
 	section.about {
 		@include padding-trailer(15);
-		text-align: center;
 		color: $wht;
-		background: rgba($blu, .92);
-		.head {
-			h5 {
-				color: $wht;
-				text-shadow: 1px 1px $blk-2;
-				&::after {
-					background-color: $wht;
-					box-shadow: 1px 1px $blk-2;
-				}
+		background: $blu;
+		h5 {
+			color: $wht;
+			&::after {
+				background-color: $wht;
 			}
 		}
 		h1, h2 {
@@ -24,133 +19,77 @@
 		p {
 			text-shadow: 1px 1px $blk-2;
 		}
+	}
+
+// skills section
+	section.skills {
+		// @include padding-trailer(15);
+		text-align: center;
+		background: rgba($blu, 0.92);
 		.fade {
 			position: absolute;
-			top: 70%;
+			z-index: 1;
+			top: 50%;
 			bottom: 0;
 			left: 0;
 			right: 0;
-			z-index: 1;
 			@include gradient-vert($blu-n, $blu);
-		}
-
-	// pitch
-		.pitch {
-			position: relative;
-			z-index: 2;
-			width: 100%;
-			@include padding-leader(3);
-			@include padding-trailer(12);
-			h1 {
-				width: 100%;
-				max-width: 1080px;
-				@include padding-trailer(2.5);
-				margin: auto;
-			}
-			p {
-				display: inline-block;
-				vertical-align: top;
-				width: 47.5%;
-				@include leader(4);
-				&:last-of-type {
-					margin-left: 5%;
-				}
-			}
-		}
-
-	// items
-		.item {
-			$offset: 8%;
-			position: relative;
-			z-index: 2;
-			width: 60% +$offset;
-			margin: auto;
-			text-align: left;
-			@include padding-leader(10);
-			@include padding-trailer(8);
-			h5 {
-				position: relative;
-				@include trailer(2.5);
-				text-shadow: 1px 1px $blk-2;
-				&::before, &::after {
-					position: absolute;
-					bottom: 11px;
-					width: 75%+$offset;
-					height: 2px;
-					background: $wht;
-					box-shadow: 1px 1px $blk-2;
-				}
-				&::before {
-					content: none;
-					right: 100% -$offset;
-					margin-right: 28px;
-				}
-				&::after {
-					content: '';
-					margin-left: 24px;
-				}
-			}
-			h1 {
-				@include padding-leader(2.5);
-				@include padding-trailer(4.5);
-				@include lineh(7);
-				br {
-					display: none;
-				}
-			}
-			p {
-				@include trailer(2.5);
-				&.lead {
-					@include leader(4);
-					@include trailer(1);
-					@extend .large;
-					font-style: italic;
-				}
-			}
-			h5 {
-				padding-left: 0; padding-right: $offset;
-				// padding-left: $offset; padding-right: 0;
-			}
-			h1, p {
-				// padding-left: 0; padding-right: $offset;
-				padding-left: $offset; padding-right: 0;
-			}
-			&.alt {
-				h5 {
-					&::before {
-						content: '';
-					}
-					&::after {
-						content: none;
-					}	
-				}
-				h5 {
-					// padding-left: 0; padding-right: $offset;
-					padding-left: $offset; padding-right: 0;
-				}
-				h1, p {
-					padding-left: 0; padding-right: $offset;
-					// padding-left: $offset; padding-right: 0;
-				}
-			}
 		}
 	}
 
-
-// About me styles
-// ------------------------------------------------------------
-
-	section.aboutme {
-		@include padding-trailer(12);
-		color: $wht;
-		background: $blu;
-		h1 {
-			text-shadow: 1px 2px $blk-15;
+// story section
+	section.story {
+		// @include padding-trailer(15);
+		.bio {
+			position: relative;
+			z-index: 9;
+			width: 100%;
+			h1 {
+				min-width: 700px;
+				font-weight: 500;
+				white-space: nowrap;
+				strong {
+					display: block;
+					font-weight: 800;
+				}
+			}
+			p {
+				padding-right: 12%;
+			}
 		}
-		p {
-			text-shadow: 1px 1px $blk-2;
+		.head h5 {
+			color: $blk-55;
+			&::after {
+				background-color: $blk-55;
+			}
 		}
-		.bg, .fade {
+		.cred {
+			position: relative;
+			z-index: 9;
+			margin: auto;
+			@include padding-leader(2);
+			@include padding-trailer(2);
+			@include lineh(9);
+			text-align: center;
+			a {
+				opacity: 0.5;
+				&:hover, &:focus {
+					opacity: 0.9;
+				}
+				&:active {
+					opacity: 1;
+				}
+			}
+			li {
+				display: inline-block;
+				@include padding-x(30px);
+			}
+			img {
+				width: auto;
+				height: 60px;
+			}
+		}
+		.photo {
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -167,55 +106,6 @@
 				pointer-events: none;
 			}
 		}
-		.fade {
-			z-index: 1;
-			display: none;
-		}
-
-	// bio
-		.bio {
-			position: relative;
-			z-index: 9;
-			width: 65%;
-			@include padding-leader(4);
-			@include padding-trailer(10);
-			h1 {
-				min-width: 700px;
-				@include trailer(4);
-				font-weight: 500;
-				white-space: nowrap;
-			}
-			p {
-				@include trailer(2);
-				padding-right: 12%;
-			}
-		}
-		.cred {
-			position: relative;
-			z-index: 9;
-			margin: auto;
-			@include padding-leader(2);
-			@include padding-trailer(4);
-			@include lineh(9);
-			text-align: center;
-			h5 {
-				@include trailer(6);
-				color: $blk-6;
-			}
-			a {
-				opacity: .5;
-				&:hover {
-					opacity: .9;
-				}
-				&:active {
-					opacity: 1;
-				}
-			}
-			li {
-				display: inline-block;
-				@include padding-x(30px);
-			}
-		}
 	}
 
 
@@ -223,42 +113,32 @@
 // ------------------------------------------------------------
 
 	@media screen and (min-width: 1201px) {
-		section.aboutme {
-			.bio strong {
-				display: block;
-				font-size: 60px;
-				font-weight: 800;
+		section.story {
+			.bio {
+				width: 100%;
+				max-width: 1140px;
+				margin: auto;
+				.point {
+					margin: 0;
+					@include padding-leader(3);
+					@include padding-trailer(0);
+				}
+				h1 strong {
+					display: block;
+					font-weight: 800;
+				}
 			}
 		}
 	}
 	@media screen and (max-width: 1200px) {
-		section.about {
-			.pitch {
-				max-width: 780px;
-				margin: auto;
-				h1 {
-					text-align: left;
-					br {
-						display: none;
-					}
-				}
-				p {
-					display: block;
-					width: 100%;
-					margin: auto;
-					@include padding-leader(2);
-					@include padding-trailer(1);
-					&:last-of-type {
-						margin: auto;
-					}
-				}
+		section.skills {
+			@include padding-trailer(10);
+			br {
+				display: none;
 			}
 		}
-		section.aboutme {
+		section.story {
 			.bio {
-				width: 100%;
-				max-width: 780px;
-				margin: auto;
 				h1 {
 					min-width: 0;
 					white-space: normal;
@@ -266,59 +146,40 @@
 				p {
 					display: block;
 					width: 100%;
-					margin: auto;
-					@include padding-leader(2);
-					@include padding-trailer(1);
 					padding-right: 0;
-					&:last-of-type {
-						margin: auto;
-						@include padding-leader(2);
-					}
 				}
 			}
-			.cred {
-				br {
-					display: none;
-				}
+			.photo {
+				display: none;
 			}
-			.bg, .fade {
+			br {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		section.skills {
+			background: $blu;
+			.fade {
 				display: none;
 			}
 		}
 	}
 	@media screen and (max-width: 640px) {
-		section.about {
-			@include padding-trailer(0);
-			.pitch {
-				width: 94%;
-				max-width: 540px;
-				margin: auto;
-				padding-left: 2%;
-				p {
-					@include padding-leader(1);
-				}
-			}
+		section.skills {
+			@include padding-trailer(5);
 		}
-		section.aboutme {
-			@include padding-trailer(10);
+		section.story {
+			@include padding-trailer(8.5);
 			.bio {
-				width: 94%;
-				max-width: 540px;
-				margin: auto;
-				padding-left: 2%;
-				@include padding-trailer(4);
-				h1 {
-					@include trailer(2);
-				}
-				p {
-					@include padding-leader(1);
+				@include trailer(0);
+				.point {
+					@include padding-trailer(1);
 				}
 			}
 			.cred {
-				h5 {
-					@include leader(3);
-					@include trailer(4);
-				}
+				@include padding-leader(3);
+				@include lineh(4.5);
 				li {
 					@include padding-x(12px);
 					&:last-of-type {
@@ -326,90 +187,29 @@
 					}
 				}
 				img {
-					width: 75%;
-					height: auto;
+					@include tscale(0.8);
 				}
 			}
 		}
 	}
 	@media screen and (max-width: 420px) {
-		section.aboutme {
-			@include padding-trailer(6);
+		section.skills {
+			@include padding-trailer(5);
+		}
+		section.story {
+			@include padding-trailer(7.5);
 			.cred {
-				width: 100%;
-				margin-left: auto;
-				@include lineh(6);
+				// @include padding-leader(3);
+				@include lineh(3);
 				li {
-					@include padding-x(12px);
+					@include padding-x(6px);
 					&:nth-of-type(7) {
 						display: none;
 					}
 				}
 				img {
-					width: 70%;
-					height: auto;
+					@include tscale(0.7);
 				}
 			}
 		}
 	}
-
-
-// Newsflash styles
-// ------------------------------------------------------------
-
-	.news {
-		display: none;
-		position: fixed;
-		z-index: -999;
-		@include onepos(0);
-		visibility: hidden;
-		text-align: center;
-		.paper {
-			position: relative;
-			z-index: 2;
-			width: 100%;
-			height: 100%;
-			padding: 6% 0;
-			img {
-				width: auto;
-				height: 100%;
-				min-height: 480px;
-				max-height: 780px;
-				box-shadow: 0 0 $blk-0;
-				@include torigin(50% 50%);
-				@include animate(.8s);
-				@include atiming(ease-out);
-				@include newsflash;
-			}
-			&::after {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				@include onepos(0);
-				background: $blk-5;
-				@include animate(.8s);
-				@include fadein;
-			}
-		}
-	}
-	.news.flash {
-		display: block;
-		z-index: 999;
-		visibility: visible;
-		cursor: pointer;
-		.paper {
-			img {
-				box-shadow: 12px 12px $blk-25;
-			}
-			&::after {
-				background: $blk-5;
-			}
-		}
-	}
-
-	// media queries
-		@media screen and (max-width: 640px) {
-			.news {
-				display: none;
-			}
-		}
