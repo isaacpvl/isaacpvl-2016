@@ -60,7 +60,7 @@ jQuery(function() {
 				});
 				// visual nav fade
 				if (window.matchMedia('(max-height: 901px)').matches) {
-					if(!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
+					if (!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
 						visualtop.waypoint({
 							handler: function(event, direction) {
 							nav.toggleClass('fade');}, offset: 60
@@ -98,7 +98,7 @@ jQuery(function() {
 	}, 400);
 
 // header parallax scroll
-	// if(!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
+	// if (!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
 		$(document).scroll(function(){
 			var headerLogo = logo,
 				offsetLogo = headerLogo.offset().top,
@@ -135,7 +135,7 @@ jQuery(function() {
 // page links & transitions
 	nava.on('mouseup', function(event) {
 		event.preventDefault();
-		if((event.which == 1)) {
+		if ((event.which == 1)) {
 			body.addClass('out').addClass('return');
 			setTimeout(function() { 
 				location.href='/';
@@ -147,7 +147,7 @@ jQuery(function() {
 	body.on('mouseup', '#navb #navlink', function(event) {
 		event.preventDefault();
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
-		if((event.which == 1)) {
+		if ((event.which == 1)) {
 			body.addClass('out').addClass('prev');
 			var projectDelay = setTimeout(function() {
 				location.href = projectPath;
@@ -159,7 +159,7 @@ jQuery(function() {
 	body.on('mouseup', '#navc #navlink, .next#navlink', function(event) {
 		event.preventDefault();
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
-		if((event.which == 1)) {
+		if ((event.which == 1)) {
 			body.addClass('out').addClass('next');
 			$('.next').addClass('active');
 			var projectDelay = setTimeout(function() { 
@@ -172,7 +172,7 @@ jQuery(function() {
 	$('section.work').on('mouseup', '#navlink', function(event) {
 		event.preventDefault();
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
-		if((event.which == 1)) {
+		if ((event.which == 1)) {
 			$('body').addClass('out').addClass('next');
 			var projectDelay = setTimeout(function() {
 				location.href = projectPath;

@@ -57,7 +57,7 @@ jQuery(function() {
 					winkyFace,
 					happyFaceAgain,
 					noFace;
-			if(($(window).innerWidth() > 959) && screen.width > 768) {
+			if (($(window).innerWidth() > 959) && screen.width > 768) {
 				$('#super').lettering();
 				$('#sweet').lettering();
 				$('#unique').lettering();
@@ -76,7 +76,7 @@ jQuery(function() {
 					faceSmile();
 				}, 2400);
 				tagline.on('click', '> span', function() {
-					if(!tagline.hasClass('face')) {
+					if (!tagline.hasClass('face')) {
 						faceSmile();
 					}
 				});
@@ -175,10 +175,9 @@ jQuery(function() {
 	setTimeout(function() {
 		smoothScroll.animateScroll(null, '#home', callbackScroll);
 	}, 400);
-	// $('#push').addClass('reveal'); $('#lockscroll').addClass('hide'); $('.overlay').addClass('hide');
 
 // header parallax scroll
-	// if(!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
+	// if (!navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
 		$(document).scroll(function(){
 			var headerTagline = tagline,
 				offsetTagline = headerTagline.offset().top,
@@ -231,7 +230,7 @@ jQuery(function() {
 		event.preventDefault();
 		$(this).closest('.button').addClass('active');
 		var projectPath = '/'+$(this).attr('data-pathname')+'/';
-		if((event.which == 1)) {
+		if ((event.which == 1)) {
 			$('body').addClass('out').addClass('next');
 			var projectDelay = setTimeout(function() {
 				location.href = projectPath;
@@ -248,7 +247,7 @@ jQuery(function() {
 // ------------------------------------------------------------
 
 	function faceSmile() {
-		if($('#tagline').hasClass('smile')) {
+		if ($('#tagline').hasClass('smile')) {
 			happyFace = setTimeout(function() {
 				$('#tagline').addClass('face').addClass('trigger');
 				$('#speech').addClass('face');
@@ -258,7 +257,7 @@ jQuery(function() {
 				$('#design').arctext('set', {radius: 335, dir: -1, animation: { speed: 380}});
 			}, 120);
 		}
-		if($('#tagline').hasClass('smile')) {
+		if ($('#tagline').hasClass('smile')) {
 			winkyFace = setTimeout(function() {
 				$('#tagline').addClass('wink');
 				$('#speech').addClass('pop');
@@ -268,7 +267,7 @@ jQuery(function() {
 				$('#design').arctext('set', {radius: 120, dir: -1, animation: { speed: 280}});
 			}, 1650);
 		}
-		if($('#tagline').hasClass('smile')) {
+		if ($('#tagline').hasClass('smile')) {
 			happyFaceAgain = setTimeout(function() {
 				$('#tagline').removeClass('wink');
 				$('#super').arctext('set', {radius: 70, dir: 1, animation: { speed: 280}});
@@ -277,7 +276,7 @@ jQuery(function() {
 				$('#design').arctext('set', {radius: 335, dir: -1, animation: { speed: 280}});
 			}, 2300);
 		}
-		if($('#tagline').hasClass('smile')) {
+		if ($('#tagline').hasClass('smile')) {
 			noFace = setTimeout(function() {
 				$('#tagline').removeClass('face');
 				$('#speech').removeClass('face');
@@ -291,7 +290,7 @@ jQuery(function() {
 // ------------------------------------------------------------
 
 	function browserCycle() {
-		if($('.multibrowser').hasClass('cycle')) {
+		if ($('.multibrowser').hasClass('cycle')) {
 			prepa = setTimeout(function() {
 				$('.cycle').addClass('prepa');
 			}, 200);

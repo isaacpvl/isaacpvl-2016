@@ -87,6 +87,7 @@
 	p.lead {
 		@include padding-leader(1);
 		@extend .large;
+		font-weight: 600;
 		font-style: italic;
 	}
 
@@ -145,6 +146,9 @@
 			@include padding-leader(2);
 			@include padding-trailer(4);
 			white-space: nowrap;
+			em {
+				font-weight: 900;
+			}
 		}
 	}
 
