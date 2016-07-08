@@ -263,35 +263,35 @@ br {
 
 @-webkit-keyframes browserzoom {
   0% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08); }
   50% {
     box-shadow: 0 -16px rgba(0, 0, 0, 0.18), 0 18px rgba(0, 0, 0, 0.18); }
   100% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05); } }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08); } }
 
 @keyframes browserzoom {
   0% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08); }
   50% {
     box-shadow: 0 -16px rgba(0, 0, 0, 0.18), 0 18px rgba(0, 0, 0, 0.18); }
   100% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05); } }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08); } }
 
 @-webkit-keyframes shotzoom {
   0% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.15); }
   50% {
     box-shadow: 0 -16px rgba(0, 0, 0, 0.18), 0 18px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.05); }
   100% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.15); } }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.15); } }
 
 @keyframes shotzoom {
   0% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.15); }
   50% {
     box-shadow: 0 -16px rgba(0, 0, 0, 0.18), 0 18px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.05); }
   100% {
-    box-shadow: 0 -24px rgba(0, 0, 0, 0.05), 0 30px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.15); } }
+    box-shadow: 0 -24px rgba(0, 0, 0, 0.08), 0 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.15); } }
 
 @-webkit-keyframes reveal {
   0% {
