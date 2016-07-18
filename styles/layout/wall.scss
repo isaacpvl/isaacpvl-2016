@@ -35,25 +35,30 @@
 			overflow: hidden;
 			@include trans(0.5s);
 			.fade {
-				position: fixed;
-				top: 540px;
-				z-index: 3;
 				display: none;
+				position: fixed;
+				z-index: 3;
+				top: 0;
+				bottom: auto;
 				width: 100%;
 				min-width: 320px;
 				max-width: $max-width;
-				height: 270px;
 				margin: auto;
-				@include gradient-vert-d($blu-n, 0%, $blu, 100%);
+				.fill {
+					@include gradient-vert-d($blu-n, 40%, $blu, 100%);
+					img {
+						width: 100%;
+						height: auto;
+						opacity: 0;
+					}
+				}
 				&::after {
 					content: '';
-					position: fixed;
-					top: 810px;
-					bottom: 0;
-					z-index: 3;
+					display: block;
 					width: 100%;
 					min-width: 320px;
 					max-width: $max-width;
+					height: 1200px;
 					margin: auto;
 					background: $blu;
 				}

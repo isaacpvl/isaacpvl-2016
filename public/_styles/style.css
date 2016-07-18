@@ -760,7 +760,7 @@ br {
   z-index: 2;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   height: 100%;
   margin: auto;
   box-shadow: 0 0 20px transparent;
@@ -782,7 +782,7 @@ br {
   z-index: 0;
   top: 0;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1680px;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   -webkit-animation-duration: 1s;
@@ -800,7 +800,7 @@ br {
   z-index: 999;
   top: 0;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1680px;
   height: 100%;
   overflow: hidden; }
   .navslide .slide {
@@ -827,7 +827,7 @@ br {
     z-index: 998;
     top: 0;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1680px;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     -webkit-animation-duration: 0.75s;
@@ -907,7 +907,7 @@ body.fold.out.next.project .overview .detail {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0); }
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1681px) {
   body.fold.out.next.project section.next, body.fold.out.prev.project section.next, body.fold.out.return.project section.next {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -939,7 +939,7 @@ body.fold.out.prev.project .overview .detail, body.fold.out.return.project .over
     -webkit-transform: translate(96px, 0);
     transform: translate(96px, 0); } }
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1681px) {
   body.fold.out.next .preview.pleft .multibrowser.cycle .browser {
     transition-duration: 1s;
     transition-delay: 0s;
@@ -2064,7 +2064,7 @@ a, a img {
   bottom: 0;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   margin: auto;
   text-align: left;
   -webkit-touch-callout: none;
@@ -2206,7 +2206,7 @@ body.project .loader.out .status h3 {
   transition-duration: 0.5s;
   transition-delay: 0s; }
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1681px) {
   .loader .status h3 {
     left: 6.5%; } }
 
@@ -2475,7 +2475,7 @@ nav {
   z-index: 99;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   height: 60px;
   text-align: right;
   font-size: 16px;
@@ -2908,7 +2908,7 @@ nav.dark li.active {
   -webkit-transform: translate(0, -27px);
   transform: translate(0, -27px); }
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1681px) {
   nav li.nava {
     left: 6%; } }
 
@@ -3215,7 +3215,7 @@ header {
   top: 0;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   overflow: hidden;
   color: #fff;
   transition-duration: 0.45s;
@@ -3266,7 +3266,7 @@ body.home .push.reveal {
   -webkit-animation-name: reveal;
           animation-name: reveal; }
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1681px) {
   header .wrap {
     width: 100%; } }
 
@@ -3401,7 +3401,7 @@ body.project header.more .title {
   top: 0;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   height: 92.5%;
   min-height: 600px;
   max-height: 960px;
@@ -3884,7 +3884,7 @@ section.wall {
     right: 0;
     z-index: -1;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1680px;
     margin: auto;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 91%); }
   section.wall .wall {
@@ -3893,7 +3893,7 @@ section.wall {
     left: 0;
     right: 0;
     z-index: -1000;
-    max-width: 1600px;
+    max-width: 1680px;
     height: 100%;
     margin: 0 auto;
     opacity: 0.2;
@@ -3901,25 +3901,28 @@ section.wall {
     transition-duration: 0.5s;
     transition-delay: 0s; }
     section.wall .wall .fade {
-      position: fixed;
-      top: 540px;
-      z-index: 3;
       display: none;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      bottom: auto;
       width: 100%;
       min-width: 320px;
-      max-width: 1600px;
-      height: 270px;
-      margin: auto;
-      background: linear-gradient(to bottom, rgba(21, 137, 214, 0) 0%, #1589d6 100%); }
+      max-width: 1680px;
+      margin: auto; }
+      section.wall .wall .fade .fill {
+        background: linear-gradient(to bottom, rgba(21, 137, 214, 0) 40%, #1589d6 100%); }
+        section.wall .wall .fade .fill img {
+          width: 100%;
+          height: auto;
+          opacity: 0; }
       section.wall .wall .fade::after {
         content: '';
-        position: fixed;
-        top: 810px;
-        bottom: 0;
-        z-index: 3;
+        display: block;
         width: 100%;
         min-width: 320px;
-        max-width: 1600px;
+        max-width: 1680px;
+        height: 1200px;
         margin: auto;
         background: #1589d6; }
     section.wall .wall video {
@@ -3930,7 +3933,7 @@ section.wall {
       z-index: 1;
       width: 100%;
       min-width: 1280px;
-      max-width: 1600px;
+      max-width: 1680px;
       background-color: #fff !important; }
 
 @media screen and (max-width: 1200px) {
@@ -4285,7 +4288,7 @@ section.about {
 
 section.skills {
   text-align: center;
-  background: rgba(21, 137, 214, 0.92); }
+  background: rgba(21, 137, 214, 0.9); }
   section.skills .fade {
     position: absolute;
     z-index: 1;
@@ -4294,6 +4297,11 @@ section.skills {
     left: 0;
     right: 0;
     background: linear-gradient(to bottom, rgba(21, 137, 214, 0) 0%, #1589d6 100%); }
+  section.skills b {
+    font-size: 30px;
+    line-height: 0;
+    font-family: "jaf-facitweb", sans-serif;
+    font-weight: 300; }
 
 section.story .bio {
   position: relative;
@@ -4353,14 +4361,14 @@ section.story .photo {
   section.story .photo img {
     width: 90%;
     min-width: 540px;
-    max-width: 660px;
+    max-width: 720px;
     height: auto;
     pointer-events: none; }
 
 @media screen and (min-width: 1201px) {
   section.story .bio {
     width: 100%;
-    max-width: 1140px;
+    max-width: 1164px;
     margin: auto; }
     section.story .bio .point {
       margin: 0;
@@ -4431,7 +4439,7 @@ section.story .photo {
         transform: scale(0.7); } }
 
 section.contact {
-  padding-bottom: 360px;
+  padding-bottom: 432px;
   background: #fff;
   background: url("/_img/home/contactbg.jpg") no-repeat bottom #fff;
   background-position: 50% 100%;
@@ -5587,7 +5595,7 @@ body {
   position: relative;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   height: 100%;
   margin: auto;
   color: #000;
@@ -5600,7 +5608,7 @@ section {
   z-index: 2;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   margin: auto;
   overflow: hidden; }
 
@@ -5611,7 +5619,7 @@ section {
   z-index: -1;
   width: 100%;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1680px;
   margin: auto;
   box-shadow: 18px 0 rgba(0, 0, 0, 0.1), -18px 0 rgba(0, 0, 0, 0.1);
   background: #d12b52;
@@ -5627,7 +5635,7 @@ body.home section.work, body.past section.work {
   padding-right: 0%;
   overflow: visible; }
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1681px) {
   nav ul, header, section, section.project {
     padding-left: 6.5%;
     padding-right: 6.5%; } }
