@@ -107,10 +107,10 @@
 			white-space: nowrap;
 			a {
 				width: 286px;
-				margin-right: 10%;
+				margin-right: 5%;
 			}
 			.digits {
-				margin-right: 5%;
+				margin-left: 5%;
 			}
 		}
 		.social {
@@ -158,12 +158,11 @@
 				height: auto;
 				a {
 					width: auto;
-					margin-right: 0;
 				}
 				.digits {
 					display: block;
 					@include leader(5);
-					margin-right: 0;
+					margin-left: 0;
 				}
 			}
 		}
